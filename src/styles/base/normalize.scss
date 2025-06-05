@@ -1,0 +1,16 @@
+.re,
+.pl-rely {
+  position: relative;
+  display: table;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+
+  .ce,
+  .pl-centry {
+    position: relative;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 1;
+  }
+}

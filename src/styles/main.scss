@@ -1,0 +1,18 @@
+// plugins
+@import "./../plugins/slick-carousel/slick/slick.css";
+@import "./../plugins/slick-carousel/slick/slick-theme.css";
+
+// Base
+@import "./base/fonts";
+@import "./base/variables";
+@import "./base/normalize";
+@import "./base/animations";
+
+// Components
+@import "./components/preloader";
+@import "./components/icon";
+@import "./components/minicart";
+
+
+// Sections
+@import "./sections/header";
