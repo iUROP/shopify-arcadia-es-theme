@@ -109,7 +109,7 @@
     "product": {
       "add_to_cart": "Ajouter au panier",
       "description": "Description",
-      "on_sale": "Promotion",
+      "on_sale": "En vente",
       "product_variants": "Variantes de produits",
       "quantity": {
         "label": "Quantité",
@@ -125,7 +125,7 @@
         "max_of": "Max. {{ quantity }}"
       },
       "price": {
-        "from_price_html": "À partir de {{ price }}",
+        "from_price_html": "Du {{ price }}",
         "regular_price": "Prix habituel",
         "sale_price": "Prix promotionnel",
         "unit_price": "Prix unitaire"
@@ -173,8 +173,8 @@
         "title": "Tarification basée sur le volume",
         "note": "La tarification basée sur le volume est disponible",
         "minimum": "{{ quantity }} ou plus",
-        "price_range": "{{ minimum }} - {{ maximum }}",
-        "price_at_each_html": "à {{ price }}/pièce"
+        "price_at_each": "à {{ price }}/pièce",
+        "price_range": "{{ minimum }} - {{ maximum }}"
       },
       "taxes_included": "Taxes incluses.",
       "duties_included": "Frais de douane inclus.",

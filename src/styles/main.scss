@@ -5,13 +5,20 @@
 // Base
 @import "./base/fonts";
 @import "./base/variables";
+@import "./base/colors";
+@import "./base/corners";
+@import "./base/spaces";
 @import "./base/normalize";
 @import "./base/animations";
 
 // Components
+@import "./components/announcement-bar";
+
 @import "./components/preloader";
 @import "./components/icon";
 @import "./components/minicart";
+
+
 
 
 // Sections

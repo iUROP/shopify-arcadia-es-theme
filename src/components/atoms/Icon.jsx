@@ -3,7 +3,7 @@ import React from 'react'
 function Icon(props) {
   
     return (
-      <div className={`pl-icon`}>
+      <div className={`i-icon`}>
         {props.name === "cart" &&
           <span className={`icon-${props.name}`}>
             <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

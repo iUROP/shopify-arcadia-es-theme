@@ -1,7 +1,7 @@
-<header class="pl-header-container" style="height: {{ section.settings.container_height }}px;">
+<header class="i-header-container" style="height: {{ section.settings.container_height }}px;">
 
-  <div class="pl-header-container__content {% if section.settings.header__layout_box %} page-width page-width-desktop{% else %} page-no-boxed{% endif %}">
-    <div class="pl-header-container__content--logo" style="width: {{ settings.logo_width }}px;">
+  <div class="i-header-container__content i-container">
+    <div class="i-header-container__content--logo" style="width: {{ settings.logo_width }}px;">
       <div class="re">
         <div class="ce">
           <a href="{{ routes.root_url }}" class="header__logo">
@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-    <div class="pl-header-container__content--menu">
+    <div class="i-header-container__content--menu">
       <div class="re">
         <div class="ce">
           {%- liquid
@@ -39,14 +39,14 @@
         </div>
       </div>
     </div>
-    <div class="pl-header-container__content--search">
+    <div class="i-header-container__content--search">
       Searchbar
 
       {% comment %} {% render 'header-search', input_id: 'Search-In-Modal' %} {% endcomment %}
     </div>
-    <div class="pl-header-container__content--icons">
+    <div class="i-header-container__content--icons">
 
-      <div id="icon-search" class="pl-header-container__content--icons__icon">
+      <div id="icon-search" class="i-header-container__content--icons__icon">
         <div class="re">
           <div class="ce">
             sea
@@ -54,7 +54,7 @@
         </div>
       </div>
 
-      <div id="icon-user" class="pl-header-container__content--icons__icon">
+      <div id="icon-user" class="i-header-container__content--icons__icon">
         <div class="re">
           <div class="ce">
             us
@@ -62,8 +62,8 @@
         </div>
       </div>
 
-      <div id="icon-minicart" class="pl-header-container__content--icons__icon">
-        <pl-minicart blocks="{{ settings.enable_permalink_cart }}" />
+      <div id="icon-minicart" class="i-header-container__content--icons__icon">
+        <i-minicart blocks="{{ settings.enable_permalink_cart }}" />
       </div>
     </div>
   </div>
@@ -79,13 +79,6 @@
     {
       "type": "header",
       "content": "Estructura"
-    },
-    {
-      "type": "checkbox",
-      "id": "header__layout_box",
-      "default": true,
-      "label": "Usar contenedor",
-      "info": "Si no se activa esta opción, el header usará todo el ancho de la pantalla."
     },
     {
       "type": "link_list",

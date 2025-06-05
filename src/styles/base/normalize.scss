@@ -1,5 +1,5 @@
 .re,
-.pl-rely {
+.i-rely {
   position: relative;
   display: table;
   height: 100%;
@@ -7,10 +7,22 @@
   z-index: 2;
 
   .ce,
-  .pl-centry {
+  .i-centry {
     position: relative;
     vertical-align: middle;
     display: table-cell;
     z-index: 1;
+  }
+}
+
+.i-container {
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  padding: 0 $Space-1200;
+
+  @media only screen and (max-width: 1024px) {
+    padding: 0 $Grid-MGrid-Margin;
   }
 }

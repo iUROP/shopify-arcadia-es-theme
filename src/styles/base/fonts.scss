@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+html, body {
+  font-family: "Besley", serif;
+}
+
+// Fonts
+.Family-Font {
+  font-family: "Besley", serif;
+}
+
+.Family-Font---Body {
+  font-family: "Instrument Sans", sans-serif;
+}
+
+// Typos
+.Typo-Display-XL {
+  font-size: 61px;
+  line-height: 100%;
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 39px;
+  }
+}
+
+.Typo-H1 {
+  font-size: 49px;
+  line-height: 100%;
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 31px;
+  }
+}
+
+.Typo-H2 {
+  font-size: 39px;
+  line-height: 100%;
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 25px;
+  }
+}
+
+.Typo-H3 {
+  font-size: 31px;
+  line-height: 100%;
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+
+.Typo-Body-XL {
+  font-size: 25px;
+  line-height: 100%;
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 18px;
+  }
+}
+
+.Typo-Body-L {
+  font-size: 20px;
+  line-height: 100%;
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+.Typo-Body-M {
+  font-size: 16px;
+  line-height: 100%;
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 14px;
+  }
+}
+
+.Typo-Body-S {
+  font-size: 13px;
+  line-height: 100%;
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 12px;
+  }
+}
+
+.Typo-Body-XS {
+  font-size: 10px;
+  line-height: 100%;
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 10px;
+  }
+}

@@ -8,7 +8,7 @@ function Preloader({
 }) {
 
   return (
-    <div className={`pl-preloader-container pl-preloader-container__${type}`}>
+    <div className={`i-preloader-container i-preloader-container__${type}`}>
       {type === 'section' &&
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
           <circle fill="none" strokeOpacity="1" stroke="#FF156D" strokeWidth=".5" cx="100" cy="100" r="0">

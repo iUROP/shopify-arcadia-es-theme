@@ -1,5 +1,5 @@
-<div class="pl-header-menu">
-  <div class="pl-header-menu__toggler">
+<div class="i-header-menu">
+  <div class="i-header-menu__toggler">
     <div class="re">
       <div class="ce">
         {% render 'icon-hamburger' %}
@@ -7,10 +7,10 @@
       </div>
     </div>
   </div>
-  <nav class="pl-header-menu__content slow_ani" style="top: {{ section.settings.container_height }}px;">
-    <ul class="pl-header-menu__content--items" role="list">
+  <nav class="i-header-menu__content slow_ani" style="top: {{ section.settings.container_height }}px;">
+    <ul class="i-header-menu__content--items" role="list">
       {%- for link in section.settings.menu.links -%}
-        <li class="pl-header-menu__content--items__item">
+        <li class="i-header-menu__content--items__item">
           {%- if link.links != blank -%}
             <div class="item-details">
               <summary class="{% if link.child_active %} active{% endif %}">
@@ -18,18 +18,18 @@
                 {% render 'icon-arrow' %}
                 {% render 'icon-caret' %}
               </summary>
-              <div class="pl-header-menu__content--items__item--submenu slow_ani" tabindex="-1">
-                <ul class="pl-header-menu__content--items__item--submenu--items" role="list" tabindex="-1">
-                  <button class="pl-header-menu__content--items__item--back" aria-expanded="true">
+              <div class="i-header-menu__content--items__item--submenu slow_ani" tabindex="-1">
+                <ul class="i-header-menu__content--items__item--submenu--items" role="list" tabindex="-1">
+                  <button class="i-header-menu__content--items__item--back" aria-expanded="true">
                     {% render 'icon-arrow' %}
                     {{ link.title | escape }}
                   </button>
                   {%- for childlink in link.links -%}
-                    <li class="pl-header-menu__content--items__item--submenu--items__item">
+                    <li class="i-header-menu__content--items__item--submenu--items__item">
                       {%- if childlink.links == blank -%}
                         <a
                           href="{{ childlink.url }}"
-                          class="pl-header-menu__content--items__item--submenu--items__item--link {% if childlink.current %} active{% endif %}"
+                          class="i-header-menu__content--items__item--submenu--items__item--link {% if childlink.current %} active{% endif %}"
                           {% if childlink.current %}
                             aria-current="page"
                           {% endif %}
@@ -43,17 +43,17 @@
                             {% render 'icon-arrow' %}
                             {% render 'icon-caret' %}
                           </summary>
-                          <div class="pl-header-menu__content--items__item--submenu--items__item--submenu slow_ani" tabindex="-1">
-                            <ul class="pl-header-menu__content--items__item--submenu--items__item--submenu--items" role="list" tabindex="-1">
-                              <button class="pl-header-menu__content--items__subitem--back" aria-expanded="true">
+                          <div class="i-header-menu__content--items__item--submenu--items__item--submenu slow_ani" tabindex="-1">
+                            <ul class="i-header-menu__content--items__item--submenu--items__item--submenu--items" role="list" tabindex="-1">
+                              <button class="i-header-menu__content--items__subitem--back" aria-expanded="true">
                                 {% render 'icon-arrow' %}
                                 {{ link.title | escape }}
                               </button>
                               {%- for grandchildlink in childlink.links -%}
-                                <li class="pl-header-menu__content--items__item--submenu--items__item--submenu--items__item">
+                                <li class="i-header-menu__content--items__item--submenu--items__item--submenu--items__item">
                                   <a
                                     href="{{ grandchildlink.url }}"
-                                    class="pl-header-menu__content--items__item--submenu--items__item--submenu--items__item--link {% if grandchildlink.current %} active{% endif %}"
+                                    class="i-header-menu__content--items__item--submenu--items__item--submenu--items__item--link {% if grandchildlink.current %} active{% endif %}"
                                     {% if grandchildlink.current %}
                                       aria-current="page"
                                     {% endif %}
@@ -75,7 +75,7 @@
           {%- else -%}
             <a
               href="{{ link.url }}"
-              class="pl-header-menu__content--items__item--link {% if link.current %} active{% endif %}"
+              class="i-header-menu__content--items__item--link {% if link.current %} active{% endif %}"
               {% if link.current %}
                 aria-current="page"
               {% endif %}
@@ -87,14 +87,14 @@
       {%- endfor -%}
     </ul>
   </nav>
-  <div class="pl-header-menu__overlay slow_ani" style="top: {{ section.settings.container_height }}px;"></div>
+  <div class="i-header-menu__overlay slow_ani" style="top: {{ section.settings.container_height }}px;"></div>
 </div>
 
 <script>
-  document.querySelector('.pl-header-menu__toggler').addEventListener("click", function(){
+  document.querySelector('.i-header-menu__toggler').addEventListener("click", function(){
     Permalink.openMenu()
   })
-  document.querySelector('.pl-header-menu__overlay').addEventListener("click", function(){
+  document.querySelector('.i-header-menu__overlay').addEventListener("click", function(){
     Permalink.openMenu()
   })
 </script>

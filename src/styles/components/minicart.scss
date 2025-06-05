@@ -1,8 +1,8 @@
-pl-minicart {
+i-minicart {
   height: 100%;
   display: block;
 
-  .pl-minicart-container {
+  .i-minicart-container {
     display: block;
     height: 100%;
 
@@ -72,10 +72,10 @@ pl-minicart {
               .slick-slide {
                 height: 100%;
                 div,
-                .pl-minicart-container__snap--deals--deal {
+                .i-minicart-container__snap--deals--deal {
                   height: 100%;
                 }
-                .pl-centry {
+                .i-centry {
                   padding: 0 20px;
                 }
                 
@@ -127,7 +127,7 @@ pl-minicart {
         overflow: auto;
         padding: 8px 10px;
 
-        .pl-cart-item {
+        .i-cart-item {
           height: 135px;
           position: relative;
           margin: 10px 0px;
@@ -223,7 +223,7 @@ pl-minicart {
                 -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.05);
                 z-index: 2;
 
-                .pl-icon {
+                .i-icon {
                   display: block;
                   margin: 0;
                   width: 100%;
@@ -265,7 +265,7 @@ pl-minicart {
             text-align: center;
             cursor: no-drop;
 
-            .pl-preloader-container__section {
+            .i-preloader-container__section {
               transform: scale(1.3);
             }
           }
@@ -281,7 +281,7 @@ pl-minicart {
               opacity: 0.5;
             }
 
-            .pl-icon {
+            .i-icon {
               width: 20px;
               height: 20px;
             }

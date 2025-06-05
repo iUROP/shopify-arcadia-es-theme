@@ -6,7 +6,7 @@
   }
 }
 
-.pl-header-container {
+.i-header-container {
   position: relative;
   height: 80px;
   outline: 1px solid red;
@@ -18,9 +18,6 @@
 
     &.page-no-boxed {
       padding: 0 20px;
-    }
-    &.page-width-desktop {
-      padding: 0 26px;
     }
 
     & > div {
@@ -79,14 +76,14 @@
     }
     &--icons {
       outline: 1px solid rgb(126, 126, 0);
-      width: 90px;
-      right: 26px;
+      width: 150px;
+      right: $Space-1200;
       position: absolute;
       top: 0px;
       text-align: right;
 
-      @media only screen and (min-width: 990px) {
-        width: 150px;
+      @media only screen and (max-width: 1024px) {
+        right: $Grid-MGrid-Margin;
       }
 
       &__icon {
@@ -104,7 +101,7 @@
         }
 
         &#icon-minicart {
-          .pl-icon {
+          .i-icon {
             display: block;
             cursor: pointer;
             margin-right: 0;
@@ -115,7 +112,7 @@
     }
   }
 
-  .pl-header-menu {
+  .i-header-menu {
     position: relative;
 
     &__toggler {
@@ -177,8 +174,8 @@
           overflow: auto;
         }
 
-        .pl-header-menu__content--items__item--back,
-        .pl-header-menu__content--items__subitem--back {
+        .i-header-menu__content--items__item--back,
+        .i-header-menu__content--items__subitem--back {
           display: block;
           border: 0;
           width: 100%;
@@ -213,7 +210,7 @@
             vertical-align: middle;
             position: relative;
 
-            &.pl-header-menu__content--items__item--submenu--items__item {
+            &.i-header-menu__content--items__item--submenu--items__item {
               display: block;
 
               a,
@@ -306,7 +303,7 @@
             }
 
             &.open {
-              .pl-header-menu__content--items__item--submenu {
+              .i-header-menu__content--items__item--submenu {
                 @media only screen and (max-width: 990px) {
                   left: 0%;
                 }
@@ -319,7 +316,7 @@
 
               .item-details {
                 @media only screen and (min-width: 990px) {
-                  .pl-header-menu__content--items__item--submenu--items__item--submenu {
+                  .i-header-menu__content--items__item--submenu--items__item--submenu {
                     right: auto;
                     left: 100%;
                     transform: translate(12px, 0px);
@@ -329,7 +326,7 @@
 
                 &.open {
                   @media only screen and (min-width: 990px) {
-                    .pl-header-menu__content--items__item--submenu--items__item--submenu {
+                    .i-header-menu__content--items__item--submenu--items__item--submenu {
                       visibility: visible;
                       opacity: 1;
                     }
@@ -341,8 +338,8 @@
             }
             
 
-            .pl-header-menu__content--items__item--submenu,
-            .pl-header-menu__content--items__item--submenu--items__item--submenu {
+            .i-header-menu__content--items__item--submenu,
+            .i-header-menu__content--items__item--submenu--items__item--submenu {
               position: absolute;
               left: -100%;
               top: 0px;
@@ -382,7 +379,7 @@
                 li {
                   .item-details {
                     &.open {
-                      .pl-header-menu__content--items__item--submenu--items__item--submenu {
+                      .i-header-menu__content--items__item--submenu--items__item--submenu {
                         @media only screen and (max-width: 990px) {
                           left: 0%;
                         }
@@ -394,7 +391,7 @@
             }
           }
 
-          &.pl-header-menu__content--items__item {
+          &.i-header-menu__content--items__item {
             & > .item-details.open {
               @media only screen and (min-width: 990px) {
                 & > summary {
@@ -449,8 +446,8 @@ body.open-menu {
     top: 0px !important;
   }
 
-  .pl-header-menu {
-    .pl-header-menu__toggler {
+  .i-header-menu {
+    .i-header-menu__toggler {
 
       svg {
         &:nth-child(1) {
@@ -461,10 +458,10 @@ body.open-menu {
         }
       }
     }
-    .pl-header-menu__content {
+    .i-header-menu__content {
       left: 0px;
     }
-    .pl-header-menu__overlay {
+    .i-header-menu__overlay {
       visibility: visible;
       opacity: 0.5;
     }
@@ -473,6 +470,11 @@ body.open-menu {
 
 body.open-cart {
   position: fixed; 
-  overflow-y: scroll;
+  overflow: hidden;
   width: 100%;
+  margin-right: 15px;
+
+  .shopify-section-group-header-group {
+    z-index: 1;
+  }
 }

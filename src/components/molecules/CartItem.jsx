@@ -34,14 +34,14 @@ function CartItem({
   }
   
   return (
-    <div className={`pl-cart-item`}>
-      <div className='pl-cart-item--image' style={{"backgroundImage": `url(${product.featured_image.url})`}}></div>
-      <div className='pl-cart-item--labels'>
-        <div className='pl-cart-item--labels--name'>{product.product_title}</div>
-        <div className='pl-cart-item--labels--price'>${Permalink.getPrice(product.price)}</div>
+    <div className={`i-cart-item`}>
+      <div className='i-cart-item--image' style={{"backgroundImage": `url(${product.featured_image.url})`}}></div>
+      <div className='i-cart-item--labels'>
+        <div className='i-cart-item--labels--name'>{product.product_title}</div>
+        <div className='i-cart-item--labels--price'>${Permalink.getPrice(product.price)}</div>
       </div>
-      <div className='pl-cart-item--actions'>
-        <div className='pl-cart-item--actions--qty'>
+      <div className='i-cart-item--actions'>
+        <div className='i-cart-item--actions--qty'>
           <button onClick={down} className='slow_ani'>
             <Icon name="minus" />
           </button>
@@ -52,12 +52,12 @@ function CartItem({
         </div>
       </div>
 
-      <div className='pl-cart-item--delete' onClick={remove}>
+      <div className='i-cart-item--delete' onClick={remove}>
         <Icon name="remove" />
       </div>
 
       {itemUpdating &&
-        <div className='pl-cart-item--overlay'>
+        <div className='i-cart-item--overlay'>
           <VerticalCenter>
             <Preloader
               type="section"

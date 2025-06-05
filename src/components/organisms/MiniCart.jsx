@@ -80,7 +80,7 @@ function MiniCart({
   ]
 
   return (
-    <div className={`pl-minicart-container`}>
+    <div className={`i-minicart-container`}>
       <VerticalCenter>
         <div onClick={cartToggler}>
           <Icon name="cart" />
@@ -89,22 +89,22 @@ function MiniCart({
       {/* {cartQty &&
         <strong>{cartQty}</strong>
       } */}
-      <div className={`pl-minicart-container__snap slow_ani ${showCart ? 'open' : ''}`}>
-        <div className='pl-minicart-container__snap--header'>
+      <div className={`i-minicart-container__snap slow_ani ${showCart ? 'open' : ''}`}>
+        <div className='i-minicart-container__snap--header'>
           <VerticalCenter>
             <h2>Carrito {cartQty && <>({cartQty})</>}</h2>
           </VerticalCenter>
-          <button onClick={cartToggler} className='pl-minicart-container__snap--header__close slow_ani'>
+          <button onClick={cartToggler} className='i-minicart-container__snap--header__close slow_ani'>
             <Icon name="close" />
           </button>
         </div>
-        <div className='pl-minicart-container__snap--deals'>
+        <div className='i-minicart-container__snap--deals'>
 
           <Slider {...settings}>
             {list.map((deal, index) => {
 
               return (
-                <div key={index} className='pl-minicart-container__snap--deals--deal'>
+                <div key={index} className='i-minicart-container__snap--deals--deal'>
                   <VerticalCenter>
                     {deal.title}
                   </VerticalCenter>
@@ -113,7 +113,7 @@ function MiniCart({
             })}
           </Slider>
         </div>
-        <div className='pl-minicart-container__snap--items'>
+        <div className='i-minicart-container__snap--items'>
           {lineItems
             ? lineItems.length > 0
               ? lineItems.map((item, index) => {
@@ -125,16 +125,16 @@ function MiniCart({
             : <>Cargando items...</>
           }
         </div>
-        <div className='pl-minicart-container__snap--footer'>
-          <div className='pl-minicart-container__snap--footer__freeshipping'>
+        <div className='i-minicart-container__snap--footer'>
+          <div className='i-minicart-container__snap--footer__freeshipping'>
             footer
           </div>
-          <div className='pl-minicart-container__snap--footer__actions'>
+          <div className='i-minicart-container__snap--footer__actions'>
             footer
           </div>
         </div>
       </div>
-      <div className={`pl-minicart-container__overlay slow_ani ${showCart ? 'open' : ''}`} onClick={cartToggler}></div>
+      <div className={`i-minicart-container__overlay slow_ani ${showCart ? 'open' : ''}`} onClick={cartToggler}></div>
     </div>
   )
 }

@@ -29,4 +29,4 @@ class MiniCartElement extends HTMLElement {
   }
 }
 
-customElements.define("pl-minicart", MiniCartElement)
+customElements.define("i-minicart", MiniCartElement)

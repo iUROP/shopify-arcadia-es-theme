@@ -2,8 +2,8 @@ import React from 'react'
 
 function VerticalCenter({children}) {
     return (
-      <div className="pl-rely">
-        <div className="pl-centry">
+      <div className="i-rely">
+        <div className="i-centry">
           {children}
         </div>
       </div>
