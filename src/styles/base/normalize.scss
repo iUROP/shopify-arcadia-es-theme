@@ -26,3 +26,7 @@
     padding: 0 $Grid-MGrid-Margin;
   }
 }
+
+.rule {
+  outline: 1px solid $ruleColor;
+}

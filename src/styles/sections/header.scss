@@ -8,9 +8,11 @@
 
 .i-header-container {
   position: relative;
-  height: 80px;
-  outline: 1px solid red;
-  background-color: #fff;
+  height: 66px;
+
+  @media only screen and (max-width: 1024px) {
+    height: 55px;
+  }
 
   &__content {
     height: 100%;
@@ -25,8 +27,7 @@
     }
 
     &--logo {
-      outline: 1px solid red;
-      width: 130px;
+      width: 110px;
       position: absolute;
       top: 0px;
       left: 0px;
@@ -45,14 +46,8 @@
         margin-bottom: -6px;
       }
 
-      @media only screen and (min-width: 990px) {
-        position: relative;
-        margin: 0;
-        display: inline-block;
-        vertical-align: top;
-      }
-      @media only screen and (max-width: 990px) {
-        max-width: 140px;
+      @media only screen and (max-width: 1024px) {
+        max-width: 110px;
       }
     }
     &--menu {
@@ -61,7 +56,7 @@
       position: absolute;
       top: 0px;
 
-      @media only screen and (min-width: 990px) {
+      @media only screen and (min-width: 1025px) {
         display: inline-block;
         vertical-align: top;
         position: relative;
@@ -94,7 +89,7 @@
         vertical-align: top;
         text-align: right;
 
-        @media only screen and (max-width: 990px) {
+        @media only screen and (max-width: 1024px) {
           &#icon-user {
             display: none;
           }
@@ -136,7 +131,7 @@
         transform: scale(0.5);
       }
 
-      @media only screen and (min-width: 990px) {
+      @media only screen and (min-width: 1025px) {
         display: none !important;
       }
 
@@ -155,7 +150,7 @@
     &__content {
       position: fixed;
       background-color: rgb(255, 255, 255);
-      top: 119px;
+      top: 41px !important;
       bottom: 0px;
       left: -350px;
       width: 350px;
@@ -170,7 +165,7 @@
         top: 0;
         bottom: 145px;
 
-        @media only screen and (max-width: 990px) {
+        @media only screen and (max-width: 1024px) {
           overflow: auto;
         }
 
@@ -197,7 +192,7 @@
             top: -1px;
           }
 
-          @media only screen and (min-width: 990px) {
+          @media only screen and (min-width: 1025px) {
             display: none !important;
           }
         }
@@ -205,7 +200,7 @@
         li {
           list-style: none;
 
-          @media only screen and (min-width: 990px) {
+          @media only screen and (min-width: 1025px) {
             display: inline-block;
             vertical-align: middle;
             position: relative;
@@ -241,17 +236,15 @@
             padding: 14px 26px;
             display: block;
 
-            @media only screen and (min-width: 990px) {
-              padding: 0px 12px;
-              font-size: 14px;
-              color: #000;
+            @media only screen and (min-width: 1025px) {
+              padding: 0px 36px;
 
               &:hover {
                 text-decoration: underline;
               }
             }
 
-            @media only screen and (max-width: 990px) {
+            @media only screen and (max-width: 1024px) {
               &:hover {
                 background-color: rgb(238, 238, 238);
               }
@@ -259,11 +252,17 @@
             
           }
 
+          &:first-child {
+            a {
+              padding-left: 0px !important;
+            }
+          }
+
           .item-details {
             padding: 14px 26px;
             display: block;
 
-            @media only screen and (min-width: 990px) {
+            @media only screen and (min-width: 1025px) {
               padding: 0px 12px;
               
               summary {
@@ -279,14 +278,14 @@
                 top: 8px;
 
                 &:nth-child(1) {
-                  @media only screen and (min-width: 990px) {
+                  @media only screen and (min-width: 1025px) {
                     display: none !important;
                   }
                 }
                 &:nth-child(2) {
                   display: none !important;
 
-                  @media only screen and (min-width: 990px) {
+                  @media only screen and (min-width: 1025px) {
                     display: inline-block !important;
                     position: relative;
                     top: -1px;
@@ -296,7 +295,7 @@
               }
             }
 
-            @media only screen and (max-width: 990px) {
+            @media only screen and (max-width: 1024px) {
               &:hover {
                 background-color: rgb(238, 238, 238);
               }
@@ -304,10 +303,10 @@
 
             &.open {
               .i-header-menu__content--items__item--submenu {
-                @media only screen and (max-width: 990px) {
+                @media only screen and (max-width: 1024px) {
                   left: 0%;
                 }
-                @media only screen and (min-width: 990px) {
+                @media only screen and (min-width: 1025px) {
                   visibility: visible;
                   opacity: 1;
                   top: 30px;
@@ -315,7 +314,7 @@
               }
 
               .item-details {
-                @media only screen and (min-width: 990px) {
+                @media only screen and (min-width: 1025px) {
                   .i-header-menu__content--items__item--submenu--items__item--submenu {
                     right: auto;
                     left: 100%;
@@ -325,7 +324,7 @@
                 }
 
                 &.open {
-                  @media only screen and (min-width: 990px) {
+                  @media only screen and (min-width: 1025px) {
                     .i-header-menu__content--items__item--submenu--items__item--submenu {
                       visibility: visible;
                       opacity: 1;
@@ -349,7 +348,7 @@
               background-color: #fff;
               border: 1px solid #e5e5e5;
 
-              @media only screen and (min-width: 990px) {
+              @media only screen and (min-width: 1025px) {
                 left: 10px;
                 top: 14px;
                 width: auto;
@@ -370,7 +369,7 @@
                 bottom: 0px;
                 overflow: auto;
 
-                @media only screen and (min-width: 990px) {
+                @media only screen and (min-width: 1025px) {
                   position: relative;
                   overflow: visible;
                   min-width: 160px;
@@ -380,7 +379,7 @@
                   .item-details {
                     &.open {
                       .i-header-menu__content--items__item--submenu--items__item--submenu {
-                        @media only screen and (max-width: 990px) {
+                        @media only screen and (max-width: 1024px) {
                           left: 0%;
                         }
                       }
@@ -393,7 +392,7 @@
 
           &.i-header-menu__content--items__item {
             & > .item-details.open {
-              @media only screen and (min-width: 990px) {
+              @media only screen and (min-width: 1025px) {
                 & > summary {
                   svg {
                     &:nth-child(2) {
@@ -406,18 +405,19 @@
           }
         }
 
-        @media only screen and (min-width: 990px) {
+        @media only screen and (min-width: 1025px) {
           position: relative;
           bottom: auto;
           width: auto;
         }
       }
 
-      @media only screen and (min-width: 990px) {
+      @media only screen and (min-width: 1025px) {
         position: relative;
         top: auto !important;
         left: auto;
         width: auto;
+        background-color: transparent;
       }
     }
 

@@ -2,7 +2,7 @@
 @import "./../plugins/slick-carousel/slick/slick.css";
 @import "./../plugins/slick-carousel/slick/slick-theme.css";
 
-// Base
+// Foundations
 @import "./base/fonts";
 @import "./base/variables";
 @import "./base/colors";
@@ -19,7 +19,10 @@
 @import "./components/minicart";
 
 
-
-
 // Sections
 @import "./sections/header";
+
+
+body {
+    background-color: gray !important;
+}
