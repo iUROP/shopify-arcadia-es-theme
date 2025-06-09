@@ -5,20 +5,39 @@ import Icon from '../atoms/Icon'
 import VerticalCenter from '../atoms/VerticalCenter'
 import CartItem from '../molecules/CartItem'
 
-
 function MiniCart({
   blocks
 }) {
   const [cartQty, setCartQty] = useState(false)
   const [lineItems, setLineItems] = useState(false)
   const [showCart, setShowCart] = useState(false)
+  const [cartTotal, setCartTotal] = useState(10)
 
   useEffect(() => {
     async function get() {
       const cart = await Permalink.getCart()
-      if (cart && cart.items) setLineItems(cart.items)
+      const items =  []
+      if (cart && cart.items) {
+
+        for (const item of cart.items) {
+          const handle = item.handle;
+          const product = await fetch(`/products/${handle}.js`).then(res => res.json());
+          if (product) {
+            const variant = product.variants.find(v => v.id === item.variant_id);
+
+            if (variant) {
+              item['compare_at_price'] = variant.compare_at_price
+            }
+          }
+          items.push(item);
+        }
+        
+        setLineItems(items)
+      }
 
       setCartQty(cart.item_count)
+      setCartTotal(cart.total_price)
+      console.log("cart info", cart)
     }
     get()
 
@@ -125,11 +144,23 @@ function MiniCart({
           }
         </div>
         <div className='i-minicart-container__snap--footer'>
-          <div className='i-minicart-container__snap--footer__freeshipping'>
-            footer
+          <div className='i-minicart-container__snap--footer__subtotals'>
+            <div className='i-minicart-container__snap--footer__subtotals--row'>
+              <div className='i-minicart-container__snap--footer__subtotals--row__key'>Shipping Cost</div>
+              <div className='i-minicart-container__snap--footer__subtotals--row__value'>
+                <strong>Free</strong>
+              </div>
+            </div>
+            <div className='i-minicart-container__snap--footer__subtotals--row'>
+              <div className='i-minicart-container__snap--footer__subtotals--row__key'>Subtotal</div>
+              <div className='i-minicart-container__snap--footer__subtotals--row__value'>€{Permalink.getPrice(cartTotal)}</div>
+            </div>
           </div>
           <div className='i-minicart-container__snap--footer__actions'>
-            footer
+            <a href="/checkout">Comprar miel</a>
+          </div>
+          <div className='i-minicart-container__snap--footer__cards'>
+            <Icon name="footer-cards" />
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Preloader from '../atoms/Preloader'
 import VerticalCenter from '../atoms/VerticalCenter'
 import Icon from '../atoms/Icon'
+import Stars from '../atoms/Stars'
 
 function CartItem({
   product
@@ -37,8 +38,21 @@ function CartItem({
     <div className={`i-cart-item`}>
       <div className='i-cart-item--image' style={{"backgroundImage": `url(${product.featured_image.url})`}}></div>
       <div className='i-cart-item--labels'>
+        <div className='i-cart-item--labels--reviews'>
+          <Stars stars={5} />
+        </div>
         <div className='i-cart-item--labels--name'>{product.product_title}</div>
-        <div className='i-cart-item--labels--price'>${Permalink.getPrice(product.price)}</div>
+
+        {product.compare_at_price && product.compare_at_price != product.price
+          ? <div className='i-cart-item--labels--price'>
+              €{Permalink.getPrice(product.price)}
+              <span>€{Permalink.getPrice(product.compare_at_price)}</span>
+            </div>
+          : <div className='i-cart-item--labels--price'>
+              €{Permalink.getPrice(product.price)}
+            </div>
+        }
+        
       </div>
       <div className='i-cart-item--actions'>
         <div className='i-cart-item--actions--qty'>

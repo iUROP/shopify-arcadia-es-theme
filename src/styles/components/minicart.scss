@@ -155,7 +155,7 @@ i-minicart {
         position: absolute;
         left: 0px;
         top: 110px;
-        bottom: 200px;
+        bottom: 240px;
         right: 0px;
         overflow: auto;
         padding: 8px 10px;
@@ -176,47 +176,88 @@ i-minicart {
             left: 4px;
             top: 0px;
             bottom: 8px;
-            width: 110px;
+            width: 100px;
             background-position: center center;
             background-size: cover;
             background-repeat: no-repeat;
             display: block;
+            border-radius: 10px;
           }
           &--labels {
             position: absolute;
-            left: 130px;
-            right: 36px;
+            left: 120px;
+            right: 0px;
             top: 0px;
             bottom: 8px;
 
+            &--reviews {
+              height: 12px;
+              .i-product-stars {
+                display: flex;
+                height: 100%;
+
+                .i-icon {
+                  height: 12px !important;
+                  width: 12px !important;
+                  margin: 0 !important;
+                  margin-right: 2px !important;
+
+                  .icon-star-review {
+                    line-height: 12px;
+                  }
+                }
+              }
+            }
+
             &--name {
-              font-size: 14px;
-              line-height: 16px;
-              font-weight: 600;
               margin-bottom: 4px;
+              color: #000;
+              font-family: var(--Family-Font---Body, "Instrument Sans");
+              font-size: var(--Typo-Body-M, 16px);
+              font-style: normal;
+              font-weight: 700;
+              line-height: 18px;
+              margin-top: 9px;
+              width: 50%;
             }
             &--desc {
               font-size: 14px;
               line-height: 16px;
             }
             &--price {
-              font-size: 16px;
-              line-height: 18px;
-              margin: 10px 0px;
+              position: absolute;
+              right: 0px;
+              top: -3px;
+              margin: 0;
+              color: #343434;
+              font-family: var(--Family-Font---Body, "Instrument Sans");
+              font-size: var(--Typo-Body-M, 16px);
+              font-style: normal;
+              font-weight: 700;
+              line-height: 25px;
+
+              span {
+                font-weight: 400;
+                color: #464646;
+                margin-left: 7px;
+              }
             }
           }
           &--actions {
             position: absolute;
             left: 130px;
-            right: 16px;
-            height: 32px;
+            right: 0px;
+            height: 26px;
             bottom: 10px;
 
             &--qty {
               height: 100%;
-              width: 110px;
+              width: 70px;
+              height: 26px;
               position: relative;
               display: inline-block;
+              border-radius: 3px;
+              border: 0.642px solid #CDCDD7;
 
               input[type="number"]::-webkit-inner-spin-button,
               input[type="number"]::-webkit-outer-spin-button {
@@ -233,40 +274,37 @@ i-minicart {
               input {
                 padding: 0;
                 position: absolute;
-                left: 36px;
-                right: 36px;
+                left: 25px;
+                right: 25px;
                 width: auto;
                 bottom: 0px;
                 top: 0px;
                 border: 0;
+                padding: 0px !important;
+                background-color: transparent;
               }
               button {
                 position: absolute;
                 top: 0;
                 bottom: 0;
                 border: 0;
-                width: 32px;
-                background: #fcfcfc;
+                width: 25px;
+                background: transparent;
                 font-weight: bold;
                 cursor: pointer;
                 padding: 0px;
-                border-radius: 6px;
-                box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.05);
-                -webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.05);
-                -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.05);
                 z-index: 2;
+                text-align: center;
+                border: 0px;
 
                 .i-icon {
                   display: block;
                   margin: 0;
                   width: 100%;
                   height: 100%;
-                  transform: scale(0.5);
-                  span {
-                    svg {
-
-                    }
-                  }
+                  transform: scale(0.4);
+                  position: relative;
+                  top: -2px;
                 }
                 
                 
@@ -305,18 +343,17 @@ i-minicart {
 
           &--delete {
             position: absolute;
-            top: 0px;
+            bottom: 15px;
             right: 10px;
             cursor: pointer;
-            opacity: 0.7;
 
             &:hover {
-              opacity: 0.5;
+              opacity: 0.7;
             }
 
             .i-icon {
-              width: 20px;
-              height: 20px;
+              width: 14px !important;
+              height: 14px !important;
             }
           }
         }
@@ -330,8 +367,67 @@ i-minicart {
         left: 0px;
         bottom: 0px;
         right: 0px;
-        height: 200px;
+        height: 250px;
         border-top: 1px solid rgb(247, 247, 247);
+        padding: 29px;
+        
+        &__subtotals {
+          &--row {
+            display: flex;
+            margin: 6px 0px;
+            &__key {
+              color: #000;
+              font-family: var(--Family-Font---Body, "Instrument Sans");
+              font-size: var(--Typo-Body-M, 16px);
+              font-style: normal;
+              font-weight: 400;
+              line-height: 25px;
+              flex: 1;
+            }
+            &__value {
+              color: #000;
+              text-align: right;
+              font-family: var(--Family-Font---Body, "Instrument Sans");
+              font-size: var(--Typo-Body-M, 16px);
+              font-style: normal;
+              font-weight: 400;
+              line-height: 25px;
+              flex: 1;
+              text-align: right;
+
+              strong {
+                font-weight: 700;
+              }
+            }
+          }
+        }
+        &__actions {
+          text-align: center;
+          a {
+            border-radius: var(--Corner-Full, 10000px);
+            background: var(--Colors-100, #5B1414);
+            color: var(--Colors-White, var(--Colors-white, #FFF));
+            font-family: var(--Family-Font, Besley);
+            font-size: var(--Typo-Body-M, 16px);
+            font-style: normal;
+            font-weight: 600;
+            line-height: 95%;
+            letter-spacing: -0.48px;
+            width: 300px;
+            display: block;
+            margin: 30px auto;
+            margin-bottom: 32px;
+            padding: 17px 0px;
+            text-decoration: none;
+            text-shadow: none;
+          }
+        }
+        &__cards {
+          .i-icon {
+            width: 100% !important;
+            height: auto !important;
+          }
+        }
       }
     }
 

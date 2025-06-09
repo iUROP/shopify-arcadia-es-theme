@@ -172,8 +172,8 @@ window.Permalink = function() {
 
   }
 
-  const getPrice = function(number) {
-    const formatter = new Intl.NumberFormat('en-US', {
+  const getPrice = function(number, currency='en-US') {
+    const formatter = new Intl.NumberFormat(currency, {
       style: 'currency',
       currency: 'USD',
       minimumFractionDigits: 0,
