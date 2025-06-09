@@ -1,29 +1,13 @@
 <header class="i-header-container rule" style="height: {{ section.settings.container_height }}px;">
 
   <div class="i-header-container__content i-container">
-    <div class="i-header-container__content--logo rule" style="width: {{ settings.logo_width }}px;">
+    <div class="i-header-container__content--logo rule">
       <div class="re">
         <div class="ce">
           <a href="{{ routes.root_url }}" class="header__logo">
-            {%- if settings.logo != blank -%}
-              <div class="header__logo--wrapper">
-                {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
-                {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
-                {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
-                {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
-                {{ settings.logo | image_url: width: 600 | image_tag:
-                  class: 'header__logo--reduce',
-                  widths: widths,
-                  height: logo_height,
-                  width: settings.logo_width,
-                  alt: logo_alt,
-                  sizes: sizes,
-                  preload: true
-                }}
-              </div>
-            {%- else -%}
-              <span class="h2">{{ shop.name }}</span>
-            {%- endif -%}
+            <div class="header__logo--wrapper">
+              <img src="{{ section.settings.logo_header | image_url: width: 400 }}" alt="Logo Arcadia" />
+            </div>
           </a>
         </div>
       </div>
@@ -44,9 +28,9 @@
 
       {% comment %} {% render 'header-search', input_id: 'Search-In-Modal' %} {% endcomment %}
     </div>
-    <div class="i-header-container__content--icons">
+    <div class="i-header-container__content--icons rule">
 
-      <div id="icon-search" class="i-header-container__content--icons__icon">
+      {% comment %} <div id="icon-search" class="i-header-container__content--icons__icon rule">
         <div class="re">
           <div class="ce">
             sea
@@ -54,15 +38,15 @@
         </div>
       </div>
 
-      <div id="icon-user" class="i-header-container__content--icons__icon">
+      <div id="icon-user" class="i-header-container__content--icons__icon rule">
         <div class="re">
           <div class="ce">
             us
           </div>
         </div>
-      </div>
+      </div> {% endcomment %}
 
-      <div id="icon-minicart" class="i-header-container__content--icons__icon">
+      <div id="icon-minicart" class="i-header-container__content--icons__icon rule">
         <i-minicart blocks="{{ settings.enable_permalink_cart }}" />
       </div>
     </div>
@@ -86,7 +70,11 @@
       "default": "main-menu",
       "label": "t:sections.header.settings.menu.label"
     },
-
+    {
+      "type": "image_picker",
+      "id": "logo_header",
+      "label": "Logo header"
+    },
 
 
 

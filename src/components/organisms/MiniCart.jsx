@@ -46,7 +46,7 @@ function MiniCart({
   }
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: false,
     speed: 500,
     autoplaySpeed: 4000,
@@ -61,8 +61,8 @@ function MiniCart({
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: true,
-          dots: true
+          infinite: false,
+          dots: false
         }
       }
     ]
@@ -70,12 +70,8 @@ function MiniCart({
 
   const list = [
     {
-      "title": "100% secure purchase",
-      "icon": "mi icon url"
-    },
-    {
-      "title": "mi title 2",
-      "icon": "mi icon url 2"
+      "title": " 90 Days Money back guarentee",
+      "icon": false
     }
   ]
 
@@ -92,7 +88,10 @@ function MiniCart({
       <div className={`i-minicart-container__snap slow_ani ${showCart ? 'open' : ''}`}>
         <div className='i-minicart-container__snap--header'>
           <VerticalCenter>
-            <h2>Carrito {cartQty && <>({cartQty})</>}</h2>
+            <h2>
+              Tu carrito
+              <span>{cartQty && <>({cartQty})</>}</span>
+            </h2>
           </VerticalCenter>
           <button onClick={cartToggler} className='i-minicart-container__snap--header__close slow_ani'>
             <Icon name="close" />
@@ -121,7 +120,7 @@ function MiniCart({
                     <CartItem product={item} key={index} />
                   )
                 })
-              : <>Carrito vacio</>
+              : <div className='empty-cart-state'>Carrito vacio</div>
             : <>Cargando items...</>
           }
         </div>

@@ -629,6 +629,10 @@ html, body {
   justify-content: center;
 }
 
+.shopify-section-group-header-group {
+  z-index: 1;
+}
+
 .i-preloader-container__section {
   position: relative;
   display: inline-block;
@@ -676,13 +680,14 @@ i-minicart .i-minicart-container {
 }
 i-minicart .i-minicart-container__snap {
   position: fixed;
-  right: -350px;
-  width: 350px;
+  right: -420px;
+  width: 420px;
   top: 0px;
   bottom: 0px;
   z-index: 4;
-  background-color: #fff;
+  background-color: #FAF5E8;
   text-align: left;
+  max-width: 90%;
 }
 @media only screen and (min-width: 990px) {
   i-minicart .i-minicart-container__snap {
@@ -703,14 +708,21 @@ i-minicart .i-minicart-container__snap--header {
 }
 i-minicart .i-minicart-container__snap--header__close {
   position: absolute;
-  right: 10px;
-  top: 0;
+  right: 25px;
+  top: 10px;
   bottom: 0px;
   background: transparent;
   border: 0px;
   cursor: pointer;
   z-index: 2;
   padding: 0px;
+  width: 16px;
+  height: 16px;
+  margin: auto;
+}
+i-minicart .i-minicart-container__snap--header__close .i-icon {
+  width: 100% !important;
+  height: 100% !important;
 }
 i-minicart .i-minicart-container__snap--header__close svg {
   width: 100%;
@@ -720,14 +732,29 @@ i-minicart .i-minicart-container__snap--header__close:hover {
   transform: scale(0.9);
   opacity: 0.8;
 }
+i-minicart .i-minicart-container__snap--header h2 {
+  text-align: center;
+  color: var(--Colors-800, var(--Colors-800, #1E1E1E));
+  text-align: center;
+  font-family: var(--Family-Font, Besley);
+  font-size: var(--Typo-Body-XL, 25px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.75px;
+}
+i-minicart .i-minicart-container__snap--header h2 span {
+  display: none;
+}
 i-minicart .i-minicart-container__snap--deals {
   position: absolute;
   left: 0px;
   top: 70px;
   right: 0px;
-  height: 40px;
-  background-color: #000;
+  height: 28px;
+  background-color: #887E64;
   color: #fff;
+  text-align: center;
 }
 i-minicart .i-minicart-container__snap--deals .slick-slider {
   height: 100%;
@@ -747,6 +774,13 @@ i-minicart .i-minicart-container__snap--deals .slick-slider .slick-list .slick-t
 }
 i-minicart .i-minicart-container__snap--deals .slick-slider .slick-list .slick-track .slick-slide .i-centry {
   padding: 0 20px;
+  color: #FFF;
+  text-align: center;
+  font-family: var(--Family-Font---Body, "Instrument Sans");
+  font-size: var(--Typo-Body-S, 13px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 i-minicart .i-minicart-container__snap--deals .slick-slider .slick-dots {
   display: block;
@@ -924,6 +958,10 @@ i-minicart .i-minicart-container__snap--items .i-cart-item--delete .i-icon {
   width: 20px;
   height: 20px;
 }
+i-minicart .i-minicart-container__snap--items .empty-cart-state {
+  text-align: center;
+  margin-top: 30px;
+}
 i-minicart .i-minicart-container__snap--footer {
   position: absolute;
   left: 0px;
@@ -977,7 +1015,7 @@ i-minicart .i-minicart-container__overlay.open {
   height: 100%;
 }
 .i-header-container__content--logo {
-  width: 110px;
+  width: 105px;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -987,6 +1025,14 @@ i-minicart .i-minicart-container__overlay.open {
 }
 .i-header-container__content--logo .header__logo {
   text-decoration: none;
+  display: block;
+}
+.i-header-container__content--logo .header__logo--wrapper {
+  display: flex;
+}
+.i-header-container__content--logo .header__logo--wrapper img {
+  width: 100%;
+  height: auto;
   display: block;
 }
 .i-header-container__content--logo img {
@@ -1020,7 +1066,6 @@ i-minicart .i-minicart-container__overlay.open {
   display: none;
 }
 .i-header-container__content--icons {
-  outline: 1px solid rgb(126, 126, 0);
   width: 150px;
   right: 48px;
   position: absolute;
@@ -1034,11 +1079,11 @@ i-minicart .i-minicart-container__overlay.open {
 }
 .i-header-container__content--icons__icon {
   height: 100%;
-  width: 38px;
-  outline: 1px solid red;
+  width: 30px;
   display: inline-block;
   vertical-align: top;
   text-align: right;
+  margin-left: 16px;
 }
 @media only screen and (max-width: 1024px) {
   .i-header-container__content--icons__icon#icon-user {
@@ -1050,6 +1095,8 @@ i-minicart .i-minicart-container__overlay.open {
   cursor: pointer;
   margin-right: 0;
   margin-left: auto;
+  width: 28px;
+  height: 28px;
 }
 .i-header-container .i-header-menu {
   position: relative;
@@ -1364,9 +1411,6 @@ body.open-cart {
   overflow: hidden;
   width: 100%;
   margin-right: 15px;
-}
-body.open-cart .shopify-section-group-header-group {
-  z-index: 1;
 }
 
 body {

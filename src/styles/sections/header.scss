@@ -27,7 +27,7 @@
     }
 
     &--logo {
-      width: 110px;
+      width: 105px;
       position: absolute;
       top: 0px;
       left: 0px;
@@ -38,6 +38,15 @@
       .header__logo {
         text-decoration: none;
         display: block;
+
+        &--wrapper {
+          display: flex;
+          img {
+            width: 100%;
+            height: auto;
+            display: block;
+          }
+        }
       }
 
       img {
@@ -70,7 +79,6 @@
       display: none;
     }
     &--icons {
-      outline: 1px solid rgb(126, 126, 0);
       width: 150px;
       right: $Space-1200;
       position: absolute;
@@ -83,11 +91,11 @@
 
       &__icon {
         height: 100%;
-        width: 38px;
-        outline: 1px solid red;
+        width: 30px;
         display: inline-block;
         vertical-align: top;
         text-align: right;
+        margin-left: 16px;
 
         @media only screen and (max-width: 1024px) {
           &#icon-user {
@@ -101,6 +109,8 @@
             cursor: pointer;
             margin-right: 0;
             margin-left: auto;
+            width: 28px;
+            height: 28px;
           }
         }
       }
@@ -473,8 +483,4 @@ body.open-cart {
   overflow: hidden;
   width: 100%;
   margin-right: 15px;
-
-  .shopify-section-group-header-group {
-    z-index: 1;
-  }
 }

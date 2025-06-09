@@ -19,8 +19,8 @@
     "header": {
       "type": "header",
       "settings": {
-        "header__layout_box": true,
         "menu": "main-menu",
+        "logo_header": "shopify://shop_images/logo.png",
         "container_height": 76
       }
     }

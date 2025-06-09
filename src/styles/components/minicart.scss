@@ -8,13 +8,14 @@ i-minicart {
 
     &__snap{
       position: fixed;
-      right: -350px;
-      width: 350px;
+      right: -420px;
+      width: 420px;
       top: 0px;
       bottom: 0px;
       z-index: 4;
-      background-color: #fff;
+      background-color: #FAF5E8;
       text-align: left;
+      max-width: 90%;
 
       @media only screen and (min-width: 990px) {
         right: -400px;
@@ -35,14 +36,22 @@ i-minicart {
 
         &__close {
           position: absolute;
-          right: 10px;
-          top: 0;
+          right: 25px;
+          top: 10px;
           bottom: 0px;
           background: transparent;
           border: 0px;
           cursor: pointer;
           z-index: 2;
           padding: 0px;
+          width: 16px;
+          height: 16px;
+          margin: auto;
+
+          .i-icon {
+            width: 100% !important;
+            height: 100% !important;
+          }
 
           svg {
             width: 100%;
@@ -54,15 +63,32 @@ i-minicart {
             opacity: 0.8;
           }
         }
+
+        h2 {
+          text-align: center;
+          color: var(--Colors-800, var(--Colors-800, #1E1E1E));
+          text-align: center;
+          font-family: var(--Family-Font, Besley);
+          font-size: var(--Typo-Body-XL, 25px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+          letter-spacing: -0.75px;
+
+          span {
+            display: none;
+          }
+        }
       }
       &--deals {
         position: absolute;
         left: 0px;
         top: 70px;
         right: 0px;
-        height: 40px;
-        background-color: #000;
+        height: 28px;
+        background-color: #887E64;
         color: #fff;
+        text-align: center;
         .slick-slider {
           height: 100%;
           .slick-list {
@@ -77,6 +103,13 @@ i-minicart {
                 }
                 .i-centry {
                   padding: 0 20px;
+                  color: #FFF;
+                  text-align: center;
+                  font-family: var(--Family-Font---Body, "Instrument Sans");
+                  font-size: var(--Typo-Body-S, 13px);
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
                 }
                 
               }
@@ -286,6 +319,10 @@ i-minicart {
               height: 20px;
             }
           }
+        }
+        .empty-cart-state {
+          text-align: center;
+          margin-top: 30px;
         }
       }
       &--footer {
