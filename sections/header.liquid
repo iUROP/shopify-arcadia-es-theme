@@ -1,7 +1,7 @@
-<header class="i-header-container rule" style="height: {{ section.settings.container_height }}px;">
+<header class="i-header-container" style="height: {{ section.settings.container_height }}px;">
 
   <div class="i-header-container__content i-container">
-    <div class="i-header-container__content--logo rule">
+    <div class="i-header-container__content--logo">
       <div class="re">
         <div class="ce">
           <a href="{{ routes.root_url }}" class="header__logo">
@@ -28,7 +28,7 @@
 
       {% comment %} {% render 'header-search', input_id: 'Search-In-Modal' %} {% endcomment %}
     </div>
-    <div class="i-header-container__content--icons rule">
+    <div class="i-header-container__content--icons">
 
       {% comment %} <div id="icon-search" class="i-header-container__content--icons__icon rule">
         <div class="re">
@@ -46,7 +46,7 @@
         </div>
       </div> {% endcomment %}
 
-      <div id="icon-minicart" class="i-header-container__content--icons__icon rule">
+      <div id="icon-minicart" class="i-header-container__content--icons__icon">
         <i-minicart blocks="{{ settings.enable_permalink_cart }}" />
       </div>
     </div>

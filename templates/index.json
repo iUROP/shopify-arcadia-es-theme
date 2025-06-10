@@ -9,43 +9,79 @@
  */
 {
   "sections": {
-    "featured_collection": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
-        "padding_bottom": 36
-      }
+    "i_section_primary_banner_jnB79p": {
+      "type": "i-section-primary-banner",
+      "name": "iUROP section - Hero",
+      "settings": {}
     },
-    "components_viewer_wgAQK6": {
-      "type": "components-viewer",
-      "name": "iUROP components",
+    "i_section_marqee_yrBH6y": {
+      "type": "i-section-marqee",
+      "name": "iUROP section - Marqee",
+      "settings": {}
+    },
+    "i_section_product_list_bbbHLt": {
+      "type": "i-section-product-list",
+      "name": "iUROP section - P List",
+      "settings": {}
+    },
+    "i_section_parallax_3Ni3FE": {
+      "type": "i-section-parallax",
+      "name": "iUROP section - Parallax",
+      "settings": {}
+    },
+    "i_section_compare_versus_rkeVgq": {
+      "type": "i-section-compare-versus",
+      "name": "iUROP section - Comparer",
+      "settings": {}
+    },
+    "i_section_parallax_eDdA9H": {
+      "type": "i-section-parallax",
+      "name": "iUROP section - Parallax",
+      "settings": {}
+    },
+    "i_section_specifications_nn6mmj": {
+      "type": "i-section-specifications",
+      "name": "iUROP section - Specs",
+      "settings": {}
+    },
+    "i_section_simple_testimonies_fBgBpU": {
+      "type": "i-section-simple-testimonies",
+      "name": "iUROP section - Opinions",
+      "settings": {}
+    },
+    "i_section_product_testimonies_GyeKNr": {
+      "type": "i-section-product-testimonies",
+      "name": "iUROP section - P Rev",
+      "settings": {}
+    },
+    "i_section_image_text_B87Rdc": {
+      "type": "i-section-image-text",
+      "name": "iUROP section - ImageText",
+      "settings": {}
+    },
+    "i_section_faqs_HJH7nm": {
+      "type": "i-section-faqs",
+      "name": "iUROP section - Faqs",
+      "settings": {}
+    },
+    "i_section_instagram_LBwPDT": {
+      "type": "i-section-instagram",
+      "name": "iUROP section - Instagram",
       "settings": {}
     }
   },
   "order": [
-    "featured_collection",
-    "components_viewer_wgAQK6"
+    "i_section_primary_banner_jnB79p",
+    "i_section_marqee_yrBH6y",
+    "i_section_product_list_bbbHLt",
+    "i_section_parallax_3Ni3FE",
+    "i_section_compare_versus_rkeVgq",
+    "i_section_parallax_eDdA9H",
+    "i_section_specifications_nn6mmj",
+    "i_section_simple_testimonies_fBgBpU",
+    "i_section_product_testimonies_GyeKNr",
+    "i_section_image_text_B87Rdc",
+    "i_section_faqs_HJH7nm",
+    "i_section_instagram_LBwPDT"
   ]
 }

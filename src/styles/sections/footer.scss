@@ -1,0 +1,197 @@
+.i-footer-container {
+  background: var(--Colors-300, #EEE6D4);
+  padding: $Space-1600 0px;
+  &__content {
+
+    &--cols {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: -4px;
+    }
+    &--col-1 {
+      width: 23.5%;
+      box-sizing: border-box;
+      padding-right: 40px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        display: none !important;
+      }
+    }
+    &--col-2 {
+      width: 42%;
+      box-sizing: border-box;
+      padding-right: 30px;
+      .Typo-H3 {
+        margin-bottom: 16px;
+        margin-top: 0px;
+      }
+      .Typo-Body-M  {
+        line-height: 24px;
+        margin: 0px;
+        max-width: 465px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        width: 100%;
+        padding: 0;
+      }
+    }
+    &--col-3 {
+      width: 17%;
+
+      @media only screen and (max-width: 1024px) {
+        width: 50%;
+      }
+
+      .Typo-Body-XL {
+        margin-bottom: 24px;
+        margin-top: 0px;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0px;
+        li {
+          list-style: none;
+          a {
+            text-decoration: none;
+            display: block;
+            margin-bottom: 22px;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    &--cols-absolute {
+      position: absolute;
+      right: 50px;
+      bottom: 0px;
+      z-index: 1;
+      width: 32%;
+
+      img {
+        width: 100%;
+        height: auto;
+        margin-bottom: -8px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        position: relative;
+        right: 0;
+        width: 100%;
+
+        .i-footer-copyright {
+          display: flex !important;
+          margin-bottom: 22px;
+
+          span {
+            flex: 1;
+            &:first-child {
+              line-height: 28px;
+            }
+            &:last-child {
+              text-align: right;
+
+              a {
+                &:last-child {
+                  margin-right: 0px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .i-footer-form {
+      margin-top: $Space-800;
+      margin-bottom: 76px;
+
+      @media only screen and (max-width: 1024px) {
+        margin-bottom: 50px;
+      }
+
+      form {
+        max-width: 465px;
+        position: relative;
+        .newsletter-form__field-wrapper {
+          .field {
+            &:before,
+            &:after {
+              display: none;
+            }
+            input {
+              border-radius: var(--Corner-Full, 10000px);
+              border: var(--Strokes-Small, 1px) solid var(--Colors-grey, #464646);
+              color: var(--Colors-Grey, var(--Colors-grey, #464646));
+              font-family: var(--Family-Font, Besley);
+              font-size: var(--Typo-Body-M, 16px);
+              font-style: normal;
+              font-weight: 600;
+              line-height: 95%;
+              letter-spacing: -0.48px;
+              height: 50px;
+              background-color: transparent;
+              margin: 0;
+              outline: 0 !important;
+              box-shadow: none !important;
+              @media only screen and (max-width: 1024px) {
+                height: 40px;
+              }
+
+              &::placeholder {
+                color: var(--Colors-Grey, var(--Colors-grey, #464646)) !important;
+              }
+            }
+            button {
+              border-radius: var(--Corner-Full, 10000px);
+              background: var(--Colors-100, #5B1414);
+              color: var(--Colors-200, var(--Colors-200, #FAF5E8));
+              font-family: var(--Family-Font, Besley);
+              font-size: var(--Typo-Body-M, 16px);
+              font-style: normal;
+              font-weight: 600;
+              line-height: 95%;
+              letter-spacing: -0.48px;
+              height: 50px;
+              width: 170px;
+
+              @media only screen and (max-width: 1024px) {
+                height: 40px;
+              }
+            }
+            label {
+              @media only screen and (max-width: 1024px) {
+                margin-top: -4px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .i-footer-copyright {
+      @media only screen and (max-width: 1024px) {
+        display: none;
+      }
+      a {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 18px;
+
+        &:first-of-type {
+          margin-left: 30px;
+        }
+      }
+    }
+    .logo-mobile-footer {
+      margin-top: 52px;
+    }
+  }
+}

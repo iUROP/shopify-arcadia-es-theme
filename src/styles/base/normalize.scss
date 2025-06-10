@@ -26,7 +26,24 @@
     padding: 0 $Grid-MGrid-Margin;
   }
 }
+.i-relative {
+  position: relative;
+}
 
 .rule {
   outline: 1px solid $ruleColor;
+}
+.ruleDark {
+  outline: 1px solid gray;
+}
+
+.only-mobile {
+  @media only screen and (min-width: 1025px) {
+    display: none !important;
+  }
+}
+.only-desktop {
+  @media only screen and (max-width: 1024px) {
+    display: none !important;
+  }
 }
