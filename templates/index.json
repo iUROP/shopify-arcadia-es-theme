@@ -12,7 +12,10 @@
     "i_section_primary_banner_jnB79p": {
       "type": "i-section-primary-banner",
       "name": "iUROP section - Hero",
-      "settings": {}
+      "settings": {
+        "banner_image": "shopify://shop_images/hero-section.png",
+        "banner_image_mobile": "shopify://shop_images/primary-banner.png"
+      }
     },
     "i_section_marqee_yrBH6y": {
       "type": "i-section-marqee",

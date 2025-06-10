@@ -1,12 +1,30 @@
-<div class="i-section" data-aos="fade-up">
-  Hero section here
+<div class="i-section i-section-full" data-aos="fade-up">
+  <div class="i-section-primary-hero Bg-Colors-100">
+    
+    <div class="i-section-primary-hero__overlay"></div>
+    <img src="{{ section.settings.banner_image | image_url: width: 1600 }}" alt="Banner Arcadia" class="bg-image" />
+  </div>
 </div>
+
+{% comment %} <video autoplay muted loop playsinline class="bg-image">
+  <source src="{{ 'video_home.mp4' | asset_url }}" type="video/mp4" />
+</video> {% endcomment %}
 
 {% schema %}
 {
   "name": "iUROP section - Hero",
+  "class": "section-primary-banner",
   "settings": [
-
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Imagen (escritorio)"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image_mobile",
+      "label": "Imagen (mobile)"
+    }
   ],
   "blocks": [],
   "presets": [

@@ -1,5 +1,8 @@
 .section-header {
-  position: sticky;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  margin-top: 41px;
 
   &.sticky {
     top: var(--_top);
