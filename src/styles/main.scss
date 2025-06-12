@@ -13,13 +13,17 @@
 
 // Components
 @import "./components/announcement-bar";
+@import "./components/add-to-cart";
+
 
 @import "./components/preloader";
 @import "./components/icon";
 @import "./components/minicart";
 
-
 // Sections
 @import "./sections/header";
 @import "./sections/footer";
 @import "./sections/sections";
+
+// Snippets
+@import "./sections/snippets";

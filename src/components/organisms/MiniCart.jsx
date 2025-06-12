@@ -11,7 +11,7 @@ function MiniCart({
   const [cartQty, setCartQty] = useState(false)
   const [lineItems, setLineItems] = useState(false)
   const [showCart, setShowCart] = useState(false)
-  const [cartTotal, setCartTotal] = useState(10)
+  const [cartTotal, setCartTotal] = useState(0)
 
   useEffect(() => {
     async function get() {
@@ -58,9 +58,7 @@ function MiniCart({
     }
   }, [showCart])
   
-
   const cartToggler = () => {
-    
     setShowCart(!showCart)
   }
 

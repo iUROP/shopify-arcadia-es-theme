@@ -1,12 +1,35 @@
 <div class="i-section" data-aos="fade-up">
-  Product list section here
+
+  <div class="i-section-product-list">
+    {% if section.settings.collection != blank %}
+      {% assign featured_collection = collections[section.settings.collection] %}
+      {% if featured_collection.products_count > 0 %}
+        <div class="collection-featured-products">
+          {% for product in featured_collection.products %}
+            {% render 'i-product-card' product: product %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <p>No hay productos en esta colección.</p>
+      {% endif %}
+    {% else %}
+      <p>Selecciona una colección en la configuración de la sección.</p>
+    {% endif %}
+  </div>
+
+
 </div>
 
 {% schema %}
 {
   "name": "iUROP section - P List",
+  "class": "section-product-list",
   "settings": [
-
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Colección"
+    }
   ],
   "blocks": [],
   "presets": [

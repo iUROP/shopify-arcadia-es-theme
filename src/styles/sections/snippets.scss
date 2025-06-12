@@ -1,0 +1,65 @@
+.i-product-card {
+  display: inline-block;
+  width: 22%;
+  margin-right: $Space-600;
+
+  @media only screen and (max-width: 1024px) {
+    width: 80%;
+  }
+
+  &__gallery {
+    aspect-ratio: 2 / 2.2;
+    display: block;
+    margin-bottom: $Space-400;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      margin-bottom: -10px;
+    }
+  }
+
+  &__labels {
+    &--reviews {
+      height: 12px;
+      .i-reviews-stars {
+        display: inline-block;
+        margin-right: 4px;
+        vertical-align: top;
+        height: 100%;
+        .i-icon {
+          width: 12px;
+          height: 12px;
+          padding: 0;
+          vertical-align: top;
+          svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+          }
+        }
+      }
+      span {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+    &--title {
+      letter-spacing: -0.93px;
+      margin-top: $Space-400;
+      margin-bottom: 18px;
+      padding-bottom: 6px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+    &--actions {
+      margin-top: $Space-400;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}

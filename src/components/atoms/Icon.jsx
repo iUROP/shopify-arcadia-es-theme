@@ -46,7 +46,6 @@ function Icon(props) {
             </svg>
           </span>
         }
-
         {props.name === "footer-cards" &&
           <span className={`icon-${props.name}`}>
             <svg width="377" height="19" viewBox="0 0 377 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,6 +99,15 @@ function Icon(props) {
             </svg>
           </span>
         }
+        {props.name === "preloader" &&
+          <span className={`icon-${props.name}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+              <circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="3" r="15" cx="35" cy="100"><animate attributeName="cx" calcMode="spline" dur="2" values="35;165;165;35;35" keySplines="0 .1 .5 1;0 .1 .5 1;0 .1 .5 1;0 .1 .5 1" repeatCount="indefinite" begin="0"></animate></circle><circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="3" opacity=".8" r="15" cx="35" cy="100"><animate attributeName="cx" calcMode="spline" dur="2" values="35;165;165;35;35" keySplines="0 .1 .5 1;0 .1 .5 1;0 .1 .5 1;0 .1 .5 1" repeatCount="indefinite" begin="0.05"></animate></circle><circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="3" opacity=".6" r="15" cx="35" cy="100"><animate attributeName="cx" calcMode="spline" dur="2" values="35;165;165;35;35" keySplines="0 .1 .5 1;0 .1 .5 1;0 .1 .5 1;0 .1 .5 1" repeatCount="indefinite" begin=".1"></animate></circle><circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="3" opacity=".4" r="15" cx="35" cy="100"><animate attributeName="cx" calcMode="spline" dur="2" values="35;165;165;35;35" keySplines="0 .1 .5 1;0 .1 .5 1;0 .1 .5 1;0 .1 .5 1" repeatCount="indefinite" begin=".15"></animate></circle><circle fill="#FFFFFF" stroke="#FFFFFF" stroke-width="3" opacity=".2" r="15" cx="35" cy="100"><animate attributeName="cx" calcMode="spline" dur="2" values="35;165;165;35;35" keySplines="0 .1 .5 1;0 .1 .5 1;0 .1 .5 1;0 .1 .5 1" repeatCount="indefinite" begin=".2"></animate></circle>
+            </svg>
+          </span>
+        }
+
+        
 
       </div>
     )

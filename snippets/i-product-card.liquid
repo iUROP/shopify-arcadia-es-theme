@@ -1,0 +1,21 @@
+<div class="i-product-card">
+  <a href="{{ product.url }}" class="i-product-card__gallery">
+    <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}" loading="lazy" class="Corner-Large" />
+  </a>
+  <div class="i-product-card__labels">
+    <div class="i-product-card__labels--reviews">
+      {% render 'review-star' star: 5 %}
+      <span class="Family-Font---Body Text-Colors-Grey Typo-Body-XS">4.9/5 (255 reseñas)</span>
+    </div>
+    <a class="i-product-card__labels--title Text-Colors-800 Family-Font Typo-H3">
+      {{ product.title }}
+    </a>
+    <div class="i-product-card__labels--prices Text-Colors-800 Family-Font---Body Typo-Body-L">
+      {{ product.price | money }}
+    </div>
+    <div class="i-product-card__labels--actions">
+      {% assign first_variant = product.variants.first %}
+      <i-add-to-cart blocks="Comprar miel|{{ first_variant.id }}" />
+    </div>
+  </div>
+</div>

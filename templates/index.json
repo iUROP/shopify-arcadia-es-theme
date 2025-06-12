@@ -19,13 +19,68 @@
     },
     "i_section_marqee_yrBH6y": {
       "type": "i-section-marqee",
+      "blocks": {
+        "announcement_cdGrre": {
+          "type": "announcement",
+          "settings": {
+            "marqee": "Obtención <strong>ética</strong>"
+          }
+        },
+        "announcement_FFCnLz": {
+          "type": "announcement",
+          "settings": {
+            "marqee": "<strong>100 % trazable</strong>"
+          }
+        },
+        "announcement_ahXVHK": {
+          "type": "announcement",
+          "settings": {
+            "marqee": "<strong>Sin azúcares</strong> añadidos"
+          }
+        },
+        "announcement_6HBgMa": {
+          "type": "announcement",
+          "settings": {
+            "marqee": "<strong>Sin conservantes</strong>"
+          }
+        },
+        "announcement_RrCbXx": {
+          "type": "announcement",
+          "settings": {
+            "marqee": "Certificado de Comercio Justo"
+          }
+        },
+        "announcement_RraMa7": {
+          "type": "announcement",
+          "settings": {
+            "marqee": "Sin <strong>aditivos</strong>"
+          }
+        },
+        "announcement_7T3ibm": {
+          "type": "announcement",
+          "settings": {
+            "marqee": "No modificado genéticamente"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_cdGrre",
+        "announcement_FFCnLz",
+        "announcement_ahXVHK",
+        "announcement_6HBgMa",
+        "announcement_RrCbXx",
+        "announcement_RraMa7",
+        "announcement_7T3ibm"
+      ],
       "name": "iUROP section - Marqee",
       "settings": {}
     },
     "i_section_product_list_bbbHLt": {
       "type": "i-section-product-list",
       "name": "iUROP section - P List",
-      "settings": {}
+      "settings": {
+        "collection": "frontpage"
+      }
     },
     "i_section_parallax_3Ni3FE": {
       "type": "i-section-parallax",
