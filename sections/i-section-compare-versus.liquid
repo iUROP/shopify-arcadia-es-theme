@@ -5,6 +5,27 @@
         <img src="{{ section.settings.banner_left | image_url: width: 1600 }}" alt="Product Arcadia" />
       </div>
     </div>
+
+
+    <div class="i-section-compare-versus-comparative individual-comparative only-mobile">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'especificacion' %}
+            <div class="i-section-compare-versus-comparative__item">
+
+              <div class="i-section-compare-versus-comparative__item--row">
+                <div class="i-section-compare-versus-comparative__item--row__progress" style="width: {{ block.settings.left_percent }}%"></div>
+              </div>
+              <div class="i-section-compare-versus-comparative__item--col Text-Colors-800 Family-Font---Body Typo-Body-M">
+                {{ block.settings.title }}
+              </div>
+
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+
+
     <div class="i-section-compare-versus__specs">
       <div class="compare-versus__header">
         <svg xmlns="http://www.w3.org/2000/svg" width="94" height="49" viewBox="0 0 94 49" fill="none">
@@ -26,7 +47,7 @@
         {% when 'especificacion' %}
           <div class="i-section-compare-versus-comparative__item">
 
-            <div class="i-section-compare-versus-comparative__item--row">
+            <div class="i-section-compare-versus-comparative__item--row is-left">
               <div class="i-section-compare-versus-comparative__item--row__progress" style="width: {{ block.settings.left_percent }}%"></div>
             </div>
             <div class="i-section-compare-versus-comparative__item--col Text-Colors-800 Family-Font---Body Typo-Body-M">
@@ -41,7 +62,9 @@
     {% endfor %}
   </div>
 
-
+  <div class="i-section-compare-versus-footer Text-Colors-800 Family-Font---Body Typo-Body-L">
+    * Por favor, elige con cuidado
+  </div>
     
 </div>
 

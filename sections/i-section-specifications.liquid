@@ -1,14 +1,118 @@
 <div class="i-section" data-aos="fade-up">
-  Specs section here
+  
+  <div class="i-section-specifications">
+
+    <div class="i-section-specifications--row row-head">
+      <div class="i-section-specifications--row__col-1">
+        <h2 class="Text-Colors-800 Family-Font Typo-H1">La fuente más saludable</h2>
+        {% if section.settings.button_text and section.settings.button_link %}
+          <a href="{{ section.settings.button_link }}" class="Text-Colors-White Family-Font Typo-Body-M">
+            {{ section.settings.button_text }}
+          </a>
+        {% endif %}
+      </div>
+      <div class="i-section-specifications--row__col-2 first-image">
+        <img src="{{ section.settings.banner_1 | image_url: width: 1600 }}" alt="Banner Arcadia" class="header-image" />
+      </div>
+      <div class="i-section-specifications--row__col-2">
+        <img src="{{ section.settings.banner_2 | image_url: width: 1600 }}" alt="Banner Arcadia" class="header-image" />
+      </div>
+      <div class="i-section-specifications--row__col-2">
+        <img src="{{ section.settings.banner_3 | image_url: width: 1600 }}" alt="Banner Arcadia" class="header-image" />
+      </div>
+      <div class="i-section-specifications--row__col-2">
+        <img src="{{ section.settings.banner_4 | image_url: width: 1600 }}" alt="Banner Arcadia" class="header-image" />
+      </div>
+    </div>
+
+    {% for block in section.blocks %}
+      <div class="i-section-specifications--row has-border">
+        <div class="i-section-specifications--row__col-1 Text-colors-800 Family-Font---Body Typo-Body-M">{{ block.settings.description }}</div>
+        <div class="i-section-specifications--row__col-2 Text-Colors-100 Family-Font---Body Typo-Body-M">{{ block.settings.spec_1 }}</div>
+        <div class="i-section-specifications--row__col-2 Text-Colors-100 Family-Font---Body Typo-Body-M">{{ block.settings.spec_2 }}</div>
+        <div class="i-section-specifications--row__col-2 Text-Colors-100 Family-Font---Body Typo-Body-M">{{ block.settings.spec_3 }}</div>
+        <div class="i-section-specifications--row__col-2 Text-Colors-100 Family-Font---Body Typo-Body-M">{{ block.settings.spec_4 }}</div>
+      </div>
+    {% endfor %}
+
+  </div>
+
 </div>
 
 {% schema %}
 {
   "name": "iUROP section - Specs",
   "settings": [
-
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titulo"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Texto del botón",
+      "default": "Comprar miel"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Enlace del botón"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_1",
+      "label": "Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_2",
+      "label": "Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_3",
+      "label": "Image 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_4",
+      "label": "Image 4"
+    }
   ],
-  "blocks": [],
+  "blocks": [
+    {
+      "type": "especificacion",
+      "name": "Especificación",
+      "settings": [
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Descripción"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "spec_1",
+          "label": "Spec 1"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "spec_2",
+          "label": "Spec 2"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "spec_3",
+          "label": "Spec 3"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "spec_4",
+          "label": "Spec 4"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "iUROP section - Specs",
