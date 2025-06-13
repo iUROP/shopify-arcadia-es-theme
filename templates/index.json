@@ -191,31 +191,31 @@
         "especificacion_WeFBkW": {
           "type": "especificacion",
           "settings": {
-            "description": "",
-            "spec_1": "",
-            "spec_2": "",
-            "spec_3": "",
-            "spec_4": ""
+            "description": "Minerales",
+            "spec_1": "<strong>+8 tipos</strong>",
+            "spec_2": "<em><strong>Hierro falso</strong></em>",
+            "spec_3": "<em><strong>Hierro falso</strong></em>",
+            "spec_4": "<em><strong>Hierro falso</strong></em>"
           }
         },
         "especificacion_e4enDU": {
           "type": "especificacion",
           "settings": {
-            "description": "",
-            "spec_1": "",
-            "spec_2": "",
-            "spec_3": "",
-            "spec_4": ""
+            "description": "Vitaminas",
+            "spec_1": "<strong>4+ grupos</strong>",
+            "spec_2": "<em><strong>Cerca de 0</strong></em>",
+            "spec_3": "<em><strong>Cerca de 0</strong></em>",
+            "spec_4": "<em><strong>Cerca de 0</strong></em>"
           }
         },
         "especificacion_pUpJke": {
           "type": "especificacion",
           "settings": {
-            "description": "",
-            "spec_1": "",
-            "spec_2": "",
-            "spec_3": "",
-            "spec_4": ""
+            "description": "Antioxidantes",
+            "spec_1": "<strong>+6 tipos</strong>",
+            "spec_2": "<em><strong>Ninguno (0)</strong></em>",
+            "spec_3": "<em><strong>Ninguno (0)</strong></em>",
+            "spec_4": "<em><strong>Ninguno (0)</strong></em>"
           }
         }
       },
