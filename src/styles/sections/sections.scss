@@ -71,6 +71,66 @@
     }
   }
 
+  .i-section-parallax {
+    height: 345px;
+    position: relative;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    overflow: hidden;
+
+    &.is-video-background {
+      background-image: transparent !important;
+    }
+
+    .i-section-parallax__overlay {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.50);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h2 {
+        font-weight: 700;
+        margin: $Space-600 0px;
+        line-height: 44px;
+      }
+      p {
+        margin: 0px;
+      }
+
+      &.is-alternate-title {
+        h2 {
+          width: 528px;
+          font-weight: 400;
+          margin-top: 0px;
+        }
+      }
+
+      a {
+        border-radius: var(--Corner-Full, 10000px);
+        background: var(--Colors-200, #FAF5E8);
+        padding: 17px 48px;
+        margin-top: 40px;
+        font-weight: 600;
+      }
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
 }
 
 @keyframes marquee {

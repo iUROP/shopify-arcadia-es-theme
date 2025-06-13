@@ -151,31 +151,77 @@ i-minicart {
           }
         }
       }
+      &--freeShipping {
+        position: absolute;
+        left: $Space-600;
+        top: 112px;
+        right: $Space-600;
+        height: 42px;
+        text-align: center;
+        color: #fff;
+        text-align: center;
+
+        &--labels {
+          position: absolute;
+          top: 0;
+          left: 0;
+          text-align: center;
+          width: 100%;
+          height: auto !important;
+
+          .i-icon {
+            display: inline-block !important;
+            vertical-align: middle;
+            position: relative;
+          }
+        }
+
+        &--bar {
+          border-radius: 6000px;
+          background: var(--Colors-400, #C5BEAF);
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          width: 100%;
+          height: 5px;
+          overflow: hidden;
+          &__progress {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 2;
+            border-radius: 6000px;
+            background: var(--Colors-500, #887E64);
+            height: 100%;
+            display: block !important;
+          }
+        }
+      }
       &--items {
         position: absolute;
         left: 0px;
-        top: 110px;
+        top: 155px;
         bottom: 240px;
         right: 0px;
         overflow: auto;
-        padding: 8px 10px;
+        padding: $Space-300 $Space-600;
 
         .i-cart-item {
-          height: 135px;
+          height: 118px;
           position: relative;
           margin: 10px 0px;
           margin-bottom: 16px;
-          border-bottom: 1px solid rgb(238, 238, 238);
-
-          &:last-child {
-            border-bottom: 0px;
-          }
+          border-radius: var(--Corner-Extra-small, 4px);
+          border: 1px solid var(--Colors-400, #C5BEAF);
+          background: var(--Colors-300, #EEE6D4);
+          padding: $Space-300;
+          box-sizing: border-box;
 
           &--image {
             position: absolute;
-            left: 4px;
-            top: 0px;
-            bottom: 8px;
+            left: $Space-300;
+            top: $Space-300;
+            bottom: $Space-300;
             width: 100px;
             background-position: center center;
             background-size: cover;
@@ -185,13 +231,14 @@ i-minicart {
           }
           &--labels {
             position: absolute;
-            left: 120px;
-            right: 0px;
-            top: 0px;
-            bottom: 8px;
+            left: 124px;
+            right: 10px;
+            top: 10px;
+            bottom: 10px;
 
             &--reviews {
               height: 12px;
+              display: none !important;
               .i-product-stars {
                 display: flex;
                 height: 100%;
@@ -208,17 +255,22 @@ i-minicart {
                 }
               }
             }
-
             &--name {
               margin-bottom: 4px;
-              color: #000;
-              font-family: var(--Family-Font---Body, "Instrument Sans");
+              color: var(--Colors-800, var(--Colors-800, #1E1E1E));
+              font-family: var(--Family-Font, Besley);
               font-size: var(--Typo-Body-M, 16px);
               font-style: normal;
-              font-weight: 700;
-              line-height: 18px;
-              margin-top: 9px;
+              font-weight: 400;
+              line-height: 20px;
+              margin-top: 0px;
               width: 50%;
+
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              text-overflow: ellipsis;
             }
             &--desc {
               font-size: 14px;
@@ -227,28 +279,29 @@ i-minicart {
             &--price {
               position: absolute;
               right: 0px;
-              top: -3px;
+              top: 0px;
               margin: 0;
-              color: #343434;
+              color: var(--Colors-800, var(--Colors-800, #1E1E1E));
               font-family: var(--Family-Font---Body, "Instrument Sans");
               font-size: var(--Typo-Body-M, 16px);
               font-style: normal;
-              font-weight: 700;
+              font-weight: 400;
               line-height: 25px;
 
               span {
                 font-weight: 400;
-                color: #464646;
+                color: #868686;
                 margin-left: 7px;
+                text-decoration-line: line-through;
               }
             }
           }
           &--actions {
             position: absolute;
-            left: 130px;
+            left: 124px;
             right: 0px;
             height: 26px;
-            bottom: 10px;
+            bottom: 12px;
 
             &--qty {
               height: 100%;
@@ -257,7 +310,7 @@ i-minicart {
               position: relative;
               display: inline-block;
               border-radius: 3px;
-              border: 0.642px solid #CDCDD7;
+              border: var(--Strokes-Small, 1px) solid var(--Colors-500, #887E64);
 
               input[type="number"]::-webkit-inner-spin-button,
               input[type="number"]::-webkit-outer-spin-button {
@@ -343,8 +396,8 @@ i-minicart {
 
           &--delete {
             position: absolute;
-            bottom: 15px;
-            right: 10px;
+            bottom: 18px;
+            right: 12px;
             cursor: pointer;
 
             &:hover {

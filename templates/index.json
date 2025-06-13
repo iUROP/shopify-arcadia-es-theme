@@ -11,7 +11,6 @@
   "sections": {
     "i_section_primary_banner_jnB79p": {
       "type": "i-section-primary-banner",
-      "name": "iUROP section - Hero",
       "settings": {
         "banner_image": "shopify://shop_images/hero-section.png"
       }
@@ -71,59 +70,63 @@
         "announcement_RraMa7",
         "announcement_7T3ibm"
       ],
-      "name": "iUROP section - Marqee",
       "settings": {}
     },
     "i_section_product_list_bbbHLt": {
       "type": "i-section-product-list",
-      "name": "iUROP section - P List",
       "settings": {
         "collection": "frontpage"
       }
     },
     "i_section_parallax_3Ni3FE": {
       "type": "i-section-parallax",
-      "name": "iUROP section - Parallax",
-      "settings": {}
+      "settings": {
+        "banner_image": "shopify://shop_images/parallax-bg.png",
+        "video_url": "",
+        "title_image": "Miel pura,\ncuidadosamente recolectada",
+        "subtitle": "",
+        "alternate_title": false,
+        "button_text": "Comprar miel",
+        "button_link": ""
+      }
     },
     "i_section_compare_versus_rkeVgq": {
       "type": "i-section-compare-versus",
-      "name": "iUROP section - Comparer",
       "settings": {}
     },
     "i_section_parallax_eDdA9H": {
       "type": "i-section-parallax",
-      "name": "iUROP section - Parallax",
-      "settings": {}
+      "settings": {
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/4a0452f4f3c84f6da55d3d829a242da1.mp4",
+        "title_image": "La forma más rápida de mejorar tu salud con nutrición real.",
+        "subtitle": "El respeto por la naturaleza es nuestra forma de cuidarte.",
+        "alternate_title": true,
+        "button_text": "Comprar miel",
+        "button_link": "shopify://collections/frontpage"
+      }
     },
     "i_section_specifications_nn6mmj": {
       "type": "i-section-specifications",
-      "name": "iUROP section - Specs",
       "settings": {}
     },
     "i_section_simple_testimonies_fBgBpU": {
       "type": "i-section-simple-testimonies",
-      "name": "iUROP section - Opinions",
       "settings": {}
     },
     "i_section_product_testimonies_GyeKNr": {
       "type": "i-section-product-testimonies",
-      "name": "iUROP section - P Rev",
       "settings": {}
     },
     "i_section_image_text_B87Rdc": {
       "type": "i-section-image-text",
-      "name": "iUROP section - ImageText",
       "settings": {}
     },
     "i_section_faqs_HJH7nm": {
       "type": "i-section-faqs",
-      "name": "iUROP section - Faqs",
       "settings": {}
     },
     "i_section_instagram_LBwPDT": {
       "type": "i-section-instagram",
-      "name": "iUROP section - Instagram",
       "settings": {}
     }
   },

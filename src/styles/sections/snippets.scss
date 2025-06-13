@@ -1,7 +1,8 @@
 .i-product-card {
   display: inline-block;
-  width: 22%;
+  width: 26%;
   margin-right: $Space-600;
+  max-width: 390px;
 
   @media only screen and (max-width: 1024px) {
     width: 80%;

@@ -12,9 +12,12 @@ function MiniCart({
   const [lineItems, setLineItems] = useState(false)
   const [showCart, setShowCart] = useState(false)
   const [cartTotal, setCartTotal] = useState(0)
+  const [freeShippingAmount, setFreeShippingAmount] = useState(0)
+  const [freeShippingPercent, setFreeShippingPercent] = useState(0)
 
   useEffect(() => {
     async function get() {
+      console.log("Re run cart")
       const cart = await Permalink.getCart()
       const items =  []
       if (cart && cart.items) {
@@ -34,10 +37,18 @@ function MiniCart({
         
         setLineItems(items)
       }
+      console.log("cart info", cart)
 
       setCartQty(cart.item_count)
       setCartTotal(cart.total_price)
-      console.log("cart info", cart)
+
+      let blocksSplit = blocks.split('|')
+      let freeShipping =  (Number(blocksSplit[0]) * 100) - cart.total_price
+      let freePercent = (cart.total_price * 100) / (Number(blocksSplit[0]) * 100)
+
+      setFreeShippingAmount(freeShipping)
+      setFreeShippingPercent(freePercent)
+
     }
     get()
 
@@ -129,6 +140,21 @@ function MiniCart({
             })}
           </Slider>
         </div>
+
+        <div className='i-minicart-container__snap--freeShipping'>
+          <div className='i-minicart-container__snap--freeShipping--labels Text-Colors-500 Family-Font---Body Typo-Body-S'>
+            <Icon name="shipping" /> 
+            {freeShippingAmount <= 0 
+              ? <>¡Ahora tienes envio gratuito!</>
+              : <>¡Gasta ${window.Permalink.getPrice(freeShippingAmount)} más y obtén envío gratis!</>
+
+            }
+          </div>
+          <div className='i-minicart-container__snap--freeShipping--bar'>
+            <div className='i-minicart-container__snap--freeShipping--bar__progress slow_ani' style={{width: `${freeShippingPercent}%`}}></div>
+          </div>
+        </div>
+
         <div className='i-minicart-container__snap--items'>
           {lineItems
             ? lineItems.length > 0
