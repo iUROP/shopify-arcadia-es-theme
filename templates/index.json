@@ -93,7 +93,7 @@
     "i_section_compare_versus_rkeVgq": {
       "type": "i-section-compare-versus",
       "blocks": {
-        "especificacion_TTEK86": {
+        "especificacion_PTJC98": {
           "type": "especificacion",
           "settings": {
             "title": "Azúcar añadido",
@@ -101,7 +101,7 @@
             "right_percent": 66
           }
         },
-        "especificacion_GBR3Wh": {
+        "especificacion_XHRcQP": {
           "type": "especificacion",
           "settings": {
             "title": "Pasteurizado",
@@ -109,7 +109,7 @@
             "right_percent": 83
           }
         },
-        "especificacion_mCC8n4": {
+        "especificacion_aHdgTF": {
           "type": "especificacion",
           "settings": {
             "title": "Pesticidas",
@@ -117,7 +117,7 @@
             "right_percent": 64
           }
         },
-        "especificacion_aLQCVz": {
+        "especificacion_BmTEtT": {
           "type": "especificacion",
           "settings": {
             "title": "Nutrientes",
@@ -125,7 +125,7 @@
             "right_percent": 29
           }
         },
-        "especificacion_QQ4QAY": {
+        "especificacion_3y6ch4": {
           "type": "especificacion",
           "settings": {
             "title": "Natural",
@@ -133,7 +133,7 @@
             "right_percent": 22
           }
         },
-        "especificacion_Uh4jHg": {
+        "especificacion_Fhxyip": {
           "type": "especificacion",
           "settings": {
             "title": "Pureza",
@@ -141,7 +141,7 @@
             "right_percent": 30
           }
         },
-        "especificacion_bQMCAF": {
+        "especificacion_Gj3HBq": {
           "type": "especificacion",
           "settings": {
             "title": "Producto local",
@@ -151,13 +151,13 @@
         }
       },
       "block_order": [
-        "especificacion_TTEK86",
-        "especificacion_GBR3Wh",
-        "especificacion_mCC8n4",
-        "especificacion_aLQCVz",
-        "especificacion_QQ4QAY",
-        "especificacion_Uh4jHg",
-        "especificacion_bQMCAF"
+        "especificacion_PTJC98",
+        "especificacion_XHRcQP",
+        "especificacion_aHdgTF",
+        "especificacion_BmTEtT",
+        "especificacion_3y6ch4",
+        "especificacion_Fhxyip",
+        "especificacion_Gj3HBq"
       ],
       "settings": {
         "banner_left": "shopify://shop_images/prod-left.png",
