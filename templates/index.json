@@ -97,12 +97,12 @@
     "i_section_parallax_eDdA9H": {
       "type": "i-section-parallax",
       "settings": {
-        "video_url": "https://cdn.shopify.com/videos/c/o/v/4a0452f4f3c84f6da55d3d829a242da1.mp4",
-        "title_image": "La forma más rápida de mejorar tu salud con nutrición real.",
-        "subtitle": "El respeto por la naturaleza es nuestra forma de cuidarte.",
-        "alternate_title": true,
+        "video_url": "",
+        "title_image": "",
+        "subtitle": "",
+        "alternate_title": false,
         "button_text": "Comprar miel",
-        "button_link": "shopify://collections/frontpage"
+        "button_link": ""
       }
     },
     "i_section_specifications_nn6mmj": {
