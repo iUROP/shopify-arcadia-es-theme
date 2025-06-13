@@ -238,9 +238,10 @@
     "i_section_simple_testimonies_fBgBpU": {
       "type": "i-section-simple-testimonies",
       "settings": {
-        "mision_text": "",
-        "name": "",
-        "role": ""
+        "mision_text": "<p><strong>“Nuestra misión es simple: </strong>ofrecer miel pura y trazable que le dé energía a tu vida. Lo que realmente importa: calidad excepcional, obtención ética y beneficios reales para tu bienestar.”</p>",
+        "avatar": "shopify://shop_images/avatar.png",
+        "name": "PABLO MARTI",
+        "role": "Founder"
       }
     },
     "i_section_product_testimonies_GyeKNr": {
