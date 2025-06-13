@@ -304,6 +304,21 @@
             color: #887E64;
           }
         }
+
+        @media only screen and (max-width: 1024px) {
+          padding: $Space-400 0px;
+          
+          .simple-row-spec {
+            font-size: var(--Typo-Body-XS, 10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:first-child {
+              justify-content: left;
+            }
+          }
+        }
       }
 
       &__col-1 {
@@ -342,10 +357,13 @@
       &.row-head {
         @media only screen and (max-width: 1024px) {
           display: block;
+          margin-bottom: 6px;
+
           .i-section-specifications--row__col-1 {
             display: block;
             width: 100%;
             text-align: center;
+            margin-bottom: 32px;
 
             h2 {
               margin: 0 auto;
@@ -355,10 +373,20 @@
           .i-section-specifications--row__col-2 {
             display: inline-block;
             vertical-align: middle;
+            width: 17.5%;
+            margin-right: -4px;
 
-            width: 20%;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              transform: scale(0.85);
+            }
+
             &.first-image {
-              margin-left: 28%;
+              margin-left: 27%;
+              width: 19%;
+              transform: scale(1.2);
             }
           }
         }
@@ -366,6 +394,65 @@
     }
   }
 
+  .i-section-testimonials {
+    position: relative;
+    padding: $Space-800 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;;
+
+    &__text {
+      text-align: center;
+      width: 970px;
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      p {
+        margin: 0px;
+        color: var(--Colors-Grey, var(--Colors-grey, #464646));
+        text-align: center;
+        font-family: var(--Family-Font, Besley);
+        font-size: var(--Typo-H3, 31px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.93px;
+
+        @media only screen and (max-width: 1024px) {
+          font-size: var(--Typo-H3, 20px);
+          padding: 0 20px;
+        }
+
+        strong {
+          font-weight: 700;
+        }
+      }
+    }
+    &__profile {
+      text-align: center;
+
+      &--avatar {
+        display: inline-block;
+        vertical-align: middle;
+
+        img {
+          margin-bottom: -10px;
+        }
+      }
+      &--labels {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        padding-left: 16px;
+
+        .title-profile {
+          font-weight: 700;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
 }
 
 @keyframes marquee {

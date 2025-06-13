@@ -1,12 +1,46 @@
 <div class="i-section" data-aos="fade-up">
-  Simple Testimonials section here
+  <div class="i-section-testimonials">
+    <div class="i-section-testimonials__text">{{ section.settings.mision_text }}</div>
+    <div class="i-section-testimonials__profile">
+      <div class="i-section-testimonials__profile--avatar">
+        <img src="{{ section.settings.avatar | image_url: width: 1600 }}" alt="Banner Arcadia" class="header-image" />
+      </div>
+      <div class="i-section-testimonials__profile--labels">
+        <div class="Text-Colors-Grey Family-Font---Body Typo-Body-M title-profile">{{ section.settings.name }}</div>
+        <div class="Text-Colors-Grey Family-Font---Body Typo-Body-S">{{ section.settings.role }}</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 {% schema %}
 {
   "name": "iUROP section - Opinions",
   "settings": [
-
+    {
+      "type": "richtext",
+      "id": "mision_text",
+      "label": "Misión"
+    },
+    {
+      "type": "header",
+      "content": "Perfil"
+    },
+    {
+      "type": "image_picker",
+      "id": "avatar",
+      "label": "Imágen de perfil"
+    },
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Nombre"
+    },
+    {
+      "type": "text",
+      "id": "role",
+      "label": "Rol"
+    }
   ],
   "blocks": [],
   "presets": [
