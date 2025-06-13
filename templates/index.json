@@ -18,43 +18,43 @@
     "i_section_marqee_yrBH6y": {
       "type": "i-section-marqee",
       "blocks": {
-        "announcement_cdGrre": {
+        "announcement_VNXwgX": {
           "type": "announcement",
           "settings": {
             "marqee": "Obtención <strong>ética</strong>"
           }
         },
-        "announcement_FFCnLz": {
+        "announcement_xBc8d9": {
           "type": "announcement",
           "settings": {
             "marqee": "<strong>100 % trazable</strong>"
           }
         },
-        "announcement_ahXVHK": {
+        "announcement_LBtHhW": {
           "type": "announcement",
           "settings": {
-            "marqee": "<strong>Sin azúcares</strong> añadidos"
+            "marqee": "<strong>100 % trazable</strong>"
           }
         },
-        "announcement_6HBgMa": {
+        "announcement_dhqb7e": {
           "type": "announcement",
           "settings": {
             "marqee": "<strong>Sin conservantes</strong>"
           }
         },
-        "announcement_RrCbXx": {
+        "announcement_ndmtew": {
           "type": "announcement",
           "settings": {
             "marqee": "Certificado de Comercio Justo"
           }
         },
-        "announcement_RraMa7": {
+        "announcement_jXWMQ9": {
           "type": "announcement",
           "settings": {
             "marqee": "Sin <strong>aditivos</strong>"
           }
         },
-        "announcement_7T3ibm": {
+        "announcement_cLRRpU": {
           "type": "announcement",
           "settings": {
             "marqee": "No modificado genéticamente"
@@ -62,13 +62,13 @@
         }
       },
       "block_order": [
-        "announcement_cdGrre",
-        "announcement_FFCnLz",
-        "announcement_ahXVHK",
-        "announcement_6HBgMa",
-        "announcement_RrCbXx",
-        "announcement_RraMa7",
-        "announcement_7T3ibm"
+        "announcement_VNXwgX",
+        "announcement_xBc8d9",
+        "announcement_LBtHhW",
+        "announcement_dhqb7e",
+        "announcement_ndmtew",
+        "announcement_jXWMQ9",
+        "announcement_cLRRpU"
       ],
       "settings": {}
     },
