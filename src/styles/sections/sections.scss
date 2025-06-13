@@ -131,6 +131,73 @@
     }
   }
 
+  .i-section-compare-versus {
+    margin: $Space-800 $Space-4000;
+    display: flex;
+
+    &__product {
+      width: 40%;
+      text-align: center;
+    }
+    &__specs {
+      width: 20%;
+      text-align: center;
+    }
+    .compare-versus__header {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+    
+  }
+  .i-section-compare-versus-comparative {
+    margin: $Space-800 $Space-4000;
+    display: flex;
+    flex-direction: column;
+    gap: $Space-800;
+
+    &__item {
+      display: flex;
+
+      &--row {
+        width: 40%;
+        border-radius: var(--Corner-Full, 10000px);
+        background: var(--Colors-300, #EEE6D4);
+        height: 10px;
+        position: relative;
+        margin-top: 3px;
+
+        &__progress {
+          position: absolute;
+          border-radius: 100px;
+          background: #C27530;
+          top: 0px;
+          right: 0px;
+          height: 100%;
+          display: block !important;
+        }
+
+        &.is-right {
+          .i-section-compare-versus-comparative__item--row__progress {
+            right: auto;
+            left: 0px;
+            background: var(--Colors-100, #5B1414);
+          }
+        }
+      }
+      &--col {
+        width: 20%;
+        text-align: center;
+      }
+    }
+  }
+
 }
 
 @keyframes marquee {

@@ -92,7 +92,77 @@
     },
     "i_section_compare_versus_rkeVgq": {
       "type": "i-section-compare-versus",
-      "settings": {}
+      "blocks": {
+        "especificacion_TTEK86": {
+          "type": "especificacion",
+          "settings": {
+            "title": "Azúcar añadido",
+            "left_percent": 0,
+            "right_percent": 66
+          }
+        },
+        "especificacion_GBR3Wh": {
+          "type": "especificacion",
+          "settings": {
+            "title": "Pasteurizado",
+            "left_percent": 0,
+            "right_percent": 83
+          }
+        },
+        "especificacion_mCC8n4": {
+          "type": "especificacion",
+          "settings": {
+            "title": "Pesticidas",
+            "left_percent": 0,
+            "right_percent": 64
+          }
+        },
+        "especificacion_aLQCVz": {
+          "type": "especificacion",
+          "settings": {
+            "title": "Nutrientes",
+            "left_percent": 75,
+            "right_percent": 29
+          }
+        },
+        "especificacion_QQ4QAY": {
+          "type": "especificacion",
+          "settings": {
+            "title": "Natural",
+            "left_percent": 83,
+            "right_percent": 22
+          }
+        },
+        "especificacion_Uh4jHg": {
+          "type": "especificacion",
+          "settings": {
+            "title": "Pureza",
+            "left_percent": 69,
+            "right_percent": 30
+          }
+        },
+        "especificacion_bQMCAF": {
+          "type": "especificacion",
+          "settings": {
+            "title": "Producto local",
+            "left_percent": 78,
+            "right_percent": 36
+          }
+        }
+      },
+      "block_order": [
+        "especificacion_TTEK86",
+        "especificacion_GBR3Wh",
+        "especificacion_mCC8n4",
+        "especificacion_aLQCVz",
+        "especificacion_QQ4QAY",
+        "especificacion_Uh4jHg",
+        "especificacion_bQMCAF"
+      ],
+      "settings": {
+        "banner_left": "shopify://shop_images/prod-left.png",
+        "banner_right": "shopify://shop_images/prod-right.png"
+      }
     },
     "i_section_parallax_eDdA9H": {
       "type": "i-section-parallax",
