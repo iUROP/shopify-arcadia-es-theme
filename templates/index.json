@@ -177,6 +177,54 @@
     },
     "i_section_specifications_nn6mmj": {
       "type": "i-section-specifications",
+      "blocks": {
+        "especificacion_TqFTaj": {
+          "type": "especificacion",
+          "settings": {
+            "description": "Impacto en el azúcar en sangre",
+            "spec_1": "Cerca de 35-40",
+            "spec_2": "<em>70 a 90</em>",
+            "spec_3": "<em>55 a 80</em>",
+            "spec_4": "<em>70 a 90</em>"
+          }
+        },
+        "especificacion_WeFBkW": {
+          "type": "especificacion",
+          "settings": {
+            "description": "",
+            "spec_1": "",
+            "spec_2": "",
+            "spec_3": "",
+            "spec_4": ""
+          }
+        },
+        "especificacion_e4enDU": {
+          "type": "especificacion",
+          "settings": {
+            "description": "",
+            "spec_1": "",
+            "spec_2": "",
+            "spec_3": "",
+            "spec_4": ""
+          }
+        },
+        "especificacion_pUpJke": {
+          "type": "especificacion",
+          "settings": {
+            "description": "",
+            "spec_1": "",
+            "spec_2": "",
+            "spec_3": "",
+            "spec_4": ""
+          }
+        }
+      },
+      "block_order": [
+        "especificacion_TqFTaj",
+        "especificacion_WeFBkW",
+        "especificacion_e4enDU",
+        "especificacion_pUpJke"
+      ],
       "settings": {
         "title": "La fuente más saludable",
         "button_text": "Comprar miel",
