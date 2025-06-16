@@ -2251,6 +2251,92 @@ body.open-cart .i-header-container__content--icons {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
+.i-section .i-section-image-text {
+  margin: 32px 32px;
+  display: flex;
+}
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-image-text {
+    display: block;
+    margin: 32px 20px;
+  }
+}
+.i-section .i-section-image-text .i-section-image-text__image {
+  flex: 1;
+  width: 50%;
+  position: relative;
+  padding: 24px;
+}
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-image-text .i-section-image-text__image {
+    display: block;
+    width: 100%;
+    padding: 24px 0px;
+  }
+}
+.i-section .i-section-image-text .i-section-image-text__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-image-text .i-section-image-text__image img {
+    height: auto;
+  }
+}
+.i-section .i-section-image-text .i-section-image-text__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-image-text .i-section-image-text__text {
+    display: block;
+    width: 100%;
+  }
+}
+.i-section .i-section-image-text .i-section-image-text__text--pharagrah {
+  margin: 32px 0px;
+  width: 516px;
+  max-width: 100%;
+}
+.i-section .i-section-image-text .i-section-image-text__text h2 {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 554px;
+  max-width: 100%;
+}
+.i-section .i-section-image-text .i-section-image-text__text p {
+  color: var(--Colors-800, var(--Colors-800, #1E1E1E));
+  text-align: center;
+  font-family: var(--Family-Font---Body, "Instrument Sans");
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  margin-bottom: 36px;
+}
+.i-section .i-section-image-text .i-section-image-text__text a {
+  border-radius: var(--Corner-Full, 10000px);
+  background: var(--Colors-100, #5B1414);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 95%;
+  letter-spacing: -0.48px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 18px 48px;
+  cursor: pointer;
+}
+.i-section .i-section-image-text .i-section-image-text__text a:hover {
+  background: var(--Colors-100, #802020);
+}
 
 @keyframes marquee {
   0% {

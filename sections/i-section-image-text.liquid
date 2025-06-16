@@ -1,12 +1,70 @@
 <div class="i-section" data-aos="fade-up">
-  Image-Text section here
+  <div class="i-section-image-text">
+
+    {% if section.settings.image_left %}
+      <div class="i-section-image-text__image">
+        <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large only-desktop">
+        <img src="{{ section.settings.image_m | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large only-mobile">
+      </div>
+    {% endif %}
+    <div class="i-section-image-text__text">
+      <h2 class="Text-Colors-800 Family-Font Typo-H1">{{ section.settings.title }}</h2>
+      <div class="i-section-image-text__text--pharagrah">
+        {{ section.settings.content }}
+        {% if section.settings.button_link and section.settings.button_text %}
+          <a href="{{ section.settings.button_link }}" class="Text-Colors-White Family-Font Typo-Body-M">{{ section.settings.button_text }}</a>
+        {% endif %}
+      </div>
+    </div>
+    {% unless section.settings.image_left %}
+      <div class="i-section-image-text__image">
+        <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large only-desktop">
+        <img src="{{ section.settings.image_m | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large only-mobile">
+      </div>
+    {% endunless %}
+  </div>
 </div>
 
 {% schema %}
 {
   "name": "iUROP section - ImageText",
   "settings": [
-
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Título"
+      },
+      {
+        "type": "richtext",
+        "id": "content",
+        "label": "Texto enriquecido"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Texto del botón"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "URL del botón"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Imagen (escritorio)"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_m",
+        "label": "Imagen (mobile)"
+      },
+      {
+        "type": "checkbox",
+        "id": "image_left",
+        "label": "Mostrar imagen a la izquierda",
+        "default": false
+      }
   ],
   "blocks": [],
   "presets": [

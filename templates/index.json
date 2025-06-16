@@ -250,7 +250,15 @@
     },
     "i_section_image_text_B87Rdc": {
       "type": "i-section-image-text",
-      "settings": {}
+      "settings": {
+        "title": "Refuerza tus defensas de forma natural",
+        "content": "<p>Nuestra miel premium, rica en flavonoides y ácidos fenólicos, ayuda a reducir el estrés oxidativo y protege la salud celular.<br/><br/>Gracias a sus propiedades antimicrobianas, combate bacterias e infecciones, aliviando la inflamación y acelerando la recuperación frente a enfermedades.</p>",
+        "button_text": "Comprar miel",
+        "button_link": "shopify://collections",
+        "image": "shopify://shop_images/image-text.png",
+        "image_m": "shopify://shop_images/image-text_m.png",
+        "image_left": false
+      }
     },
     "i_section_faqs_HJH7nm": {
       "type": "i-section-faqs",
