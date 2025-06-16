@@ -262,6 +262,42 @@
     },
     "i_section_faqs_HJH7nm": {
       "type": "i-section-faqs",
+      "blocks": {
+        "content_block_mtzKdM": {
+          "type": "content_block",
+          "settings": {
+            "title": "¿Vuestra miel contiene algún aditivo?",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin varius enim nec vestibulum. Etiam ut hendrerit dui. Sed imperdiet ipsum et justo auctor accumsan."
+          }
+        },
+        "content_block_3FRWkX": {
+          "type": "content_block",
+          "settings": {
+            "title": "¿Vuestra miel contiene algún aditivo?",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin varius enim nec vestibulum. Etiam ut hendrerit dui. Sed imperdiet ipsum et justo auctor accumsan."
+          }
+        },
+        "content_block_DtwGYr": {
+          "type": "content_block",
+          "settings": {
+            "title": "¿Vuestra miel contiene algún aditivo?",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin varius enim nec vestibulum. Etiam ut hendrerit dui. Sed imperdiet ipsum et justo auctor accumsan."
+          }
+        },
+        "content_block_BPdyWr": {
+          "type": "content_block",
+          "settings": {
+            "title": "¿Vuestra miel contiene algún aditivo?",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin varius enim nec vestibulum. Etiam ut hendrerit dui. Sed imperdiet ipsum et justo auctor accumsan."
+          }
+        }
+      },
+      "block_order": [
+        "content_block_mtzKdM",
+        "content_block_3FRWkX",
+        "content_block_DtwGYr",
+        "content_block_BPdyWr"
+      ],
       "settings": {}
     },
     "i_section_instagram_LBwPDT": {

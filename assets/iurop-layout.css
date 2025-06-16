@@ -540,6 +540,62 @@ html, body {
   background-color: #FFFFFF;
 }
 
+.Border-Colors-100 {
+  border-color: #5B1414;
+}
+
+.Border-Colors-200 {
+  border-color: #FAF5E8;
+}
+
+.Border-Colors-300 {
+  border-color: #EEE6D4;
+}
+
+.Border-Colors-400 {
+  border-color: #C5BEAF;
+}
+
+.Border-Colors-500 {
+  border-color: #887E64;
+}
+
+.Border-Colors-600 {
+  border-color: #FEC34D;
+}
+
+.Border-Colors-700 {
+  border-color: #4E502A;
+}
+
+.Border-Colors-800 {
+  border-color: #1E1E1E;
+}
+
+.Border-Colors-900 {
+  border-color: #000000;
+}
+
+.Border-Colors-1000 {
+  border-color: #FFFFFF;
+}
+
+.Border-Colors-Ligth_grey {
+  border-color: #868686;
+}
+
+.Border-Colors-Grey {
+  border-color: #464646;
+}
+
+.Border-Colors-Black {
+  border-color: #000000;
+}
+
+.Border-Colors-White {
+  border-color: #FFFFFF;
+}
+
 .Corner-None {
   border-radius: 0px;
 }
@@ -2336,6 +2392,61 @@ body.open-cart .i-header-container__content--icons {
 }
 .i-section .i-section-image-text .i-section-image-text__text a:hover {
   background: var(--Colors-100, #802020);
+}
+.i-section .i-section-image-faqs {
+  padding: 48px 45px;
+  display: flex;
+}
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-image-faqs {
+    padding: 48px 20px;
+    display: block;
+  }
+}
+.i-section .i-section-image-faqs__title {
+  margin-top: 0px;
+  width: 35%;
+}
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-image-faqs__title {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+}
+.i-section .i-section-image-faqs__items {
+  width: 65%;
+  min-height: 420px;
+}
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-image-faqs__items {
+    width: 100%;
+    min-height: auto;
+  }
+}
+.i-section .i-section-image-faqs__items .i-section-image-faqs__item {
+  padding: 16px 0px;
+  border-bottom: 1px solid;
+  margin-bottom: 10px;
+}
+.i-section .i-section-image-faqs__items .i-section-image-faqs__item:first-child {
+  padding-top: 0px;
+}
+.i-section .i-section-image-faqs__items .i-section-image-faqs__item details summary {
+  font-weight: 700;
+  line-height: 25px;
+  position: relative;
+}
+.i-section .i-section-image-faqs__items .i-section-image-faqs__item details summary svg {
+  -webkit-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+  position: absolute;
+  right: 0px;
+  top: 2px;
+}
+.i-section .i-section-image-faqs__items .i-section-image-faqs__item details[open] summary svg {
+  transform: rotate(45deg);
 }
 
 @keyframes marquee {

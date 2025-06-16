@@ -1,5 +1,24 @@
-<div class="i-section" data-aos="fade-up">
-  Faqs section here
+<div class="i-section Bg-Colors-300" data-aos="fade-up">
+  
+  <div class="i-section-image-faqs">
+    <div class="i-section-image-faqs__title Text-Colors-800 Family-Font Typo-H2">Preguntas frecuentes</div>
+    <div class="i-section-image-faqs__items">
+      {% for block in section.blocks %}
+        <div class="i-section-image-faqs__item">
+          <details>
+            <summary class="Text-Colors-800 Family-Font---Body Typo-Body-M">
+              {{ block.settings.title }}
+              {% render 'i-icon' name: 'plus' %}
+            </summary>
+            <p class="Text-Colors-800 Family-Font---Body Typo-Body-M">
+              {{ block.settings.content }}
+            </p>
+          </details>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
 </div>
 
 {% schema %}
@@ -8,7 +27,24 @@
   "settings": [
 
   ],
-  "blocks": [],
+  "blocks": [
+    {
+      "type": "content_block",
+      "name": "Pregunta frecuente",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Pregunta"
+        },
+        {
+          "type": "textarea",
+          "id": "content",
+          "label": "Respuesta"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "iUROP section - Faqs",
