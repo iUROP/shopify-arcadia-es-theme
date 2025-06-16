@@ -517,10 +517,9 @@ body.open-menu {
 }
 
 body.open-cart {
-  position: fixed; 
   overflow: hidden;
   width: 100%;
-  margin-right: 15px;
+  padding-right: 15px;
 
   .i-header-container__content--icons {
     z-index: initial;

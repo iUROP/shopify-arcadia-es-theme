@@ -284,8 +284,13 @@
       }
     </script>
 
+    <link rel="stylesheet" type="text/css" href="{{ 'slick.css' | asset_url }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ 'slick-theme.css' | asset_url }}"/>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="{{ 'slick.js' | asset_url }}" defer="defer"></script>
 
     {{ 'iurop-layout.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'iurop-layout.js' | asset_url }}" defer></script>
@@ -367,5 +372,16 @@
 
   <script>
     AOS.init();
+
+    $( window ).on( "ready", function() {
+      $('.simple-slick').slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        adaptiveHeight: true
+      });
+    });
   </script>
 </html>

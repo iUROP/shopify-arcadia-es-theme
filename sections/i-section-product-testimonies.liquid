@@ -1,14 +1,89 @@
 <div class="i-section" data-aos="fade-up">
-  Product Reviews section here
+  
+  <div class="i-section-product-testimonials">
+    <div class="i-section-product-testimonials__comments">
+      <div class="i-section-product-testimonials__comments--list simple-slick">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'comment' %}
+              <div class="i-section-product-testimonials__comments--list__item">
+                <p>“{{block.settings.comment}}”</p>
+                <div class="item-author">- {{block.settings.author}}</div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+      <div class="i-section-product-testimonials__comments--footer">
+        <div class="i-section-product-testimonials__comments--footer__head">
+          <span>Nectar en prensa</span>
+        </div>
+        <div class="i-section-product-testimonials__comments--footer__logos">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'logo' %}
+                <img src="{{ block.settings.image | image_url: width: 1600 }}" alt="Logo prensa Arcadia" />
+            {% endcase %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="i-section-product-testimonials__products">
+      <div class="i-section-product-testimonials__products--list simple-slick">
+        {% if section.settings.collection != blank %}
+          {% assign featured_collection = collections[section.settings.collection] %}
+          {% if featured_collection.products_count > 0 %}
+            {% for product in featured_collection.products limit: 4 %}
+              <div class="i-section-product-testimonials__products--list__p">
+                {% render 'i-product-card' product: product, complex: true, use_review_type: true %}
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
 </div>
 
 {% schema %}
 {
   "name": "iUROP section - P Rev",
   "settings": [
-
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Colección"
+    }
   ],
-  "blocks": [],
+  "blocks": [
+    {
+      "type": "comment",
+      "name": "Comentario",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "comment",
+          "label": "Comentario"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Autor"
+        }
+      ]
+    },
+    {
+      "type": "logo",
+      "name": "Logotipo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "iUROP section - P Rev",

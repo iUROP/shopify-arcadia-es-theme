@@ -246,7 +246,57 @@
     },
     "i_section_product_testimonies_GyeKNr": {
       "type": "i-section-product-testimonies",
-      "settings": {}
+      "blocks": {
+        "comment_Nhzrza": {
+          "type": "comment",
+          "settings": {
+            "comment": "Cada mañana se siente transformada desde que empecé a usar esta miel pura. Su sabor auténtico y su energía natural redefinieron mi rutina: me dan fuerza… y una sonrisa de verdad.",
+            "author": "Sofia Ramirez"
+          }
+        },
+        "comment_dCr4fV": {
+          "type": "comment",
+          "settings": {
+            "comment": "Cada mañana se siente transformada desde que empecé a usar esta miel pura. Su sabor auténtico y su energía natural redefinieron mi rutina: me dan fuerza… y una sonrisa de verdad - segundo item de prueba en otra linea.",
+            "author": "Sofia Ramirez"
+          }
+        },
+        "logo_DHAP7B": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo-1.png"
+          }
+        },
+        "logo_PQLcmQ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo-2.png"
+          }
+        },
+        "logo_mdeQ4K": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo-3.png"
+          }
+        },
+        "logo_TdyGRQ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo-4.png"
+          }
+        }
+      },
+      "block_order": [
+        "comment_Nhzrza",
+        "comment_dCr4fV",
+        "logo_DHAP7B",
+        "logo_PQLcmQ",
+        "logo_mdeQ4K",
+        "logo_TdyGRQ"
+      ],
+      "settings": {
+        "collection": "frontpage"
+      }
     },
     "i_section_image_text_B87Rdc": {
       "type": "i-section-image-text",

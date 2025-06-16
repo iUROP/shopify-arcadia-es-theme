@@ -1,7 +1,20 @@
-<div class="i-product-card">
+<div class="i-product-card {% if complex %} is-complex-card{% endif %}">
   <a href="{{ product.url }}" class="i-product-card__gallery">
-    <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}" loading="lazy" class="Corner-Large" />
+    {% if use_review_type %}
+      {% if product.metafields.custom.review_image %}
+        <img src="{{ product.metafields.custom.review_image | file_url }}" alt="Product stamp image">
+      {% endif %}
+    {% else %}
+      <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}" loading="lazy" class="Corner-Large" />
+    {% endif %}
   </a>
+  {% if complex %}
+    <div class="i-product-card__stamp">
+      {% if product.metafields.custom.stamp %}
+        <img src="{{ product.metafields.custom.stamp | file_url }}" alt="Product stamp">
+      {% endif %}
+    </div>
+  {% endif %}
   <div class="i-product-card__labels">
     <div class="i-product-card__labels--reviews">
       {% render 'review-star' star: 5 %}
@@ -9,7 +22,18 @@
     </div>
     <a class="i-product-card__labels--title Text-Colors-800 Family-Font Typo-H3">
       {{ product.title }}
+
+      {% if complex %}
+        <div class="i-product-card__labels--prices-alternate">
+          {{ product.price | money }}
+        </div>
+      {% endif %}
     </a>
+    {% if complex %}
+      <div class="i-product-card__labels--description">
+        {{ product.metafields.custom.custom_review }}
+      </div>
+    {% endif %}
     <div class="i-product-card__labels--prices Text-Colors-800 Family-Font---Body Typo-Body-L">
       {{ product.price | money }}
     </div>
