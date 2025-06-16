@@ -1,7 +1,23 @@
 <div class="i-section i-section-full" data-aos="fade-up">
   <div class="i-section-primary-hero Bg-Colors-100">
     
-    <div class="i-section-primary-hero__overlay"></div>
+    <div class="i-section-primary-hero__overlay">
+      <div class="i-section-primary-hero__overlay--reviews">
+        {% render 'review-star' star: 5 %}
+        <span class="Family-Font---Body Text-Colors-Grey Typo-Body-XS">4.9/5 (255 reseñas)</span>
+      </div>
+      <div class="i-section-primary-hero__overlay--title">
+        {{ section.settings.title }}
+      </div>
+      <p>{{ section.settings.sub_title }}</p>
+
+      {% if section.settings.button_text and section.settings.button_link %}
+        <a href="{{ section.settings.button_link }}">
+          {{ section.settings.button_text }}
+        </a>
+      {% endif %}
+
+    </div>
     <img src="{{ section.settings.banner_image | image_url: width: 1600 }}" alt="Banner Arcadia" class="bg-image" />
   </div>
 </div>
@@ -24,6 +40,27 @@
       "type": "image_picker",
       "id": "banner_image_mobile",
       "label": "Imagen (mobile)"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Titulo"
+    },
+    {
+      "type": "text",
+      "id": "sub_title",
+      "label": "Subtitulo"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Texto del botón",
+      "default": "Comprar miel"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Enlace del botón"
     }
   ],
   "blocks": [],

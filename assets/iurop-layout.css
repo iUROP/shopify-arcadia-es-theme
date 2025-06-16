@@ -1914,7 +1914,81 @@ body.open-cart .i-header-container__content--icons {
   width: 100%;
   height: 100%;
   z-index: 1;
-  display: block !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.i-section .i-section-primary-hero__overlay--reviews .i-reviews-stars {
+  display: inline-block;
+  vertical-align: middle;
+}
+.i-section .i-section-primary-hero__overlay--reviews .i-reviews-stars .i-icon {
+  width: 14px;
+}
+.i-section .i-section-primary-hero__overlay--reviews span {
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--Colors-200, var(--Colors-200, #FAF5E8));
+  font-family: var(--Family-Font---Body, "Instrument Sans");
+  font-size: var(--Typo-Body-S, 13px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  top: 1px;
+}
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-primary-hero__overlay--title {
+    padding: 0px 18px;
+  }
+  .i-section .i-section-primary-hero__overlay--title br {
+    display: none !important;
+  }
+}
+.i-section .i-section-primary-hero__overlay--title p {
+  margin: 0px !important;
+  color: var(--Colors-White, var(--Colors-white, #FFF)) !important;
+  text-align: center !important;
+  font-family: var(--Family-Font, Besley) !important;
+  font-size: var(--Typo-Display-XL, 61px) !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 120% !important;
+  letter-spacing: -1.83px !important;
+}
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-primary-hero__overlay--title p {
+    font-size: var(--Typo-Display-XL, 39px) !important;
+    letter-spacing: -1.17px !important;
+  }
+}
+.i-section .i-section-primary-hero__overlay p {
+  color: var(--Colors-White, var(--Colors-white, #FFF));
+  text-align: center;
+  font-family: var(--Family-Font---Body, "Instrument Sans");
+  font-size: var(--Typo-Body-L, 20px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33.4px;
+}
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-primary-hero__overlay p {
+    font-size: 16px;
+  }
+}
+.i-section .i-section-primary-hero__overlay a {
+  border-radius: var(--Corner-Full, 10000px);
+  background: var(--Colors-200, #FAF5E8);
+  color: var(--Colors-100, var(--Colors-100, #5B1414));
+  font-family: var(--Family-Font, Besley);
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 95%;
+  letter-spacing: -0.48px;
+  text-decoration: none;
+  padding: 17px 38px;
 }
 .i-section.i-section-marqee-container {
   overflow: hidden;

@@ -12,7 +12,11 @@
     "i_section_primary_banner_jnB79p": {
       "type": "i-section-primary-banner",
       "settings": {
-        "banner_image": "shopify://shop_images/hero-section.png"
+        "banner_image": "shopify://shop_images/hero-section.png",
+        "title": "<p>Impulsa tu ambición con la<br/>fuerza de <em><strong>la miel más pura.</strong></em></p>",
+        "sub_title": "Miel pura. Energía natural para cada día.",
+        "button_text": "Comprar miel",
+        "button_link": "shopify://collections/all"
       }
     },
     "i_section_marqee_yrBH6y": {
