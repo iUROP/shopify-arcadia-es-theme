@@ -2448,6 +2448,86 @@ body.open-cart .i-header-container__content--icons {
 .i-section .i-section-image-faqs__items .i-section-image-faqs__item details[open] summary svg {
   transform: rotate(45deg);
 }
+.i-section .i-section-instagram-feed {
+  position: relative;
+}
+.i-section .i-section-instagram-feed__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  margin-bottom: 34px;
+  padding: 0px 45px;
+}
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-instagram-feed__header {
+    padding: 0px 20px;
+    margin-bottom: 28px;
+  }
+}
+.i-section .i-section-instagram-feed__header h2 {
+  font-style: italic;
+  font-weight: 700;
+}
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-instagram-feed__header h2 {
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+}
+.i-section .i-section-instagram-feed__items {
+  position: relative;
+  padding: 0 45px;
+  white-space: nowrap;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-instagram-feed__items {
+    padding: 0px 20px;
+    margin-bottom: 44px;
+  }
+}
+.i-section .i-section-instagram-feed__items .i-section-instagram-feed__item {
+  display: inline-block;
+  width: 26%;
+  margin-right: 24px;
+  max-width: 390px;
+  position: relative;
+  aspect-ratio: 2/3.5;
+}
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-instagram-feed__items .i-section-instagram-feed__item {
+    width: 60%;
+  }
+}
+.i-section .i-section-instagram-feed__items .i-section-instagram-feed__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+.i-section .i-section-instagram-feed .alternate-link {
+  text-decoration: none;
+  border-radius: var(--Corner-Full, 10000px);
+  border: var(--Strokes-Small, 1px) solid var(--Colors-100, #5B1414);
+  padding: 16px 48px;
+}
+.i-section .i-section-instagram-feed .alternate-link:hover {
+  background-color: rgba(91, 20, 20, 0.1215686275);
+}
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-instagram-feed .alternate-link {
+    text-align: center;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 286px;
+    padding: 14px 22px;
+  }
+}
 
 @keyframes marquee {
   0% {

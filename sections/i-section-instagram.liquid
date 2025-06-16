@@ -1,14 +1,64 @@
 <div class="i-section" data-aos="fade-up">
-  Instagram section here
+  <div class="i-section-instagram-feed">
+    <div class="i-section-instagram-feed__header">
+      <h2 class="Text-Colors-800 Family-Font Typo-Body-XL">{{ section.settings.title }}</h2>
+      {% if section.settings.button_text and section.settings.button_link %}
+        <a href="{{ section.settings.button_link }}" class="Text-Colors-100 Family-Font Typo-Body-M only-desktop alternate-link">
+          {{ section.settings.button_text }}
+        </a>
+      {% endif %}
+      
+    </div>
+    <div class="i-section-instagram-feed__items">
+      {% for block in section.blocks %}
+        <div class="i-section-instagram-feed__item">
+          <img src="{{ block.settings.image | image_url: width: 1600 }}" alt="Banner IG Arcadia" class="Corner-Large" />
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if section.settings.button_text and section.settings.button_link %}
+      <a href="{{ section.settings.button_link }}" class="Text-Colors-100 Family-Font Typo-Body-M only-mobile alternate-link">
+        {{ section.settings.button_text }}
+      </a>
+    {% endif %}
+  </div>
 </div>
 
 {% schema %}
 {
   "name": "iUROP section - Instagram",
   "settings": [
-
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Cuenta"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Texto del botón",
+      "default": "Siguenos en nuestro Instagram"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Enlace del botón"
+    }
   ],
-  "blocks": [],
+  "blocks": [
+    {
+      "type": "content_block",
+      "name": "IG Post",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Imagen"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "iUROP section - Instagram",

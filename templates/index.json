@@ -302,7 +302,50 @@
     },
     "i_section_instagram_LBwPDT": {
       "type": "i-section-instagram",
-      "settings": {}
+      "blocks": {
+        "content_block_eGtqKe": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ig-1.png"
+          }
+        },
+        "content_block_qiieig": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ig-2.png"
+          }
+        },
+        "content_block_dePx4z": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ig-3.png"
+          }
+        },
+        "content_block_HCkRbF": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ig-2.png"
+          }
+        },
+        "content_block_949PGE": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ig-1.png"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_eGtqKe",
+        "content_block_qiieig",
+        "content_block_dePx4z",
+        "content_block_HCkRbF",
+        "content_block_949PGE"
+      ],
+      "settings": {
+        "title": "Nectararcadia",
+        "button_text": "Siguenos en nuestro Instagram",
+        "button_link": "/#"
+      }
     }
   },
   "order": [
