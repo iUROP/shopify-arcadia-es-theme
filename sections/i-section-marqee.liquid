@@ -1,5 +1,5 @@
-<div class="i-section i-section-marqee-container" data-aos="fade-up">
-  <div class="i-section-marqee Bg-Colors-100">
+<div class="i-section i-section-marqee-container">
+  <div class="i-section-marqee {% if section.settings.is_alternate_color %} Bg-Colors-500{% else %} Bg-Colors-100{% endif %}">
     {% for block in section.blocks %}
       {% case block.type %}
         {% when 'announcement' %}
@@ -32,7 +32,12 @@
   "name": "iUROP section - Marqee",
   "class": "section-marqee",
   "settings": [
-
+    {
+      "type": "checkbox",
+      "id": "is_alternate_color",
+      "default": false,
+      "label": "Usar color secundario"
+    },
   ],
   "blocks": [
     {

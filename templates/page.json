@@ -1,1 +1,236 @@
-{"sections":{"main":{"type":"main-page","settings":{"padding_top":28,"padding_bottom":28}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "i_section_marqee_HbL8Je": {
+      "type": "i-section-marqee",
+      "blocks": {
+        "announcement_jmNfaH": {
+          "type": "announcement",
+          "settings": {
+            "marqee": "Cosecha <strong>sostenible</strong>"
+          }
+        },
+        "announcement_fnk84k": {
+          "type": "announcement",
+          "settings": {
+            "marqee": "Obtención <strong>ética</strong>"
+          }
+        },
+        "announcement_Wpmzhj": {
+          "type": "announcement",
+          "settings": {
+            "marqee": "<strong>100 % trazable</strong>"
+          }
+        },
+        "announcement_UArqN4": {
+          "type": "announcement",
+          "settings": {
+            "marqee": "<strong>Sin azúcares</strong> añadidos"
+          }
+        },
+        "announcement_xPWney": {
+          "type": "announcement",
+          "settings": {
+            "marqee": "<strong>Sin conservantes</strong>"
+          }
+        },
+        "announcement_FTPrkG": {
+          "type": "announcement",
+          "settings": {
+            "marqee": "Certificado de Comercio Justo"
+          }
+        },
+        "announcement_kJYM6Y": {
+          "type": "announcement",
+          "settings": {
+            "marqee": "Sin <strong>aditivos</strong>"
+          }
+        },
+        "announcement_kyxmBF": {
+          "type": "announcement",
+          "settings": {
+            "marqee": "No modificado genéticamente"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_jmNfaH",
+        "announcement_fnk84k",
+        "announcement_Wpmzhj",
+        "announcement_UArqN4",
+        "announcement_xPWney",
+        "announcement_FTPrkG",
+        "announcement_kJYM6Y",
+        "announcement_kyxmBF"
+      ],
+      "name": "iUROP section - Marqee",
+      "settings": {
+        "is_alternate_color": true
+      }
+    },
+    "i_section_image_text_KTdEDw": {
+      "type": "i-section-image-text",
+      "name": "iUROP section - ImageText",
+      "settings": {
+        "title": "",
+        "content": "<p>Creemos en la pureza, la transparencia y la sostenibilidad. Cada frasco de Arcadias Nectar es 100 % trazable, obtenido de forma ética y libre de aditivos, para que disfrutes la miel en su forma más natural.</p>",
+        "button_text": "Comprar miel",
+        "button_link": "shopify://collections/all",
+        "image": "shopify://shop_images/ingredientes-image.png",
+        "image_m": "shopify://shop_images/ingredientes-image-m.png",
+        "image_left": true
+      }
+    },
+    "i_section_parallax_BL69dQ": {
+      "type": "i-section-parallax",
+      "name": "iUROP section - Parallax",
+      "settings": {
+        "banner_image": "shopify://shop_images/miel-mesa.jpg",
+        "video_url": "",
+        "title_image": "Cuidadosamente elaborada para el sabor, el bienestar y el planeta",
+        "subtitle": "Nuestra miel premium es obtenida de forma ética, pura y elaborada con esmero para garantizar transparencia, sostenibilidad y bienestar, para que disfrutes la miel tal como la naturaleza lo pensó.",
+        "alternate_title": true,
+        "text_left": true,
+        "button_text": "Comprar miel",
+        "button_link": "shopify://collections/all"
+      }
+    },
+    "i_section_simple_testimonies_GrkfNm": {
+      "type": "i-section-simple-testimonies",
+      "name": "iUROP section - Opinions",
+      "settings": {
+        "mision_text": "<p><strong>“Nuestra misión es simple:</strong> ofrecer miel pura y trazable que le dé energía a tu vida. Lo que realmente importa: calidad excepcional, obtención ética y beneficios reales para tu bienestar.”</p>",
+        "avatar": "shopify://shop_images/avatar.png",
+        "name": "PABLO MARTI",
+        "role": "Founder"
+      }
+    },
+    "i_section_product_testimonies_dzJJ3b": {
+      "type": "i-section-product-testimonies",
+      "blocks": {
+        "comment_jzRbJ8": {
+          "type": "comment",
+          "settings": {
+            "comment": "Cada mañana se siente transformada desde que empecé a usar esta miel pura. Su sabor auténtico y su energía natural redefinieron mi rutina: me dan fuerza… y una sonrisa de verdad.",
+            "author": "Sofia Ramirez"
+          }
+        },
+        "comment_RBVzrT": {
+          "type": "comment",
+          "settings": {
+            "comment": "Cada mañana se siente transformada desde que empecé a usar esta miel pura. Su sabor auténtico y su energía natural redefinieron mi rutina: me dan fuerza… y una sonrisa de verdad.",
+            "author": "Sofia Ramirez"
+          }
+        },
+        "logo_dRhgJX": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo-1.png"
+          }
+        },
+        "logo_fxVTBx": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo-2.png"
+          }
+        },
+        "logo_MxNHM6": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo-3.png"
+          }
+        },
+        "logo_KQbhRY": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/logo-4.png"
+          }
+        }
+      },
+      "block_order": [
+        "comment_jzRbJ8",
+        "comment_RBVzrT",
+        "logo_dRhgJX",
+        "logo_fxVTBx",
+        "logo_MxNHM6",
+        "logo_KQbhRY"
+      ],
+      "name": "iUROP section - P Rev",
+      "settings": {
+        "collection": "frontpage"
+      }
+    },
+    "i_section_instagram_64ck7C": {
+      "type": "i-section-instagram",
+      "blocks": {
+        "content_block_gmPtjn": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ig-1.png"
+          }
+        },
+        "content_block_JUF4kL": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ig-2.png"
+          }
+        },
+        "content_block_wNNqyG": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ig-3.png"
+          }
+        },
+        "content_block_tmHFLw": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ig-2.png"
+          }
+        },
+        "content_block_hLCwUV": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ig-1.png"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_gmPtjn",
+        "content_block_JUF4kL",
+        "content_block_wNNqyG",
+        "content_block_tmHFLw",
+        "content_block_hLCwUV"
+      ],
+      "name": "iUROP section - Instagram",
+      "settings": {
+        "title": "#Nectararcadia",
+        "button_text": "Siguenos en nuestro Instagram",
+        "button_link": "/#"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "i_section_marqee_HbL8Je",
+    "i_section_image_text_KTdEDw",
+    "i_section_parallax_BL69dQ",
+    "i_section_simple_testimonies_GrkfNm",
+    "i_section_product_testimonies_dzJJ3b",
+    "i_section_instagram_64ck7C"
+  ]
+}

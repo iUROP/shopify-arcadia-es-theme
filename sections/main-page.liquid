@@ -1,23 +1,18 @@
 {{ 'section-main-page.css' | asset_url | stylesheet_tag }}
 
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
+<div class="i-page section-{{ section.id }}-padding">
+  <div class="i-page-hero Bg-Colors-100">
+    <div class="i-page-hero__overlay">
+      <h1 class="main-page-title page-title Text-Colors-White Family-Font Typo-Display-XL">
+        {{ page.title | escape }}
+      </h1>
+    </div>
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
+    {% if page.metafields.custom.imagen_destacada %}
+      <img src="{{ page.metafields.custom.imagen_destacada | file_url }}" alt="Page background" class="bg-image" />
+    {% endif %}
+  </div>
 
-<div class="page-width page-width--narrow section-{{ section.id }}-padding">
-  <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-    {{ page.title | escape }}
-  </h1>
   <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     {{ page.content }}
   </div>

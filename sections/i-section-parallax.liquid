@@ -1,6 +1,6 @@
 <div class="i-section" data-aos="fade-up">
-  <div class="i-section-parallax {% if section.settings.video_url != blank %} is-video-background{% endif %}" style="background-image: url({{ section.settings.banner_image | image_url: width: 1600 }})">
-    <div class="i-section-parallax__overlay {% if section.settings.alternate_title %} is-alternate-title{% endif %}">
+  <div class="i-section-parallax {% if section.settings.video_url != blank %} is-video-background{% endif %} {% if section.settings.text_left %} is-left-section{% endif %}" style="background-image: url({{ section.settings.banner_image | image_url: width: 1600 }})">
+    <div class="i-section-parallax__overlay {% if section.settings.alternate_title %} is-alternate-title{% endif %} {% if section.settings.text_left %} is-left-text{% endif %}">
       <h2 class="Family-Font {% if section.settings.alternate_title %} Text-Colors-White Typo-H3{% else %} Text-Colors-200 Typo-H2{% endif %}">{{ section.settings.title_image | newline_to_br }}</h2>
       {% if section.settings.subtitle != blank %}
         <p class="Text-Colors-White Family-Font---Body Typo-Body-L">{{ section.settings.subtitle }}</p>
@@ -53,6 +53,12 @@
       "id": "alternate_title",
       "default": false,
       "label": "Small title"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_left",
+      "default": false,
+      "label": "Left text"
     },
     {
       "type": "text",
