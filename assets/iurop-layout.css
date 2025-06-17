@@ -1472,6 +1472,7 @@ i-minicart .i-minicart-container__overlay.open {
     overflow: hidden;
     top: 90px;
     bottom: 230px;
+    opacity: 1;
   }
   .i-header-container .i-header-menu__content--items li.i-header-menu__content--items__item a.i-header-menu__content--items__item--link {
     color: #5B1414 !important;
