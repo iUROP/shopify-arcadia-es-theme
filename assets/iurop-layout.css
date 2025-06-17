@@ -1469,7 +1469,7 @@ i-minicart .i-minicart-container__overlay.open {
 }
 @media only screen and (max-width: 1024px) {
   .i-header-container .i-header-menu__content--items {
-    overflow: auto;
+    overflow: hidden;
     top: 90px;
     bottom: 230px;
   }
