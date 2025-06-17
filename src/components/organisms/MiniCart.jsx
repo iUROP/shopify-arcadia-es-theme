@@ -181,7 +181,7 @@ function MiniCart({
             </div>
           </div>
           <div className='i-minicart-container__snap--footer__actions'>
-            <a href="/checkout">Comprar miel</a>
+            <a href="/checkout" className='is-button-hover-primary'>Comprar miel</a>
           </div>
           <div className='i-minicart-container__snap--footer__cards'>
             <Icon name="footer-cards" />

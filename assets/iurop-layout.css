@@ -677,6 +677,50 @@ html, body {
   outline: 1px solid gray;
 }
 
+@media only screen and (min-width: 1025px) {
+  .desktop-dragger-function {
+    cursor: grab;
+  }
+  .desktop-dragger-function.active {
+    user-select: none;
+  }
+}
+
+.is-button-hover-primary {
+  -webkit-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+  border: var(--Strokes-Small, 1px) solid var(--Colors-100, #5B1414) !important;
+}
+.is-button-hover-primary:hover {
+  background-color: transparent !important;
+  color: var(--Colors-100, var(--Colors-100, #5B1414)) !important;
+}
+
+.is-button-hover-secondary {
+  -webkit-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+  border: var(--Strokes-Small, 1px) solid #FAF5E8 !important;
+}
+.is-button-hover-secondary:hover {
+  background-color: transparent !important;
+  color: var(--Colors-100, var(--Colors-100, #FAF5E8)) !important;
+}
+
+.is-button-hover-alternate {
+  -webkit-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.is-button-hover-alternate:hover {
+  background: var(--Colors-100, #5B1414) !important;
+  color: var(--Colors-200, var(--Colors-200, #FAF5E8)) !important;
+}
+
 body {
   background-color: #FAF5E8 !important;
 }
@@ -2462,9 +2506,6 @@ body.open-cart .i-header-container__content--icons {
   display: inline-block;
   padding: 18px 48px;
   cursor: pointer;
-}
-.i-section .i-section-image-text .i-section-image-text__text a:hover {
-  background: var(--Colors-100, #802020);
 }
 .i-section .i-section-image-faqs {
   padding: 48px 45px;

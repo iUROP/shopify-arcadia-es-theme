@@ -4,7 +4,7 @@
     {% if section.settings.collection != blank %}
       {% assign featured_collection = collections[section.settings.collection] %}
       {% if featured_collection.products_count > 0 %}
-        <div class="collection-featured-products">
+        <div class="collection-featured-products desktop-dragger-function">
           {% for product in featured_collection.products %}
             {% render 'i-product-card' product: product %}
           {% endfor %}

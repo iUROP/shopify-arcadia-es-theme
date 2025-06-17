@@ -29,7 +29,7 @@ function ProductAddToCart({
   }
 
   return (
-    <button className={`i-product-add-to-cart-container`} onClick={add}>
+    <button className={`i-product-add-to-cart-container ${!itemUpdating ? 'is-button-hover-primary' : ''}`} onClick={add}>
       {itemUpdating
         ? <Icon name="preloader" />
         : text

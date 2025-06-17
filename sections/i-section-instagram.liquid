@@ -3,13 +3,13 @@
     <div class="i-section-instagram-feed__header">
       <h2 class="Text-Colors-800 Family-Font Typo-Body-XL">{{ section.settings.title }}</h2>
       {% if section.settings.button_text and section.settings.button_link %}
-        <a href="{{ section.settings.button_link }}" class="Text-Colors-100 Family-Font Typo-Body-M only-desktop alternate-link">
+        <a href="{{ section.settings.button_link }}" class="Text-Colors-100 Family-Font Typo-Body-M only-desktop alternate-link is-button-hover-alternate">
           {{ section.settings.button_text }}
         </a>
       {% endif %}
       
     </div>
-    <div class="i-section-instagram-feed__items">
+    <div class="i-section-instagram-feed__items desktop-dragger-function">
       {% for block in section.blocks %}
         <div class="i-section-instagram-feed__item">
           <img src="{{ block.settings.image | image_url: width: 1600 }}" alt="Banner IG Arcadia" class="Corner-Large" />
@@ -18,7 +18,7 @@
     </div>
 
     {% if section.settings.button_text and section.settings.button_link %}
-      <a href="{{ section.settings.button_link }}" class="Text-Colors-100 Family-Font Typo-Body-M only-mobile alternate-link">
+      <a href="{{ section.settings.button_link }}" class="Text-Colors-100 Family-Font Typo-Body-M only-mobile alternate-link is-button-hover-alternate">
         {{ section.settings.button_text }}
       </a>
     {% endif %}

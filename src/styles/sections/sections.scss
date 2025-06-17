@@ -610,10 +610,6 @@
         display: inline-block;
         padding:  18px $Space-1200;
         cursor: pointer;
-
-        &:hover {
-          background: var(--Colors-100, #802020);
-        }
       }
     }
   }
