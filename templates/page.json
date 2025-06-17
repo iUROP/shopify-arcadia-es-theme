@@ -91,8 +91,6 @@
         "content": "<p>Creemos en la pureza, la transparencia y la sostenibilidad. Cada frasco de Arcadias Nectar es 100 % trazable, obtenido de forma ética y libre de aditivos, para que disfrutes la miel en su forma más natural.</p>",
         "button_text": "Comprar miel",
         "button_link": "shopify://collections/all",
-        "image": "shopify://shop_images/ingredientes-image.png",
-        "image_m": "shopify://shop_images/ingredientes-image-m.png",
         "image_left": true
       }
     },
@@ -105,7 +103,7 @@
         "title_image": "Cuidadosamente elaborada para el sabor, el bienestar y el planeta",
         "subtitle": "Nuestra miel premium es obtenida de forma ética, pura y elaborada con esmero para garantizar transparencia, sostenibilidad y bienestar, para que disfrutes la miel tal como la naturaleza lo pensó.",
         "alternate_title": true,
-        "text_left": true,
+        "text_left": false,
         "button_text": "Comprar miel",
         "button_link": "shopify://collections/all"
       }
