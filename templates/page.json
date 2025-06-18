@@ -85,6 +85,37 @@
     },
     "i_section_image_text_KTdEDw": {
       "type": "i-section-image-text",
+      "blocks": {
+        "link_block_hHJhJg": {
+          "type": "link_block",
+          "settings": {
+            "title": "Sin azúcar añadido",
+            "button_link": "/#",
+            "icon": "shopify://shop_images/no-sugar.png"
+          }
+        },
+        "link_block_HkMqyw": {
+          "type": "link_block",
+          "settings": {
+            "title": "Sin pasteurización",
+            "button_link": "/#",
+            "icon": "shopify://shop_images/no-pausterization.png"
+          }
+        },
+        "link_block_jhFbNt": {
+          "type": "link_block",
+          "settings": {
+            "title": "Sin glifosato",
+            "button_link": "/#",
+            "icon": "shopify://shop_images/no-quimics.png"
+          }
+        }
+      },
+      "block_order": [
+        "link_block_hHJhJg",
+        "link_block_HkMqyw",
+        "link_block_jhFbNt"
+      ],
       "name": "iUROP section - ImageText",
       "settings": {
         "title": "",
