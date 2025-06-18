@@ -151,6 +151,15 @@
         "role": "Founder"
       }
     },
+    "i_section_title_image_edTJdn": {
+      "type": "i-section-title-image",
+      "name": "iUROP section - Title-Img",
+      "settings": {
+        "title": "Los nutrientes perduran durante el calentamiento a alta temperatura.",
+        "image": "shopify://shop_images/table-chart.png",
+        "image_m": "shopify://shop_images/table-chart-m.png"
+      }
+    },
     "i_section_product_testimonies_dzJJ3b": {
       "type": "i-section-product-testimonies",
       "blocks": {
@@ -261,6 +270,7 @@
     "i_section_image_text_KTdEDw",
     "i_section_parallax_BL69dQ",
     "i_section_simple_testimonies_GrkfNm",
+    "i_section_title_image_edTJdn",
     "i_section_product_testimonies_dzJJ3b",
     "i_section_instagram_64ck7C"
   ]
