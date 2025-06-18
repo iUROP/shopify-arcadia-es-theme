@@ -2,20 +2,41 @@
   <div class="i-section-image-text">
 
     {% if section.settings.image_left %}
-      <div class="i-section-image-text__image">
+      <div class="i-section-image-text__image {% if section.blocks.size > 0 %} has-items{% endif %}">
         <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large only-desktop">
         <img src="{{ section.settings.image_m | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large only-mobile">
       </div>
     {% endif %}
-    <div class="i-section-image-text__text">
+    <div class="i-section-image-text__text {% if section.blocks.size > 0 %} has-items{% endif %}">
       <h2 class="Text-Colors-800 Family-Font Typo-H1">{{ section.settings.title }}</h2>
       <div class="i-section-image-text__text--pharagrah">
         {{ section.settings.content }}
         {% if section.settings.button_link and section.settings.button_text %}
           <a href="{{ section.settings.button_link }}" class="Text-Colors-White Family-Font Typo-Body-M is-button-hover-primary">{{ section.settings.button_text }}</a>
         {% endif %}
+
+        {% for block in section.blocks %}
+          <div class="i-section-image-text__text--pharagrah__link">
+            <a href="{{ block.settings.button_link }}" class="Text-Colors-500 Family-Font---Body Typo-Body-L external-link">
+              {% if block.settings.icon != blank %}
+                <img src="{{ block.settings.icon | img_url: 'master' }}" alt="{{ block.settings.title }}" />
+              {% endif %}
+              {{ block.settings.title }}
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                <path d="M13.338 5.04405L1.88204 16.5L0 14.618L11.4546 3.16201H1.35896V0.5H16V15.141H13.338V5.04405Z" fill="#887E64"/>
+              </svg>
+            </a>
+          </div>
+        {% endfor %}
       </div>
     </div>
+    {% if section.settings.image_left and section.blocks.size > 0 %}
+      <div class="i-section-image-text__image image-with-items only-mobile">
+        <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large only-desktop">
+        <img src="{{ section.settings.image_m | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large only-mobile">
+      </div>
+    {% endif %}
     {% unless section.settings.image_left %}
       <div class="i-section-image-text__image">
         <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large only-desktop">
@@ -66,7 +87,29 @@
         "default": false
       }
   ],
-  "blocks": [],
+  "blocks": [
+    {
+      "type": "link_block",
+      "name": "Enlace",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titulo"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Enlace"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icono"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "iUROP section - ImageText",

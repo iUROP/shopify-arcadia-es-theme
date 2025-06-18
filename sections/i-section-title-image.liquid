@@ -1,0 +1,43 @@
+<div class="i-section" data-aos="fade-up">
+  
+  <div class="i-section-title-image">
+    <h2>{{ section.settings.title | newline_to_br }}</h2>
+    {% if section.settings.image != blank %}
+      <div>
+        <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.title }}" class="only-desktop" />
+        <img src="{{ section.settings.image_m | img_url: 'master' }}" alt="{{ section.settings.title }}" class="only-mobile" />
+      </div>
+    {% endif %}
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "iUROP section - Title-Img",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Titulo"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_m",
+      "label": "Imagen mobile"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "iUROP section - Title-Img",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
