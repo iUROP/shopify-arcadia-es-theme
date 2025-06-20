@@ -383,6 +383,25 @@
         adaptiveHeight: true
       });
 
+      $('.gallery-slick').slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true,
+        asNavFor: '.gallery-thumbs-slick'
+      });
+
+      $('.gallery-thumbs-slick').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        asNavFor: '.gallery-slick',
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        focusOnSelect: true
+      });
+      
       Permalink.setScrollDragger();
     });
   </script>

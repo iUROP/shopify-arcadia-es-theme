@@ -151,3 +151,64 @@
     }
   }
 }
+
+.i-shipping-calculator {
+  text-align: center;
+  margin: 24px 0px;
+  margin-top: 30px;
+
+  &__char {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+
+    &--item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h3 {
+        margin: 0px;
+        color: var(--Colors-500, var(--Colors-500, #887E64));
+        font-family: var(--Family-Font---Body, "Instrument Sans");
+        font-size: var(--Typo-Body-S, 13px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 3px;
+      }
+      p {
+        margin: 0px;
+        color: var(--Colors-500, var(--Colors-500, #887E64));
+        font-family: var(--Family-Font---Body, "Instrument Sans");
+        font-size: var(--Typo-Body-XS, 10px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 95%;
+      }
+    }
+    &--separator {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 6px;
+    }
+  }
+  &__labels {
+    padding: 10px;
+    div {
+      color: var(--Colors-Grey, var(--Colors-grey, #464646));
+      text-align: center;
+      font-family: var(--Family-Font---Body, "Instrument Sans");
+      font-size: var(--Typo-Body-XS, 10px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      span {
+        color: var(--Colors-100, var(--Colors-100, #5B1414));
+      }
+    }
+  }
+}

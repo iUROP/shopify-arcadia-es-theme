@@ -263,6 +263,12 @@
                 }
               }
             }
+
+            &.is-first-item {
+              a {
+                padding-left: 0px;
+              }
+            }
           }
 
           svg {

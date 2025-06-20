@@ -132,6 +132,20 @@
     }
   }
 
+  .i-section-product-list-title {
+    color: #1E1E1E;
+    text-align: left;
+    font-family: var(--Family-Font, Besley);
+    font-size: var(--Typo-H3, 31px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.93px;
+    padding: 0 45px;
+    margin: 0;
+    margin-bottom: 18px;
+  }
+
   .i-section-product-list {
     position: relative;
 
@@ -774,7 +788,7 @@
 
     &__title {
       margin-top: 0px;
-      width: 35%;
+      width: 40%;
 
       @media only screen and (max-width: 1024px) {
         width: 100%;
@@ -782,7 +796,7 @@
       }
     }
     &__items {
-      width: 65%;
+      width: 60%;
       min-height: 420px;
 
       @media only screen and (max-width: 1024px) {

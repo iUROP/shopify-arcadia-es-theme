@@ -60,7 +60,7 @@
         {% endif %}
       </div>
       {%- for link in section.settings.menu.links -%}
-        <li class="i-header-menu__content--items__item only-desktop">
+        <li class="i-header-menu__content--items__item only-desktop {% if forloop.first %} is-first-item{% endif %}">
           {%- if link.links != blank -%}
             <div class="item-details">
               <summary class="{% if link.child_active %} active{% endif %}">

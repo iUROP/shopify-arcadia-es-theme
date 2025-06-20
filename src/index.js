@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import MiniCart from './components/organisms/MiniCart.jsx'
 import ProductAddToCart from './components/atoms/ProductAddToCart.jsx'
+import ShippingCalculator from './components/organisms/ShippingCalculator.jsx'
 import './styles/main.scss'
 import './utils/functions.js'
 
@@ -63,3 +64,31 @@ class AddToCartElement extends HTMLElement {
 }
 
 customElements.define("i-add-to-cart", AddToCartElement)
+
+
+class ShippingCalculatorElement extends HTMLElement {
+  static get observedAttributes() { 
+    return ['blocks']
+  }
+
+  constructor() {
+    super()
+    this.state = {
+      blocks: null
+    }
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+
+    if (name === 'blocks') {
+      this.state.blocks = newValue ? newValue : null;
+    }
+  }
+
+  connectedCallback() {
+    
+    ReactDOM.render(<ShippingCalculator blocks={this.state.blocks} />, this);
+  }
+}
+
+customElements.define("i-shipping-calculator", ShippingCalculatorElement)

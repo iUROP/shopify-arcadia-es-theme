@@ -92,7 +92,10 @@
       {{ input_dataset }}
     >
     <label for="{{ input_id }}">
-      {{ value -}}
+      {{ value }}
+      {% if value.variant %}
+        <strong>{{ value.variant.price | money }}</strong>
+      {% endif %}
       {{ label_unavailable }}
     </label>
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}

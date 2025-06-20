@@ -1,35 +1,38 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
+        "custom_tags_QgcnPk": {
+          "type": "custom_tags",
+          "settings": {}
         },
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
-        "price": {
-          "type": "price",
-          "settings": {
-          }
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "custom_icons_aUfbEJ": {
+          "type": "custom_icons",
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
             "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {
           }
         },
         "buy_buttons": {
@@ -39,37 +42,49 @@
             "show_gift_card_recipient": true
           }
         },
-        "description": {
-          "type": "description",
+        "collapsible_tab_JHdRz4": {
+          "type": "collapsible_tab",
           "settings": {
+            "heading": "Ingredientes",
+            "icon": "none",
+            "content": "<p>Texto de ingredientes</p>",
+            "page": ""
           }
         },
-        "share": {
-          "type": "share",
+        "collapsible_tab_E6nzTz": {
+          "type": "collapsible_tab",
           "settings": {
-            "share_label": "Share"
+            "heading": "Envíos y precios",
+            "icon": "none",
+            "content": "<p>Texto de envio y precios</p>",
+            "page": ""
           }
+        },
+        "custom_image_ewChUF": {
+          "type": "custom-image",
+          "settings": {}
         }
       },
       "block_order": [
-        "vendor",
+        "custom_tags_QgcnPk",
         "title",
-        "price",
-        "variant_picker",
-        "quantity_selector",
-        "buy_buttons",
         "description",
-        "share"
+        "custom_icons_aUfbEJ",
+        "variant_picker",
+        "buy_buttons",
+        "collapsible_tab_JHdRz4",
+        "collapsible_tab_E6nzTz",
+        "custom_image_ewChUF"
       ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
-        "media_size": "large",
+        "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail_slider",
         "media_position": "left",
-        "image_zoom": "lightbox",
+        "image_zoom": "none",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
@@ -79,6 +94,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -94,10 +110,120 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "i_section_product_list_LMxRtN": {
+      "type": "i-section-product-list",
+      "name": "iUROP section - P List",
+      "settings": {
+        "collection": "frontpage",
+        "title": "También podría gustarte"
+      }
+    },
+    "i_section_banner_content_bTBCLc": {
+      "type": "i-section-banner-content",
+      "name": "iUROP section - Banner C",
+      "settings": {}
+    },
+    "i_section_table_compare_96AMME": {
+      "type": "i-section-table-compare",
+      "name": "iUROP section - Table",
+      "settings": {}
+    },
+    "i_section_recipes_TRctnp": {
+      "type": "i-section-recipes",
+      "name": "iUROP section - Recipes",
+      "settings": {}
+    },
+    "i_section_faqs_wdayGH": {
+      "type": "i-section-faqs",
+      "blocks": {
+        "content_block_A48nDF": {
+          "type": "content_block",
+          "settings": {
+            "title": "¿Vuestra miel contiene algún aditivo?",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mauris turpis, cursus sit amet semper eu, pulvinar at eros. Maecenas malesuada porttitor laoreet."
+          }
+        },
+        "content_block_kzqaBB": {
+          "type": "content_block",
+          "settings": {
+            "title": "¿Vuestra miel contiene algún aditivo?",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mauris turpis, cursus sit amet semper eu, pulvinar at eros. Maecenas malesuada porttitor laoreet."
+          }
+        },
+        "content_block_EpyqUT": {
+          "type": "content_block",
+          "settings": {
+            "title": "¿Vuestra miel contiene algún aditivo?",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mauris turpis, cursus sit amet semper eu, pulvinar at eros. Maecenas malesuada porttitor laoreet."
+          }
+        }
+      },
+      "block_order": [
+        "content_block_A48nDF",
+        "content_block_kzqaBB",
+        "content_block_EpyqUT"
+      ],
+      "name": "iUROP section - Faqs",
+      "settings": {}
+    },
+    "i_section_instagram_fMCFXj": {
+      "type": "i-section-instagram",
+      "blocks": {
+        "content_block_mcmcLe": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ig-1.png"
+          }
+        },
+        "content_block_BWhmcE": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ig-2.png"
+          }
+        },
+        "content_block_XyUkzR": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ig-3.png"
+          }
+        },
+        "content_block_NnbzFV": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ig-2.png"
+          }
+        },
+        "content_block_qCJnWT": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ig-1.png"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_mcmcLe",
+        "content_block_BWhmcE",
+        "content_block_XyUkzR",
+        "content_block_NnbzFV",
+        "content_block_qCJnWT"
+      ],
+      "name": "iUROP section - Instagram",
+      "settings": {
+        "title": "#Nectararcadia",
+        "button_text": "Siguenos en nuestro Instagram",
+        "button_link": "/#"
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "i_section_product_list_LMxRtN",
+    "i_section_banner_content_bTBCLc",
+    "i_section_table_compare_96AMME",
+    "i_section_recipes_TRctnp",
+    "i_section_faqs_wdayGH",
+    "i_section_instagram_fMCFXj"
   ]
 }

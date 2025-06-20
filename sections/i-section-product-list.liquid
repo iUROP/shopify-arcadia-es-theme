@@ -1,5 +1,8 @@
 <div class="i-section" data-aos="fade-up">
-
+  {% if section.settings.title != blank %}
+    <h2 class="i-section-product-list-title">{{ section.settings.title }}</h2>
+  {% endif %}
+  
   <div class="i-section-product-list">
     {% if section.settings.collection != blank %}
       {% assign featured_collection = collections[section.settings.collection] %}
@@ -17,7 +20,6 @@
     {% endif %}
   </div>
 
-
 </div>
 
 {% schema %}
@@ -29,6 +31,11 @@
       "type": "collection",
       "id": "collection",
       "label": "Colección"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Custom title"
     }
   ],
   "blocks": [],

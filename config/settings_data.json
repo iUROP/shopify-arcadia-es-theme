@@ -143,6 +143,13 @@
       }
     },
     "content_for_index": [],
+    "blocks": {
+      "15588394620387169604": {
+        "type": "shopify://apps/subi-ex-subify/blocks/app-embed-block/bc0dba25-cd46-4841-bea4-6bdfe9ac815f",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
