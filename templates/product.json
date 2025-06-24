@@ -121,8 +121,52 @@
     },
     "i_section_banner_content_bTBCLc": {
       "type": "i-section-banner-content",
+      "blocks": {
+        "item_CpYN6J": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/fructose.png",
+            "title": "Fructosa",
+            "subtitle": "Azúcar natural"
+          }
+        },
+        "item_nEd97r": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/bee-pollen.png",
+            "title": "Polen de abeja",
+            "subtitle": "Superalimento natural"
+          }
+        },
+        "item_6w9xFq": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/flavonoids.png",
+            "title": "Flavonoides",
+            "subtitle": "Nutrientes naturales"
+          }
+        },
+        "item_CdiDMW": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/item-info-2.png",
+            "title": "Miel cruda",
+            "subtitle": "Dulzura pura"
+          }
+        }
+      },
+      "block_order": [
+        "item_CpYN6J",
+        "item_nEd97r",
+        "item_6w9xFq",
+        "item_CdiDMW"
+      ],
       "name": "iUROP section - Banner C",
-      "settings": {}
+      "settings": {
+        "title": "Miel, pura y naturalmente poderosa",
+        "text": "Cada gota de nuestra miel es creada por la naturaleza. Libre de aditivos, químicos y cualquier cosa artificial.",
+        "banner_image": "shopify://shop_images/bg-parallax.png"
+      }
     },
     "i_section_table_compare_96AMME": {
       "type": "i-section-table-compare",

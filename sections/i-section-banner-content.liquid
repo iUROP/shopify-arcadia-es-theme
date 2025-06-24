@@ -1,7 +1,24 @@
 <div class="i-section" data-aos="fade-up">
 
-  <div class="i-section-banner-content">
-    Banner content here
+  <div class="i-section-banner-content" style="background-image: url({{ section.settings.banner_image | image_url: width: 1600 }})">
+    <h2>{{ section.settings.title }}</h2>
+    <p>{{ section.settings.text }}</p>
+    <div class="i-section-banner-content__items">
+
+      {% for block in section.blocks %}
+        <div class="i-section-banner-content__items--item item-{{ forloop.index }}">
+          <div class="i-section-banner-content__items--item__icon">
+            <img src="{{ block.settings.icon | img_url: 'master' }}" alt="{{ block.settings.title }}" />
+          </div>
+          <div class="i-section-banner-content__items--item__text">{{ block.settings.title }}</div>
+          <div class="i-section-banner-content__items--item__subtext">{{ block.settings.subtitle }}</div>
+        </div>
+        <div class="i-section-banner-content__items--separator item-{{ forloop.index }}">
+          <span></span>
+        </div>
+      {% endfor %}
+
+    </div>
   </div>
 
 </div>
@@ -10,8 +27,46 @@
 {
   "name": "iUROP section - Banner C",
   "class": "section-banner-content",
-  "settings": [],
-  "blocks": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titulo"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Imagen"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icono"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titulo"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitulo"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "iUROP section - Banner C",

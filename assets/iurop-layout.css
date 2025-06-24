@@ -3224,6 +3224,156 @@ body.open-cart .i-header-container__content--icons {
   width: 100%;
   height: auto;
 }
+.i-section .i-section-banner-content {
+  position: relative;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  overflow: hidden;
+  background-color: gray;
+  padding: 64px 0px;
+}
+.i-section .i-section-banner-content h2 {
+  color: var(--Colors-200, var(--Colors-200, #FAF5E8));
+  text-align: center;
+  font-family: var(--Family-Font, Besley);
+  font-size: var(--Typo-H1, 49px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -1.47px;
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
+@media only screen and (max-width: 1025px) {
+  .i-section .i-section-banner-content h2 {
+    font-size: 30px;
+    padding: 0 20px;
+  }
+}
+.i-section .i-section-banner-content p {
+  color: var(--Colors-200, var(--Colors-200, #FAF5E8));
+  text-align: center;
+  font-family: var(--Family-Font---Body, "Instrument Sans");
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  margin: 0px;
+}
+@media only screen and (max-width: 1025px) {
+  .i-section .i-section-banner-content p {
+    font-size: 14px;
+    padding: 0 20px;
+    line-height: 20px;
+  }
+}
+.i-section .i-section-banner-content__items {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+@media only screen and (max-width: 1025px) {
+  .i-section .i-section-banner-content__items {
+    display: block !important;
+    position: relative;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .i-section .i-section-banner-content__items::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin: auto;
+    height: 1px;
+    background-color: #fff;
+  }
+  .i-section .i-section-banner-content__items::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin: auto;
+    width: 1px;
+    background-color: #fff;
+  }
+}
+.i-section .i-section-banner-content__items--item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 146px;
+  margin-top: 40px;
+}
+@media only screen and (max-width: 1025px) {
+  .i-section .i-section-banner-content__items--item {
+    display: inline-block !important;
+    width: 49%;
+    margin-top: 0px;
+  }
+  .i-section .i-section-banner-content__items--item.item-1 {
+    margin-bottom: 44px;
+  }
+  .i-section .i-section-banner-content__items--item.item-2 {
+    margin-bottom: 44px;
+  }
+}
+.i-section .i-section-banner-content__items--item__icon {
+  text-align: center;
+}
+.i-section .i-section-banner-content__items--item__icon img {
+  width: 80px;
+  height: auto;
+}
+.i-section .i-section-banner-content__items--item__text {
+  color: var(--Colors-200, var(--Colors-200, #FAF5E8));
+  text-align: center;
+  font-family: var(--Family-Font---Body, "Instrument Sans");
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+}
+.i-section .i-section-banner-content__items--item__subtext {
+  color: var(--Colors-200, var(--Colors-200, #FAF5E8));
+  text-align: center;
+  font-family: var(--Family-Font---Body, "Instrument Sans");
+  font-size: var(--Typo-Body-S, 13px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.i-section .i-section-banner-content__items--item.item-4 .i-section-banner-content__items--item__icon img {
+  margin-bottom: -12px;
+}
+.i-section .i-section-banner-content__items--separator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  background: var(--Colors-300, #EEE6D4);
+  width: 1px;
+  height: 64px;
+  padding: 0px;
+  margin: 26px 40px;
+  margin-top: 65px;
+}
+.i-section .i-section-banner-content__items--separator.item-4 {
+  display: none !important;
+}
+@media only screen and (max-width: 1025px) {
+  .i-section .i-section-banner-content__items--separator {
+    display: none !important;
+  }
+}
 
 @keyframes marquee {
   0% {
@@ -3279,7 +3429,7 @@ body.open-cart .i-header-container__content--icons {
 .i-product-page .product__media-wrapper .product__media-wrapper-container .product__media-wrapper-master__item {
   position: relative;
   width: 100%;
-  aspect-ratio: 2.45/3;
+  aspect-ratio: 2.37/3;
   overflow: hidden;
 }
 .i-product-page .product__media-wrapper .product__media-wrapper-container .product__media-wrapper-master__item img {
