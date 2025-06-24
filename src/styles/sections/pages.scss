@@ -570,3 +570,72 @@ body.template-product {
 
   }
 }
+
+body.template- {
+  .i-header-container .i-header-menu__content--items li a {
+    color: #1E1E1E !important;
+  }
+
+  #MainContent {
+    .shopify-policy__container {
+      width: 1440px;
+      max-width: 100%;
+      margin: 0 auto;
+      display: block;
+      padding: 0 54px;
+      margin-top: 105px;
+
+      @media only screen and (max-width: 1025px) {
+        padding: 0 20px;
+      }
+
+      .shopify-policy__title {
+        h1 {
+          text-align: left;
+          color: #000;
+          font-family: var(--Family-Font, Besley);
+          font-size: var(--Typo-H2, 39px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 120%; /* 46.8px */
+          letter-spacing: -1.17px;
+
+          @media only screen and (max-width: 1025px) {
+            font-size: var(--Typo-H2, 25px);
+          }
+        }
+      }
+      .shopify-policy__body {
+        padding-bottom: 80px;
+
+        @media only screen and (max-width: 1025px) {
+          padding-bottom: 840px;
+        }
+        p, span {
+          color: #000;
+          font-family: var(--Family-Font---Body, "Instrument Sans");
+          font-size: var(--Typo-Body-M, 16px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 25px; /* 156.25% */
+          @media only screen and (max-width: 1025px) {
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+        strong {
+          color: #000;
+          font-family: var(--Family-Font---Body, "Instrument Sans");
+          font-size: var(--Typo-Body-M, 16px);
+          font-style: normal;
+          font-weight: 700;
+          line-height: 25px; /* 156.25% */
+          @media only screen and (max-width: 1025px) {
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
