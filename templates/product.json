@@ -170,11 +170,13 @@
     },
     "i_section_table_compare_96AMME": {
       "type": "i-section-table-compare",
+      "disabled": true,
       "name": "iUROP section - Table",
       "settings": {}
     },
     "i_section_recipes_TRctnp": {
       "type": "i-section-recipes",
+      "disabled": true,
       "name": "iUROP section - Recipes",
       "settings": {}
     },
