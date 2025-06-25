@@ -2826,6 +2826,70 @@ body.open-cart .i-header-container__content--icons {
     font-size: 18px;
   }
 }
+.i-section .i-section-image-text .is_text-left {
+  text-align: left;
+}
+.i-section .i-section-image-text .is_text-left h2 {
+  text-align: left;
+  width: 100%;
+  color: var(--Colors-800, var(--Colors-800, #1E1E1E));
+  font-family: var(--Family-Font, Besley);
+  font-size: var(--Typo-H2, 39px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 46.8px */
+  letter-spacing: -1.17px;
+  margin-bottom: 24px;
+}
+.i-section .i-section-image-text .is_text-left p {
+  color: var(--Colors-800, var(--Colors-800, #1E1E1E));
+  font-family: var(--Family-Font---Body, "Instrument Sans");
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  margin-bottom: 24px;
+}
+.i-section .i-section-image-text .is_text-left .i-section-image-text__text--pharagrah div {
+  display: inline-block;
+  vertical-align: top;
+  width: 49%;
+  margin-bottom: 10px;
+}
+.i-section .i-section-image-text .is_text-left .i-section-image-text__text--pharagrah div svg {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.i-section .i-section-image-text .is_text-left .i-section-image-text__text--pharagrah div span {
+  color: var(--Colors-800, var(--Colors-800, #1E1E1E));
+  font-family: var(--Family-Font---Body, "Instrument Sans");
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 156.25% */
+  display: inline-block;
+  vertical-align: middle;
+}
+.i-section .i-section-image-text.template-style-alternative_1 .i-section-image-text__text h2 {
+  font-size: 30px;
+  padding-left: 30px;
+  margin-bottom: 18px;
+}
+.i-section .i-section-image-text.template-style-alternative_1 .i-section-image-text__text .i-section-image-text__text--pharagrah {
+  margin: 0px !important;
+  width: 100%;
+  padding-left: 30px;
+}
+.i-section .i-section-image-text.template-style-alternative_1 .i-section-image-text__text .i-section-image-text__text--pharagrah p {
+  font-size: 16px;
+  line-height: 25px;
+  text-align: left;
+}
+.i-section .i-section-image-text.template-style-alternative_1 .i-section-image-text__image {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 .i-section .i-section-image-faqs {
   padding: 48px 45px;
   display: flex;
@@ -3373,6 +3437,151 @@ body.open-cart .i-header-container__content--icons {
   .i-section .i-section-banner-content__items--separator {
     display: none !important;
   }
+}
+.i-section .i-section-table-comparer {
+  max-width: 100%;
+  box-sizing: border-box;
+  width: 947px;
+  padding: 30px 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (max-width: 1025px) {
+  .i-section .i-section-table-comparer {
+    padding: 0 20px;
+  }
+}
+.i-section .i-section-table-comparer h2 {
+  color: var(--Colors-800, var(--Colors-800, #1E1E1E));
+  text-align: center;
+  font-family: var(--Family-Font, Besley);
+  font-size: var(--Typo-H1, 49px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -1.47px;
+}
+@media only screen and (max-width: 1025px) {
+  .i-section .i-section-table-comparer h2 {
+    font-size: 30px;
+    padding: 0 20px;
+  }
+}
+.i-section .i-section-table-comparer__table {
+  margin-top: 68px;
+}
+@media only screen and (max-width: 1025px) {
+  .i-section .i-section-table-comparer__table {
+    margin-top: 48px;
+  }
+}
+.i-section .i-section-table-comparer__table--header {
+  display: flex;
+}
+.i-section .i-section-table-comparer__table--header__col {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.i-section .i-section-table-comparer__table--header__col .overlay-major-option {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background: var(--Colors-300, #EEE6D4);
+  border-left: 1px solid #C5BEAF;
+  border-right: 1px solid #C5BEAF;
+  border-top: 1px solid #C5BEAF;
+  z-index: 0;
+  left: 0;
+  top: -18px;
+  bottom: -24px;
+  right: 0;
+  margin: auto;
+  -webkit-border-top-left-radius: 15px;
+  -webkit-border-top-right-radius: 15px;
+  -moz-border-radius-topleft: 15px;
+  -moz-border-radius-topright: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.i-section .i-section-table-comparer__table--header__col img {
+  width: 78px;
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+@media only screen and (max-width: 1025px) {
+  .i-section .i-section-table-comparer__table--header__col img {
+    width: 52px;
+  }
+}
+.i-section .i-section-table-comparer__table--rows {
+  margin-top: 22px;
+}
+.i-section .i-section-table-comparer__table--rows__items {
+  border-bottom: var(--Strokes-Small, 1px) solid var(--Colors-500, #887E64);
+  display: flex;
+}
+.i-section .i-section-table-comparer__table--rows__items--col {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.i-section .i-section-table-comparer__table--rows__items--col .overlay-major-option {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background: var(--Colors-300, #EEE6D4);
+  border-left: 1px solid #C5BEAF;
+  border-right: 1px solid #C5BEAF;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  bottom: -2px;
+  right: 0;
+  margin: auto;
+}
+.i-section .i-section-table-comparer__table--rows__items--col svg {
+  position: relative;
+  z-index: 2;
+}
+.i-section .i-section-table-comparer__table--rows__items:last-child {
+  border-bottom: 0px !important;
+}
+.i-section .i-section-table-comparer__table--rows__items:last-child .overlay-major-option {
+  border-bottom: 1px solid #C5BEAF;
+  -webkit-border-bottom-left-radius: 15px;
+  -webkit-border-bottom-right-radius: 15px;
+  -moz-border-radius-bottomleft: 15px;
+  -moz-border-radius-bottomright: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.i-section .i-section-table-comparer .table-col-1 {
+  width: 40%;
+  padding: 28px 0px;
+  text-align: left;
+  justify-content: left;
+  color: var(--Colors-800, var(--Colors-800, #1E1E1E));
+  font-family: var(--Family-Font---Body, "Instrument Sans");
+  font-size: var(--Typo-Body-S, 13px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media only screen and (max-width: 1025px) {
+  .i-section .i-section-table-comparer .table-col-1 {
+    padding: 20px 0;
+    font-size: 12px;
+    padding-right: 6px;
+  }
+}
+.i-section .i-section-table-comparer .table-col-2 {
+  width: 20%;
 }
 
 @keyframes marquee {

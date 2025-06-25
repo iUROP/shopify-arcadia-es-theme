@@ -1,7 +1,42 @@
 <div class="i-section" data-aos="fade-up">
 
   <div class="i-section-table-comparer">
-    Tabla comparativa
+    <h2>{{ section.settings.title }}</h2>
+    <div class="i-section-table-comparer__table">
+      <div class="i-section-table-comparer__table--header">
+        <div class="i-section-table-comparer__table--header__col table-col-1">&nbsp;</div>
+        <div class="i-section-table-comparer__table--header__col table-col-2">
+          <img src="{{ section.settings.banner_1 | image_url: width: 1600 }}" alt="Banner Arcadia" class="header-image" />
+          <span class="overlay-major-option"></span>
+        </div>
+        <div class="i-section-table-comparer__table--header__col table-col-2">
+          <img src="{{ section.settings.banner_2 | image_url: width: 1600 }}" alt="Banner Arcadia" class="header-image" />
+        </div>
+        <div class="i-section-table-comparer__table--header__col table-col-2">
+          <img src="{{ section.settings.banner_3 | image_url: width: 1600 }}" alt="Banner Arcadia" class="header-image" />
+        </div>
+      </div>
+      <div class="i-section-table-comparer__table--rows">
+
+        {% for block in section.blocks %}
+          <div class="i-section-table-comparer__table--rows__items">
+            <div class="i-section-table-comparer__table--rows__items--col table-col-1">
+              {{ block.settings.description }}
+            </div>
+            <div class="i-section-table-comparer__table--rows__items--col table-col-2">
+              {% render 'i-table-include' state_icon: block.settings.opption_state_1 %}
+              <span class="overlay-major-option"></span>
+            </div>
+            <div class="i-section-table-comparer__table--rows__items--col table-col-2">
+              {% render 'i-table-include' state_icon: block.settings.opption_state_2 %}
+            </div>
+            <div class="i-section-table-comparer__table--rows__items--col table-col-2">
+              {% render 'i-table-include' state_icon: block.settings.opption_state_3 %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
   </div>
 
 </div>
@@ -10,8 +45,101 @@
 {
   "name": "iUROP section - Table",
   "class": "section-table-comparer",
-  "settings": [],
-  "blocks": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titulo"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_1",
+      "label": "Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_2",
+      "label": "Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_3",
+      "label": "Image 3"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "especificacion",
+      "name": "Especificación",
+      "settings": [
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Descripción"
+        },
+        {
+          "type": "select",
+          "id": "opption_state_1",
+          "options": [
+            {
+              "value": "include",
+              "label": "Incluido"
+            },
+            {
+              "value": "no_include",
+              "label": "No incluido"
+            },
+            {
+              "value": "optional",
+              "label": "Sin especificar"
+            }
+          ],
+          "default": "include",
+          "label": "Opción Nectar"
+        },
+        {
+          "type": "select",
+          "id": "opption_state_2",
+          "options": [
+            {
+              "value": "include",
+              "label": "Incluido"
+            },
+            {
+              "value": "no_include",
+              "label": "No incluido"
+            },
+            {
+              "value": "optional",
+              "label": "Sin especificar"
+            }
+          ],
+          "default": "include",
+          "label": "Opción Branded honey"
+        },
+        {
+          "type": "select",
+          "id": "opption_state_3",
+          "options": [
+            {
+              "value": "include",
+              "label": "Incluido"
+            },
+            {
+              "value": "no_include",
+              "label": "No incluido"
+            },
+            {
+              "value": "optional",
+              "label": "Sin especificar"
+            }
+          ],
+          "default": "include",
+          "label": "Opción Normal honey"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "iUROP section - Table",
