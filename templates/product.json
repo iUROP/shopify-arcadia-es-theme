@@ -242,6 +242,68 @@
         "banner_3": "shopify://shop_images/logo3.png"
       }
     },
+    "i_section_image_text_fhdDVB": {
+      "type": "i-section-image-text",
+      "blocks": {
+        "checkblock_wjhWiw": {
+          "type": "checkblock",
+          "settings": {
+            "title": "Sin aditivos"
+          }
+        },
+        "checkblock_ePKKpX": {
+          "type": "checkblock",
+          "settings": {
+            "title": "Libre de pesticidas"
+          }
+        },
+        "checkblock_BneKjb": {
+          "type": "checkblock",
+          "settings": {
+            "title": "Sin pasteurizar"
+          }
+        },
+        "checkblock_CgWNKJ": {
+          "type": "checkblock",
+          "settings": {
+            "title": "Rica en antioxidantes"
+          }
+        },
+        "checkblock_QWQKye": {
+          "type": "checkblock",
+          "settings": {
+            "title": "Cargada de polen"
+          }
+        },
+        "checkblock_dweLgQ": {
+          "type": "checkblock",
+          "settings": {
+            "title": "Alta en ácidos fenólicos"
+          }
+        }
+      },
+      "block_order": [
+        "checkblock_wjhWiw",
+        "checkblock_ePKKpX",
+        "checkblock_BneKjb",
+        "checkblock_CgWNKJ",
+        "checkblock_QWQKye",
+        "checkblock_dweLgQ"
+      ],
+      "name": "iUROP section - ImageText",
+      "settings": {
+        "title": "Cuidadosamente obtenida, naturalmente pura",
+        "content": "<p>Descubre nuestra miel artesanal pura, recolectada de forma ética y 100 % trazable. Rica en antioxidantes y enzimas.</p>",
+        "button_text": "",
+        "button_link": "",
+        "image": "shopify://shop_images/reseta.png",
+        "image_left": true,
+        "text_to_left": true,
+        "is_complete": false,
+        "is_bg": false,
+        "template_text_style": "normal"
+      }
+    },
     "i_section_recipes_TRctnp": {
       "type": "i-section-recipes",
       "disabled": true,
@@ -336,6 +398,7 @@
     "i_section_product_list_LMxRtN",
     "i_section_banner_content_bTBCLc",
     "i_section_table_compare_96AMME",
+    "i_section_image_text_fhdDVB",
     "i_section_recipes_TRctnp",
     "i_section_faqs_wdayGH",
     "i_section_instagram_fMCFXj"
