@@ -122,7 +122,7 @@
     "i_section_banner_content_bTBCLc": {
       "type": "i-section-banner-content",
       "blocks": {
-        "item_CpYN6J": {
+        "item_YAby6q": {
           "type": "item",
           "settings": {
             "icon": "shopify://shop_images/fructose.png",
@@ -130,7 +130,7 @@
             "subtitle": "Azúcar natural"
           }
         },
-        "item_nEd97r": {
+        "item_6XYrwN": {
           "type": "item",
           "settings": {
             "icon": "shopify://shop_images/bee-pollen.png",
@@ -138,7 +138,7 @@
             "subtitle": "Superalimento natural"
           }
         },
-        "item_6w9xFq": {
+        "item_QFyr7q": {
           "type": "item",
           "settings": {
             "icon": "shopify://shop_images/flavonoids.png",
@@ -146,7 +146,7 @@
             "subtitle": "Nutrientes naturales"
           }
         },
-        "item_CdiDMW": {
+        "item_hnMznx": {
           "type": "item",
           "settings": {
             "icon": "shopify://shop_images/item-info-2.png",
@@ -156,10 +156,10 @@
         }
       },
       "block_order": [
-        "item_CpYN6J",
-        "item_nEd97r",
-        "item_6w9xFq",
-        "item_CdiDMW"
+        "item_YAby6q",
+        "item_6XYrwN",
+        "item_QFyr7q",
+        "item_hnMznx"
       ],
       "name": "iUROP section - Banner C",
       "settings": {
@@ -170,11 +170,13 @@
     },
     "i_section_table_compare_96AMME": {
       "type": "i-section-table-compare",
+      "disabled": true,
       "name": "iUROP section - Table",
       "settings": {}
     },
     "i_section_recipes_TRctnp": {
       "type": "i-section-recipes",
+      "disabled": true,
       "name": "iUROP section - Recipes",
       "settings": {}
     },
