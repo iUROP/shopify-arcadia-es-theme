@@ -170,9 +170,77 @@
     },
     "i_section_table_compare_96AMME": {
       "type": "i-section-table-compare",
-      "disabled": true,
+      "blocks": {
+        "especificacion_RBEtnG": {
+          "type": "especificacion",
+          "settings": {
+            "description": "Por qué nuestra miel destaca",
+            "opption_state_1": "include",
+            "opption_state_2": "optional",
+            "opption_state_3": "no_include"
+          }
+        },
+        "especificacion_TKGYRF": {
+          "type": "especificacion",
+          "settings": {
+            "description": "Certificada libre de residuos de glifosato",
+            "opption_state_1": "include",
+            "opption_state_2": "optional",
+            "opption_state_3": "optional"
+          }
+        },
+        "especificacion_KYEqGp": {
+          "type": "especificacion",
+          "settings": {
+            "description": "100 % trazable hasta su origen",
+            "opption_state_1": "include",
+            "opption_state_2": "optional",
+            "opption_state_3": "optional"
+          }
+        },
+        "especificacion_kwE79Y": {
+          "type": "especificacion",
+          "settings": {
+            "description": "Apicultura con estándares éticos",
+            "opption_state_1": "include",
+            "opption_state_2": "optional",
+            "opption_state_3": "no_include"
+          }
+        },
+        "especificacion_A9F9Ua": {
+          "type": "especificacion",
+          "settings": {
+            "description": "Garantía de textura rica y suave",
+            "opption_state_1": "include",
+            "opption_state_2": "no_include",
+            "opption_state_3": "no_include"
+          }
+        },
+        "especificacion_c7YWgV": {
+          "type": "especificacion",
+          "settings": {
+            "description": "Recomendada por expertos en bienestar",
+            "opption_state_1": "include",
+            "opption_state_2": "no_include",
+            "opption_state_3": "no_include"
+          }
+        }
+      },
+      "block_order": [
+        "especificacion_RBEtnG",
+        "especificacion_TKGYRF",
+        "especificacion_KYEqGp",
+        "especificacion_kwE79Y",
+        "especificacion_A9F9Ua",
+        "especificacion_c7YWgV"
+      ],
       "name": "iUROP section - Table",
-      "settings": {}
+      "settings": {
+        "title": "Por qué nuestra miel destaca",
+        "banner_1": "shopify://shop_images/logo1.png",
+        "banner_2": "shopify://shop_images/logo2.png",
+        "banner_3": "shopify://shop_images/logo3.png"
+      }
     },
     "i_section_recipes_TRctnp": {
       "type": "i-section-recipes",
