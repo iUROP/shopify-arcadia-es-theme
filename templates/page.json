@@ -75,16 +75,28 @@
             "text": "<strong>NO </strong>tenemos azúcares añadidos (es una miel natural)"
           }
         },
-        "yes_dbxzUT": {
-          "type": "yes",
-          "settings": {
-            "text": "TIENEN <strong>azúcares añadidos</strong>"
-          }
-        },
         "no_9qeRKy": {
           "type": "no",
           "settings": {
             "text": "<strong>NO </strong>pasteurizamos la miel (es una miel cruda)"
+          }
+        },
+        "no_EzKwqq": {
+          "type": "no",
+          "settings": {
+            "text": "<strong>NO </strong>utilizamos envases de plástico (usamos vidrio)"
+          }
+        },
+        "no_M8eKVQ": {
+          "type": "no",
+          "settings": {
+            "text": "<strong>NO </strong>elaboramos en zonas de algo contenido en pesticidas"
+          }
+        },
+        "yes_dbxzUT": {
+          "type": "yes",
+          "settings": {
+            "text": "TIENEN <strong>azúcares añadidos</strong>"
           }
         },
         "yes_qYqzcd": {
@@ -92,13 +104,29 @@
           "settings": {
             "text": "<strong>Pasteurizan la miel</strong>"
           }
+        },
+        "yes_nUgaxp": {
+          "type": "yes",
+          "settings": {
+            "text": "USAN<strong> envases de plástico</strong>"
+          }
+        },
+        "yes_t8tcBt": {
+          "type": "yes",
+          "settings": {
+            "text": "ELABORAN en zonas de <strong>alto contenidoen pesticidas</strong>"
+          }
         }
       },
       "block_order": [
         "no_NFCKwE",
-        "yes_dbxzUT",
         "no_9qeRKy",
-        "yes_qYqzcd"
+        "no_EzKwqq",
+        "no_M8eKVQ",
+        "yes_dbxzUT",
+        "yes_qYqzcd",
+        "yes_nUgaxp",
+        "yes_t8tcBt"
       ],
       "name": "iUROP section - YesNot",
       "settings": {
