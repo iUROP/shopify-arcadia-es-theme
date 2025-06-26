@@ -54,6 +54,7 @@
       }
 
       &--title {
+        margin-bottom: 32px;
         @media only screen and (max-width: 1024px) {
           padding: 0px 18px;
 
@@ -620,7 +621,6 @@
             display: inline-block;
             vertical-align: middle;
             position: relative;
-            top: -1px;
           }
           span {
             display: inline-block;
@@ -633,6 +633,7 @@
             line-height: 25px;
             position: relative;
             top: -1px;
+            text-transform: lowercase;
           }
         }
       }
@@ -1700,6 +1701,7 @@
       width: 730px;
       margin-left: auto;
       margin-right: auto;
+      margin-top: 128px;
 
       @media only screen and (max-width: 1025px) {
         width: 100%;
@@ -1775,7 +1777,7 @@
         border-radius: var(--Corner-Small, 8px);
         border: var(--Strokes-Small, 1px) solid var(--Colors-100, #5B1414);
         cursor: pointer;
-
+        text-decoration: none;
         color: var(--Colors-100, var(--Colors-100, #5B1414));
         font-family: var(--Family-Font, Besley);
         font-size: var(--Typo-Body-M, 16px);

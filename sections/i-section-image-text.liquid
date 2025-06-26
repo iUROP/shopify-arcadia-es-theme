@@ -1,4 +1,4 @@
-<div class="i-section" data-aos="fade-up">
+<div class="i-section" data-aos="fade-up" id="{{ section.settings.id_section }}">
   <div class="
     i-section-image-text 
     {% if section.settings.is_complete %} without-margins{% endif %} 
@@ -71,6 +71,11 @@
         "type": "text",
         "id": "title",
         "label": "Título"
+      },
+      {
+        "type": "text",
+        "id": "id_section",
+        "label": "ID de sección"
       },
       {
         "type": "richtext",

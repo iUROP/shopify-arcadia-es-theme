@@ -779,6 +779,10 @@ body {
   border: 0px;
   padding: 0px;
   cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  line-height: 42px;
+  text-decoration: none !important;
 }
 .i-product-add-to-cart-container:hover {
   background: var(--Colors-100, #752020);
@@ -1545,6 +1549,7 @@ i-minicart .i-minicart-container__overlay.open {
   text-decoration: none;
   padding: 14px 26px;
   display: block;
+  font-family: "Besley", serif !important;
 }
 @media only screen and (min-width: 1025px) {
   .i-header-container .i-header-menu__content--items li a {
@@ -2149,6 +2154,9 @@ body.open-cart .i-header-container__content--icons {
   position: relative;
   top: 1px;
 }
+.i-section .i-section-primary-hero__overlay--title {
+  margin-bottom: 32px;
+}
 @media only screen and (max-width: 1024px) {
   .i-section .i-section-primary-hero__overlay--title {
     padding: 0px 18px;
@@ -2683,7 +2691,6 @@ body.open-cart .i-header-container__content--icons {
   display: inline-block;
   vertical-align: middle;
   position: relative;
-  top: -1px;
 }
 .i-section .i-section-testimonials__profile--labels .title-profile span {
   display: inline-block;
@@ -2696,6 +2703,7 @@ body.open-cart .i-header-container__content--icons {
   line-height: 25px;
   position: relative;
   top: -1px;
+  text-transform: lowercase;
 }
 .i-section .i-section-image-text {
   margin: 32px 32px;
@@ -3710,6 +3718,7 @@ body.open-cart .i-header-container__content--icons {
   width: 730px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 128px;
 }
 @media only screen and (max-width: 1025px) {
   .i-section .i-section-hero-tabs__title {
@@ -3785,6 +3794,7 @@ body.open-cart .i-header-container__content--icons {
   border-radius: var(--Corner-Small, 8px);
   border: var(--Strokes-Small, 1px) solid var(--Colors-100, #5B1414);
   cursor: pointer;
+  text-decoration: none;
   color: var(--Colors-100, var(--Colors-100, #5B1414));
   font-family: var(--Family-Font, Besley);
   font-size: var(--Typo-Body-M, 16px);
@@ -4646,6 +4656,10 @@ body.template- #MainContent .shopify-policy__container .shopify-policy__body str
     font-size: 14px;
     line-height: 20px;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .i-product-card {

@@ -6,9 +6,9 @@
     </h1>
     <div class="i-section-hero-tabs__tabs">
       {% for block in section.blocks %}
-        <div class="i-section-hero-tabs__tabs--item">
+        <a class="i-section-hero-tabs__tabs--item" href="#{{ block.settings.anchor }}">
           {{ block.settings.title }}
-        </div>
+        </a>
       {% endfor %}
     </div>
     <div class="i-section-hero-tabs__text">
@@ -58,6 +58,11 @@
           "type": "text",
           "id": "title",
           "label": "Titulo"
+        },
+        {
+          "type": "text",
+          "id": "anchor",
+          "label": "ID de seccion"
         }
       ]
     },
