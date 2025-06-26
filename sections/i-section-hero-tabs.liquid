@@ -1,0 +1,72 @@
+<div class="i-section" data-aos="fade-up">
+
+  <div class="i-section-hero-tabs">
+    <h1 class="i-section-hero-tabs__title">
+      {{ section.settings.title }}
+    </h1>
+    <div class="i-section-hero-tabs__tabs">
+      {% for block in section.blocks %}
+        <div class="i-section-hero-tabs__tabs--item">
+          {{ block.settings.title }}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="i-section-hero-tabs__text">
+      {{ section.settings.subtitle }}
+    </div>
+    <div class="i-section-hero-tabs__actions">
+      {% if section.settings.button_link and section.settings.button_text %}
+        <a href="{{ section.settings.button_link }}" class="Text-Colors-White Family-Font Typo-Body-M is-button-hover-primary">{{ section.settings.button_text }}</a>
+      {% endif %}
+    </div>
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "iUROP section - Hero tabs",
+  "class": "section-hero-tabs",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Titulo"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitulo"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Texto del botón"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "URL del botón"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titulo"
+        }
+      ]
+    },
+  ],
+  "presets": [
+    {
+      "name": "iUROP section - Hero tabs",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

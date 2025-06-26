@@ -11,267 +11,220 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
     },
-    "i_section_marqee_HbL8Je": {
-      "type": "i-section-marqee",
+    "i_section_hero_tabs_7dhCm3": {
+      "type": "i-section-hero-tabs",
       "blocks": {
-        "announcement_jmNfaH": {
-          "type": "announcement",
+        "tab_nFaPLJ": {
+          "type": "tab",
           "settings": {
-            "marqee": "Cosecha <strong>sostenible</strong>"
+            "title": "Ingredientes"
           }
         },
-        "announcement_fnk84k": {
-          "type": "announcement",
+        "tab_8FAkgh": {
+          "type": "tab",
           "settings": {
-            "marqee": "Obtención <strong>ética</strong>"
+            "title": "Sin azúcares añadidos"
           }
         },
-        "announcement_Wpmzhj": {
-          "type": "announcement",
+        "tab_a4dHT7": {
+          "type": "tab",
           "settings": {
-            "marqee": "<strong>100 % trazable</strong>"
+            "title": "Sin pasteurizar"
           }
         },
-        "announcement_UArqN4": {
-          "type": "announcement",
+        "tab_6XQVGi": {
+          "type": "tab",
           "settings": {
-            "marqee": "<strong>Sin azúcares</strong> añadidos"
+            "title": "Sin pesticidas"
           }
         },
-        "announcement_xPWney": {
-          "type": "announcement",
+        "tab_paUjyr": {
+          "type": "tab",
           "settings": {
-            "marqee": "<strong>Sin conservantes</strong>"
-          }
-        },
-        "announcement_FTPrkG": {
-          "type": "announcement",
-          "settings": {
-            "marqee": "Certificado de Comercio Justo"
-          }
-        },
-        "announcement_kJYM6Y": {
-          "type": "announcement",
-          "settings": {
-            "marqee": "Sin <strong>aditivos</strong>"
-          }
-        },
-        "announcement_kyxmBF": {
-          "type": "announcement",
-          "settings": {
-            "marqee": "No modificado genéticamente"
+            "title": "Envase de cristal"
           }
         }
       },
       "block_order": [
-        "announcement_jmNfaH",
-        "announcement_fnk84k",
-        "announcement_Wpmzhj",
-        "announcement_UArqN4",
-        "announcement_xPWney",
-        "announcement_FTPrkG",
-        "announcement_kJYM6Y",
-        "announcement_kyxmBF"
+        "tab_nFaPLJ",
+        "tab_8FAkgh",
+        "tab_a4dHT7",
+        "tab_6XQVGi",
+        "tab_paUjyr"
       ],
-      "name": "iUROP section - Marqee",
+      "name": "iUROP section - Hero tabs",
       "settings": {
-        "is_alternate_color": true
-      }
-    },
-    "i_section_image_text_KTdEDw": {
-      "type": "i-section-image-text",
-      "blocks": {
-        "link_block_hHJhJg": {
-          "type": "link_block",
-          "settings": {
-            "title": "Sin azúcar añadido",
-            "button_link": "/#",
-            "icon": "shopify://shop_images/no-sugar.png"
-          }
-        },
-        "link_block_HkMqyw": {
-          "type": "link_block",
-          "settings": {
-            "title": "Sin pasteurización",
-            "button_link": "/#",
-            "icon": "shopify://shop_images/no-pausterization.png"
-          }
-        },
-        "link_block_jhFbNt": {
-          "type": "link_block",
-          "settings": {
-            "title": "Sin glifosato",
-            "button_link": "/#",
-            "icon": "shopify://shop_images/no-quimics.png"
-          }
-        }
-      },
-      "block_order": [
-        "link_block_hHJhJg",
-        "link_block_HkMqyw",
-        "link_block_jhFbNt"
-      ],
-      "name": "iUROP section - ImageText",
-      "settings": {
-        "title": "",
-        "content": "<p>Creemos en la pureza, la transparencia y la sostenibilidad. Cada frasco de Arcadias Nectar es 100 % trazable, obtenido de forma ética y libre de aditivos, para que disfrutes la miel en su forma más natural.</p>",
-        "button_text": "Comprar miel",
-        "button_link": "shopify://collections/all",
-        "image": "shopify://shop_images/ingredientes-image-m.png",
-        "image_m": "shopify://shop_images/ingredientes-image-m.png",
-        "image_left": true
-      }
-    },
-    "i_section_parallax_BL69dQ": {
-      "type": "i-section-parallax",
-      "name": "iUROP section - Parallax",
-      "settings": {
-        "banner_image": "shopify://shop_images/miel-mesa.jpg",
-        "video_url": "",
-        "title_image": "Cuidadosamente elaborada para el sabor, el bienestar y el planeta",
-        "subtitle": "Nuestra miel premium es obtenida de forma ética, pura y elaborada con esmero para garantizar transparencia, sostenibilidad y bienestar, para que disfrutes la miel tal como la naturaleza lo pensó.",
-        "alternate_title": true,
-        "text_left": true,
-        "button_text": "Comprar miel",
-        "button_link": "shopify://collections/all"
-      }
-    },
-    "i_section_simple_testimonies_GrkfNm": {
-      "type": "i-section-simple-testimonies",
-      "name": "iUROP section - Opinions",
-      "settings": {
-        "mision_text": "<p><strong>“Nuestra misión es simple:</strong> ofrecer miel pura y trazable que le dé energía a tu vida. Lo que realmente importa: calidad excepcional, obtención ética y beneficios reales para tu bienestar.”</p>",
-        "avatar": "shopify://shop_images/avatar.png",
-        "name": "PABLO MARTI",
-        "role": "Founder"
-      }
-    },
-    "i_section_title_image_edTJdn": {
-      "type": "i-section-title-image",
-      "name": "iUROP section - Title-Img",
-      "settings": {
-        "title": "Los nutrientes perduran durante el calentamiento a alta temperatura.",
-        "image": "shopify://shop_images/table-chart.png",
-        "image_m": "shopify://shop_images/table-chart-m.png"
-      }
-    },
-    "i_section_product_testimonies_dzJJ3b": {
-      "type": "i-section-product-testimonies",
-      "blocks": {
-        "comment_jzRbJ8": {
-          "type": "comment",
-          "settings": {
-            "comment": "Cada mañana se siente transformada desde que empecé a usar esta miel pura. Su sabor auténtico y su energía natural redefinieron mi rutina: me dan fuerza… y una sonrisa de verdad.",
-            "author": "Sofia Ramirez"
-          }
-        },
-        "comment_RBVzrT": {
-          "type": "comment",
-          "settings": {
-            "comment": "Cada mañana se siente transformada desde que empecé a usar esta miel pura. Su sabor auténtico y su energía natural redefinieron mi rutina: me dan fuerza… y una sonrisa de verdad.",
-            "author": "Sofia Ramirez"
-          }
-        },
-        "logo_dRhgJX": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo-1.png"
-          }
-        },
-        "logo_fxVTBx": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo-2.png"
-          }
-        },
-        "logo_MxNHM6": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo-3.png"
-          }
-        },
-        "logo_KQbhRY": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo-4.png"
-          }
-        }
-      },
-      "block_order": [
-        "comment_jzRbJ8",
-        "comment_RBVzrT",
-        "logo_dRhgJX",
-        "logo_fxVTBx",
-        "logo_MxNHM6",
-        "logo_KQbhRY"
-      ],
-      "name": "iUROP section - P Rev",
-      "settings": {
-        "collection": "frontpage"
-      }
-    },
-    "i_section_instagram_64ck7C": {
-      "type": "i-section-instagram",
-      "blocks": {
-        "content_block_gmPtjn": {
-          "type": "content_block",
-          "settings": {
-            "image": "shopify://shop_images/ig-1.png"
-          }
-        },
-        "content_block_JUF4kL": {
-          "type": "content_block",
-          "settings": {
-            "image": "shopify://shop_images/ig-2.png"
-          }
-        },
-        "content_block_wNNqyG": {
-          "type": "content_block",
-          "settings": {
-            "image": "shopify://shop_images/ig-3.png"
-          }
-        },
-        "content_block_tmHFLw": {
-          "type": "content_block",
-          "settings": {
-            "image": "shopify://shop_images/ig-2.png"
-          }
-        },
-        "content_block_hLCwUV": {
-          "type": "content_block",
-          "settings": {
-            "image": "shopify://shop_images/ig-1.png"
-          }
-        }
-      },
-      "block_order": [
-        "content_block_gmPtjn",
-        "content_block_JUF4kL",
-        "content_block_wNNqyG",
-        "content_block_tmHFLw",
-        "content_block_hLCwUV"
-      ],
-      "name": "iUROP section - Instagram",
-      "settings": {
-        "title": "#Nectararcadia",
-        "button_text": "Siguenos en nuestro Instagram",
+        "title": "<p>La  <em>miel  </em>debería llevar un <strong>ÚNICO </strong>ingrediente. Debería…</p>",
+        "subtitle": "En Arcadia’s Nectar creemos en la pureza: solo miel natural, cruda y auténtica. Sin añadidos, sin mezclas. Lo que ves es lo que es.",
+        "button_text": "Comprar miel natural",
         "button_link": "/#"
       }
+    },
+    "i_section_yes_not_QJaRnV": {
+      "type": "i-section-yes-not",
+      "blocks": {
+        "no_NFCKwE": {
+          "type": "no",
+          "settings": {
+            "text": "<strong>NO </strong>tenemos azúcares añadidos (es una miel natural)"
+          }
+        },
+        "yes_dbxzUT": {
+          "type": "yes",
+          "settings": {
+            "text": "TIENEN <strong>azúcares añadidos</strong>"
+          }
+        },
+        "no_9qeRKy": {
+          "type": "no",
+          "settings": {
+            "text": "<strong>NO </strong>pasteurizamos la miel (es una miel cruda)"
+          }
+        },
+        "yes_qYqzcd": {
+          "type": "yes",
+          "settings": {
+            "text": "<strong>Pasteurizan la miel</strong>"
+          }
+        }
+      },
+      "block_order": [
+        "no_NFCKwE",
+        "yes_dbxzUT",
+        "no_9qeRKy",
+        "yes_qYqzcd"
+      ],
+      "name": "iUROP section - YesNot",
+      "settings": {
+        "title": "La miel NO debe tener ingredientes.",
+        "title_no": "Nosotros",
+        "title_yes": "Ellos"
+      }
+    },
+    "i_section_image_text_dhbiWV": {
+      "type": "i-section-image-text",
+      "name": "iUROP section - ImageText",
+      "settings": {
+        "title": "Miel auténtica, sin azúcares añadidos",
+        "content": "<p>Más del 50% de la miel en España está adulterada con jarabes y azúcares industriales para abaratar costes, lo que reduce su calidad y puede afectar la salud, especialmente en personas con diabetes.<br/><br/>Nuestra miel es 100% natural, cruda y sin aditivos. Proviene de colmenas cuidadas en entornos limpios, se cristaliza de forma natural —señal de pureza— y mantiene todas sus propiedades originales.<br/><br/>Además, realizamos controles de calidad en laboratorios independientes para garantizar un producto auténtico, tal como lo crean las abejas: sin trampas ni azúcares ocultos.</p>",
+        "button_text": "Experimentar la miel auténtica",
+        "button_link": "/#",
+        "image": "shopify://shop_images/ti-1.png",
+        "image_m": "shopify://shop_images/ti-1.png",
+        "show_complete_image": false,
+        "hide_borders": false,
+        "image_left": true,
+        "text_to_left": true,
+        "is_complete": false,
+        "is_bg": false,
+        "template_text_style": "alternative_1"
+      }
+    },
+    "i_section_image_text_jyMdpR": {
+      "type": "i-section-image-text",
+      "name": "iUROP section - ImageText",
+      "settings": {
+        "title": "Sin pasteurizar: miel viva y contodas sus propiedades",
+        "content": "<p>La pasteurización, aunque común en la industria para evitar la cristalización y alargar la vida útil, destruye gran parte del valor nutricional de la miel. Al calentarla, se pierden enzimas clave, vitaminas sensibles al calor y compuestos aromáticos naturales. Incluso puede generarse HMF, un indicador de sobrecalentamiento.<br/><br/>Nuestra miel es completamente cruda y sin pasteurizar, lo que preserva sus enzimas, vitaminas, sabor y beneficios funcionales (prebiótico, cicatrizante, antimicrobiano). No forzamos su apariencia: si cristaliza o tiene sedimentos, es prueba de su pureza.</p>",
+        "button_text": "",
+        "button_link": "",
+        "image": "shopify://shop_images/bars.png",
+        "image_m": "shopify://shop_images/m-table.png",
+        "show_complete_image": true,
+        "hide_borders": false,
+        "image_left": false,
+        "text_to_left": true,
+        "is_complete": true,
+        "is_bg": true,
+        "template_text_style": "alternative_1"
+      }
+    },
+    "i_section_image_text_4kQpQb": {
+      "type": "i-section-image-text",
+      "name": "iUROP section - ImageText",
+      "settings": {
+        "title": "Sin abuso de pesticidas, saludabledesde el origen",
+        "content": "<p>Cuando las abejas forrajean cerca de cultivos tratados con pesticidas, estos químicos terminan en la miel, afectando su calidad y poniendo en riesgo la salud de las propias abejas. Sustancias como el glifosato han sido encontradas incluso en mieles etiquetadas como “naturales”.<br/><br/>Nuestra miel se produce en zonas libres de agricultura intensiva, donde las abejas recolectan néctar y polen de flores silvestres, sin riesgo de contaminación. Trabajamos con apicultores que siguen prácticas agroecológicas, respetando el ecosistema y favoreciendo la biodiversidad.</p>",
+        "button_text": "Comprar miel pura",
+        "button_link": "/#",
+        "image": "shopify://shop_images/ti-3.png",
+        "image_m": "shopify://shop_images/ti-3.png",
+        "show_complete_image": false,
+        "hide_borders": false,
+        "image_left": true,
+        "text_to_left": true,
+        "is_complete": false,
+        "is_bg": false,
+        "template_text_style": "alternative_1"
+      }
+    },
+    "i_section_image_text_JcqiL7": {
+      "type": "i-section-image-text",
+      "name": "iUROP section - ImageText",
+      "settings": {
+        "title": "Envase de cristal: purezay sostenibilidad",
+        "content": "<p>A diferencia del plástico, que puede liberar toxinas como ftalatos o bisfenoles al entrar en contacto con alimentos —especialmente ácidos y densos como la miel—, el vidrio es un material inerte, seguro y no contaminante.<br/><br/>Elegimos el envase de cristal porque protege la calidad de la miel sin alterar su sabor, aroma ni propiedades. Su transparencia permite ver el producto tal como es, y su resistencia garantiza una conservación óptima.</p>",
+        "button_text": "",
+        "button_link": "",
+        "image": "shopify://shop_images/ti-4.png",
+        "image_m": "shopify://shop_images/ti-4.png",
+        "show_complete_image": false,
+        "hide_borders": true,
+        "image_left": false,
+        "text_to_left": true,
+        "is_complete": true,
+        "is_bg": true,
+        "template_text_style": "alternative_1"
+      }
+    },
+    "i_section_faqs_fHMqKn": {
+      "type": "i-section-faqs",
+      "blocks": {
+        "content_block_BxAcpA": {
+          "type": "content_block",
+          "settings": {
+            "title": "¿Vuestra miel contiene algún aditivo?",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar erat quam, id maximus nisi imperdiet tempor. Ut tincidunt, mauris sit amet ultrices pulvinar, erat sem mollis purus, quis ultricies quam orci id diam. Nam et diam rutrum, tempus erat in, varius ex. Integer blandit velit massa."
+          }
+        },
+        "content_block_wKpYCA": {
+          "type": "content_block",
+          "settings": {
+            "title": "¿Vuestra miel contiene algún aditivo?",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar erat quam, id maximus nisi imperdiet tempor. Ut tincidunt, mauris sit amet ultrices pulvinar, erat sem mollis purus, quis ultricies quam orci id diam. Nam et diam rutrum, tempus erat in, varius ex. Integer blandit velit massa."
+          }
+        },
+        "content_block_kXUJU3": {
+          "type": "content_block",
+          "settings": {
+            "title": "¿Vuestra miel contiene algún aditivo?",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar erat quam, id maximus nisi imperdiet tempor. Ut tincidunt, mauris sit amet ultrices pulvinar, erat sem mollis purus, quis ultricies quam orci id diam. Nam et diam rutrum, tempus erat in, varius ex. Integer blandit velit massa."
+          }
+        }
+      },
+      "block_order": [
+        "content_block_BxAcpA",
+        "content_block_wKpYCA",
+        "content_block_kXUJU3"
+      ],
+      "name": "iUROP section - Faqs",
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "i_section_marqee_HbL8Je",
-    "i_section_image_text_KTdEDw",
-    "i_section_parallax_BL69dQ",
-    "i_section_simple_testimonies_GrkfNm",
-    "i_section_title_image_edTJdn",
-    "i_section_product_testimonies_dzJJ3b",
-    "i_section_instagram_64ck7C"
+    "i_section_hero_tabs_7dhCm3",
+    "i_section_yes_not_QJaRnV",
+    "i_section_image_text_dhbiWV",
+    "i_section_image_text_jyMdpR",
+    "i_section_image_text_4kQpQb",
+    "i_section_image_text_JcqiL7",
+    "i_section_faqs_fHMqKn"
   ]
 }

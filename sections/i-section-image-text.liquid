@@ -3,11 +3,13 @@
     i-section-image-text 
     {% if section.settings.is_complete %} without-margins{% endif %} 
     {% if section.settings.is_bg %} width-background{% endif %} 
-    template-style-{{section.settings.template_text_style }}
+    template-style-{{section.settings.template_text_style }} 
+
+    {% if section.settings.hide_borders %} hide-borders{% endif %}
   ">
 
     {% if section.settings.image_left %}
-      <div class="i-section-image-text__image {% if section.blocks.size > 0 %} has-items{% endif %}">
+      <div class="i-section-image-text__image {% if section.blocks.size > 0 %} has-items{% endif %} {% if section.settings.show_complete_image %} complete-image{% endif %}"> 
         <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large only-desktop">
         <img src="{{ section.settings.image_m | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large only-mobile">
       </div>
@@ -47,13 +49,13 @@
       </div>
     </div>
     {% if section.settings.image_left and section.blocks.size > 0 %}
-      <div class="i-section-image-text__image image-with-items only-mobile">
+      <div class="i-section-image-text__image image-with-items only-mobile {% if section.settings.show_complete_image %} complete-image{% endif %}">
         <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large only-desktop">
         <img src="{{ section.settings.image_m | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large only-mobile">
       </div>
     {% endif %}
     {% unless section.settings.image_left %}
-      <div class="i-section-image-text__image">
+      <div class="i-section-image-text__image {% if section.settings.show_complete_image %} complete-image{% endif %}">
         <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large only-desktop">
         <img src="{{ section.settings.image_m | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large only-mobile">
       </div>
@@ -94,6 +96,18 @@
         "type": "image_picker",
         "id": "image_m",
         "label": "Imagen (mobile)"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_complete_image",
+        "default": false,
+        "label": "Mostrar imagen completa"
+      },
+      {
+        "type": "checkbox",
+        "id": "hide_borders",
+        "default": false,
+        "label": "Ocultar borde redondeado"
       },
       {
         "type": "checkbox",
