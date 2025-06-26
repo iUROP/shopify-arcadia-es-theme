@@ -21,6 +21,7 @@
       "settings": {
         "menu": "main-menu",
         "logo_header": "shopify://shop_images/logo.png",
+        "logo_header_dark": "shopify://shop_images/logo-dark.png",
         "collection": "frontpage",
         "container_height": 76
       }

@@ -74,12 +74,15 @@
         "announcement_jXWMQ9",
         "announcement_cLRRpU"
       ],
-      "settings": {}
+      "settings": {
+        "is_alternate_color": false
+      }
     },
     "i_section_product_list_bbbHLt": {
       "type": "i-section-product-list",
       "settings": {
-        "collection": "frontpage"
+        "collection": "frontpage",
+        "title": ""
       }
     },
     "i_section_parallax_3Ni3FE": {
@@ -90,6 +93,7 @@
         "title_image": "Miel pura,\ncuidadosamente recolectada",
         "subtitle": "",
         "alternate_title": false,
+        "text_left": false,
         "button_text": "Comprar miel",
         "button_link": ""
       }
@@ -175,6 +179,7 @@
         "title_image": "La forma más rápida de mejorar tu salud con nutrición real.",
         "subtitle": "El respeto por la naturaleza es nuestra forma de cuidarte.",
         "alternate_title": true,
+        "text_left": false,
         "button_text": "Comprar miel",
         "button_link": "shopify://collections/frontpage"
       }
@@ -245,7 +250,8 @@
         "mision_text": "<p><strong>“Nuestra misión es simple: </strong>ofrecer miel pura y trazable que le dé energía a tu vida. Lo que realmente importa: calidad excepcional, obtención ética y beneficios reales para tu bienestar.”</p>",
         "avatar": "shopify://shop_images/avatar.png",
         "name": "PABLO MARTI",
-        "role": "Founder"
+        "account": "@pablo.svg",
+        "role": "Founder | Health Coach"
       }
     },
     "i_section_product_testimonies_GyeKNr": {
@@ -311,7 +317,13 @@
         "button_link": "shopify://collections",
         "image": "shopify://shop_images/image-text.png",
         "image_m": "shopify://shop_images/image-text_m.png",
-        "image_left": false
+        "show_complete_image": false,
+        "hide_borders": false,
+        "image_left": false,
+        "text_to_left": false,
+        "is_complete": false,
+        "is_bg": false,
+        "template_text_style": "normal"
       }
     },
     "i_section_faqs_HJH7nm": {

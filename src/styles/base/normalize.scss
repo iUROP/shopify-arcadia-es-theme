@@ -23,7 +23,7 @@
   padding: 0 $Space-1200;
 
   @media only screen and (max-width: 1024px) {
-    padding: 0 $Grid-MGrid-Margin;
+    padding: 0 $Grid-MGrid-Margin !important;
   }
 }
 .i-relative {
