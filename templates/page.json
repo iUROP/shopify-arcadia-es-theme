@@ -31,28 +31,28 @@
           "type": "tab",
           "settings": {
             "title": "Sin azúcares añadidos",
-            "anchor": ""
+            "anchor": "sin-azucares"
           }
         },
         "tab_a4dHT7": {
           "type": "tab",
           "settings": {
             "title": "Sin pasteurizar",
-            "anchor": ""
+            "anchor": "sin-pasteurizar"
           }
         },
         "tab_6XQVGi": {
           "type": "tab",
           "settings": {
             "title": "Sin pesticidas",
-            "anchor": ""
+            "anchor": "sin-pesticidas"
           }
         },
         "tab_paUjyr": {
           "type": "tab",
           "settings": {
             "title": "Envase de cristal",
-            "anchor": ""
+            "anchor": "envase-cristal"
           }
         }
       },
@@ -146,7 +146,7 @@
       "name": "iUROP section - ImageText",
       "settings": {
         "title": "Miel auténtica, sin azúcares añadidos",
-        "id_section": "",
+        "id_section": "sin-azucares",
         "content": "<p>Más del 50% de la miel en España está adulterada con jarabes y azúcares industriales para abaratar costes, lo que reduce su calidad y puede afectar la salud, especialmente en personas con diabetes.<br/><br/>Nuestra miel es 100% natural, cruda y sin aditivos. Proviene de colmenas cuidadas en entornos limpios, se cristaliza de forma natural —señal de pureza— y mantiene todas sus propiedades originales.<br/><br/>Además, realizamos controles de calidad en laboratorios independientes para garantizar un producto auténtico, tal como lo crean las abejas: sin trampas ni azúcares ocultos.</p>",
         "button_text": "Experimentar la miel auténtica",
         "button_link": "/#",
@@ -166,7 +166,7 @@
       "name": "iUROP section - ImageText",
       "settings": {
         "title": "Sin pasteurizar: miel viva y contodas sus propiedades",
-        "id_section": "",
+        "id_section": "sin-pasteurizar",
         "content": "<p>La pasteurización, aunque común en la industria para evitar la cristalización y alargar la vida útil, destruye gran parte del valor nutricional de la miel. Al calentarla, se pierden enzimas clave, vitaminas sensibles al calor y compuestos aromáticos naturales. Incluso puede generarse HMF, un indicador de sobrecalentamiento.<br/><br/>Nuestra miel es completamente cruda y sin pasteurizar, lo que preserva sus enzimas, vitaminas, sabor y beneficios funcionales (prebiótico, cicatrizante, antimicrobiano). No forzamos su apariencia: si cristaliza o tiene sedimentos, es prueba de su pureza.</p>",
         "button_text": "",
         "button_link": "",
@@ -186,7 +186,7 @@
       "name": "iUROP section - ImageText",
       "settings": {
         "title": "Sin abuso de pesticidas, saludabledesde el origen",
-        "id_section": "",
+        "id_section": "sin-pesticidas",
         "content": "<p>Cuando las abejas forrajean cerca de cultivos tratados con pesticidas, estos químicos terminan en la miel, afectando su calidad y poniendo en riesgo la salud de las propias abejas. Sustancias como el glifosato han sido encontradas incluso en mieles etiquetadas como “naturales”.<br/><br/>Nuestra miel se produce en zonas libres de agricultura intensiva, donde las abejas recolectan néctar y polen de flores silvestres, sin riesgo de contaminación. Trabajamos con apicultores que siguen prácticas agroecológicas, respetando el ecosistema y favoreciendo la biodiversidad.</p>",
         "button_text": "Comprar miel pura",
         "button_link": "/#",
@@ -206,7 +206,7 @@
       "name": "iUROP section - ImageText",
       "settings": {
         "title": "Envase de cristal: pureza y sostenibilidad",
-        "id_section": "",
+        "id_section": "envase-cristal",
         "content": "<p>A diferencia del plástico, que puede liberar toxinas como ftalatos o bisfenoles al entrar en contacto con alimentos —especialmente ácidos y densos como la miel—, el vidrio es un material inerte, seguro y no contaminante.<br/><br/>Elegimos el envase de cristal porque protege la calidad de la miel sin alterar su sabor, aroma ni propiedades. Su transparencia permite ver el producto tal como es, y su resistencia garantiza una conservación óptima.</p>",
         "button_text": "",
         "button_link": "",
