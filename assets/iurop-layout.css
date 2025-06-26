@@ -2685,7 +2685,7 @@ body.open-cart .i-header-container__content--icons {
 .i-section .i-section-testimonials__profile--labels .title-profile {
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 .i-section .i-section-testimonials__profile--labels .title-profile svg {
   display: inline-block;
