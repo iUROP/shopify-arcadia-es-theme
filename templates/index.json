@@ -106,7 +106,7 @@
           "settings": {
             "title": "Azúcar añadido",
             "left_percent": 0,
-            "right_percent": 66
+            "right_percent": 59
           }
         },
         "especificacion_XHRcQP": {
@@ -114,7 +114,7 @@
           "settings": {
             "title": "Pasteurizado",
             "left_percent": 0,
-            "right_percent": 83
+            "right_percent": 90
           }
         },
         "especificacion_aHdgTF": {
@@ -122,39 +122,39 @@
           "settings": {
             "title": "Pesticidas",
             "left_percent": 0,
-            "right_percent": 64
+            "right_percent": 58
           }
         },
         "especificacion_BmTEtT": {
           "type": "especificacion",
           "settings": {
             "title": "Nutrientes",
-            "left_percent": 75,
-            "right_percent": 29
+            "left_percent": 82,
+            "right_percent": 22
           }
         },
         "especificacion_3y6ch4": {
           "type": "especificacion",
           "settings": {
             "title": "Natural",
-            "left_percent": 83,
-            "right_percent": 22
+            "left_percent": 96,
+            "right_percent": 18
           }
         },
         "especificacion_Fhxyip": {
           "type": "especificacion",
           "settings": {
             "title": "Pureza",
-            "left_percent": 69,
-            "right_percent": 30
+            "left_percent": 81,
+            "right_percent": 24
           }
         },
         "especificacion_Gj3HBq": {
           "type": "especificacion",
           "settings": {
             "title": "Producto local",
-            "left_percent": 78,
-            "right_percent": 36
+            "left_percent": 90,
+            "right_percent": 29
           }
         }
       },
@@ -312,6 +312,7 @@
       "type": "i-section-image-text",
       "settings": {
         "title": "Refuerza tus defensas de forma natural",
+        "id_section": "",
         "content": "<p>Nuestra miel premium, rica en flavonoides y ácidos fenólicos, ayuda a reducir el estrés oxidativo y protege la salud celular.<br/><br/>Gracias a sus propiedades antimicrobianas, combate bacterias e infecciones, aliviando la inflamación y acelerando la recuperación frente a enfermedades.</p>",
         "button_text": "Comprar miel",
         "button_link": "shopify://collections",
