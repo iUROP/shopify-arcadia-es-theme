@@ -1,4 +1,12 @@
 <div class="i-product-card {% if complex %} is-complex-card{% endif %}">
+  
+  <div class="custom-product-item-tags">
+    {% assign customtags = product.metafields.custom.custom_product_tags.value %}
+    {% for customtag in customtags %}
+      <span class="type-{{ customtag.titulo | handleize }}" style="color: {{ customtag.color_de_texto }}; background: {{ customtag.color_de_fondo }}">{{ customtag.titulo }}</span>
+    {% endfor %}
+  </div>
+
   <a href="{{ product.url }}" class="i-product-card__gallery">
     {% if use_review_type %}
       {% if product.metafields.custom.review_image %}
@@ -6,6 +14,10 @@
       {% endif %}
     {% else %}
       <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}" loading="lazy" class="Corner-Large" />
+
+      {% if product.images.size > 2 %}
+        <img src="{{ product.images[2] | img_url: '800x' }}" alt="{{ product.images[2].alt | escape }}" class="hover-product-image slow_ani">
+      {% endif %}
     {% endif %}
   </a>
   {% if complex %}
