@@ -13,7 +13,7 @@
       "type": "i-section-primary-banner",
       "settings": {
         "banner_image": "shopify://shop_images/primary-banner-2.png",
-        "title": "<p>Impulsa tu ambición con la<br/>fuerza de <em><strong>la miel más pura.</strong></em></p>",
+        "title": "<p>Impulsa tu ambición con la <br/>fuerza de <em><strong>la miel más pura.</strong></em></p>",
         "sub_title": "",
         "button_text": "Comprar miel",
         "button_link": "shopify://collections/all"
