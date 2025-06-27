@@ -4698,7 +4698,7 @@ html {
   display: none !important;
 }
 .i-product-card__gallery {
-  aspect-ratio: 2/2.2;
+  aspect-ratio: 2/1.85;
   display: block;
   margin-bottom: 16px;
   position: relative;
