@@ -12,7 +12,12 @@
     position: absolute;
     z-index: 3;
     top: 24px;
-    left: 84px;
+    left: 76px;
+
+    @media only screen and (max-width: 1024px) {
+      top: 14px;
+      left: 36px;
+    }
 
     span {
       border-radius: 4px;
@@ -26,7 +31,7 @@
       margin-right: 10px;
 
       &.type-bestseller {
-        background: var(--Colors-600, #FEC34D) !important;
+        background: linear-gradient(96deg, #FFDFA0 -13.82%, #AC770C 147.17%) !important;
         color: var(--Colors-800, var(--Colors-800, #1E1E1E)) !important;
       }
       &.type-mas-saludable {
@@ -99,6 +104,19 @@
       overflow: hidden;
       text-overflow: ellipsis;
       display: block;
+      text-decoration: none;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: transparent;
+      }
     }
     &--actions {
       margin-top: $Space-400;

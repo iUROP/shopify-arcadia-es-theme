@@ -43,8 +43,8 @@ function MiniCart({
       setCartTotal(cart.total_price)
 
       let blocksSplit = blocks.split('|')
-      let freeShipping =  (Number(blocksSplit[0]) * 100) - cart.total_price
-      let freePercent = (cart.total_price * 100) / (Number(blocksSplit[0]) * 100)
+      let freeShipping =  (Number(blocksSplit[0])) - cart.total_price
+      let freePercent = (cart.total_price) / (Number(blocksSplit[0]))
 
       setFreeShippingAmount(freeShipping)
       setFreeShippingPercent(freePercent)
@@ -98,7 +98,7 @@ function MiniCart({
 
   const list = [
     {
-      "title": " 90 Days Money back guarentee",
+      "title": "Envío gratis a todo el mundo en pedidos a partir de 65 €.",
       "icon": false
     }
   ]
@@ -146,7 +146,7 @@ function MiniCart({
             <Icon name="shipping" /> 
             {freeShippingAmount <= 0 
               ? <>¡Ahora tienes envio gratuito!</>
-              : <>¡Gasta ${window.Permalink.getPrice(freeShippingAmount)} más y obtén envío gratis!</>
+              : <>¡Gasta {window.Permalink.getPrice(freeShippingAmount)} más y obtén envío gratis!</>
 
             }
           </div>
@@ -177,7 +177,7 @@ function MiniCart({
             </div>
             <div className='i-minicart-container__snap--footer__subtotals--row'>
               <div className='i-minicart-container__snap--footer__subtotals--row__key'>Subtotal</div>
-              <div className='i-minicart-container__snap--footer__subtotals--row__value'>€{Permalink.getPrice(cartTotal)}</div>
+              <div className='i-minicart-container__snap--footer__subtotals--row__value'>{Permalink.getPrice(cartTotal / 100)}</div>
             </div>
           </div>
           <div className='i-minicart-container__snap--footer__actions'>

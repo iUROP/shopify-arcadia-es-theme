@@ -53,7 +53,7 @@
           {% if featured_collection.products_count > 0 %}
             {% for product in featured_collection.products %}
               <div class="i-section-product-testimonials__products--list__p">
-                {% render 'i-product-card' product: product %}
+                {% render 'i-product-card' product: product, use_review_type: true %}
               </div>
             {% endfor %}
           {% endif %}
@@ -139,7 +139,7 @@
 
     <div class="i-header-menu__content--links only-mobile">
       <a href="/collections/all" class="i-header-menu__content--links__primary is-button-hover-primary">Comprar miel</a>
-      <a class="i-header-menu__content--links__Secondary">Ingredientes</a>
+      <a href="/pages/ingredientes" class="i-header-menu__content--links__Secondary">Ingredientes</a>
     </div>
   </nav>
   <div class="i-header-menu__overlay slow_ani" style="top: {{ section.settings.container_height }}px;"></div>

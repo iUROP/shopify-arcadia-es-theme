@@ -45,11 +45,11 @@ function CartItem({
 
         {product.compare_at_price && product.compare_at_price != product.price
           ? <div className='i-cart-item--labels--price'>
-              €{Permalink.getPrice(product.price)}
-              <span>€{Permalink.getPrice(product.compare_at_price)}</span>
+              {Permalink.getPrice(product.final_line_price / 100)}
+              <span>{Permalink.getPrice(product.compare_at_price / 100)}</span>
             </div>
           : <div className='i-cart-item--labels--price'>
-              €{Permalink.getPrice(product.price)}
+              {Permalink.getPrice(product.final_line_price / 100)}
             </div>
         }
         

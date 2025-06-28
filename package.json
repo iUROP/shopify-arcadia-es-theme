@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run upgrade && npm run serve",
-    "upgrade": "shopify theme push --store permalink-boilerplate-store.myshopify.com --development --nodelete --path ./shopify",
-    "serve": "shopify theme dev --store permalink-boilerplate-store.myshopify.com --theme-editor-sync",
+    "upgrade": "shopify theme push --store tuqnjn-yc.myshopify.com --development --nodelete --path ./shopify",
+    "serve": "shopify theme dev --store tuqnjn-yc.myshopify.com --theme-editor-sync",
     "watch": "npx webpack --mode=development",
     "webpack": "npx webpack --mode=production",
     "deploy": "npm run webpack && shopify theme push --path ./shopify"

@@ -104,3 +104,15 @@ body {
     display: none !important;
   }
 }
+
+
+.only-mobile-v2 {
+  @media only screen and (min-width: 481px) {
+    display: none !important;
+  }
+}
+.only-desktop-v2 {
+  @media only screen and (max-width: 480px) {
+    display: none !important;
+  }
+}

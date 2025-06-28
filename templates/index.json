@@ -270,42 +270,15 @@
             "comment": "Cada mañana se siente transformada desde que empecé a usar esta miel pura. Su sabor auténtico y su energía natural redefinieron mi rutina: me dan fuerza… y una sonrisa de verdad.",
             "author": "Sofia Ramirez"
           }
-        },
-        "logo_FgQkUc": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo-1.png"
-          }
-        },
-        "logo_Nn9eUQ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo-2.png"
-          }
-        },
-        "logo_BMFigQ": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo-3.png"
-          }
-        },
-        "logo_qB9eEU": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/logo-4.png"
-          }
         }
       },
       "block_order": [
         "comment_w4kKh8",
-        "comment_iHnCHA",
-        "logo_FgQkUc",
-        "logo_Nn9eUQ",
-        "logo_BMFigQ",
-        "logo_qB9eEU"
+        "comment_iHnCHA"
       ],
       "settings": {
-        "collection": "home-reviews"
+        "collection": "home-reviews",
+        "logos": "shopify://shop_images/logos-comments.png"
       }
     },
     "i_section_image_text_B87Rdc": {
@@ -316,9 +289,10 @@
         "content": "<p>Nuestra miel premium, rica en flavonoides y ácidos fenólicos, ayuda a reducir el estrés oxidativo y protege la salud celular.<br/><br/>Gracias a sus propiedades antimicrobianas, combate bacterias e infecciones, aliviando la inflamación y acelerando la recuperación frente a enfermedades.</p>",
         "button_text": "Comprar miel",
         "button_link": "shopify://collections",
-        "image": "shopify://shop_images/image-text.png",
-        "image_m": "shopify://shop_images/image-text_m.png",
+        "image": "shopify://shop_images/new-image-home.png",
+        "image_m": "shopify://shop_images/new-image-home.png",
         "show_complete_image": false,
+        "imagen_mobile_less": false,
         "hide_borders": false,
         "image_left": false,
         "text_to_left": false,

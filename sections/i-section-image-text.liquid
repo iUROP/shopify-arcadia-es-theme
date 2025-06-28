@@ -3,7 +3,7 @@
     i-section-image-text 
     {% if section.settings.is_complete %} without-margins{% endif %} 
     {% if section.settings.is_bg %} width-background{% endif %} 
-    template-style-{{section.settings.template_text_style }} 
+    template-style-{{ section.settings.template_text_style }} 
 
     {% if section.settings.hide_borders %} hide-borders{% endif %}
   ">
@@ -11,7 +11,10 @@
     {% if section.settings.image_left %}
       <div class="i-section-image-text__image {% if section.blocks.size > 0 %} has-items{% endif %} {% if section.settings.show_complete_image %} complete-image{% endif %}"> 
         <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large only-desktop">
-        <img src="{{ section.settings.image_m | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large only-mobile">
+
+        <span class="{% if section.settings.template_text_style == 'alternative_1' %} only-desktop{% endif %}">
+          <img src="{{ section.settings.image_m | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large only-mobile">
+        </span>
       </div>
     {% endif %}
     <div class="i-section-image-text__text {% if section.blocks.size > 0 %} has-items{% endif %} {% if section.settings.text_to_left %} is_text-left{% endif %}">
@@ -56,10 +59,18 @@
     {% endif %}
     {% unless section.settings.image_left %}
       <div class="i-section-image-text__image {% if section.settings.show_complete_image %} complete-image{% endif %}">
-        <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large only-desktop">
-        <img src="{{ section.settings.image_m | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large only-mobile">
+        <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large {% if section.settings.imagen_mobile_less %} only-desktop-v2{% else %} only-desktop{% endif %}">
+        <img src="{{ section.settings.image_m | img_url: 'master' }}" alt="{{ section.settings.title }}" class="Corner-Large {% if section.settings.imagen_mobile_less %} only-mobile-v2{% else %} only-mobile{% endif %}">
       </div>
     {% endunless %}
+
+    {% if section.settings.image_left %}
+      {% if section.settings.template_text_style == 'alternative_1' %}
+        <div class="i-section-image-text__image last-order only-mobile">
+          <img src="{{ section.settings.image_m | img_url: 'master' }}" alt="{{ section.settings.title }}" />
+        </div>
+      {% endif %}
+    {% endif %}
   </div>
 </div>
 
@@ -107,6 +118,12 @@
         "id": "show_complete_image",
         "default": false,
         "label": "Mostrar imagen completa"
+      },
+      {
+        "type": "checkbox",
+        "id": "imagen_mobile_less",
+        "default": false,
+        "label": "Versión mobile desde los 480px"
       },
       {
         "type": "checkbox",

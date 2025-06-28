@@ -18,12 +18,7 @@
           <span>Nectar en prensa</span>
         </div>
         <div class="i-section-product-testimonials__comments--footer__logos">
-          {% for block in section.blocks %}
-            {% case block.type %}
-              {% when 'logo' %}
-                <img src="{{ block.settings.image | image_url: width: 1600 }}" alt="Logo prensa Arcadia" />
-            {% endcase %}
-          {% endfor %}
+          <img src="{{ section.settings.logos | image_url: width: 1600 }}" alt="Logo prensa Arcadia" />
         </div>
       </div>
     </div>
@@ -53,6 +48,11 @@
       "type": "collection",
       "id": "collection",
       "label": "Colección"
+    },
+    {
+      "type": "image_picker",
+      "id": "logos",
+      "label": "Logos"
     }
   ],
   "blocks": [
@@ -69,17 +69,6 @@
           "type": "text",
           "id": "author",
           "label": "Autor"
-        }
-      ]
-    },
-    {
-      "type": "logo",
-      "name": "Logotipo",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Imagen"
         }
       ]
     }

@@ -172,15 +172,15 @@ window.Permalink = function() {
 
   }
 
-  const getPrice = function(number, currency='en-US') {
+  const getPrice = function(number, currency='en-ES') {
     const formatter = new Intl.NumberFormat(currency, {
       style: 'currency',
-      currency: 'USD',
+      currency: 'EUR',
       minimumFractionDigits: 0,
-      maximumFractionDigits: 0
+      maximumFractionDigits: 2
     })
   
-    return formatter.format(number).replace(',','.').replace('$','')
+    return formatter.format(number)
   }
 
   const setScrollDragger = function() {

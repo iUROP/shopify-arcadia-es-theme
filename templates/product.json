@@ -293,14 +293,19 @@
       "name": "iUROP section - ImageText",
       "settings": {
         "title": "Cuidadosamente obtenida, naturalmente pura",
+        "id_section": "",
         "content": "<p>Descubre nuestra miel artesanal pura, recolectada de forma ética y 100 % trazable. Rica en antioxidantes y enzimas.</p>",
         "button_text": "",
         "button_link": "",
         "image": "shopify://shop_images/reseta.png",
+        "image_m": "shopify://shop_images/reseta.png",
+        "show_complete_image": false,
+        "imagen_mobile_less": false,
+        "hide_borders": false,
         "image_left": true,
         "text_to_left": true,
         "is_complete": false,
-        "is_bg": false,
+        "is_bg": true,
         "template_text_style": "normal"
       }
     },
