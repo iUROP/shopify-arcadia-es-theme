@@ -1,0 +1,34 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "i_section_page_titles_WdiJmT": {
+      "type": "i-section-page-titles",
+      "name": "iUROP section - Titles",
+      "settings": {
+        "title": "Misión",
+        "subtitle": "<p>La miel es un superalimento que eleva la vida y la salud de las personas. Nuestra energía, sistema inmune, metabolismo y sueño se ven beneficiados gracias al oro líquido que nos regalan las abejas cuando han sido tratadas de la forma adecuada. En un mundo de enfermedad y engaño en el entorno de la nutrición, queremos devolver transparencia y cuidado en cada frasco de vidrio.</p>",
+        "image": "shopify://shop_images/sign.png"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "i_section_page_titles_WdiJmT"
+  ]
+}

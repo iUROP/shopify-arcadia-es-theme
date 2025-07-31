@@ -6,6 +6,8 @@
     template-style-{{ section.settings.template_text_style }} 
 
     {% if section.settings.hide_borders %} hide-borders{% endif %}
+    {% if section.settings.top_format %} top_format{% endif %}
+    {% if section.settings.alternative_list %} alternative_list{% endif %}
   ">
 
     {% if section.settings.image_left %}
@@ -18,6 +20,10 @@
       </div>
     {% endif %}
     <div class="i-section-image-text__text {% if section.blocks.size > 0 %} has-items{% endif %} {% if section.settings.text_to_left %} is_text-left{% endif %}">
+      
+      {% if section.settings.top_format %}
+        <div class="content_sticky">
+      {% endif %}
       <h2 class="Text-Colors-800 Family-Font Typo-H1">{{ section.settings.title }}</h2>
       <div class="i-section-image-text__text--pharagrah">
         {{ section.settings.content }}
@@ -42,14 +48,25 @@
           {% endif %}
           {% if block.type == 'checkblock' %}
             <div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                <path d="M2.31528 3.33952C-0.788538 6.47708 -0.77167 11.5545 2.36589 14.6583C5.50345 17.7622 10.5809 17.7453 13.6847 14.6077C16.7885 11.4702 16.7717 6.39274 13.6341 3.28892C10.4966 0.185095 5.41911 0.201963 2.31528 3.33952ZM11.8966 7.43859L7.54455 11.8413C7.17344 12.2124 6.56617 12.2124 6.19506 11.8413L6.02637 11.6726L5.52032 11.1666L4.10335 9.76646C3.73225 9.39535 3.73225 8.78808 4.10335 8.41697C4.47446 8.04586 5.08173 8.04586 5.45284 8.41697L6.8698 9.81706L10.5472 6.10597C10.9183 5.73486 11.5255 5.73486 11.8966 6.10597C12.2678 6.46021 12.2678 7.06748 11.8966 7.43859Z" fill="#1E1E1E"/>
-              </svg>
+              {% if section.settings.alternative_list %} 
+                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="7" viewBox="0 0 6 7" fill="none">
+                  <circle cx="3" cy="3.50195" r="3" fill="#C5BEAF"/>
+                </svg>
+              {% else %}
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                  <path d="M2.31528 3.33952C-0.788538 6.47708 -0.77167 11.5545 2.36589 14.6583C5.50345 17.7622 10.5809 17.7453 13.6847 14.6077C16.7885 11.4702 16.7717 6.39274 13.6341 3.28892C10.4966 0.185095 5.41911 0.201963 2.31528 3.33952ZM11.8966 7.43859L7.54455 11.8413C7.17344 12.2124 6.56617 12.2124 6.19506 11.8413L6.02637 11.6726L5.52032 11.1666L4.10335 9.76646C3.73225 9.39535 3.73225 8.78808 4.10335 8.41697C4.47446 8.04586 5.08173 8.04586 5.45284 8.41697L6.8698 9.81706L10.5472 6.10597C10.9183 5.73486 11.5255 5.73486 11.8966 6.10597C12.2678 6.46021 12.2678 7.06748 11.8966 7.43859Z" fill="#1E1E1E"/>
+                </svg>
+              {% endif %}
+
               <span>{{ block.settings.title }}</span>
             </div>
           {% endif %}
         {% endfor %}
       </div>
+      {% if section.settings.top_format %}
+        </div>
+      {% endif %}
+
     </div>
     {% if section.settings.image_left and section.blocks.size > 0 %}
       <div class="i-section-image-text__image image-with-items only-mobile {% if section.settings.show_complete_image %} complete-image{% endif %}">
@@ -170,6 +187,18 @@
         ],
         "default": "normal",
         "label": "Normal"
+      },
+      {
+        "type": "checkbox",
+        "id": "top_format",
+        "default": false,
+        "label": "Texto sticky"
+      },
+      {
+        "type": "checkbox",
+        "id": "alternative_list",
+        "default": false,
+        "label": "Contenedor en caja"
       },
   ],
   "blocks": [

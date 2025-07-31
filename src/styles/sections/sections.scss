@@ -984,6 +984,83 @@
         padding-right: 32px;
       }
     }
+    &.top_format {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+
+      .i-section-image-text__text {
+        flex: 1;
+        position:sticky;
+        align-self: start; 
+        top: 26px;
+        will-change: top;
+
+        .content_sticky {
+          padding-left: 18%;
+          padding-right: 2%;
+        }
+      }
+      .i-section-image-text__image  {
+        flex: 1;
+
+        img {
+          width: 370px;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+    &.alternative_list {
+      margin-left: 32px;
+      margin-right: 32px;
+
+      .i-section-image-text__text {
+        padding-left: 0;
+        padding-right: 10%;
+        flex: initial;
+
+        h2 {
+          text-align: left;
+          padding-left: 0px;
+          font-size: 25px;
+          line-height: 40px;
+          margin-top: 0px;
+          width: 100%;
+        }
+        .i-section-image-text__text--pharagrah {
+          padding-left: 0px;
+
+          p {
+            color: var(--Colors-800, var(--Colors-800, #1E1E1E));
+            font-family: var(--Family-Font---Body, "Instrument Sans");
+            font-size: var(--Typo-Body-M, 16px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+          }
+
+          & > div {
+            border-top: 0.5px solid var(--Colors-400, #C5BEAF);
+            padding: 20px 0;
+
+            svg {
+              position: relative;
+              top: -2px;
+              margin-right: 4px;
+            }
+            span {
+              color: var(--Colors-800, var(--Colors-800, #1E1E1E));
+              font-family: var(--Family-Font---Body, "Instrument Sans");
+              font-size: var(--Typo-Body-M, 16px);
+              font-style: normal;
+              font-weight: 700;
+              line-height: 25px;
+            }
+          }
+        }
+      }
+    }
   }
 
   .i-section-image-faqs {
@@ -1977,6 +2054,128 @@
           &:last-child {
             border-bottom: 0px;
           }
+        }
+      }
+    }
+  }
+
+  .i-section-titles {
+    width: 730px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 64px;
+    padding-bottom: 48px;
+
+    h1 {
+      color: var(--Colors-900, var(--Colors-900, #000));
+      text-align: center;
+      font-family: "Besley", serif;
+      font-size: var(--Typo-H1, 49px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      letter-spacing: -1.47px;
+      margin-top: 0px;
+      margin-bottom: 38px;
+    }
+
+    p {
+      color: #000;
+      text-align: center;
+      font-family: var(--Family-Font---Body, "Instrument Sans");
+      font-size: var(--Typo-Body-M, 16px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 35px;
+      margin: 38px 0px;
+
+      strong {
+        color: var(--Colors-800, var(--Colors-800, #1E1E1E));
+        font-family: var(--Family-Font---Body, "Instrument Sans");
+        font-size: var(--Typo-Body-M, 16px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 25px;
+      }
+    }
+
+    &__image {
+      width: 180px;
+      display: block;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  &.isfaqs {
+    &.alternative_ticks {
+      .i-section-image-faqs__items {
+        width: 50%;
+        padding-right: 8%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &--heading {
+          margin-bottom: 44px;
+          h2 {
+            color: var(--Colors-800, var(--Colors-800, #1E1E1E));
+            font-family: "Besley", serif;
+            font-size: var(--Typo-H3, 31px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px;
+            letter-spacing: -0.93px;
+            margin: 0px;
+          }
+          p {
+            color: var(--Colors-800, var(--Colors-800, #1E1E1E));
+            font-family: var(--Family-Font---Body, "Instrument Sans");
+            font-size: var(--Typo-Body-M, 16px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+            margin: 20px 0px;
+
+            strong {
+              color: var(--Colors-800, var(--Colors-800, #1E1E1E));
+              font-family: var(--Family-Font---Body, "Instrument Sans");
+              font-size: var(--Typo-Body-M, 16px);
+              font-style: normal;
+              font-weight: 700;
+              line-height: 25px;
+            }
+          }
+        }
+        .i-section-image-faqs__item {
+          border-top: 0.5px solid var(--Colors-400, #C5BEAF);
+          border-bottom: 0px;
+          margin-bottom: 0px;
+          padding: 20px 0;
+
+          .tick-icon {
+            margin-right: 6px;
+            svg {
+              position: relative;
+              transform: rotate(0deg);
+            }
+          }
+
+          &:last-child {
+            border-bottom: 0.5px solid var(--Colors-400, #C5BEAF);
+          }
+        }
+      }
+      .i-section-image-faqs__image {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        img {
+          width: 100%;
+          height: auto;
         }
       }
     }

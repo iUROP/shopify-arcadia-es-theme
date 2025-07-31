@@ -1,0 +1,48 @@
+<div class="i-section" data-aos="fade-up">
+
+  <div class="i-section-titles">
+    <h1>{{ section.settings.title }}</h1>
+    <div>
+      {{ section.settings.subtitle }}
+    </div>
+
+    {% if section.settings.image %}
+      <div class="i-section-titles__image"> 
+        <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.title }}">
+      </div>
+    {% endif %}
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "iUROP section - Titles",
+  "class": "section-titles",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titulo"
+    },
+    {
+      "type": "richtext",
+      "id": "subtitle",
+      "label": "Subtitulos"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Firma"
+    }
+  ],
+  "blocks": [
+  ],
+  "presets": [
+    {
+      "name": "iUROP section - Titles",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
