@@ -1,5 +1,14 @@
 <div class="i-section" data-aos="fade-up">
-  <div class="i-section-parallax {% if section.settings.video_url != blank %} is-video-background{% endif %} {% if section.settings.text_left %} is-left-section{% endif %}" style="background-image: url({{ section.settings.banner_image | image_url: width: 1600 }})">
+  <div 
+    class="
+      i-section-parallax 
+      {% if section.settings.video_url != blank %} is-video-background{% endif %} 
+      {% if section.settings.text_left %} is-left-section{% endif %} 
+      {% if section.settings.boxed_text %} is-boxed-text{% endif %} 
+      {% if section.settings.boxed_banner %} is-boxed-banner{% endif %} 
+    " 
+    style="background-image: url({{ section.settings.banner_image | image_url: width: 1600 }})"
+  >
     <div class="i-section-parallax__overlay {% if section.settings.alternate_title %} is-alternate-title{% endif %} {% if section.settings.text_left %} is-left-text{% endif %}">
       <h2 class="Family-Font {% if section.settings.alternate_title %} Text-Colors-White Typo-H3{% else %} Text-Colors-200 Typo-H2{% endif %}">{{ section.settings.title_image | newline_to_br }}</h2>
       {% if section.settings.subtitle != blank %}
@@ -10,6 +19,17 @@
         <a href="{{ section.settings.button_link }}" class="Text-Colors-100 Family-Font Typo-Body-M is-button-hover-secondary">
           {{ section.settings.button_text }}
         </a>
+      {% endif %}
+
+      {% if section.settings.boxed_text != blank %}
+        <div class="custom-percent-chart">
+          {% for block in section.blocks %}
+            <div class="custom-percent-chart">
+              <img src="{{ block.settings.percent | img_url: 'master' }}" alt="{{ section.settings.title }}" />
+              <p>{{ block.settings.title }}</p>
+            </div>
+          {% endfor %}
+        </div>
       {% endif %}
 
     </div>
@@ -70,9 +90,38 @@
       "type": "url",
       "id": "button_link",
       "label": "Enlace del botón"
+    },
+    {
+      "type": "checkbox",
+      "id": "boxed_text",
+      "default": false,
+      "label": "Texto centrado"
+    },
+    {
+      "type": "checkbox",
+      "id": "boxed_banner",
+      "default": false,
+      "label": "Banner boxed"
     }
   ],
-  "blocks": [],
+  "blocks": [
+    {
+      "type": "content_block",
+      "name": "Porcentaje",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titulo"
+        },
+        {
+          "type": "image_picker",
+          "id": "percent",
+          "label": "Imagen"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "iUROP section - Parallax",

@@ -1,0 +1,87 @@
+<div class="i-section section-benefits" data-aos="fade-up">
+  
+  <div class="i-section-benefits">
+    <h2>{{ section.settings.title }}</h2>
+
+    <div class="i-section-benefits__boxes">
+      {% for block in section.blocks %}
+        <div class="i-section-benefits__boxes--item">
+          <div class="i-boxes-item">
+            <div class="i-boxes-item__pretitle">
+
+              <div class="i-boxes-item__pretitle--box">
+                <img src="{{ block.settings.icon_1 | img_url: 'master' }}" alt="{{ section.settings.title }}" />
+                <span>{{ block.settings.pretitle }}</span>
+                {% if block.settings.icon_2 != blank %}
+                  <img src="{{ block.settings.icon_2 | img_url: 'master' }}" alt="{{ section.settings.title }}" />
+                {% endif %}
+              </div>
+
+            </div>
+            <div class="i-boxes-item__line"></div>
+            <div class="i-boxes-item__title">
+              {{ block.settings.title }}
+            </div>
+          </div>
+          <div class="i-boxes-text">
+            {{ block.settings.content }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "iUROP section - Benefits",
+  "class": "section-benefits",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content_block",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "pretitle",
+          "label": "Pre titulo"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titulo"
+        },
+        {
+          "type": "text",
+          "id": "content",
+          "label": "Contenido"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_1",
+          "label": "Icono 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_2",
+          "label": "Icono 2"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "iUROP section - Benefits",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

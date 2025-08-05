@@ -17,7 +17,7 @@
         "padding_bottom": 28
       }
     },
-    "i_section_page_titles_WdiJmT": {
+    "i_section_page_titles_kn8fgC": {
       "type": "i-section-page-titles",
       "name": "iUROP section - Titles",
       "settings": {
@@ -25,10 +25,127 @@
         "subtitle": "<p>La miel es un superalimento que eleva la vida y la salud de las personas. Nuestra energía, sistema inmune, metabolismo y sueño se ven beneficiados gracias al oro líquido que nos regalan las abejas cuando han sido tratadas de la forma adecuada. En un mundo de enfermedad y engaño en el entorno de la nutrición, queremos devolver transparencia y cuidado en cada frasco de vidrio.</p>",
         "image": "shopify://shop_images/sign.png"
       }
+    },
+    "i_section_benefits_4jFNea": {
+      "type": "i-section-benefits",
+      "blocks": {
+        "content_block_rnHg6A": {
+          "type": "content_block",
+          "settings": {
+            "pretitle": "o",
+            "title": "-35 % de inflamación",
+            "content": "1–2 cucharadas diarias de miel rica en polifenoles reduce marcadores inflamatorios en un 35 %.",
+            "icon_1": "shopify://shop_images/fork_spoon.png",
+            "icon_2": "shopify://shop_images/Frame_64740.png"
+          }
+        },
+        "content_block_jBddaT": {
+          "type": "content_block",
+          "settings": {
+            "pretitle": "antes de dormir",
+            "title": "+ 62% calidad del sueño",
+            "content": "Tomar una cucharada de miel antes de dormir mejora la calidad del sueño en un 62 %.",
+            "icon_1": "shopify://shop_images/fork_spoon.png"
+          }
+        },
+        "content_block_7FUF6M": {
+          "type": "content_block",
+          "settings": {
+            "pretitle": "al día por 8 semanas",
+            "title": "-  azúcar  - colesterol  - grasas",
+            "content": "40 g de miel al día (~2 cucharadas) durante unas 8 semanas, se observaron reducciones significativas en varios indicadores metabólicos: glucosa en ayunas, colesterol LDL y triglicéridos.",
+            "icon_1": "shopify://shop_images/Frame_64740.png"
+          }
+        },
+        "content_block_8AxW8d": {
+          "type": "content_block",
+          "settings": {
+            "pretitle": "al día",
+            "title": "hasta un  20% + memoria",
+            "content": "20 g diarios de miel durante 4 meses mejoran la memoria inmediata y verbal en un 15–20 %.",
+            "icon_1": "shopify://shop_images/fork_spoon.png"
+          }
+        },
+        "content_block_bWML7k": {
+          "type": "content_block",
+          "settings": {
+            "pretitle": "al consumir miel",
+            "title": "–30 % glucosa + más bienestar",
+            "content": "Pico de glucosa e insulina del 30 % menor al consumir la bebida con miel. Mayor sensación de bienestar y energía sin los altibajos comunes tras el azúcar refinado.",
+            "icon_1": "shopify://shop_images/Mask_group.png"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_rnHg6A",
+        "content_block_jBddaT",
+        "content_block_7FUF6M",
+        "content_block_8AxW8d",
+        "content_block_bWML7k"
+      ],
+      "name": "iUROP section - Benefits",
+      "settings": {
+        "title": "Beneficios clave para la salud"
+      }
+    },
+    "i_section_parallax_GXgLBU": {
+      "type": "i-section-parallax",
+      "blocks": {
+        "content_block_TykijK": {
+          "type": "content_block",
+          "settings": {
+            "title": "de la miel española es sospechosa de estar adulterada con azúcar",
+            "percent": "shopify://shop_images/Group_1.png"
+          }
+        },
+        "content_block_djLkAE": {
+          "type": "content_block",
+          "settings": {
+            "title": "de las empresas españolas importan productos de categorías sospechosas",
+            "percent": "shopify://shop_images/86.png"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_TykijK",
+        "content_block_djLkAE"
+      ],
+      "name": "iUROP section - Parallax",
+      "settings": {
+        "banner_image": "shopify://shop_images/Frame_64727.png",
+        "video_url": "",
+        "title_image": "¿QUÉ ESTÁ PASANDO?",
+        "subtitle": "Los beneficios anteriores solo se dan cuando se ha respetado la alimentación y cuidado de las abejas y la elaboración de la miel. Pero aquí viene una dura realidad:",
+        "alternate_title": true,
+        "text_left": false,
+        "button_text": "Comprar miel",
+        "button_link": "",
+        "boxed_text": true,
+        "boxed_banner": false
+      }
+    },
+    "i_section_parallax_dXjdQU": {
+      "type": "i-section-parallax",
+      "name": "iUROP section - Parallax",
+      "settings": {
+        "banner_image": "shopify://shop_images/Frame_64732.png",
+        "video_url": "",
+        "title_image": "¿Solución?",
+        "subtitle": "Arcadia’s Nectar",
+        "alternate_title": true,
+        "text_left": false,
+        "button_text": "Comprar miel natural",
+        "button_link": "/#",
+        "boxed_text": false,
+        "boxed_banner": true
+      }
     }
   },
   "order": [
     "main",
-    "i_section_page_titles_WdiJmT"
+    "i_section_page_titles_kn8fgC",
+    "i_section_benefits_4jFNea",
+    "i_section_parallax_GXgLBU",
+    "i_section_parallax_dXjdQU"
   ]
 }
