@@ -159,7 +159,9 @@
         "text_to_left": true,
         "is_complete": false,
         "is_bg": false,
-        "template_text_style": "alternative_1"
+        "template_text_style": "alternative_1",
+        "top_format": false,
+        "alternative_list": false
       }
     },
     "i_section_image_text_jyMdpR": {
@@ -171,8 +173,8 @@
         "content": "<p>La pasteurización, aunque común en la industria para evitar la cristalización y alargar la vida útil, destruye gran parte del valor nutricional de la miel. Al calentarla, se pierden enzimas clave, vitaminas sensibles al calor y compuestos aromáticos naturales. Incluso puede generarse HMF, un indicador de sobrecalentamiento.<br/><br/>Nuestra miel es completamente cruda y sin pasteurizar, lo que preserva sus enzimas, vitaminas, sabor y beneficios funcionales (prebiótico, cicatrizante, antimicrobiano). No forzamos su apariencia: si cristaliza o tiene sedimentos, es prueba de su pureza.</p>",
         "button_text": "",
         "button_link": "",
-        "image": "shopify://shop_images/bars.png",
-        "image_m": "shopify://shop_images/m-table.png",
+        "image": "shopify://shop_images/table_1.webp",
+        "image_m": "shopify://shop_images/table_1.webp",
         "show_complete_image": true,
         "imagen_mobile_less": true,
         "hide_borders": false,
@@ -180,7 +182,9 @@
         "text_to_left": true,
         "is_complete": true,
         "is_bg": true,
-        "template_text_style": "alternative_1"
+        "template_text_style": "alternative_1",
+        "top_format": false,
+        "alternative_list": false
       }
     },
     "i_section_image_text_4kQpQb": {
@@ -201,7 +205,9 @@
         "text_to_left": true,
         "is_complete": false,
         "is_bg": false,
-        "template_text_style": "alternative_1"
+        "template_text_style": "alternative_1",
+        "top_format": false,
+        "alternative_list": false
       }
     },
     "i_section_image_text_JcqiL7": {
@@ -222,7 +228,9 @@
         "text_to_left": true,
         "is_complete": true,
         "is_bg": true,
-        "template_text_style": "alternative_1"
+        "template_text_style": "alternative_1",
+        "top_format": false,
+        "alternative_list": false
       }
     },
     "i_section_faqs_fHMqKn": {
@@ -256,7 +264,11 @@
         "content_block_kXUJU3"
       ],
       "name": "iUROP section - Faqs",
-      "settings": {}
+      "settings": {
+        "use_image_ticks": false,
+        "title": "",
+        "content": ""
+      }
     }
   },
   "order": [
