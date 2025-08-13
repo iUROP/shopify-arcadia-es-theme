@@ -7,7 +7,7 @@
           <a href="{{ routes.root_url }}" class="header__logo">
             <div class="header__logo--wrapper">
 
-              {% if template == 'index' %}
+              {% if template == 'index' or template == 'page.faqs' %}
                 <img src="{{ section.settings.logo_header | image_url: width: 400 }}" alt="Logo Arcadia" />
               {% else %}
                 <img src="{{ section.settings.logo_header_dark | image_url: width: 400 }}" alt="Logo Arcadia" />

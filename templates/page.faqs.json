@@ -1,0 +1,133 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "i_section_faqs_gtAnmM": {
+      "type": "i-section-faqs",
+      "blocks": {
+        "content_grouped_miel_aGMqiJ": {
+          "type": "content_grouped_miel",
+          "settings": {
+            "title": "¿Por qué Cruda?",
+            "content": "Evitar calentar la miel a altas temperaturas permite preservar sus beneficios nutricionales intactos."
+          }
+        },
+        "content_grouped_miel_wXRmbh": {
+          "type": "content_grouped_miel",
+          "settings": {
+            "title": "¿Tiene azúcares añadidos, colorantes o conservantes?",
+            "content": "Nuestra miel se elabora de forma tradicional y respetuosa. Enfrascamos el producto que las abejas, con su alimentación natural, nos proporcionan."
+          }
+        },
+        "content_grouped_miel_yw9Pjw": {
+          "type": "content_grouped_miel",
+          "settings": {
+            "title": "¿Qué diferencia Arcadia’s Nectar?",
+            "content": "Nuestra miel pura mantiene intactos todos los nutrientes que la convierten en un superalimento."
+          }
+        },
+        "content_grouped_shipping_FE4Jmt": {
+          "type": "content_grouped_shipping",
+          "settings": {
+            "title": "¿Cuándo llega mi pedido?",
+            "content": "El pedido llega en un plazo de 24-48 horas. Tienen prioridad los pedidos realizados antes de las 12 del mediodía (cómo redactar esto para transmitir que el de correos viene a esa hora y saldrá ese mismo día??)"
+          }
+        },
+        "content_grouped_shipping_qUkrTc": {
+          "type": "content_grouped_shipping",
+          "settings": {
+            "title": "Seguimiento de mi paquete",
+            "content": "***dónde lo trackearemos IUROP"
+          }
+        },
+        "content_grouped_shipping_ktjtEt": {
+          "type": "content_grouped_shipping",
+          "settings": {
+            "title": "Contacto",
+            "content": "info@nectararcadia.com"
+          }
+        },
+        "content_grouped_shipping_QPA4Wx": {
+          "type": "content_grouped_shipping",
+          "settings": {
+            "title": "Envíos internacionales",
+            "content": "***envíos internacionales (dónde y precios)"
+          }
+        },
+        "content_grouped_subs_f4nmBM": {
+          "type": "content_grouped_subs",
+          "settings": {
+            "title": "¿Cuándo llega el pedido de mi suscripción?",
+            "content": "El pedido se repetirá el mismo día de la fecha de compra de cada mes."
+          }
+        },
+        "content_grouped_subs_hNriAQ": {
+          "type": "content_grouped_subs",
+          "settings": {
+            "title": "¿Cómo la modifico el pack",
+            "content": "Puedes ajustar la miel de tu pack de tu suscripción desde tu cuenta de usuario o escribiendo a info@nectararcadia.com."
+          }
+        },
+        "content_grouped_subs_JagjiU": {
+          "type": "content_grouped_subs",
+          "settings": {
+            "title": "¿Cómo cambio la dirección de entrega?",
+            "content": "Si quieres modificar la dirección de entrega de tu suscripción, puedes enviar un mail a info@nectararcadia.com"
+          }
+        },
+        "content_grouped_subs_L7gmUz": {
+          "type": "content_grouped_subs",
+          "settings": {
+            "title": "¿Puedo modificar la frecuencia de entrega?",
+            "content": "Puedes ajustar la frecuencia de tu suscripción desde tu cuenta de usuario o escribiendo a info@nectararcadia.com."
+          }
+        },
+        "content_grouped_subs_EQ8VaM": {
+          "type": "content_grouped_subs",
+          "settings": {
+            "title": "¿Cómo puedo cancelar la suscripción?",
+            "content": "La permanencia mínima es de **X** meses IUROP. Pasado este tiempo, puedes solicitar la cancelación escribiendo a info@nectararcadia.com. A partir de ese momento, tendrás la libertad de gestionarla según tus necesidades sin compromisos adicionales."
+          }
+        }
+      },
+      "block_order": [
+        "content_grouped_miel_aGMqiJ",
+        "content_grouped_miel_wXRmbh",
+        "content_grouped_miel_yw9Pjw",
+        "content_grouped_shipping_FE4Jmt",
+        "content_grouped_shipping_qUkrTc",
+        "content_grouped_shipping_ktjtEt",
+        "content_grouped_shipping_QPA4Wx",
+        "content_grouped_subs_f4nmBM",
+        "content_grouped_subs_hNriAQ",
+        "content_grouped_subs_JagjiU",
+        "content_grouped_subs_L7gmUz",
+        "content_grouped_subs_EQ8VaM"
+      ],
+      "settings": {
+        "use_image_ticks": false,
+        "title": "",
+        "content": "",
+        "use_groups": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "i_section_faqs_gtAnmM"
+  ]
+}

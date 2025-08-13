@@ -32,7 +32,7 @@
           "type": "content_block",
           "settings": {
             "title": "Barrera natural",
-            "content": "Barrera natural",
+            "content": "El peróxido de hidrógeno que generan las abejas durante la elaboración de la miel tiene una potente acción antimicrobiana. Sumado a su pH bajo y alta concentración de azúcares, crea un entorno hostil para virus y bacterias. Una defensa natural frente a infecciones cotidianas.",
             "only_tick": false
           }
         },
@@ -40,7 +40,7 @@
           "type": "content_block",
           "settings": {
             "title": "Refuerzo antioxidante",
-            "content": "Refuerzo antioxidante",
+            "content": "Flavonoides y ácidos orgánicos presentes en la miel ayudan a reducir el estrés oxidativo, una de las principales causas del debilitamiento inmunológico. Así, las células de defensa funcionan con mayor eficacia y se mantienen activas por más tiempo.",
             "only_tick": false
           }
         },
@@ -48,7 +48,7 @@
           "type": "content_block",
           "settings": {
             "title": "Inmunidad desde el intestino",
-            "content": "Inmunidad desde el intestino",
+            "content": "Nuestra miel aporta un suave efecto prebiótico que favorece el crecimiento de bacterias beneficiosas en la microbiota intestinal, donde reside buena parte del sistema inmune. Además, sus minerales y vitaminas del grupo B complementan el soporte inmunológico diario.",
             "only_tick": false
           }
         }
@@ -222,7 +222,8 @@
         "use_image_ticks": true,
         "title": "Hormonas en equilibrio.",
         "content": "<p>Desde lo más natural. Sin interferir, sin alterar: nuestra miel cruda acompaña los procesos hormonales clave con suavidad y eficacia.<br/><strong>Un aliado real para tu bienestar hormonal.</strong></p>",
-        "image": "shopify://shop_images/image.png"
+        "image": "shopify://shop_images/image.png",
+        "use_groups": false
       }
     },
     "i_section_image_text_BKkNDQ": {

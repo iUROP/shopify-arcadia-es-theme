@@ -3353,6 +3353,11 @@ body.open-cart .i-header-container__content--icons {
   line-height: 25px;
   position: relative;
 }
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-image-faqs__items .i-section-image-faqs__item details summary {
+    padding-right: 30px;
+  }
+}
 .i-section .i-section-image-faqs__items .i-section-image-faqs__item details summary svg {
   -webkit-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
@@ -5765,6 +5770,24 @@ body.template-page-benefits .i-section .i-section-image-text.template-style-alte
   height: auto;
   max-height: 100%;
   padding: 30px;
+}
+
+body.template-page-faqs .i-page-hero {
+  height: 400px;
+}
+body.template-page-faqs .i-section.isfaqs {
+  background-color: transparent !important;
+}
+body.template-page-faqs .i-section.isfaqs .i-section-image-faqs .i-section-image-faqs__title {
+  display: none !important;
+}
+body.template-page-faqs .i-section.isfaqs .i-section-image-faqs .i-section-image-faqs__items {
+  width: 890px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+body.template-page-faqs .i-section.isfaqs .i-section-image-faqs .i-section-image-faqs__items .i-section-image-faqs__tabs {
+  text-align: center;
 }
 
 body.template- .i-header-container .i-header-menu__content--items li a {

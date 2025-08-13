@@ -1255,6 +1255,10 @@
             font-weight: 700;
             line-height: 25px;
             position: relative;
+
+            @media only screen and (max-width: 1024px) {
+              padding-right: 30px;
+            }
             svg {
               -webkit-transition: all .25s cubic-bezier(.77,0,.175,1);
               -moz-transition: all .25s cubic-bezier(.77,0,.175,1);

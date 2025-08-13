@@ -731,6 +731,30 @@ body.template-page-benefits {
   }
 }
 
+body.template-page-faqs {
+  .i-page-hero {
+    height: 400px;
+  }
+  .i-section.isfaqs {
+    background-color: transparent !important;
+
+    .i-section-image-faqs {
+      .i-section-image-faqs__title {
+        display: none !important;
+      }
+      .i-section-image-faqs__items {
+        width: 890px;
+        margin: 0 auto;
+        max-width: 100%;
+
+        .i-section-image-faqs__tabs {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
 body.template- {
   .i-header-container .i-header-menu__content--items li a {
     color: #1E1E1E !important;
