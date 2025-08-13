@@ -317,107 +317,107 @@
       "name": "iUROP section - Recipes",
       "settings": {}
     },
-    "i_section_faqs_kmkEpz": {
+    "i_section_faqs_jFTKRH": {
       "type": "i-section-faqs",
       "blocks": {
-        "content_grouped_miel_kR8fCH": {
+        "content_grouped_miel_VMmwGr": {
           "type": "content_grouped_miel",
           "settings": {
-            "title": "Por qué Cruda",
+            "title": "¿Por qué Cruda?",
             "content": "Evitar calentar la miel a altas temperaturas permite preservar sus beneficios nutricionales intactos."
           }
         },
-        "content_grouped_miel_HEQCgU": {
+        "content_grouped_miel_BXhHzb": {
           "type": "content_grouped_miel",
           "settings": {
             "title": "¿Tiene azúcares añadidos, colorantes o conservantes?",
             "content": "Nuestra miel se elabora de forma tradicional y respetuosa. Enfrascamos el producto que las abejas, con su alimentación natural, nos proporcionan."
           }
         },
-        "content_grouped_miel_egbBaU": {
+        "content_grouped_miel_UMf4TV": {
           "type": "content_grouped_miel",
           "settings": {
-            "title": "Qué diferencia Arcadia’s Nectar",
+            "title": "¿Qué diferencia Arcadia’s Nectar?",
             "content": "Nuestra miel pura mantiene intactos todos los nutrientes que la convierten en un superalimento."
           }
         },
-        "content_grouped_shipping_8XqMbP": {
+        "content_grouped_shipping_r6kzLg": {
           "type": "content_grouped_shipping",
           "settings": {
-            "title": "Cuándo llega mi pedido",
+            "title": "¿Cuándo llega mi pedido?",
             "content": "El pedido llega en un plazo de 24-48 horas. Tienen prioridad los pedidos realizados antes de las 12 del mediodía (cómo redactar esto para transmitir que el de correos viene a esa hora y saldrá ese mismo día??)"
           }
         },
-        "content_grouped_shipping_YyfFiX": {
+        "content_grouped_shipping_Ur6FQj": {
           "type": "content_grouped_shipping",
           "settings": {
             "title": "Seguimiento de mi paquete",
             "content": "***dónde lo trackearemos IUROP"
           }
         },
-        "content_grouped_shipping_TixMJM": {
+        "content_grouped_shipping_FpPFTX": {
           "type": "content_grouped_shipping",
           "settings": {
             "title": "Contacto",
             "content": "info@nectararcadia.com"
           }
         },
-        "content_grouped_shipping_4qtA4B": {
+        "content_grouped_shipping_6WdA9K": {
           "type": "content_grouped_shipping",
           "settings": {
             "title": "Envíos internacionales",
             "content": "***envíos internacionales (dónde y precios)"
           }
         },
-        "content_grouped_subs_xXwBAb": {
+        "content_grouped_subs_p4RbRm": {
           "type": "content_grouped_subs",
           "settings": {
             "title": "¿Cuándo llega el pedido de mi suscripción?",
             "content": "El pedido se repetirá el mismo día de la fecha de compra de cada mes."
           }
         },
-        "content_grouped_subs_DQ6REy": {
+        "content_grouped_subs_NJkYYh": {
           "type": "content_grouped_subs",
           "settings": {
-            "title": "Cómo la modifico el pack",
+            "title": "¿Cómo la modifico el pack",
             "content": "Puedes ajustar la miel de tu pack de tu suscripción desde tu cuenta de usuario o escribiendo a info@nectararcadia.com."
           }
         },
-        "content_grouped_subs_iPHiL6": {
+        "content_grouped_subs_qgfCDW": {
           "type": "content_grouped_subs",
           "settings": {
-            "title": "Cómo cambio la dirección de entrega?",
+            "title": "¿Cómo cambio la dirección de entrega?",
             "content": "Si quieres modificar la dirección de entrega de tu suscripción, puedes enviar un mail a info@nectararcadia.com"
           }
         },
-        "content_grouped_subs_WiD8FF": {
+        "content_grouped_subs_eAwNQe": {
           "type": "content_grouped_subs",
           "settings": {
-            "title": "Puedo modificar la frecuencia de entrega?",
+            "title": "¿Puedo modificar la frecuencia de entrega?",
             "content": "Puedes ajustar la frecuencia de tu suscripción desde tu cuenta de usuario o escribiendo a info@nectararcadia.com."
           }
         },
-        "content_grouped_subs_dbXGcX": {
+        "content_grouped_subs_yYU9YM": {
           "type": "content_grouped_subs",
           "settings": {
-            "title": "Cómo puedo cancelar la suscripción?",
+            "title": "¿Cómo puedo cancelar la suscripción?",
             "content": "La permanencia mínima es de **X** meses IUROP. Pasado este tiempo, puedes solicitar la cancelación escribiendo a info@nectararcadia.com. A partir de ese momento, tendrás la libertad de gestionarla según tus necesidades sin compromisos adicionales."
           }
         }
       },
       "block_order": [
-        "content_grouped_miel_kR8fCH",
-        "content_grouped_miel_HEQCgU",
-        "content_grouped_miel_egbBaU",
-        "content_grouped_shipping_8XqMbP",
-        "content_grouped_shipping_YyfFiX",
-        "content_grouped_shipping_TixMJM",
-        "content_grouped_shipping_4qtA4B",
-        "content_grouped_subs_xXwBAb",
-        "content_grouped_subs_DQ6REy",
-        "content_grouped_subs_iPHiL6",
-        "content_grouped_subs_WiD8FF",
-        "content_grouped_subs_dbXGcX"
+        "content_grouped_miel_VMmwGr",
+        "content_grouped_miel_BXhHzb",
+        "content_grouped_miel_UMf4TV",
+        "content_grouped_shipping_r6kzLg",
+        "content_grouped_shipping_Ur6FQj",
+        "content_grouped_shipping_FpPFTX",
+        "content_grouped_shipping_6WdA9K",
+        "content_grouped_subs_p4RbRm",
+        "content_grouped_subs_NJkYYh",
+        "content_grouped_subs_qgfCDW",
+        "content_grouped_subs_eAwNQe",
+        "content_grouped_subs_yYU9YM"
       ],
       "settings": {
         "use_image_ticks": false,
@@ -483,7 +483,7 @@
     "i_section_table_compare_96AMME",
     "i_section_image_text_fhdDVB",
     "i_section_recipes_TRctnp",
-    "i_section_faqs_kmkEpz",
+    "i_section_faqs_jFTKRH",
     "i_section_instagram_fMCFXj"
   ]
 }
