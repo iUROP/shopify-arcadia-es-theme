@@ -2750,6 +2750,9 @@ body.open-cart .i-header-container__content--icons {
   margin: 0px;
   max-width: 350px;
 }
+.i-section .i-section-specifications--row__col-1 h2.Typo-H1 {
+  font-size: 29px;
+}
 @media only screen and (max-width: 1390px) {
   .i-section .i-section-specifications--row__col-1 h2 {
     max-width: 300px;

@@ -612,6 +612,10 @@
           margin: 0px;
           max-width: 350px;
 
+          &.Typo-H1 {
+            font-size: 29px;
+          }
+
           @media only screen and (max-width: 1390px) {
             max-width: 300px;
             font-size: 42px;
