@@ -14,7 +14,7 @@
     "i_announcement_bar_Xbqaq3": {
       "type": "i-announcement-bar",
       "blocks": {
-        "content_block_DkdLmq": {
+        "content_block_PnRaHy": {
           "type": "content_block",
           "settings": {
             "text": "Envío gratis a todo el mundo en pedidos a partir de 65 €.",
@@ -24,7 +24,7 @@
         }
       },
       "block_order": [
-        "content_block_DkdLmq"
+        "content_block_PnRaHy"
       ],
       "name": "iUROP Announcement Bar",
       "settings": {}
