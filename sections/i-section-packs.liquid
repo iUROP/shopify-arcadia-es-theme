@@ -1,7 +1,7 @@
 <div class="i-section" data-aos="fade-up">
   
   <div class="i-section-packs">
-    <h2>Crea tu propio pack</h2>
+    <h2>{{ section.settings.title }}</h2>
 
     <div class="i-section-packs__window">
       <div class="i-section-packs__window--tabs">
@@ -154,6 +154,8 @@
         </div>
       </div>
     </div>
+
+    <img src="{{ section.settings.background | img_url: 'master' }}" class="background-section" alt="{{ section.settings.title }}" />
   </div>
 
 </div>
@@ -163,6 +165,11 @@
   "name": "iUROP section - Packs",
   "class": "section-packs",
   "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título"
+    },
     {
       "type": "product",
       "id": "product_1",
@@ -182,7 +189,12 @@
       "type": "product",
       "id": "product_4",
       "label": "Seleccionar producto 4"
-    }
+    },
+    {
+      "type": "image_picker",
+      "id": "background",
+      "label": "Imagen de fondo"
+    },
   ],
   "presets": [
     {

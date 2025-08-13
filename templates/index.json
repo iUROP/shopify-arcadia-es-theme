@@ -82,10 +82,12 @@
       "type": "i-section-packs",
       "name": "iUROP section - Packs",
       "settings": {
+        "title": "Crea tu propio pack",
         "product_1": "miel-cruda-de-azahar",
         "product_2": "miel-cruda-de-bosque",
         "product_3": "miel-cruda-de-lavanda",
-        "product_4": "miel-cruda-de-tomillo"
+        "product_4": "miel-cruda-de-tomillo",
+        "background": "shopify://shop_images/background-packs.png"
       }
     },
     "i_section_product_list_bbbHLt": {
