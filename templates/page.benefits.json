@@ -21,8 +21,49 @@
       "type": "i-section-page-titles",
       "name": "iUROP section - Titles",
       "settings": {
-        "title": "¿Por qué Arcadia’s Nectar?",
+        "title": "<p>¿Por qué <em>Arcadia’s Nectar</em>?</p>",
         "subtitle": "<p>Arcadia’s Nectar es mucho más que miel. Es nutrición funcional en su estado más puro. No ha sido pasteurizada, filtrada ni manipulada. Por eso conserva intactas sus enzimas, antioxidantes y minerales naturales, ofreciendo beneficios reales y sostenidos para tu sistema inmune, metabolismo, digestión y descanso.<br/><br/><strong>Un alimento completo. Respaldado por la ciencia. Cosechado por la naturaleza.</strong></p>"
+      }
+    },
+    "i_section_image_accordeon_dwkVfy": {
+      "type": "i-section-image-accordeon",
+      "blocks": {
+        "content_block_rXC8Re": {
+          "type": "content_block",
+          "settings": {
+            "title": "Barrera natural",
+            "content": "Barrera natural",
+            "only_tick": false
+          }
+        },
+        "content_block_YmMmCV": {
+          "type": "content_block",
+          "settings": {
+            "title": "Refuerzo antioxidante",
+            "content": "Refuerzo antioxidante",
+            "only_tick": false
+          }
+        },
+        "content_block_yURUz8": {
+          "type": "content_block",
+          "settings": {
+            "title": "Inmunidad desde el intestino",
+            "content": "Inmunidad desde el intestino",
+            "only_tick": false
+          }
+        }
+      },
+      "block_order": [
+        "content_block_rXC8Re",
+        "content_block_YmMmCV",
+        "content_block_yURUz8"
+      ],
+      "name": "iUROP section - ImgAcor",
+      "settings": {
+        "title": "Un ingrediente, múltiples mecanismos naturales de defensa.",
+        "content": "<p>En Arcadia’s Nectar elaboramos miel cruda: sin calentar, sin filtrar y con todos sus compuestos activos intactos.Gracias a su perfil natural y completo, nuestra miel contribuye a reforzar tu sistema inmunológico de forma continua y profunda.<br/><br/>Comprobada por su impacto en:</p>",
+        "image": "shopify://shop_images/arc-image-1.png",
+        "use_boxed": false
       }
     },
     "i_section_image_text_Np9DB3": {
@@ -36,6 +77,88 @@
         "button_link": "/#",
         "image": "shopify://shop_images/Frame_64747.png",
         "image_m": "shopify://shop_images/Frame_64747.png",
+        "show_complete_image": false,
+        "imagen_mobile_less": false,
+        "hide_borders": false,
+        "image_left": false,
+        "text_to_left": true,
+        "is_complete": false,
+        "is_bg": false,
+        "template_text_style": "alternative_1",
+        "top_format": true,
+        "alternative_list": false
+      }
+    },
+    "i_section_image_accordeon_fKD7Xt": {
+      "type": "i-section-image-accordeon",
+      "blocks": {
+        "content_block_iqQBRL": {
+          "type": "content_block",
+          "settings": {
+            "title": "Enzimas digestivas activas.",
+            "content": "",
+            "only_tick": true
+          }
+        },
+        "content_block_qYMe3i": {
+          "type": "content_block",
+          "settings": {
+            "title": "Apoyo a tu flora intestinal.",
+            "content": "",
+            "only_tick": true
+          }
+        },
+        "content_block_DRYmbe": {
+          "type": "content_block",
+          "settings": {
+            "title": "Efecto prebiótico natural.",
+            "content": "",
+            "only_tick": true
+          }
+        },
+        "content_block_VfkUeN": {
+          "type": "content_block",
+          "settings": {
+            "title": "Calma tu estómago.",
+            "content": "",
+            "only_tick": true
+          }
+        },
+        "content_block_jgpRYb": {
+          "type": "content_block",
+          "settings": {
+            "title": "Sin químicos ni aditivos.",
+            "content": "",
+            "only_tick": true
+          }
+        }
+      },
+      "block_order": [
+        "content_block_iqQBRL",
+        "content_block_qYMe3i",
+        "content_block_DRYmbe",
+        "content_block_VfkUeN",
+        "content_block_jgpRYb"
+      ],
+      "name": "iUROP section - ImgAcor",
+      "settings": {
+        "title": "Menos inflamación.Más digestiones ligeras.",
+        "content": "<p>Para cuidar tu digestión de forma natural, no necesitas suplementos, jarabes ni cápsulas.<br/><br/>Una cucharada de nuestra miel cruda puede ayudarte más de lo que crees:</p>",
+        "image": "shopify://shop_images/arc-image-2.png",
+        "use_boxed": true
+      }
+    },
+    "i_section_image_text_eTLWRW": {
+      "type": "i-section-image-text",
+      "name": "iUROP section - ImageText",
+      "settings": {
+        "title": "Descanso y sueño",
+        "id_section": "",
+        "content": "<p>Nuestra miel cruda puede ayudarte a dormir mejor, de forma natural.Probado por su impacto en la regulación de glucosa nocturna, la producción de melatonina y el equilibrio del sistema nervioso.</p>",
+        "button_text": "Qué significa esto +",
+        "button_link": "/#",
+        "image": "shopify://shop_images/Frame_64747_1.png",
+        "image_m": "shopify://shop_images/Frame_64747_1.png",
         "show_complete_image": false,
         "imagen_mobile_less": false,
         "hide_borders": false,
@@ -175,7 +298,10 @@
   "order": [
     "main",
     "i_section_page_titles_pmTgGa",
+    "i_section_image_accordeon_dwkVfy",
     "i_section_image_text_Np9DB3",
+    "i_section_image_accordeon_fKD7Xt",
+    "i_section_image_text_eTLWRW",
     "i_section_faqs_MVaJHK",
     "i_section_image_text_BKkNDQ"
   ]

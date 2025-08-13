@@ -1,0 +1,194 @@
+<div class="i-section" data-aos="fade-up">
+  
+  <div class="i-section-packs">
+    <h2>Crea tu propio pack</h2>
+
+    <div class="i-section-packs__window">
+      <div class="i-section-packs__window--tabs">
+        <div class="i-section-packs__window--tabs__item active">
+          <span></span>
+          Pack Premium
+          <strong>Bestseller</strong>
+        </div>
+        <div class="i-section-packs__window--tabs__item">
+          <span></span>
+          Pack Basic
+        </div>
+      </div>
+      <div class="i-section-packs__window--contents">
+        <div class="i-section-packs__window--contents__item active">
+
+          {% if section.settings.product_1 != blank %}
+            {% assign selected_product_1 = all_products[section.settings.product_1] %}
+
+            {% if selected_product_1 %}
+              <div class="item-pack-product">
+                <div class="img-content">
+                  <img 
+                    src="{{ selected_product_1.featured_image | image_url: width: 500 }}" 
+                    alt="{{ selected_product_1.featured_image.alt | escape }}"
+                  >
+                </div>
+                <h3>{{ selected_product_1.title }}</h3>
+                <div class="quantity-selector">
+                  <button class="qty-btn less">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="2" viewBox="0 0 7 2" fill="none">
+                      <path d="M0.944092 1.60797V0.391968H6.48009V1.60797H0.944092Z" fill="#1E1E1E"/>
+                    </svg>
+                  </button>
+                  <span class="qty-value">0</span>
+                  <button class="qty-btn more">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                      <path d="M3.21598 7.49603V0.504028H4.33598V7.49603H3.21598ZM0.47998 4.55203V3.46403H7.05598V4.55203H0.47998Z" fill="#1E1E1E"/>
+                    </svg>
+                  </button>
+                </div>
+
+              </div>
+            {% endif %}
+          {% endif %}
+
+          {% if section.settings.product_2 != blank %}
+            {% assign selected_product_2 = all_products[section.settings.product_2] %}
+
+            {% if selected_product_2 %}
+              <div class="item-pack-product">
+                <div class="img-content">
+                  <img 
+                    src="{{ selected_product_2.featured_image | image_url: width: 500 }}" 
+                    alt="{{ selected_product_2.featured_image.alt | escape }}"
+                  >
+                </div>
+                <h3>{{ selected_product_2.title }}</h3>
+                <div class="quantity-selector">
+                  <button class="qty-btn less">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="2" viewBox="0 0 7 2" fill="none">
+                      <path d="M0.944092 1.60797V0.391968H6.48009V1.60797H0.944092Z" fill="#1E1E1E"/>
+                    </svg>
+                  </button>
+                  <span class="qty-value">0</span>
+                  <button class="qty-btn more">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                      <path d="M3.21598 7.49603V0.504028H4.33598V7.49603H3.21598ZM0.47998 4.55203V3.46403H7.05598V4.55203H0.47998Z" fill="#1E1E1E"/>
+                    </svg>
+                  </button>
+                </div>
+
+              </div>
+            {% endif %}
+          {% endif %}
+
+          {% if section.settings.product_3 != blank %}
+            {% assign selected_product_3 = all_products[section.settings.product_3] %}
+
+            {% if selected_product_3 %}
+              <div class="item-pack-product">
+                <div class="img-content">
+                  <img 
+                    src="{{ selected_product_3.featured_image | image_url: width: 500 }}" 
+                    alt="{{ selected_product_3.featured_image.alt | escape }}"
+                  >
+                </div>
+                <h3>{{ selected_product_3.title }}</h3>
+                <div class="quantity-selector">
+                  <button class="qty-btn less">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="2" viewBox="0 0 7 2" fill="none">
+                      <path d="M0.944092 1.60797V0.391968H6.48009V1.60797H0.944092Z" fill="#1E1E1E"/>
+                    </svg>
+                  </button>
+                  <span class="qty-value">0</span>
+                  <button class="qty-btn more">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                      <path d="M3.21598 7.49603V0.504028H4.33598V7.49603H3.21598ZM0.47998 4.55203V3.46403H7.05598V4.55203H0.47998Z" fill="#1E1E1E"/>
+                    </svg>
+                  </button>
+                </div>
+
+              </div>
+            {% endif %}
+          {% endif %}
+
+          {% if section.settings.product_4 != blank %}
+            {% assign selected_product_4 = all_products[section.settings.product_4] %}
+
+            {% if selected_product_4 %}
+              <div class="item-pack-product">
+                <div class="img-content">
+                  <img 
+                    src="{{ selected_product_4.featured_image | image_url: width: 500 }}" 
+                    alt="{{ selected_product_4.featured_image.alt | escape }}"
+                  >
+                </div>
+                <h3>{{ selected_product_4.title }}</h3>
+                <div class="quantity-selector">
+                  <button class="qty-btn less">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="2" viewBox="0 0 7 2" fill="none">
+                      <path d="M0.944092 1.60797V0.391968H6.48009V1.60797H0.944092Z" fill="#1E1E1E"/>
+                    </svg>
+                  </button>
+                  <span class="qty-value">0</span>
+                  <button class="qty-btn more">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                      <path d="M3.21598 7.49603V0.504028H4.33598V7.49603H3.21598ZM0.47998 4.55203V3.46403H7.05598V4.55203H0.47998Z" fill="#1E1E1E"/>
+                    </svg>
+                  </button>
+                </div>
+
+              </div>
+            {% endif %}
+          {% endif %}
+
+        </div>
+        <div class="i-section-packs__window--contents__item"></div>
+      </div>
+      <div class="i-section-packs__window--bulker">
+        <div class="i-section-packs__window--bulker__products">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="i-section-packs__window--bulker__addToCart">
+          <span>Faltan 4 productos</span>
+          <button>Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "iUROP section - Packs",
+  "class": "section-packs",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product_1",
+      "label": "Seleccionar producto 1"
+    },
+    {
+      "type": "product",
+      "id": "product_2",
+      "label": "Seleccionar producto 2"
+    },
+    {
+      "type": "product",
+      "id": "product_3",
+      "label": "Seleccionar producto 3"
+    },
+    {
+      "type": "product",
+      "id": "product_4",
+      "label": "Seleccionar producto 4"
+    }
+  ],
+  "presets": [
+    {
+      "name": "iUROP section - Packs",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

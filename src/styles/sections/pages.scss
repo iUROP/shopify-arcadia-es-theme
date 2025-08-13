@@ -698,7 +698,9 @@ body.template-product {
   }
 }
 
-body.template-page {
+body.template-page,
+body.template-page-benefits,
+body.template-page-mision {
   .i-header-container .i-header-menu__content--items li a {
     color: #1E1E1E !important;
   }
@@ -715,6 +717,17 @@ body.template-page {
         fill: #1E1E1E;
       }
     }
+  }
+  .i-section.isfaqs.Bg-Colors-300 {
+    background-color: transparent !important;
+  }
+}
+
+body.template-page-benefits {
+  .i-section .i-section-image-text.template-style-alternative_1 .i-section-image-text__image:not(.complete-image) {
+    height: auto;
+    max-height: 100%;
+    padding: 30px;
   }
 }
 
@@ -797,23 +810,34 @@ body.template- {
 body.template-page-benefits {
   .alternative_list {
     &.template-style-alternative_1 {
-      margin: 0;
+      .i-section-image-text__text {
+        padding-top: 34px;
+        padding-bottom: 34px;
+
+        h2 {
+          margin-bottom: -8px;
+        }
+      }
     }
 
     .i-section-image-text__text {
       h2 {
-        font-size: 18px !important;
+        font-size: 31px !important;
         line-height: 40px !important;
       }
       .i-section-image-text__text--pharagrah {
         p {
-          font-size: 14px !important;
-          line-height: 21px !important
+          color: var(--Colors-800, var(--Colors-800, #1E1E1E)) !important;
+          font-family: var(--Family-Font---Body, "Instrument Sans") !important;
+          font-size: var(--Typo-Body-M, 16px) !important;
+          font-style: normal !important;
+          font-weight: 400 !important;
+          line-height: 25px !important;
+          margin: 20px 0 !important;
         }
         div {
           span {
-            font-size: 14px !important;
-            line-height: 14px !important;
+
           }
         }
       }
