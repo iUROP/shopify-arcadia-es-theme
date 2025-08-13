@@ -403,6 +403,25 @@
       });
       
       Permalink.setScrollDragger();
+
+      $('.i-section-image-faqs__tabs button').on('click', function (e) {
+        let clases = $(this).attr("class");
+        console.log("clases", clases)
+
+        $('.i-section-image-faqs__items').removeClass('mil-active')
+        $('.i-section-image-faqs__items').removeClass('shipping-active')
+        $('.i-section-image-faqs__items').removeClass('subs-active')
+
+        if (clases == 'miel-button') {
+          $('.i-section-image-faqs__items').addClass('mil-active')
+        }
+        if (clases == 'shipping-button') {
+          $('.i-section-image-faqs__items').addClass('shipping-active')
+        }
+        if (clases == 'subs-button') {
+          $('.i-section-image-faqs__items').addClass('subs-active')
+        }
+      });
     });
   </script>
 </html>

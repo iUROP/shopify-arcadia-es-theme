@@ -811,8 +811,8 @@ body.template-page-benefits {
   .alternative_list {
     &.template-style-alternative_1 {
       .i-section-image-text__text {
-        padding-top: 34px;
-        padding-bottom: 34px;
+        padding-top: 42px;
+        padding-bottom: 60px;
 
         h2 {
           margin-bottom: -8px;
@@ -826,6 +826,12 @@ body.template-page-benefits {
         line-height: 40px !important;
       }
       .i-section-image-text__text--pharagrah {
+
+        & > div {
+          &:last-of-type {
+            border-bottom: .5px solid var(--Colors-400, #C5BEAF);
+          }
+        }
         p {
           color: var(--Colors-800, var(--Colors-800, #1E1E1E)) !important;
           font-family: var(--Family-Font---Body, "Instrument Sans") !important;

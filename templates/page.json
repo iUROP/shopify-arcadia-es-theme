@@ -233,41 +233,113 @@
         "alternative_list": false
       }
     },
-    "i_section_faqs_fHMqKn": {
+    "i_section_faqs_4JnXkt": {
       "type": "i-section-faqs",
       "blocks": {
-        "content_block_BxAcpA": {
-          "type": "content_block",
+        "content_grouped_miel_7MqbYU": {
+          "type": "content_grouped_miel",
           "settings": {
-            "title": "¿Vuestra miel contiene algún aditivo?",
-            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar erat quam, id maximus nisi imperdiet tempor. Ut tincidunt, mauris sit amet ultrices pulvinar, erat sem mollis purus, quis ultricies quam orci id diam. Nam et diam rutrum, tempus erat in, varius ex. Integer blandit velit massa."
+            "title": "Por qué Cruda",
+            "content": "Evitar calentar la miel a altas temperaturas permite preservar sus beneficios nutricionales intactos."
           }
         },
-        "content_block_wKpYCA": {
-          "type": "content_block",
+        "content_grouped_miel_izXHxG": {
+          "type": "content_grouped_miel",
           "settings": {
-            "title": "¿Vuestra miel contiene algún aditivo?",
-            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar erat quam, id maximus nisi imperdiet tempor. Ut tincidunt, mauris sit amet ultrices pulvinar, erat sem mollis purus, quis ultricies quam orci id diam. Nam et diam rutrum, tempus erat in, varius ex. Integer blandit velit massa."
+            "title": "¿Tiene azúcares añadidos, colorantes o conservantes?",
+            "content": "Nuestra miel se elabora de forma tradicional y respetuosa. Enfrascamos el producto que las abejas, con su alimentación natural, nos proporcionan."
           }
         },
-        "content_block_kXUJU3": {
-          "type": "content_block",
+        "content_grouped_miel_tbVJJ3": {
+          "type": "content_grouped_miel",
           "settings": {
-            "title": "¿Vuestra miel contiene algún aditivo?",
-            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar erat quam, id maximus nisi imperdiet tempor. Ut tincidunt, mauris sit amet ultrices pulvinar, erat sem mollis purus, quis ultricies quam orci id diam. Nam et diam rutrum, tempus erat in, varius ex. Integer blandit velit massa."
+            "title": "Qué diferencia Arcadia’s Nectar",
+            "content": "Nuestra miel pura mantiene intactos todos los nutrientes que la convierten en un superalimento."
+          }
+        },
+        "content_grouped_shipping_TmiNRz": {
+          "type": "content_grouped_shipping",
+          "settings": {
+            "title": "Cuándo llega mi pedido",
+            "content": "El pedido llega en un plazo de 24-48 horas. Tienen prioridad los pedidos realizados antes de las 12 del mediodía (cómo redactar esto para transmitir que el de correos viene a esa hora y saldrá ese mismo día??)"
+          }
+        },
+        "content_grouped_shipping_j6M6DU": {
+          "type": "content_grouped_shipping",
+          "settings": {
+            "title": "Seguimiento de mi paquete",
+            "content": "***dónde lo trackearemos IUROP"
+          }
+        },
+        "content_grouped_shipping_kFhpT6": {
+          "type": "content_grouped_shipping",
+          "settings": {
+            "title": "Contacto",
+            "content": "info@nectararcadia.com"
+          }
+        },
+        "content_grouped_shipping_VdFBdG": {
+          "type": "content_grouped_shipping",
+          "settings": {
+            "title": "Envíos internacionales",
+            "content": "***envíos internacionales (dónde y precios)"
+          }
+        },
+        "content_grouped_subs_iqzKAj": {
+          "type": "content_grouped_subs",
+          "settings": {
+            "title": "¿Cuándo llega el pedido de mi suscripción?",
+            "content": "El pedido se repetirá el mismo día de la fecha de compra de cada mes."
+          }
+        },
+        "content_grouped_subs_LxjKW6": {
+          "type": "content_grouped_subs",
+          "settings": {
+            "title": "Cómo la modifico el pack",
+            "content": "Puedes ajustar la miel de tu pack de tu suscripción desde tu cuenta de usuario o escribiendo a info@nectararcadia.com."
+          }
+        },
+        "content_grouped_subs_YBjxX7": {
+          "type": "content_grouped_subs",
+          "settings": {
+            "title": "Cómo cambio la dirección de entrega?",
+            "content": "Si quieres modificar la dirección de entrega de tu suscripción, puedes enviar un mail a info@nectararcadia.com"
+          }
+        },
+        "content_grouped_subs_bkynac": {
+          "type": "content_grouped_subs",
+          "settings": {
+            "title": "Puedo modificar la frecuencia de entrega?",
+            "content": "Puedes ajustar la frecuencia de tu suscripción desde tu cuenta de usuario o escribiendo a info@nectararcadia.com."
+          }
+        },
+        "content_grouped_subs_4QT3fk": {
+          "type": "content_grouped_subs",
+          "settings": {
+            "title": "Cómo puedo cancelar la suscripción?",
+            "content": "La permanencia mínima es de **X** meses IUROP. Pasado este tiempo, puedes solicitar la cancelación escribiendo a info@nectararcadia.com. A partir de ese momento, tendrás la libertad de gestionarla según tus necesidades sin compromisos adicionales."
           }
         }
       },
       "block_order": [
-        "content_block_BxAcpA",
-        "content_block_wKpYCA",
-        "content_block_kXUJU3"
+        "content_grouped_miel_7MqbYU",
+        "content_grouped_miel_izXHxG",
+        "content_grouped_miel_tbVJJ3",
+        "content_grouped_shipping_TmiNRz",
+        "content_grouped_shipping_j6M6DU",
+        "content_grouped_shipping_kFhpT6",
+        "content_grouped_shipping_VdFBdG",
+        "content_grouped_subs_iqzKAj",
+        "content_grouped_subs_LxjKW6",
+        "content_grouped_subs_YBjxX7",
+        "content_grouped_subs_bkynac",
+        "content_grouped_subs_4QT3fk"
       ],
-      "name": "iUROP section - Faqs",
       "settings": {
         "use_image_ticks": false,
         "title": "",
-        "content": ""
+        "content": "",
+        "use_groups": true
       }
     }
   },
@@ -279,6 +351,6 @@
     "i_section_image_text_jyMdpR",
     "i_section_image_text_4kQpQb",
     "i_section_image_text_JcqiL7",
-    "i_section_faqs_fHMqKn"
+    "i_section_faqs_4JnXkt"
   ]
 }
