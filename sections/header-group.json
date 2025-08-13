@@ -18,13 +18,22 @@
           "type": "content_block",
           "settings": {
             "text": "Envío gratis a todo el mundo en pedidos a partir de 65 €.",
+            "show_subscribe": false,
+            "subs_text": ""
+          }
+        },
+        "content_block_btjkUq": {
+          "type": "content_block",
+          "settings": {
+            "text": "Suscríbete y ahorra",
             "show_subscribe": true,
-            "subs_text": "SUSCRIBETE"
+            "subs_text": ""
           }
         }
       },
       "block_order": [
-        "content_block_PnRaHy"
+        "content_block_PnRaHy",
+        "content_block_btjkUq"
       ],
       "name": "iUROP Announcement Bar",
       "settings": {}

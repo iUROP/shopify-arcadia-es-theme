@@ -766,14 +766,14 @@ body {
 .i-announcement-bar .i-announcement-bar__item {
   text-align: center;
   height: 41px;
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
 }
 .i-announcement-bar .i-announcement-bar__item a {
-  margin-left: 8px;
-  margin-right: 8px;
-  font-weight: bold;
+  display: block;
+  color: #faf5e8;
+  text-decoration: none;
 }
 
 .shopify-section-group-header-group {
@@ -1306,14 +1306,15 @@ i-minicart .i-minicart-container__overlay.open {
   position: absolute;
   left: 0;
   width: 100%;
-  margin-top: 41px;
+  margin-top: 0px !important;
+  top: 41px !important;
 }
 .section-header.sticky {
   top: var(--_top);
 }
 @media only screen and (max-width: 1024px) {
   .section-header {
-    top: 0px !important;
+    top: 41px !important;
   }
 }
 

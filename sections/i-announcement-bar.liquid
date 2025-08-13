@@ -1,9 +1,14 @@
-<div class="i-announcement-bar Bg-Colors-100">
+<div class="i-announcement-bar Bg-Colors-100 announcement-slick">
   {% for block in section.blocks %}
     <li class="i-announcement-bar__item Text-Colors-200 Typo-Body-S Family-Font---Body">
-      {{ block.settings.text }}
       {% if block.settings.show_subscribe %}
-        <a href="/products/miel-cruda-de-azahar" class="Text-Colors-200 Typo-Body-S Family-Font---Body">{{ block.settings.subs_text }}</a>
+        <a href="/products/miel-cruda-de-azahar">
+      {% endif %}
+
+      {{ block.settings.text }}
+
+      {% if block.settings.show_subscribe %}
+        </a>
       {% endif %}
     </li>
   {% endfor %}
@@ -30,11 +35,6 @@
           "id": "show_subscribe",
           "default": false,
           "label": "Mostrar CTA de suscripción"
-        },
-        {
-          "type": "text",
-          "id": "subs_text",
-          "label": "Texto de suscripción"
         },
       ]
     }

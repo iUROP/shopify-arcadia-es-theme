@@ -2,14 +2,15 @@
   position: absolute;
   left: 0;
   width: 100%;
-  margin-top: 41px;
+  margin-top: 0px !important;
+  top: 41px !important;
 
   &.sticky {
     top: var(--_top);
   }
 
   @media only screen and (max-width: 1024px) {
-    top: 0px !important;
+    top: 41px !important;
   }
 }
 

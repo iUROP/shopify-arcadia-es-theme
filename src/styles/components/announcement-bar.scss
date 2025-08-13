@@ -2,14 +2,14 @@
   .i-announcement-bar__item {
     text-align: center;
     height: 41px;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
 
     a {
-      margin-left: 8px;
-      margin-right: 8px;
-      font-weight: bold;
+      display: block;
+      color: #faf5e8;
+      text-decoration: none;
     }
   }
 }
