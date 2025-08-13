@@ -734,6 +734,14 @@ body.template-page-benefits {
 body.template-page-faqs {
   .i-page-hero {
     height: 400px;
+
+    .main-page-title {
+      @media only screen and (max-width: 1024px) {
+        padding: 0 20px;
+        text-align: center;
+        font-size: 32px;
+      }
+    }
   }
   .i-section.isfaqs {
     background-color: transparent !important;

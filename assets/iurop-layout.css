@@ -5775,6 +5775,13 @@ body.template-page-benefits .i-section .i-section-image-text.template-style-alte
 body.template-page-faqs .i-page-hero {
   height: 400px;
 }
+@media only screen and (max-width: 1024px) {
+  body.template-page-faqs .i-page-hero .main-page-title {
+    padding: 0 20px;
+    text-align: center;
+    font-size: 32px;
+  }
+}
 body.template-page-faqs .i-section.isfaqs {
   background-color: transparent !important;
 }
