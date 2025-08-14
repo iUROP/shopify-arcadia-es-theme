@@ -174,7 +174,7 @@
         "especificacion_RBEtnG": {
           "type": "especificacion",
           "settings": {
-            "description": "Por qué nuestra miel destaca",
+            "description": "Analizada por laboratorios",
             "opption_state_1": "include",
             "opption_state_2": "optional",
             "opption_state_3": "no_include"
@@ -183,7 +183,7 @@
         "especificacion_TKGYRF": {
           "type": "especificacion",
           "settings": {
-            "description": "Certificada libre de residuos de glifosato",
+            "description": "Certificada libre de residuos de pesticidas",
             "opption_state_1": "include",
             "opption_state_2": "optional",
             "opption_state_3": "optional"
