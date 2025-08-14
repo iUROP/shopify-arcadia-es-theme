@@ -224,6 +224,24 @@
             "opption_state_2": "no_include",
             "opption_state_3": "no_include"
           }
+        },
+        "especificacion_ec9RKf": {
+          "type": "especificacion",
+          "settings": {
+            "description": "Cargada de Nutrientes",
+            "opption_state_1": "include",
+            "opption_state_2": "no_include",
+            "opption_state_3": "no_include"
+          }
+        },
+        "especificacion_VamTGF": {
+          "type": "especificacion",
+          "settings": {
+            "description": "Saludable",
+            "opption_state_1": "include",
+            "opption_state_2": "optional",
+            "opption_state_3": "no_include"
+          }
         }
       },
       "block_order": [
@@ -232,7 +250,9 @@
         "especificacion_KYEqGp",
         "especificacion_kwE79Y",
         "especificacion_A9F9Ua",
-        "especificacion_c7YWgV"
+        "especificacion_c7YWgV",
+        "especificacion_ec9RKf",
+        "especificacion_VamTGF"
       ],
       "name": "iUROP section - Table",
       "settings": {
