@@ -2048,6 +2048,21 @@ body.open-cart .i-header-container__content--icons {
     display: block;
   }
 }
+.i-footer-container__content--cols-absolute .by-iurop {
+  text-align: right;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+.i-footer-container__content--cols-absolute .by-iurop img {
+  width: 54px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -5px;
+}
 @media only screen and (max-width: 1024px) {
   .i-footer-container__content--cols-absolute {
     position: relative;

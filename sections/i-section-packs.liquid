@@ -20,14 +20,11 @@
 
           {% if section.settings.product_1 != blank %}
             {% assign selected_product_1 = all_products[section.settings.product_1] %}
-
+            
             {% if selected_product_1 %}
               <div class="item-pack-product">
                 <div class="img-content">
-                  <img 
-                    src="{{ selected_product_1.featured_image | image_url: width: 500 }}" 
-                    alt="{{ selected_product_1.featured_image.alt | escape }}"
-                  >
+                  <img src="{{ selected_product_1.metafields.custom.review_image | file_url }}" alt="Product stamp image" draggable="false" />
                 </div>
                 <h3>{{ selected_product_1.title }}</h3>
                 <div class="quantity-selector">
@@ -54,10 +51,7 @@
             {% if selected_product_2 %}
               <div class="item-pack-product">
                 <div class="img-content">
-                  <img 
-                    src="{{ selected_product_2.featured_image | image_url: width: 500 }}" 
-                    alt="{{ selected_product_2.featured_image.alt | escape }}"
-                  >
+                  <img src="{{ selected_product_2.metafields.custom.review_image | file_url }}" alt="Product stamp image" draggable="false" />
                 </div>
                 <h3>{{ selected_product_2.title }}</h3>
                 <div class="quantity-selector">
@@ -84,10 +78,7 @@
             {% if selected_product_3 %}
               <div class="item-pack-product">
                 <div class="img-content">
-                  <img 
-                    src="{{ selected_product_3.featured_image | image_url: width: 500 }}" 
-                    alt="{{ selected_product_3.featured_image.alt | escape }}"
-                  >
+                  <img src="{{ selected_product_3.metafields.custom.review_image | file_url }}" alt="Product stamp image" draggable="false" />
                 </div>
                 <h3>{{ selected_product_3.title }}</h3>
                 <div class="quantity-selector">
@@ -114,10 +105,7 @@
             {% if selected_product_4 %}
               <div class="item-pack-product">
                 <div class="img-content">
-                  <img 
-                    src="{{ selected_product_4.featured_image | image_url: width: 500 }}" 
-                    alt="{{ selected_product_4.featured_image.alt | escape }}"
-                  >
+                  <img src="{{ selected_product_4.metafields.custom.review_image | file_url }}" alt="Product stamp image" draggable="false" />
                 </div>
                 <h3>{{ selected_product_4.title }}</h3>
                 <div class="quantity-selector">
