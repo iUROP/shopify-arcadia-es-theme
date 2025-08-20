@@ -5809,22 +5809,26 @@ body.template-product .i-minicart-container .icon-cart svg path {
 
 body.template-page .i-header-container .i-header-menu__content--items li a,
 body.template-page-benefits .i-header-container .i-header-menu__content--items li a,
-body.template-page-mision .i-header-container .i-header-menu__content--items li a {
+body.template-page-mision .i-header-container .i-header-menu__content--items li a,
+body.template-page-contact .i-header-container .i-header-menu__content--items li a {
   color: #1E1E1E !important;
 }
 body.template-page .i-header-menu__toggler svg path,
 body.template-page-benefits .i-header-menu__toggler svg path,
-body.template-page-mision .i-header-menu__toggler svg path {
+body.template-page-mision .i-header-menu__toggler svg path,
+body.template-page-contact .i-header-menu__toggler svg path {
   fill: #1E1E1E;
 }
 body.template-page .i-minicart-container .icon-cart svg path,
 body.template-page-benefits .i-minicart-container .icon-cart svg path,
-body.template-page-mision .i-minicart-container .icon-cart svg path {
+body.template-page-mision .i-minicart-container .icon-cart svg path,
+body.template-page-contact .i-minicart-container .icon-cart svg path {
   fill: #1E1E1E;
 }
 body.template-page .i-section.isfaqs.Bg-Colors-300,
 body.template-page-benefits .i-section.isfaqs.Bg-Colors-300,
-body.template-page-mision .i-section.isfaqs.Bg-Colors-300 {
+body.template-page-mision .i-section.isfaqs.Bg-Colors-300,
+body.template-page-contact .i-section.isfaqs.Bg-Colors-300 {
   background-color: transparent !important;
 }
 
@@ -5958,11 +5962,17 @@ html {
   scroll-padding-top: 170px;
 }
 
+body.template-page-contact .color-scheme-1.gradient {
+  background-color: #FAF5E8 !important;
+}
 body.template-page-contact .i-page-hero {
   display: none !important;
 }
 body.template-page-contact .contact.page-width {
   padding-top: 130px;
+  padding-bottom: 60px;
+  width: 100%;
+  max-width: 100%;
 }
 body.template-page-contact .contact.page-width h2 {
   position: relative !important;
@@ -5994,12 +6004,37 @@ body.template-page-contact .contact.page-width p {
   margin-bottom: 40px;
 }
 body.template-page-contact .contact.page-width form {
-  width: 500px;
+  width: 360px;
   margin: 0 auto;
   max-width: 90%;
 }
+body.template-page-contact .contact.page-width form .contact__fields {
+  margin-top: 48px;
+}
+body.template-page-contact .contact.page-width form .field {
+  margin-bottom: 50px;
+}
+body.template-page-contact .contact.page-width form .field::before, body.template-page-contact .contact.page-width form .field::after {
+  display: none !important;
+}
+body.template-page-contact .contact.page-width form .field input, body.template-page-contact .contact.page-width form .field textarea {
+  border-radius: var(--Corner-Extra-small, 4px);
+  border: var(--Strokes-Small, 1px) solid var(--Colors-500, #887E64);
+  background: transparent;
+}
+body.template-page-contact .contact.page-width form .field label {
+  top: -25px;
+  left: 0;
+  color: var(--Colors-Grey, var(--Colors-grey, #464646));
+  font-family: var(--Family-Font---Body, "Instrument Sans");
+  font-size: var(--Typo-Body-S, 13px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 body.template-page-contact .contact.page-width form .contact__button {
   text-align: center;
+  margin-top: -20px;
 }
 body.template-page-contact .contact.page-width form .contact__button button {
   width: 100%;

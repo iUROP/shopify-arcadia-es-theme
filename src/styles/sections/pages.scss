@@ -700,7 +700,8 @@ body.template-product {
 
 body.template-page,
 body.template-page-benefits,
-body.template-page-mision {
+body.template-page-mision,
+body.template-page-contact {
   .i-header-container .i-header-menu__content--items li a {
     color: #1E1E1E !important;
   }
@@ -889,11 +890,17 @@ html {
 }
 
 body.template-page-contact {
+  .color-scheme-1.gradient {
+    background-color: #FAF5E8 !important;
+  }
   .i-page-hero {
     display: none !important;
   }
   .contact.page-width {
     padding-top: 130px;
+    padding-bottom: 60px;
+    width: 100%;
+    max-width: 100%;
 
     h2 {
       position: relative !important;
@@ -927,12 +934,40 @@ body.template-page-contact {
     }
 
     form {
-      width: 500px;
+      width: 360px;
       margin: 0 auto;
       max-width: 90%;
 
+      .contact__fields {
+        margin-top: 48px;
+      }
+      .field {
+        margin-bottom: 50px;
+
+        &::before,
+        &::after {
+          display: none !important;
+        }
+        input, textarea {
+          border-radius: var(--Corner-Extra-small, 4px);
+          border: var(--Strokes-Small, 1px) solid var(--Colors-500, #887E64);
+          background: transparent;
+        }
+        label {
+          top: -25px;
+          left: 0;
+          color: var(--Colors-Grey, var(--Colors-grey, #464646));
+          font-family: var(--Family-Font---Body, "Instrument Sans");
+          font-size: var(--Typo-Body-S, 13px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+
       .contact__button {
         text-align: center;
+        margin-top: -20px;
         
         button {
           width: 100%;

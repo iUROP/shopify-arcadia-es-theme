@@ -67,7 +67,7 @@
     }
   },
   "newsletter": {
-    "label": "Correo electrónico",
+    "label": "Email",
     "success": "Gracias por suscribirte",
     "button_label": "Suscribirse"
   },
@@ -268,9 +268,9 @@
     "contact": {
       "form": {
         "name": "Nombre",
-        "email": "Correo electrónico",
+        "email": "Email",
         "phone": "Número de teléfono",
-        "comment": "Comentario",
+        "comment": "Asunto",
         "send": "Enviar",
         "post_success": "Gracias por contactarnos. Te responderemos lo antes posible.",
         "error_heading": "Por favor, ajusta lo siguiente:",
