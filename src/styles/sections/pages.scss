@@ -887,3 +887,67 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 170px;
 }
+
+body.template-page-contact {
+  .i-page-hero {
+    display: none !important;
+  }
+  .contact.page-width {
+    padding-top: 130px;
+
+    h2 {
+      position: relative !important;
+      overflow: visible;
+      width: auto;
+      height: auto;
+      visibility: visible;
+      transform: scale(1);
+      clip: initial;
+      text-align: center;
+      color: #000;
+      text-align: center;
+      font-family: "Besley", serif;
+      font-size: var(--Typo-H2, 39px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      letter-spacing: -1.17px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #000;
+      text-align: center;
+      font-family: var(--Family-Font---Body, "Instrument Sans");
+      font-size: var(--Typo-Body-M, 16px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      margin-bottom: 40px;
+    }
+
+    form {
+      width: 500px;
+      margin: 0 auto;
+      max-width: 90%;
+
+      .contact__button {
+        text-align: center;
+        
+        button {
+          width: 100%;
+          border-radius: var(--Corner-Full, 10000px);
+          background: var(--Colors-100, #5B1414);
+          font-family: "Besley", serif;
+          color: var(--Colors-White, var(--Colors-white, #FFF));
+          font-family: var(--Family-Font, Besley);
+          font-size: var(--Typo-Body-M, 16px);
+          font-style: normal;
+          font-weight: 600;
+          line-height: 95%;
+          letter-spacing: -0.48px;
+        }
+      }
+    }
+  }
+}
