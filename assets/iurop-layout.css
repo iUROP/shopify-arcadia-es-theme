@@ -5139,6 +5139,11 @@ body.open-cart .i-header-container__content--icons {
 .i-section .i-section-packs .show-1 .content-tab-1 {
   display: block;
 }
+.i-section .i-section-packs .show-1 .tab-packs-2 {
+  margin-left: -12px;
+  z-index: 0;
+  padding-left: 22px;
+}
 .i-section .i-section-packs .show-2 .tab-packs-2 {
   border-radius: var(--Corner-Medium, 12px) var(--Corner-Medium, 12px) var(--Corner-None, 0) var(--Corner-None, 0);
   border-top: var(--Strokes-Small, 1px) solid var(--Colors-400, #C5BEAF);
