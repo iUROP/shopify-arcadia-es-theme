@@ -87,7 +87,9 @@
         "product_2": "miel-cruda-de-bosque",
         "product_3": "miel-cruda-de-lavanda",
         "product_4": "miel-cruda-de-tomillo",
-        "background": "shopify://shop_images/arma_tu_pack.webp"
+        "background": "shopify://shop_images/arma_tu_pack.webp",
+        "product_5": "miel-cruda-de-lavanda",
+        "product_6": "miel-cruda-multifloral"
       }
     },
     "i_section_product_list_bbbHLt": {

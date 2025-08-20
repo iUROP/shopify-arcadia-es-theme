@@ -3,26 +3,25 @@
   <div class="i-section-packs">
     <h2>{{ section.settings.title }}</h2>
 
-    <div class="i-section-packs__window">
+    <div class="i-section-packs__window show-1">
       <div class="i-section-packs__window--tabs">
-        <div class="i-section-packs__window--tabs__item active">
+        <div class="i-section-packs__window--tabs__item tab-packs-1">
           <span></span>
           Pack Premium
           <strong>Bestseller</strong>
         </div>
-        <div class="i-section-packs__window--tabs__item">
+        <div class="i-section-packs__window--tabs__item tab-packs-2">
           <span></span>
           Pack Basic
         </div>
       </div>
       <div class="i-section-packs__window--contents">
-        <div class="i-section-packs__window--contents__item active">
-
+        <div class="i-section-packs__window--contents__item content-tab-1">
           {% if section.settings.product_1 != blank %}
             {% assign selected_product_1 = all_products[section.settings.product_1] %}
             
             {% if selected_product_1 %}
-              <div class="item-pack-product">
+              <div class="item-pack-product" data-variant-id="{{ selected_product_1.variants.first.id }}">
                 <div class="img-content">
                   <img src="{{ selected_product_1.metafields.custom.review_image | file_url }}" alt="Product stamp image" draggable="false" />
                 </div>
@@ -44,12 +43,11 @@
               </div>
             {% endif %}
           {% endif %}
-
           {% if section.settings.product_2 != blank %}
             {% assign selected_product_2 = all_products[section.settings.product_2] %}
 
             {% if selected_product_2 %}
-              <div class="item-pack-product">
+              <div class="item-pack-product" data-variant-id="{{ selected_product_2.variants.first.id }}">
                 <div class="img-content">
                   <img src="{{ selected_product_2.metafields.custom.review_image | file_url }}" alt="Product stamp image" draggable="false" />
                 </div>
@@ -71,12 +69,11 @@
               </div>
             {% endif %}
           {% endif %}
-
           {% if section.settings.product_3 != blank %}
             {% assign selected_product_3 = all_products[section.settings.product_3] %}
 
             {% if selected_product_3 %}
-              <div class="item-pack-product">
+              <div class="item-pack-product" data-variant-id="{{ selected_product_3.variants.first.id }}">
                 <div class="img-content">
                   <img src="{{ selected_product_3.metafields.custom.review_image | file_url }}" alt="Product stamp image" draggable="false" />
                 </div>
@@ -98,12 +95,11 @@
               </div>
             {% endif %}
           {% endif %}
-
           {% if section.settings.product_4 != blank %}
             {% assign selected_product_4 = all_products[section.settings.product_4] %}
 
             {% if selected_product_4 %}
-              <div class="item-pack-product">
+              <div class="item-pack-product" data-variant-id="{{ selected_product_4.variants.first.id }}">
                 <div class="img-content">
                   <img src="{{ selected_product_4.metafields.custom.review_image | file_url }}" alt="Product stamp image" draggable="false" />
                 </div>
@@ -125,9 +121,60 @@
               </div>
             {% endif %}
           {% endif %}
-
         </div>
-        <div class="i-section-packs__window--contents__item"></div>
+        <div class="i-section-packs__window--contents__item content-tab-2">
+          {% if section.settings.product_5 != blank %}
+            {% assign selected_product_5 = all_products[section.settings.product_5] %}
+            
+            {% if selected_product_5 %}
+              <div class="item-pack-product" data-variant-id="{{ selected_product_5.variants.first.id }}">
+                <div class="img-content">
+                  <img src="{{ selected_product_5.metafields.custom.review_image | file_url }}" alt="Product stamp image" draggable="false" />
+                </div>
+                <h3>{{ selected_product_5.title }}</h3>
+                <div class="quantity-selector">
+                  <button class="qty-btn less">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="2" viewBox="0 0 7 2" fill="none">
+                      <path d="M0.944092 1.60797V0.391968H6.48009V1.60797H0.944092Z" fill="#1E1E1E"/>
+                    </svg>
+                  </button>
+                  <span class="qty-value">0</span>
+                  <button class="qty-btn more">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                      <path d="M3.21598 7.49603V0.504028H4.33598V7.49603H3.21598ZM0.47998 4.55203V3.46403H7.05598V4.55203H0.47998Z" fill="#1E1E1E"/>
+                    </svg>
+                  </button>
+                </div>
+
+              </div>
+            {% endif %}
+          {% endif %}
+          {% if section.settings.product_6 != blank %}
+            {% assign selected_product_6 = all_products[section.settings.product_6] %}
+
+            {% if selected_product_6 %}
+              <div class="item-pack-product" data-variant-id="{{ selected_product_6.variants.first.id }}">
+                <div class="img-content">
+                  <img src="{{ selected_product_6.metafields.custom.review_image | file_url }}" alt="Product stamp image" draggable="false" />
+                </div>
+                <h3>{{ selected_product_6.title }}</h3>
+                <div class="quantity-selector">
+                  <button class="qty-btn less">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="7" height="2" viewBox="0 0 7 2" fill="none">
+                      <path d="M0.944092 1.60797V0.391968H6.48009V1.60797H0.944092Z" fill="#1E1E1E"/>
+                    </svg>
+                  </button>
+                  <span class="qty-value">0</span>
+                  <button class="qty-btn more">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                      <path d="M3.21598 7.49603V0.504028H4.33598V7.49603H3.21598ZM0.47998 4.55203V3.46403H7.05598V4.55203H0.47998Z" fill="#1E1E1E"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            {% endif %}
+          {% endif %}
+        </div>
       </div>
       <div class="i-section-packs__window--bulker">
         <div class="i-section-packs__window--bulker__products">
@@ -182,6 +229,16 @@
       "type": "image_picker",
       "id": "background",
       "label": "Imagen de fondo"
+    },
+    {
+      "type": "product",
+      "id": "product_5",
+      "label": "Seleccionar producto 5"
+    },
+    {
+      "type": "product",
+      "id": "product_6",
+      "label": "Seleccionar producto 6"
     },
   ],
   "presets": [

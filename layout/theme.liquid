@@ -431,6 +431,85 @@
           $('.i-section-image-faqs__items').addClass('subs-active')
         }
       });
+
+      $('.tab-packs-1').on('click', function (e) {
+        $('.i-section-packs__window').removeClass('show-2')
+        $('.i-section-packs__window').addClass('show-1')
+      });
+
+      $('.tab-packs-2').on('click', function (e) {
+        $('.i-section-packs__window').removeClass('show-1')
+        $('.i-section-packs__window').addClass('show-2')
+      });
+
+
+      let arrProducts = []
+      let arrProdsHtml = []
+
+      function updatePacks () {
+        arrProducts = [];
+        arrProdsHtml = [];
+        $('.item-pack-product').each(function () {
+          const $item = $(this);
+          const quantity = parseInt($item.find('.qty-value').text().trim(), 10);
+
+          if (quantity > 0) {
+            arrProducts.push({
+              id: $item.data('variant-id'),
+              quantity: quantity
+            });
+
+            arrProdsHtml.push({
+              image: $item.find('.img-content img').attr('src')
+            });
+
+          }
+
+          setImages();
+        });
+      }
+
+      function setImages () {
+        const $container = $('.i-section-packs__window--bulker__products');
+        $container.find('span').empty();
+
+        $container.find('span').each(function (index) {
+          if (arrProdsHtml[index]) {
+            $(this).html(`<img src="${arrProdsHtml[index].image}" alt="Image ${index + 1}">`);
+          }
+        });
+
+        $('.i-section-packs__window--bulker__addToCart span').html(`Faltan ${4 - arrProdsHtml.length} productos`)
+
+        if (arrProdsHtml.length == 4) {
+          $('.i-section-packs__window').addClass('complete')
+        } else {
+          $('.i-section-packs__window').removeClass('complete')
+        }
+      }
+
+      $('.qty-btn.more').on('click', function (e) {
+        const currentQty = $(this).closest('.quantity-selector').find('.qty-value').html();
+        if (currentQty && currentQty == '0') {
+          $(this).closest('.quantity-selector').find('.qty-value').html(1);
+        }
+        updatePacks()
+      });
+
+      $('.qty-btn.less').on('click', function (e) {
+        const currentQty = $(this).closest('.quantity-selector').find('.qty-value').html();
+        if (currentQty && currentQty == '1') {
+          $(this).closest('.quantity-selector').find('.qty-value').html(0);
+        }
+        updatePacks()
+      });
+
+
+      $('.i-section-packs__window--bulker__addToCart button').on('click', function (e) {
+        Permalink.addItems(arrProducts, true)
+      });
+
+      
     });
   </script>
 </html>
