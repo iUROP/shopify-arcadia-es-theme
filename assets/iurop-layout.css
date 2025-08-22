@@ -5051,9 +5051,11 @@ body.open-cart .i-header-container__content--icons {
   display: flex;
   gap: 11px;
   align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 .i-section .i-section-packs__window--bulker__products span {
-  display: block;
+  display: inline-block;
   width: 70px;
   height: 70px;
   border-radius: 3px;
@@ -5172,6 +5174,9 @@ body.open-cart .i-header-container__content--icons {
 .i-section .i-section-packs .show-2 .content-tab-2 {
   display: block;
   text-align: center;
+}
+.i-section .i-section-packs .show-2 .i-section-packs__window--bulker .i-section-packs__window--bulker__products span:nth-child(3), .i-section .i-section-packs .show-2 .i-section-packs__window--bulker .i-section-packs__window--bulker__products span:nth-child(4) {
+  display: none !important;
 }
 
 @keyframes marquee {

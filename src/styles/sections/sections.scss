@@ -3019,9 +3019,11 @@
           display: flex;
           gap: 11px;
           align-items: center;
+          text-align: center;
+          justify-content: center;
 
           span {
-            display: block;
+            display: inline-block;
             width: 70px;
             height: 70px;
             border-radius: 3px;
@@ -3159,6 +3161,16 @@
       .content-tab-2 {
         display: block;
         text-align: center;
+      }
+      .i-section-packs__window--bulker {
+        .i-section-packs__window--bulker__products {
+          span {
+            &:nth-child(3),
+            &:nth-child(4) {
+              display: none !important;
+            }
+          }
+        }
       }
     }
   }
