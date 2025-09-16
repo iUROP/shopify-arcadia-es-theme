@@ -3250,10 +3250,10 @@
       .i-section-packs__window--bulker {
         .i-section-packs__window--bulker__products {
           span {
-            &:nth-child(3),
-            &:nth-child(4) {
-              display: none !important;
-            }
+            // &:nth-child(3),
+            // &:nth-child(4) {
+            //   display: none !important;
+            // }
           }
         }
       }

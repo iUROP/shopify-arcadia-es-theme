@@ -413,6 +413,7 @@
       
       Permalink.setScrollDragger();
       let maxItems = 4
+      let packType = 1
 
       $('.i-section-image-faqs__tabs button').on('click', function (e) {
         let clases = $(this).attr("class");
@@ -437,6 +438,7 @@
         $('.i-section-packs__window').removeClass('show-2')
         $('.i-section-packs__window').addClass('show-1')
         maxItems = 4
+        packType = 1
         $('.i-section-packs__window--bulker__addToCart span').html(`Faltan ${maxItems} productos`)
       });
 
@@ -444,25 +446,48 @@
         $('.i-section-packs__window').removeClass('show-1')
         $('.i-section-packs__window').addClass('show-2')
         maxItems = 4
+        packType = 2
         $('.i-section-packs__window--bulker__addToCart span').html(`Faltan ${maxItems} productos`)
       });
 
       
       let arrProducts = []
+      let arrProperties = {}
       let arrProdsHtml = []
 
       function updatePacks () {
+        // 46986224566510 Pack Premium
+        // 46986224926958 Pack Basic
         arrProducts = [];
+
+        if (packType == 1) {
+          arrProducts = [
+            {
+              id: 46986224566510,
+              quantity: 1,
+              selling_plan: 4878532846
+            }
+          ];
+        } else {
+          arrProducts = [
+            {
+              id: 46986224926958,
+              quantity: 1,
+              selling_plan: 4878532846
+            }
+          ];
+        }
+
         arrProdsHtml = [];
-        $('.item-pack-product').each(function () {
+        $('.item-pack-product').each(function (index) {
           const $item = $(this);
           const quantity = parseInt($item.find('.qty-value').text().trim(), 10);
 
           if (quantity > 0 && arrProdsHtml.length <= maxItems) {
-            arrProducts.push({
-              id: $item.data('variant-id'),
-              quantity: quantity
-            });
+            let propName = `Product #${index + 1} - x${quantity}`
+            arrProperties[propName] = $item.data('variant-name');
+
+            arrProducts[0]['properties'] = arrProperties
 
             const image = $item.find('.img-content img').attr('src');
             for (let i = 0; i < quantity; i++) {
@@ -517,6 +542,7 @@
 
 
       $('.i-section-packs__window--bulker__addToCart button').on('click', function (e) {
+        // console.log("add thus;", arrProducts)
         Permalink.addItems(arrProducts, true)
       });
 
