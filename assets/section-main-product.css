@@ -60,7 +60,7 @@ product-info {
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1025px) {
   .product--large:not(.product--no-media) .product__media-wrapper {
     max-width: 65%;
     width: calc(65% - var(--grid-desktop-horizontal-spacing) / 2);

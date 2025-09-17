@@ -1098,8 +1098,8 @@ i-minicart .i-minicart-container__snap--items .i-cart-item--labels--name {
   text-overflow: ellipsis;
 }
 i-minicart .i-minicart-container__snap--items .i-cart-item--labels--desc {
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 10px;
+  line-height: 14px;
 }
 i-minicart .i-minicart-container__snap--items .i-cart-item--labels--price {
   position: absolute;

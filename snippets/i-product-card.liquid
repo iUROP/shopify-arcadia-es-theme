@@ -13,7 +13,7 @@
         <img src="{{ product.metafields.custom.review_image | file_url }}" alt="Product stamp image" draggable="false" />
       {% endif %}
     {% else %}
-      <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}" loading="lazy" class="Corner-Large" draggable="false" />
+      <img src="{{ product.featured_image | image_url: width: 1200 }}" alt="{{ product.title }}" loading="lazy" class="Corner-Large" draggable="false" />
 
       {% if product.images.size > 2 %}
         <img src="{{ product.images[2] | img_url: '800x' }}" alt="{{ product.images[2].alt | escape }}" class="hover-product-image slow_ani" draggable="false" />

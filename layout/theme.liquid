@@ -484,7 +484,7 @@
           const quantity = parseInt($item.find('.qty-value').text().trim(), 10);
 
           if (quantity > 0 && arrProdsHtml.length <= maxItems) {
-            let propName = `Product #${index + 1} - x${quantity}`
+            let propName = `#${index + 1} - x${quantity}`
             arrProperties[propName] = $item.data('variant-name');
 
             arrProducts[0]['properties'] = arrProperties

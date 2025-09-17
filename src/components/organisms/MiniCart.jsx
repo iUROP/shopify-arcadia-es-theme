@@ -43,7 +43,7 @@ function MiniCart({
       setCartTotal(cart.total_price)
 
       let blocksSplit = blocks.split('|')
-      let freeShipping =  (Number(blocksSplit[0])) - cart.total_price
+      let freeShipping =  (Number(blocksSplit[0])) - (cart.total_price / 100)
       let freePercent = (cart.total_price) / (Number(blocksSplit[0]))
 
       setFreeShippingAmount(freeShipping)
