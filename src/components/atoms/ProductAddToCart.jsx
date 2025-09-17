@@ -9,7 +9,6 @@ function ProductAddToCart({
 
   const add = async () => {
     setItemUpdating(true);
-    console.log("add this", variantId)
     const trigger = await Permalink.addItems(
       [
         {

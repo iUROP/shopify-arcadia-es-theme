@@ -87,6 +87,7 @@
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
             name="add"
+            current-variant="{{ product.selected_or_first_available_variant.id }}"
             class="product-form__submit is-button-hover-primary button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
             {% if product.selected_or_first_available_variant.available == false
               or quantity_rule_soldout
@@ -95,7 +96,7 @@
               disabled
             {% endif %}
           >
-            <span>
+            <span current-variant="{{ product.selected_or_first_available_variant.id }}">
               {%- if product.selected_or_first_available_variant == nil -%}
                 No disponible
               {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}

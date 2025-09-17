@@ -41,16 +41,19 @@ function CartItem({
         <div className='i-cart-item--labels--reviews'>
           <Stars stars={5} />
         </div>
+        {product.properties && Object.keys(product.properties).length > 0 &&
+          <div className='i-cart-item--labels--desc mb-extra'>
+            Suscripción
+          </div>
+        }
         <div className='i-cart-item--labels--name'>
           {product.product_title}
         </div>
-
-        {product.properties && Object.keys(product.properties).length > 0 &&
+        {/* {product.properties && Object.keys(product.properties).length > 0 &&
           <div className='i-cart-item--labels--desc'>
             {Object.keys(product.properties).length} productos en el pack
           </div>
-        }
-
+        } */}
         {product.compare_at_price && product.compare_at_price != product.price
           ? <div className='i-cart-item--labels--price'>
               {Permalink.getPrice(product.final_line_price / 100)}

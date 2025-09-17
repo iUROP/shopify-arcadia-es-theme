@@ -1100,6 +1100,7 @@ i-minicart .i-minicart-container__snap--items .i-cart-item--labels--name {
 i-minicart .i-minicart-container__snap--items .i-cart-item--labels--desc {
   font-size: 10px;
   line-height: 14px;
+  margin-bottom: 4px;
 }
 i-minicart .i-minicart-container__snap--items .i-cart-item--labels--price {
   position: absolute;
