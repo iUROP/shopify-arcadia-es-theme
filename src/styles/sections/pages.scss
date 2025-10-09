@@ -486,6 +486,9 @@
                             content: "";
                             position: absolute;
                             top: 19px;
+                            @media only screen and (max-width: 1024px) {
+                              top: 27px;
+                            }
                             width: 10px;
                             height: 10px;
                             background-color: #887E64;

@@ -86,6 +86,9 @@ i-minicart {
         top: 70px;
         right: 0px;
         height: 28px;
+        @media (max-width: 767px) {
+          height: 45px;
+        }
         background-color: #887E64;
         color: #fff;
         text-align: center;
@@ -160,6 +163,10 @@ i-minicart {
         text-align: center;
         color: #fff;
         text-align: center;
+
+        @media (max-width: 767px) {
+          margin-top: 10px;
+        }
 
         &--labels {
           position: absolute;

@@ -928,6 +928,11 @@ i-minicart .i-minicart-container__snap--deals {
   color: #fff;
   text-align: center;
 }
+@media (max-width: 767px) {
+  i-minicart .i-minicart-container__snap--deals {
+    height: 45px;
+  }
+}
 i-minicart .i-minicart-container__snap--deals .slick-slider {
   height: 100%;
 }
@@ -991,6 +996,11 @@ i-minicart .i-minicart-container__snap--freeShipping {
   text-align: center;
   color: #fff;
   text-align: center;
+}
+@media (max-width: 767px) {
+  i-minicart .i-minicart-container__snap--freeShipping {
+    margin-top: 10px;
+  }
 }
 i-minicart .i-minicart-container__snap--freeShipping--labels {
   position: absolute;
@@ -5756,6 +5766,11 @@ body.open-cart .i-header-container__content--icons {
   border-radius: 100%;
   box-sizing: border-box;
   left: 3px;
+}
+@media only screen and (max-width: 1024px) {
+  .i-product-page .product__info-wrapper .suscription-buy-actions .product-form form .product-form__buttons .subify-root .subify-widget-container .subify-widget-whole-wrapper .subify-widget-box .subify-choice-box-wrapper.active label:after {
+    top: 27px;
+  }
 }
 .i-product-page .product__info-wrapper .suscription-buy-actions .product-form form .product-form__buttons .subify-root .subify-widget-container .subify-widget-whole-wrapper .subify-widget-box .subify-choice-box-wrapper.active .subify-selling-plan-whole-wrapper {
   display: none !important;
