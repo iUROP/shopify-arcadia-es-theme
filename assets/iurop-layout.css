@@ -1044,6 +1044,10 @@ i-minicart .i-minicart-container__snap--items {
   overflow: auto;
   padding: 12px 24px;
 }
+i-minicart .i-minicart-container__snap--items .empty-cart-state {
+  text-align: center;
+  margin-top: 30px;
+}
 i-minicart .i-minicart-container__snap--items .i-cart-item {
   height: 126px;
   position: relative;
@@ -1230,9 +1234,8 @@ i-minicart .i-minicart-container__snap--items .i-cart-item--delete .i-icon {
   width: 14px !important;
   height: 14px !important;
 }
-i-minicart .i-minicart-container__snap--items .empty-cart-state {
-  text-align: center;
-  margin-top: 30px;
+i-minicart .i-minicart-container__snap.empty-cart .i-minicart-container__snap--items {
+  bottom: 0px;
 }
 i-minicart .i-minicart-container__snap--footer {
   position: absolute;

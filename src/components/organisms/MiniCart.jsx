@@ -113,7 +113,7 @@ function MiniCart({
       {/* {cartQty &&
         <strong>{cartQty}</strong>
       } */}
-      <div className={`i-minicart-container__snap slow_ani ${showCart ? 'open' : ''}`}>
+      <div className={`i-minicart-container__snap slow_ani ${showCart ? 'open' : ''} ${lineItems && lineItems.length === 0 ? 'empty-cart' : ''}`}>
         <div className='i-minicart-container__snap--header'>
           <VerticalCenter>
             <h2>
@@ -163,11 +163,17 @@ function MiniCart({
                     <CartItem product={item} key={index} />
                   )
                 })
-              : <div className='empty-cart-state'>Carrito vacio</div>
+              : <div className='empty-cart-state'>
+                  <div>Nada de miel por aquí...</div>
+                  <div className='i-minicart-container__snap--footer__actions'>
+                    <a href="/collections/all" className='is-button-hover-primary'>Comprar miel</a>
+                  </div>
+                </div>
             : <>Cargando items...</>
           }
         </div>
-        <div className='i-minicart-container__snap--footer'>
+        {lineItems && lineItems.length > 0 && (
+          <div className='i-minicart-container__snap--footer'>
           <div className='i-minicart-container__snap--footer__subtotals'>
             <div className='i-minicart-container__snap--footer__subtotals--row'>
               <div className='i-minicart-container__snap--footer__subtotals--row__key'>Shipping Cost</div>
@@ -186,7 +192,8 @@ function MiniCart({
           <div className='i-minicart-container__snap--footer__cards'>
             <Icon name="footer-cards" />
           </div>
-        </div>
+          </div>
+        )}
       </div>
       <div className={`i-minicart-container__overlay slow_ani ${showCart ? 'open' : ''}`} onClick={cartToggler}></div>
     </div>

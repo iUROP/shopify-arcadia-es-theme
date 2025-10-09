@@ -213,6 +213,12 @@ i-minicart {
         overflow: auto;
         padding: $Space-300 $Space-600;
 
+        // Cuando el carrito está vacío, el footer se oculta y los items ocupan todo el espacio
+        .empty-cart-state {
+          text-align: center;
+          margin-top: 30px;
+        }
+
         .i-cart-item {
           height: 126px;
           position: relative;
@@ -417,9 +423,12 @@ i-minicart {
             }
           }
         }
-        .empty-cart-state {
-          text-align: center;
-          margin-top: 30px;
+      }
+
+      // Cuando el carrito está vacío, ajustar el layout
+      &.empty-cart {
+        .i-minicart-container__snap--items {
+          bottom: 0px; // Ocupar todo el espacio disponible cuando no hay footer
         }
       }
       &--footer {
