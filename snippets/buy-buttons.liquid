@@ -74,6 +74,22 @@
             {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
           </div>
 
+          <!-- Selector de cantidad -->
+          <div class="product-form__quantity-selector" id="quantity-selector-{{ section_id }}">
+            <div class="quantity-option" data-quantity="1" data-price="{{ product.selected_or_first_available_variant.price | divided_by: 100 | money_without_currency | remove: ',' }}" data-subscription-price="{{ product.selected_or_first_available_variant.price | times: 0.85 | divided_by: 100 | money_without_currency | remove: ',' }}">
+              <span class="quantity-text">1 Unidad</span>
+              <span class="quantity-price">{{ product.selected_or_first_available_variant.price | money }}</span>
+            </div>
+            <div class="quantity-option" data-quantity="2" data-price="{{ product.selected_or_first_available_variant.price | times: 2 | divided_by: 100 | money_without_currency | remove: ',' }}" data-subscription-price="{{ product.selected_or_first_available_variant.price | times: 1.7 | divided_by: 100 | money_without_currency | remove: ',' }}">
+              <span class="quantity-text">2 Unidades</span>
+              <span class="quantity-price">{{ product.selected_or_first_available_variant.price | times: 2 | money }}</span>
+            </div>
+            <div class="quantity-option" data-quantity="4" data-price="{{ product.selected_or_first_available_variant.price | times: 4 | divided_by: 100 | money_without_currency | remove: ',' }}" data-subscription-price="{{ product.selected_or_first_available_variant.price | times: 3.4 | divided_by: 100 | money_without_currency | remove: ',' }}">
+              <span class="quantity-text">4 Unidades</span>
+              <span class="quantity-price">{{ product.selected_or_first_available_variant.price | times: 4 | money }}</span>
+            </div>
+          </div>
+
           {%- liquid
             assign check_against_inventory = true
             if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
@@ -169,4 +185,58 @@
 
     <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
+
+  <script>
+    // Script para manejar el selector de cantidad y modo suscripción
+    document.addEventListener('DOMContentLoaded', function() {
+      const quantitySelector = document.querySelector('#quantity-selector-{{ section_id }}');
+      const quantityOptions = quantitySelector?.querySelectorAll('.quantity-option');
+      
+      if (quantityOptions) {
+        // Seleccionar la primera opción por defecto
+        quantityOptions[0].classList.add('selected');
+        
+        // Función para actualizar precios según el modo
+        function updatePrices() {
+          const isSubscription = document.querySelector('.subify-choice-box-wrapper.active #subify-widget-subscription-text');
+          
+          quantityOptions.forEach(option => {
+            const priceElement = option.querySelector('.quantity-price');
+            const regularPrice = option.dataset.price;
+            const subscriptionPrice = option.dataset.subscriptionPrice;
+            
+            if (isSubscription && subscriptionPrice) {
+              // Modo suscripción - aplicar descuento del 15%
+              const price = parseFloat(subscriptionPrice).toFixed(2).replace('.', ',');
+              priceElement.textContent = '€' + price;
+            } else {
+              // Modo compra única
+              const price = parseFloat(regularPrice).toFixed(2).replace('.', ',');
+              priceElement.textContent = '€' + price;
+            }
+          });
+        }
+        
+        // Manejar clics en las opciones de cantidad
+        quantityOptions.forEach(option => {
+          option.addEventListener('click', function() {
+            // Remover selección de todas las opciones
+            quantityOptions.forEach(opt => opt.classList.remove('selected'));
+            // Seleccionar la opción clickeada
+            this.classList.add('selected');
+          });
+        });
+        
+        // Escuchar cambios en el widget de Subify
+        document.addEventListener('click', function(e) {
+          if (e.target.closest('.subify-choice-box-wrapper')) {
+            setTimeout(updatePrices, 100);
+          }
+        });
+        
+        // Actualizar precios inicial
+        updatePrices();
+      }
+    });
+  </script>
 </div>
