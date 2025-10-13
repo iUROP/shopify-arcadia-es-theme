@@ -67,7 +67,6 @@
         &__item {
           position: relative;
           width: 100%;
-          aspect-ratio: 2.37 / 3;
           overflow: hidden;
           img {
             width: 100%;
@@ -319,6 +318,85 @@
 
             @media only screen and (max-width: 1024px) {
               padding: 18px;
+            }
+
+            .product-form__quantity-selector {
+              display: flex;
+              gap: 10px;
+              margin-bottom: 16px;
+              
+              @media only screen and (max-width: 1024px) {
+                margin-bottom: 12px;
+              }
+              
+              .quantity-option {
+                display: flex;
+                padding: var(--Space-400, 16px) var(--Space-300, 12px);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: var(--Space-200, 8px);
+                flex: 1 0 0;
+                border-radius: var(--Corner-Small, 8px);
+                border: var(--Strokes-Small, 1px) solid var(--Colors-500, #887E64);
+                background: transparent;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                
+                &:hover {
+                  border-color: var(--Colors-500, #887E64);
+                  background: rgba(136, 126, 100, 0.1);
+                }
+                
+                &.selected {
+                  background: var(--Colors-500, #887E64);
+                  color: var(--Colors-200, #FAF5E8);
+                  
+                  .quantity-text,
+                  .quantity-price {
+                    color: var(--Colors-200, #FAF5E8);
+                  }
+                }
+                
+                .quantity-text {
+                  color: var(--Colors-800, #1E1E1E);
+                  font-family: var(--Family-Font---Body, "Instrument Sans");
+                  font-size: var(--Typo-Body-S, 13px);
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                  
+                  @media only screen and (max-width: 1024px) {
+                    font-size: 11px;
+                  }
+                }
+                
+                .quantity-price {
+                  color: var(--Colors-800, #1E1E1E);
+                  font-family: var(--Family-Font---Body, "Instrument Sans");
+                  font-size: var(--Typo-Body-S, 13px);
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                  
+                  @media only screen and (max-width: 1024px) {
+                    font-size: 11px;
+                  }
+                }
+                
+                .quantity-option-divider {
+                  width: 40px;
+                  height: 1px;
+                  background-color: var(--Colors-800, #1E1E1E);
+                  border: none;
+                  margin: 4px auto 0;
+                  opacity: 0.6;
+                }
+                
+                &.selected .quantity-option-divider {
+                  background-color: var(--Colors-200, #FAF5E8);
+                }
+              }
             }
 
             .subify-root {

@@ -6,6 +6,7 @@ import ShippingCalculator from './components/organisms/ShippingCalculator.jsx'
 import './styles/main.scss'
 import './utils/functions.js'
 
+
 class MiniCartElement extends HTMLElement {
   static get observedAttributes() { 
     return ['blocks']

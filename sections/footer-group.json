@@ -34,7 +34,10 @@
         "link_list_74qMmY"
       ],
       "settings": {
-        "logo_footer": "shopify://shop_images/footer-logo.png"
+        "logo_footer": "shopify://shop_images/footer-logo.png",
+        "facebook_url": "https://www.instagram.com/nectararcadia/",
+        "instagram_url": "https://www.instagram.com/nectararcadia/",
+        "tiktok_url": "https://www.tiktok.com/@arcadiasnectar"
       }
     }
   },
