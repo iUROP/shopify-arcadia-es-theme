@@ -5747,6 +5747,17 @@ body.open-cart .i-header-container__content--icons {
     font-size: 11px;
   }
 }
+.i-product-page .product__info-wrapper .suscription-buy-actions .product-form form .product-form__buttons .product-form__quantity-selector .quantity-option .quantity-option-divider {
+  width: 40px;
+  height: 1px;
+  background-color: var(--Colors-800, #1E1E1E);
+  border: none;
+  margin: 4px auto 0;
+  opacity: 0.6;
+}
+.i-product-page .product__info-wrapper .suscription-buy-actions .product-form form .product-form__buttons .product-form__quantity-selector .quantity-option.selected .quantity-option-divider {
+  background-color: var(--Colors-200, #FAF5E8);
+}
 .i-product-page .product__info-wrapper .suscription-buy-actions .product-form form .product-form__buttons .subify-root {
   position: absolute;
   left: -1px;
