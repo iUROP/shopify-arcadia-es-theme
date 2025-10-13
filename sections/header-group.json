@@ -34,7 +34,9 @@
         "content_block_btjkUq"
       ],
       "name": "iUROP Announcement Bar",
-      "settings": {}
+      "settings": {
+        "rotation_interval": 5
+      }
     },
     "header": {
       "type": "header",
