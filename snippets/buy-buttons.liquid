@@ -74,8 +74,6 @@
             {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
           </div>
 
-<<<<<<< Updated upstream
-=======
           <!-- Selector de cantidad -->
           <div class="product-form__quantity-selector" id="quantity-selector-{{ section_id }}">
             <div class="quantity-option" data-quantity="1" data-price="{{ product.selected_or_first_available_variant.price | times: 0.01 }}" data-subscription-price="{{ product.selected_or_first_available_variant.price | times: 0.85 | times: 0.01 }}">
@@ -96,7 +94,6 @@
             </div>
           </div>
 
->>>>>>> Stashed changes
           {%- liquid
             assign check_against_inventory = true
             if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
@@ -192,8 +189,6 @@
 
     <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
-<<<<<<< Updated upstream
-=======
 
   <script>
     // Script para manejar el selector de cantidad y modo suscripción
@@ -248,5 +243,4 @@
       }
     });
   </script>
->>>>>>> Stashed changes
 </div>
