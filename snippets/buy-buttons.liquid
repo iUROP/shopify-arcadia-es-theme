@@ -74,26 +74,29 @@
             {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
           </div>
 
+<<<<<<< Updated upstream
+=======
           <!-- Selector de cantidad -->
           <div class="product-form__quantity-selector" id="quantity-selector-{{ section_id }}">
             <div class="quantity-option" data-quantity="1" data-price="{{ product.selected_or_first_available_variant.price | times: 0.01 }}" data-subscription-price="{{ product.selected_or_first_available_variant.price | times: 0.85 | times: 0.01 }}">
               <span class="quantity-text">1 Unidad</span>
               <hr class="quantity-option-divider">
-              <span class="quantity-price">{{ product.selected_or_first_available_variant.price | money_without_currency }} €</span>
+              <span class="quantity-price">{{ product.selected_or_first_available_variant.price | money_without_currency }} €/ud</span>
 
             </div>
-            <div class="quantity-option" data-quantity="2" data-price="{{ product.selected_or_first_available_variant.price | times: 2 | times: 0.01 }}" data-subscription-price="{{ product.selected_or_first_available_variant.price | times: 1.7 | times: 0.01 }}">
+            <div class="quantity-option" data-quantity="2" data-price="{{ product.selected_or_first_available_variant.price | times: 0.01 }}" data-subscription-price="{{ product.selected_or_first_available_variant.price | times: 0.85 | times: 0.01 }}">
               <span class="quantity-text">2 Unidades</span>
               <hr class="quantity-option-divider">
-              <span class="quantity-price">{{ product.selected_or_first_available_variant.price | times: 2 | money_without_currency }} €</span>
+              <span class="quantity-price">{{ product.selected_or_first_available_variant.price | money_without_currency }} €/ud</span>
             </div>
-            <div class="quantity-option" data-quantity="4" data-price="79.97" data-subscription-price="63.72">
+            <div class="quantity-option" data-quantity="4" data-price="19.99" data-subscription-price="16.99">
               <span class="quantity-text">4 Unidades</span>
               <hr class="quantity-option-divider">
-              <span class="quantity-price">79,97 €</span>
+              <span class="quantity-price">19,99 €/ud</span>
             </div>
           </div>
 
+>>>>>>> Stashed changes
           {%- liquid
             assign check_against_inventory = true
             if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
@@ -108,8 +111,6 @@
             type="submit"
             name="add"
             current-variant="{{ product.selected_or_first_available_variant.id }}"
-            data-product-handle="{{ product.handle }}"
-            data-product-title="{{ product.title }}"
             class="product-form__submit is-button-hover-primary button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
             {% if product.selected_or_first_available_variant.available == false
               or quantity_rule_soldout
@@ -191,6 +192,8 @@
 
     <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
+<<<<<<< Updated upstream
+=======
 
   <script>
     // Script para manejar el selector de cantidad y modo suscripción
@@ -214,11 +217,11 @@
             if (isSubscription && subscriptionPrice) {
               // Modo suscripción - aplicar descuento del 15%
               const price = parseFloat(subscriptionPrice).toFixed(2).replace('.', ',');
-              priceElement.textContent = price + ' €';
+              priceElement.textContent = price + ' €/ud';
             } else {
               // Modo compra única
               const price = parseFloat(regularPrice).toFixed(2).replace('.', ',');
-              priceElement.textContent = price + ' €';
+              priceElement.textContent = price + ' €/ud';
             }
           });
         }
@@ -245,4 +248,5 @@
       }
     });
   </script>
+>>>>>>> Stashed changes
 </div>
