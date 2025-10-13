@@ -440,6 +440,9 @@
         maxItems = 4
         packType = 1
         $('.i-section-packs__window--bulker__addToCart span').html(`Faltan ${maxItems} productos`)
+        $('.btn-subscription').prop('disabled', true)
+        $('.btn-single-payment').prop('disabled', true)
+        updatePacks()
       });
 
       $('.tab-packs-2').on('click', function (e) {
@@ -448,6 +451,9 @@
         maxItems = 4
         packType = 2
         $('.i-section-packs__window--bulker__addToCart span').html(`Faltan ${maxItems} productos`)
+        $('.btn-subscription').prop('disabled', true)
+        $('.btn-single-payment').prop('disabled', true)
+        updatePacks()
       });
 
       
@@ -510,13 +516,21 @@
         });
 
         if (arrProdsHtml.length <= maxItems ) {
-          $('.i-section-packs__window--bulker__addToCart span').html(`Faltan ${maxItems - arrProdsHtml.length} productos`)
+          if (arrProdsHtml.length === maxItems) {
+            $('.i-section-packs__window--bulker__addToCart span').html('¡Pack listo!')
+          } else {
+            $('.i-section-packs__window--bulker__addToCart span').html(`Faltan ${maxItems - arrProdsHtml.length} productos`)
+          }
         }
 
         if (arrProdsHtml.length > (maxItems - 1)) {
           $('.i-section-packs__window').addClass('complete')
+          $('.btn-subscription').prop('disabled', false)
+          $('.btn-single-payment').prop('disabled', false)
         } else {
           $('.i-section-packs__window').removeClass('complete')
+          $('.btn-subscription').prop('disabled', true)
+          $('.btn-single-payment').prop('disabled', true)
         }
       }
 
@@ -541,9 +555,18 @@
       });
 
 
-      $('.i-section-packs__window--bulker__addToCart button').on('click', function (e) {
+      $('.i-section-packs__window--bulker__addToCart .btn-subscription').on('click', function (e) {
         // console.log("add thus;", arrProducts)
         Permalink.addItems(arrProducts, true)
+      });
+
+      $('.i-section-packs__window--bulker__addToCart .btn-single-payment').on('click', function (e) {
+        // Crear una copia de arrProducts sin selling_plan para pago único - Alberto
+        let singlePaymentProducts = JSON.parse(JSON.stringify(arrProducts));
+        if (singlePaymentProducts[0] && singlePaymentProducts[0].selling_plan) {
+          delete singlePaymentProducts[0].selling_plan;
+        }
+        Permalink.addItems(singlePaymentProducts, true)
       });
 
       $('.product-form__buttons .product-form__submit').on('click', function (e) {
@@ -563,6 +586,10 @@
         console.log("addObj", addObj)
         Permalink.addItems(addObj, true)
       });
+
+      // Inicializar botones como deshabilitados
+      $('.btn-subscription').prop('disabled', true)
+      $('.btn-single-payment').prop('disabled', true)
       
     });
   </script>
