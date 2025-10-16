@@ -414,6 +414,40 @@
       Permalink.setScrollDragger();
       let maxItems = 4
       let packType = 1
+      let packPremiumPrice = 0
+      let packBasicPrice = 0
+
+      // Obtener precios de los packs
+      fetch('/variants/46986224566510.js')
+        .then(r => r.json())
+        .then(variant => {
+          if (variant && variant.price) {
+            packPremiumPrice = variant.price / 100; // Convertir de centavos a euros
+            updatePackPrices();
+          }
+        })
+        .catch(err => console.error('Error al obtener precio Pack Premium:', err));
+
+      fetch('/variants/46986224926958.js')
+        .then(r => r.json())
+        .then(variant => {
+          if (variant && variant.price) {
+            packBasicPrice = variant.price / 100; // Convertir de centavos a euros
+            updatePackPrices();
+          }
+        })
+        .catch(err => console.error('Error al obtener precio Pack Basic:', err));
+
+      function updatePackPrices() {
+        const currentPrice = packType === 1 ? packPremiumPrice : packBasicPrice;
+        if (currentPrice > 0) {
+          const subscriptionPrice = (currentPrice * 0.85).toFixed(2); // 15% descuento
+          const singlePrice = currentPrice.toFixed(2);
+          
+          $('.btn-subscription').html(`Suscribirme (${subscriptionPrice}€)`);
+          $('.btn-single-payment').html(`Pago único (${singlePrice}€)`);
+        }
+      }
 
       $('.i-section-image-faqs__tabs button').on('click', function (e) {
         let clases = $(this).attr("class");
@@ -442,6 +476,7 @@
         $('.i-section-packs__window--bulker__addToCart span').html(`Faltan ${maxItems} productos`)
         $('.btn-subscription').prop('disabled', true)
         $('.btn-single-payment').prop('disabled', true)
+        updatePackPrices()
         updatePacks()
       });
 
@@ -453,6 +488,7 @@
         $('.i-section-packs__window--bulker__addToCart span').html(`Faltan ${maxItems} productos`)
         $('.btn-subscription').prop('disabled', true)
         $('.btn-single-payment').prop('disabled', true)
+        updatePackPrices()
         updatePacks()
       });
 
@@ -532,6 +568,8 @@
           $('.btn-subscription').prop('disabled', true)
           $('.btn-single-payment').prop('disabled', true)
         }
+        
+        updatePackPrices();
       }
 
       $('.qty-btn.more').on('click', function (e) {
@@ -635,6 +673,7 @@
       // Inicializar botones como deshabilitados
       $('.btn-subscription').prop('disabled', true)
       $('.btn-single-payment').prop('disabled', true)
+      updatePackPrices();
       
     });
   </script>
