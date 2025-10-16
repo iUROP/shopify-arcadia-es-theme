@@ -2264,17 +2264,26 @@
       margin: 48px 0px;
 
       @media only screen and (max-width: 1025px) {
-        overflow: auto;
-        width: 100%;
-        display: block;
-        white-space: nowrap;
-        margin-bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        margin: 30px 0px;
+        padding: 0 20px;
+        overflow: visible;
+      }
+
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
       }
 
       &--item {
         display: flex;
         height: var(--Buttons-D-H, 50px);
         max-width: var(--Buttons-D-MaxW, 300px);
+        min-width: 120px;
         padding: 0px var(--Space-600, 24px);
         justify-content: center;
         align-items: center;
@@ -2290,19 +2299,24 @@
         font-weight: 600;
         line-height: 95%; /* 15.2px */
         letter-spacing: -0.48px;
+        flex-shrink: 0;
 
         @media only screen and (max-width: 1025px) {
-          display: inline-block;
-          vertical-align: middle;
-          margin-right: 12px;
           height: 40px;
-          line-height: 35px;
-          &:first-child {
-            margin-left: 20px;
-          }
-          &:last-child {
-            margin-right: 20px;
-          }
+          min-width: 100px;
+          max-width: 200px;
+          padding: 0px 16px;
+          font-size: 14px;
+          flex: 1;
+          max-width: calc(50% - 4px);
+        }
+
+        @media only screen and (max-width: 768px) {
+          width: 100%;
+          max-width: 320px;
+          height: 56px;
+          font-size: 16px;
+          padding: 12px 24px;
         }
 
         &:hover {
