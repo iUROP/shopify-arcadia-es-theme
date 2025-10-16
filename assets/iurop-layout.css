@@ -2395,6 +2395,128 @@ body.open-cart .i-header-container__content--icons {
   text-decoration: none;
   padding: 17px 38px;
 }
+.i-section .i-section-primary-hero__overlay--reviews-card {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-primary-hero__overlay--reviews-card {
+    margin-top: 24px;
+    padding: 0 20px;
+  }
+}
+.i-section .i-section-primary-hero__overlay--reviews-card .reviews-carousel {
+  position: relative;
+  width: 468px;
+  height: auto;
+}
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-primary-hero__overlay--reviews-card .reviews-carousel {
+    width: 100%;
+    max-width: 468px;
+  }
+}
+.i-section .i-section-primary-hero__overlay--reviews-card .reviews-carousel .review-card {
+  display: flex;
+  width: 100%;
+  padding: var(--Space-600, 24px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Space-200, 8px);
+  border-radius: var(--Corner-Large-increased, 20px);
+  border: var(--Strokes-Small, 1px) solid rgba(222, 215, 215, 0.2);
+  background: radial-gradient(231% 135.8% at 0.9% 2.98%, rgba(207, 186, 133, 0.4) 0%, rgba(35, 33, 29, 0) 100%);
+  backdrop-filter: blur(32px);
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-primary-hero__overlay--reviews-card .reviews-carousel .review-card {
+    padding: 20px;
+    text-align: left;
+  }
+}
+.i-section .i-section-primary-hero__overlay--reviews-card .reviews-carousel .review-card.active {
+  opacity: 1;
+  position: relative;
+}
+.i-section .i-section-primary-hero__overlay--reviews-card .reviews-carousel .review-card .review-stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+.i-section .i-section-primary-hero__overlay--reviews-card .reviews-carousel .review-card .review-stars svg {
+  width: 16px;
+  height: 16px;
+}
+.i-section .i-section-primary-hero__overlay--reviews-card .reviews-carousel .review-card .review-text {
+  color: var(--Colors-White, var(--Colors-white, #FFF));
+  leading-trim: both;
+  text-edge: cap;
+  font-family: var(--Family-Font---Body, "Instrument Sans");
+  font-size: var(--Typo-Body-S, 13px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  text-align: left;
+  width: 100%;
+}
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-primary-hero__overlay--reviews-card .reviews-carousel .review-card .review-text {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+.i-section .i-section-primary-hero__overlay--reviews-card .reviews-carousel .review-card .review-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 8px;
+}
+.i-section .i-section-primary-hero__overlay--reviews-card .reviews-carousel .review-card .review-footer .review-author {
+  color: var(--Colors-White, var(--Colors-white, #FFF));
+  leading-trim: both;
+  text-edge: cap;
+  font-family: var(--Family-Font---Body, "Instrument Sans");
+  font-size: var(--Typo-Body-S, 13px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+  text-align: left;
+}
+@media only screen and (max-width: 1024px) {
+  .i-section .i-section-primary-hero__overlay--reviews-card .reviews-carousel .review-card .review-footer .review-author {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+.i-section .i-section-primary-hero__overlay--reviews-card .reviews-carousel .review-card .review-footer .reviews-pagination {
+  display: flex;
+  align-items: center;
+}
+.i-section .i-section-primary-hero__overlay--reviews-card .reviews-carousel .review-card .review-footer .reviews-pagination .pagination-dots {
+  display: flex;
+  gap: 8px;
+}
+.i-section .i-section-primary-hero__overlay--reviews-card .reviews-carousel .review-card .review-footer .reviews-pagination .pagination-dots .pagination-dot {
+  width: 16px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 1px;
+  transition: background-color 0.3s ease;
+}
+.i-section .i-section-primary-hero__overlay--reviews-card .reviews-carousel .review-card .review-footer .reviews-pagination .pagination-dots .pagination-dot.active {
+  background-color: rgb(255, 255, 255);
+}
 .i-section.i-section-marqee-container {
   overflow: hidden;
   white-space: nowrap;

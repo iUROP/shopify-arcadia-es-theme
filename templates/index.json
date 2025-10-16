@@ -11,6 +11,26 @@
   "sections": {
     "i_section_primary_banner_jnB79p": {
       "type": "i-section-primary-banner",
+      "blocks": {
+        "review_jix6pt": {
+          "type": "review",
+          "settings": {
+            "review_text": "Cada gota impulsa mi día: miel pura para una energía natural...",
+            "author_name": "Alejandro Fernández"
+          }
+        },
+        "review_rgmwhf": {
+          "type": "review",
+          "settings": {
+            "review_text": "Desde que la probé, no falta en mi desayuno. Se nota que es miel de verdad, con sabor y aroma únicos",
+            "author_name": "Alberto Luján"
+          }
+        }
+      },
+      "block_order": [
+        "review_jix6pt",
+        "review_rgmwhf"
+      ],
       "settings": {
         "banner_image": "shopify://shop_images/primary-banner-2.png",
         "title": "<p>Impulsa tu ambición con la <br/>fuerza de <em><strong>la miel más pura.</strong></em></p>",
@@ -307,6 +327,9 @@
         "content": "<p>Nuestra miel premium, rica en flavonoides y ácidos fenólicos, ayuda a reducir el estrés oxidativo y protege la salud celular.<br/><br/>Gracias a sus propiedades antimicrobianas, combate bacterias e infecciones, aliviando la inflamación y acelerando la recuperación frente a enfermedades.</p>",
         "button_text": "Comprar miel",
         "button_link": "shopify://collections",
+        "collapsible_enabled": false,
+        "collapsible_button_text": "",
+        "collapsible_content": "",
         "image": "shopify://shop_images/new-image-home.png",
         "image_m": "shopify://shop_images/new-image-home.png",
         "show_complete_image": false,
