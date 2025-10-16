@@ -97,7 +97,6 @@ customElements.define("i-shipping-calculator", ShippingCalculatorElement)
 
 initCollectionProductGrid()
 
-// Carrusel de reseñas
 function initReviewsCarousel() {
   const carousel = document.querySelector('.reviews-carousel');
   if (!carousel) return;
@@ -110,7 +109,6 @@ function initReviewsCarousel() {
   const totalReviews = reviewCards.length;
 
   function showReview(index) {
-    // Ocultar todas las reseñas
     reviewCards.forEach(card => {
       card.classList.remove('active');
     });
@@ -118,7 +116,6 @@ function initReviewsCarousel() {
     // Mostrar la reseña actual
     reviewCards[index].classList.add('active');
     
-    // Actualizar paginación en todas las cards
     reviewCards.forEach((card, cardIndex) => {
       const paginationDots = card.querySelectorAll('.pagination-dot');
       paginationDots.forEach((dot, dotIndex) => {
@@ -132,13 +129,11 @@ function initReviewsCarousel() {
     showReview(currentIndex);
   }
 
-  // Inicializar con la primera reseña
   showReview(0);
 
   // Cambiar reseña cada 4 segundos
   setInterval(nextReview, 4000);
 
-  // Añadir funcionalidad de click en los dots de paginación
   reviewCards.forEach((card, cardIndex) => {
     const paginationDots = card.querySelectorAll('.pagination-dot');
     paginationDots.forEach((dot, dotIndex) => {
@@ -150,5 +145,4 @@ function initReviewsCarousel() {
   });
 }
 
-// Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', initReviewsCarousel);

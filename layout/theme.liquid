@@ -587,7 +587,6 @@
           addObj[0]['selling_plan'] = 4878532846
         }
 
-        // Si seleccionó 4 unidades, sustituimos por el producto pack correspondiente (qty 1) - peticion de berta
         if (selectedQty === 4) {
           const isBasic = currentHandle === 'miel-cruda-de-lavanda' || currentHandle === 'miel-cruda-multifloral';
           const packHandle = isBasic ? 'pack-basic' : 'pack-premium';
@@ -595,14 +594,25 @@
           fetch(`/products/${packHandle}.js`).then(r => r.json()).then(product => {
             let targetVariant = null;
             if (product && product.variants && product.variants.length) {
-              targetVariant = product.variants.find(v => (v.title || '').toLowerCase().includes(currentTitle.toLowerCase())) || product.variants[0];
+              targetVariant = product.variants.find(v => {
+                const variantTitle = (v.title || '').toLowerCase();
+                const productTitle = currentTitle.toLowerCase();
+                return variantTitle.includes(productTitle);
+              });
+              
+              if (!targetVariant) {
+                targetVariant = product.variants[0];
+              }
             }
 
             if (targetVariant) {
               addObj = [
                 {
                   id: targetVariant.id,
-                  quantity: 1
+                  quantity: 1,
+                  properties: {
+                    'Contiene': currentTitle
+                  }
                 }
               ];
 
@@ -615,7 +625,6 @@
               Permalink.addItems(addObj, true)
             }
           }).catch(() => {
-            console.warn('Error obteniendo producto pack, añadiendo 4 del actual')
             Permalink.addItems(addObj, true)
           })
         } else {
