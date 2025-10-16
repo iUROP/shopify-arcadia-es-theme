@@ -27,7 +27,17 @@
       <h2 class="Text-Colors-800 Family-Font Typo-H1">{{ section.settings.title }}</h2>
       <div class="i-section-image-text__text--pharagrah">
         {{ section.settings.content }}
-        {% if section.settings.button_link and section.settings.button_text %}
+        {% if section.settings.collapsible_enabled and section.settings.collapsible_content != blank %}
+          <details class="i-collapsible">
+            <summary class="Text-Colors-White Family-Font Typo-Body-M is-button-hover-primary">
+              {{ section.settings.collapsible_button_text | default: section.settings.button_text }}
+              <span class="collapsible-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="i-collapsible__content Family-Font---Body Typo-Body-M">
+              {{ section.settings.collapsible_content }}
+            </div>
+          </details>
+        {% elsif section.settings.button_link and section.settings.button_text %}
           <a href="{{ section.settings.button_link }}" class="Text-Colors-White Family-Font Typo-Body-M is-button-hover-primary">{{ section.settings.button_text }}</a>
         {% endif %}
 
@@ -119,6 +129,27 @@
         "type": "url",
         "id": "button_link",
         "label": "URL del botón"
+      },
+      {
+        "type": "header",
+        "content": "Desplegable"
+      },
+      {
+        "type": "checkbox",
+        "id": "collapsible_enabled",
+        "default": false,
+        "label": "Activar botón como desplegable"
+      },
+      {
+        "type": "text",
+        "id": "collapsible_button_text",
+        "label": "Texto del botón desplegable (opcional)",
+        "info": "Si se deja vacío, usa 'Texto del botón'"
+      },
+      {
+        "type": "richtext",
+        "id": "collapsible_content",
+        "label": "Contenido del desplegable"
       },
       {
         "type": "image_picker",

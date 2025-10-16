@@ -827,6 +827,78 @@
         width: 516px;
         max-width: 100%;
 
+        details.i-collapsible {
+          text-align: left;
+          summary {
+            list-style: none;
+            position: relative;
+            display: inline-block;
+            border-radius: var(--Corner-Full, 10000px);
+            background: var(--Colors-100, #5B1414);
+            color: var(--Colors-White, var(--Colors-white, #FFF));
+            font-family: var(--Family-Font, Besley);
+            font-size: var(--Typo-Body-M, 16px);
+            font-style: normal;
+            font-weight: 600;
+            line-height: 95%;
+            letter-spacing: -0.48px;
+            text-decoration: none;
+            padding: 18px var(--Space-1200, 48px);
+            cursor: pointer;
+            user-select: none;
+
+            @media only screen and (max-width: 1025px) {
+              font-size: 14px;
+              padding: 14px 26px;
+            }
+
+            .collapsible-icon {
+              display: inline-block;
+              width: 14px;
+              height: 14px;
+              margin-left: 10px;
+              position: relative;
+            }
+            .collapsible-icon:before,
+            .collapsible-icon:after {
+              content: '';
+              position: absolute;
+              left: 0;
+              right: 0;
+              top: 50%;
+              margin: auto;
+              background: currentColor;
+            }
+            .collapsible-icon:before { 
+              width: 14px;
+              height: 2px;
+              transform: translateY(-1px);
+            }
+            .collapsible-icon:after { 
+              width: 2px;
+              height: 14px;
+              transform: translateY(-7px);
+            }
+          }
+
+          &[open] {
+            summary {
+              .collapsible-icon:after {
+                display: none;
+              }
+            }
+          }
+
+          &__content {
+            padding: 16px 6px 0 6px;
+            color: var(--Colors-800, var(--Colors-800, #1E1E1E));
+            p {
+              margin: 0 0 10px 0;
+              text-align: left;
+            }
+          }
+        }
+
         &__link {
           a.external-link {
             color: var(--Colors-500, var(--Colors-500, #887E64));
