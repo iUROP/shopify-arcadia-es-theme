@@ -6070,6 +6070,9 @@ body.open-cart .i-header-container__content--icons {
     padding: 18px;
   }
 }
+.i-product-page .product__info-wrapper .suscription-buy-actions .product-form form .product-form__buttons .product-form__buttons--variant-picker {
+  display: none;
+}
 .i-product-page .product__info-wrapper .suscription-buy-actions .product-form form .product-form__buttons .product-form__quantity-selector {
   display: flex;
   gap: 10px;

@@ -320,6 +320,10 @@
               padding: 18px;
             }
 
+            .product-form__buttons--variant-picker {
+              display: none; // Ocultar el variant picker ya que usamos el selector de cantidad personalizado
+            }
+
             .product-form__quantity-selector {
               display: flex;
               gap: 10px;
