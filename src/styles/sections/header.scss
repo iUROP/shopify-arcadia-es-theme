@@ -12,6 +12,25 @@
   @media only screen and (max-width: 1024px) {
     top: 41px !important;
   }
+
+  // Anular position: absolute cuando el header tiene fondo de color
+  .i-header-container--background & {
+    position: relative !important;
+    top: 0 !important;
+    margin-top: 0 !important;
+  }
+}
+
+.section-header .i-header-container--background {
+  position: relative !important;
+  top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.section-header:has(.i-header-container--background) {
+  position: relative !important;
+  top: 0 !important;
+  margin-top: 0 !important;
 }
 
 .i-header-container {
@@ -20,6 +39,101 @@
 
   @media only screen and (max-width: 1024px) {
     height: 55px;
+  }
+
+  &--background {
+    background-color: #FAF5E8;
+    
+    .i-header-container__content {
+      &--logo {
+        .header__logo {
+          color: #1E1E1E;
+        }
+      }
+      
+      &--menu {
+        .i-header-menu {
+          &__content {
+            &--items {
+              li {
+                a {
+                  color: #1E1E1E !important;
+                }
+                
+                .item-details {
+                  color: #1E1E1E;
+                  
+                  summary {
+                    color: #1E1E1E;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      
+      &--icons {
+        &__icon {
+          color: #1E1E1E;
+          
+          svg {
+            path {
+              fill: #1E1E1E;
+              stroke: #1E1E1E;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Estilos para header transparente (cuando no tiene fondo)
+  &:not(.i-header-container--background) {
+    background-color: transparent;
+    
+    .i-header-container__content {
+      &--logo {
+        .header__logo {
+          color: inherit; // Mantener el logo como está
+        }
+      }
+      
+      &--menu {
+        .i-header-menu {
+          &__content {
+            &--items {
+              li {
+                a {
+                  color: #FAF5E8 !important; // Color claro para texto en header transparente
+                }
+                
+                .item-details {
+                  color: #FAF5E8;
+                  
+                  summary {
+                    color: #FAF5E8;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      
+      &--icons {
+        &__icon {
+          color: #FAF5E8;
+          
+          svg {
+            path {
+              fill: #FAF5E8;
+              stroke: #FAF5E8;
+            }
+          }
+        }
+      }
+    }
   }
 
   &__content {
@@ -75,12 +189,13 @@
       top: 0px;
 
       @media only screen and (min-width: 1025px) {
-        display: inline-block;
-        vertical-align: top;
+        display: flex;
+        align-items: center;
         position: relative;
         max-width: 640px;
         width: auto;
         left: 10px;
+        height: 100%;
       }
     }
     &--search {
@@ -184,7 +299,6 @@
       left: -100%;
       width: 100%;
       max-width: 100%;
-      height: 100vh;
       z-index: 2;
 
       @media only screen and (max-width: 1024px) {
@@ -469,6 +583,9 @@
           position: relative;
           bottom: auto;
           width: 600px;
+          display: flex;
+          align-items: center;
+          height: 100%;
         }
 
         &__heading {

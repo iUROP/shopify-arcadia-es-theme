@@ -1,4 +1,42 @@
-<header class="i-header-container" style="height: {{ section.settings.container_height }}px;">
+{%- liquid
+  assign should_show_background = false
+  assign transparent_pages = section.settings.transparent_pages
+  
+  if section.settings.background_enabled
+    case transparent_pages
+      when 'none'
+        assign should_show_background = true
+      when 'home'
+        if template == 'index'
+          assign should_show_background = false
+        else
+          assign should_show_background = true
+        endif
+      when 'home_collection'
+        if template == 'index' or template contains 'collection'
+          assign should_show_background = false
+        else
+          assign should_show_background = true
+        endif
+      when 'home_collection_product'
+        if template == 'index' or template contains 'collection' or template contains 'product'
+          assign should_show_background = false
+        else
+          assign should_show_background = true
+        endif
+      when 'all_except_cart'
+        if template contains 'cart' or template contains 'checkout'
+          assign should_show_background = true
+        else
+          assign should_show_background = false
+        endif
+      when 'all'
+        assign should_show_background = false
+    endcase
+  endif
+-%}
+
+<header class="i-header-container{% if should_show_background %} i-header-container--background{% endif %}" style="height: {{ section.settings.container_height }}px;">
 
   <div class="i-header-container__content">
     <div class="i-header-container__content--logo">
@@ -97,6 +135,50 @@
 
     {
       "type": "header",
+      "content": "Apariencia"
+    },
+    {
+      "type": "checkbox",
+      "id": "background_enabled",
+      "label": "Habilitar fondo de color",
+      "default": false,
+      "info": "Activa un fondo #FAF5E8 con texto #1E1E1E"
+    },
+    {
+      "type": "select",
+      "id": "transparent_pages",
+      "label": "Páginas con header transparente",
+      "options": [
+        {
+          "value": "none",
+          "label": "Ninguna (siempre con fondo)"
+        },
+        {
+          "value": "home",
+          "label": "Solo página de inicio"
+        },
+        {
+          "value": "home_collection",
+          "label": "Página de inicio y colecciones"
+        },
+        {
+          "value": "home_collection_product",
+          "label": "Inicio, colecciones y productos"
+        },
+        {
+          "value": "all_except_cart",
+          "label": "Todas excepto carrito y checkout"
+        },
+        {
+          "value": "all",
+          "label": "Todas las páginas"
+        }
+      ],
+      "default": "home",
+      "info": "Selecciona en qué páginas el header debe ser transparente"
+    },
+    {
+      "type": "header",
       "content": "t:sections.all.spacing"
     },
     {
@@ -112,12 +194,11 @@
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
-    },
-
+    }
   ],
   "blocks": [
     {
-      "type": "@app"
+      "type": "@app",
     }
   ]
 }

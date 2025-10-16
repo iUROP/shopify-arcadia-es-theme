@@ -45,6 +45,8 @@
         "logo_header": "shopify://shop_images/logo-h.png",
         "logo_header_dark": "shopify://shop_images/logo-dark-h.png",
         "collection": "frontpage",
+        "background_enabled": true,
+        "transparent_pages": "home",
         "container_height": 76
       }
     }

@@ -1,0 +1,168 @@
+{%- liquid
+  assign collection = collections[section.settings.collection]
+  assign products_per_page = section.settings.products_per_page | default: 6
+  assign sort_by = section.settings.sort_by | default: 'manual'
+-%}
+
+<div class="i-collection-product-grid">
+  <div class="i-collection-product-grid__container">
+    {%- if section.settings.show_sorting -%}
+      <div class="i-collection-product-grid__filters">
+        <div class="i-collection-product-grid__filter-group">
+          <label for="price-filter" class="i-collection-product-grid__filter-label">Precio</label>
+          <div class="i-collection-product-grid__filter-wrapper">
+            <select id="price-filter" class="i-collection-product-grid__filter-select">
+              <option value="price-asc">Menor a mayor</option>
+              <option value="price-desc">Mayor a menor</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="i-collection-product-grid__filter-group">
+          <label for="sort-filter" class="i-collection-product-grid__filter-label">Ordenar</label>
+          <div class="i-collection-product-grid__filter-wrapper">
+            <select id="sort-filter" class="i-collection-product-grid__filter-select">
+              <option value="manual">Más recientes</option>
+              <option value="best-selling">Más vendidos</option>
+              <option value="title-ascending">A-Z</option>
+              <option value="title-descending">Z-A</option>
+              <option value="price-ascending">Precio: menor a mayor</option>
+              <option value="price-descending">Precio: mayor a menor</option>
+              <option value="created-descending">Más recientes</option>
+              <option value="created-ascending">Más antiguos</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- if collection != blank and collection.products.size > 0 -%}
+      <div class="i-collection-product-grid__grid">
+        {%- for product in collection.products limit: products_per_page -%}
+          <div class="i-collection-product-grid__card">
+            <div class="i-collection-product-grid__card-image">
+              {%- if product.featured_media -%}
+                <a href="{{ product.url }}" class="i-collection-product-grid__card-link">
+                  <img
+                    src="{{ product.featured_media | image_url: width: 293 }}"
+                    alt="{{ product.featured_media.alt | escape }}"
+                    class="i-collection-product-grid__card-img"
+                    loading="lazy"
+                    width="293"
+                    height="280"
+                  >
+                </a>
+              {%- else -%}
+                <a href="{{ product.url }}" class="i-collection-product-grid__card-link">
+                  {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                </a>
+              {%- endif -%}
+            </div>
+            
+            <div class="i-collection-product-grid__card-content">
+              <h3 class="i-collection-product-grid__card-title">
+                <a href="{{ product.url }}" class="i-collection-product-grid__card-link">
+                  {{ product.title | escape }}
+                </a>
+              </h3>
+              
+              <div class="i-collection-product-grid__card-price">
+                {%- if product.compare_at_price > product.price -%}
+                  <span class="i-collection-product-grid__price i-collection-product-grid__price--sale">
+                    {{ product.price | money_without_currency }}€
+                  </span>
+                  <span class="i-collection-product-grid__price i-collection-product-grid__price--compare">
+                    {{ product.compare_at_price | money_without_currency }}€
+                  </span>
+                {%- else -%}
+                  <span class="i-collection-product-grid__price">
+                    {{ product.price | money_without_currency }}€
+                  </span>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- else -%}
+      <div class="i-collection-product-grid__empty">
+        <p>{{ 'sections.collection_list.empty' | t }}</p>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "IUROP Collection Grid",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Colección"
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 2,
+      "max": 24,
+      "step": 1,
+      "default": 6,
+      "label": "Productos por página"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sorting",
+      "default": true,
+      "label": "Mostrar filtros de ordenamiento"
+    },
+    {
+      "type": "select",
+      "id": "sort_by",
+      "options": [
+        {
+          "value": "manual",
+          "label": "Manual"
+        },
+        {
+          "value": "best-selling",
+          "label": "Más vendidos"
+        },
+        {
+          "value": "title-ascending",
+          "label": "A-Z"
+        },
+        {
+          "value": "title-descending",
+          "label": "Z-A"
+        },
+        {
+          "value": "price-ascending",
+          "label": "Precio: menor a mayor"
+        },
+        {
+          "value": "price-descending",
+          "label": "Precio: mayor a menor"
+        },
+        {
+          "value": "created-descending",
+          "label": "Más recientes"
+        },
+        {
+          "value": "created-ascending",
+          "label": "Más antiguos"
+        }
+      ],
+      "default": "manual",
+      "label": "Ordenar por"
+    }
+  ],
+  "presets": [
+    {
+      "name": "IUROP Collection Grid"
+    }
+  ]
+}
+{% endschema %}

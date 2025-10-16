@@ -5,6 +5,7 @@ import ProductAddToCart from './components/atoms/ProductAddToCart.jsx'
 import ShippingCalculator from './components/organisms/ShippingCalculator.jsx'
 import './styles/main.scss'
 import './utils/functions.js'
+import { initCollectionProductGrid } from './utils/collectionProductGrid.js'
 
 
 class MiniCartElement extends HTMLElement {
@@ -93,3 +94,5 @@ class ShippingCalculatorElement extends HTMLElement {
 }
 
 customElements.define("i-shipping-calculator", ShippingCalculatorElement)
+
+initCollectionProductGrid()

@@ -1,0 +1,54 @@
+{% comment %}
+  Banner de colección personalizable
+  Permite configurar imagen y texto desde el admin de Shopify
+{% endcomment %}
+
+<div class="collection-banner">
+  <div class="collection-banner__image">
+    {% if section.settings.banner_image != blank %}
+      <img 
+        src="{{ section.settings.banner_image | image_url: width: 1920 }}"
+        alt="{{ section.settings.banner_image.alt | default: section.settings.banner_text }}"
+        loading="lazy"
+        width="1920"
+        height="345"
+      >
+    {% else %}
+      <div class="collection-banner__placeholder">
+        {{ 'lifestyle.onboarding.image' | t }}
+      </div>
+    {% endif %}
+  </div>
+  
+  <div class="collection-banner__content">
+    <h2 class="collection-banner__text">
+      {{ section.settings.banner_text | default: 'La miel mas pura' }}
+    </h2>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "IUROP Banner de Colección",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Imagen del banner"
+    },
+    {
+      "type": "text",
+      "id": "banner_text",
+      "label": "Texto del banner",
+      "default": "La miel mas pura"
+    }
+  ],
+  "presets": [
+    {
+      "name": "IUROP Banner de Colección"
+    }
+  ]
+}
+{% endschema %}
