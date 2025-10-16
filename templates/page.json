@@ -68,7 +68,7 @@
         "title": "<p>La  <em>miel  </em>debería llevar un <strong>ÚNICO </strong>ingrediente. Debería…</p>",
         "subtitle": "En Arcadia’s Nectar creemos en la pureza: solo miel natural, cruda y auténtica. Sin añadidos, sin mezclas. Lo que ves es lo que es.",
         "button_text": "Comprar miel natural",
-        "button_link": "shopify://collections"
+        "button_link": "shopify://collections/all"
       }
     },
     "i_section_yes_not_QJaRnV": {
@@ -149,7 +149,7 @@
         "id_section": "sin-azucares",
         "content": "<p>Más del 50% de la miel en España está adulterada con jarabes y azúcares industriales para abaratar costes, lo que reduce su calidad y puede afectar a la salud, especialmente en personas con diabetes.<br/><br/>Nuestra miel es 100% natural, cruda y sin aditivos. Proviene de colmenas cuidadas en entornos limpios, se cristaliza de forma natural —señal de pureza— y mantiene todas sus propiedades originales.<br/><br/>Además, realizamos controles de calidad en laboratorios independientes para garantizar un producto auténtico, tal como lo crean las abejas: sin trampas ni azúcares ocultos.</p>",
         "button_text": "Experimentar la miel auténtica",
-        "button_link": "shopify://collections",
+        "button_link": "shopify://collections/all",
         "image": "shopify://shop_images/miel-ingredientes.png",
         "image_m": "shopify://shop_images/miel-ingredientes.png",
         "show_complete_image": false,
@@ -195,7 +195,7 @@
         "id_section": "sin-pesticidas",
         "content": "<p>Cuando las abejas forrajean cerca de cultivos tratados con pesticidas, estos químicos terminan en la miel, afectando su calidad y poniendo en riesgo la salud de las propias abejas. Sustancias como el glifosato han sido encontradas incluso en mieles etiquetadas como “naturales”.<br/><br/>Nuestra miel se produce en zonas libres de agricultura intensiva, donde las abejas recolectan néctar y polen de flores silvestres, sin riesgo de contaminación. Trabajamos con apicultores que siguen prácticas agroecológicas, respetando el ecosistema y favoreciendo la biodiversidad.</p>",
         "button_text": "Comprar miel pura",
-        "button_link": "shopify://collections",
+        "button_link": "shopify://collections/all",
         "image": "shopify://shop_images/ti-3.png",
         "image_m": "shopify://shop_images/ti-3.png",
         "show_complete_image": false,
