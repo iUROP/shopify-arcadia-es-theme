@@ -1,0 +1,56 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_CnjRyG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_RUf7xH": {
+          "type": "heading",
+          "settings": {
+            "heading": "Información de envío",
+            "heading_size": "h1"
+          }
+        },
+        "text_aWrYWF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Condiciones de servicio<br/><br/>Fecha de entrada en vigor: [Insertar fecha]<br/><br/><strong>1. Condiciones generales</strong><br/><br/>• Al acceder o utilizar el sitio web, los productos o los servicios de Nectar, usted acepta cumplir y estar sujeto a estas Condiciones de servicio. Estas condiciones se aplican a todos los visitantes, usuarios y clientes de nuestro sitio web.<br/><br/>• Al utilizar los servicios de Nectar, usted confirma que tiene al menos 18 años o que ha obtenido el consentimiento de sus padres o tutores si es menor de edad.<br/><br/>• Todas las compras realizadas en nuestro sitio web están sujetas a la disponibilidad del producto y nos reservamos el derecho de limitar o discontinuar cualquier producto sin previo aviso. <br/><br/><strong>2. Uso de los productos</strong><br/><br/>• Los parches de Nectar están diseñados exclusivamente para uso externo. No deben ingerirse, inhalarse ni aplicarse sobre piel agrietada o irritada.<br/><br/>• Lea siempre atentamente la lista de ingredientes antes de usarlos, especialmente si tiene alergias o sensibilidades conocidas. Si está embarazada, en período de lactancia o tiene una afección médica preexistente, consulte con su profesional de la salud antes de usar nuestros parches.<br/><br/>• El uso inadecuado de los productos Nectar puede provocar efectos adversos, de los cuales no nos hacemos responsables.<br/> <br/><strong>3. Pedidos y Pagos</strong><br/><br/>• Los pagos deben realizarse al momento de la compra mediante los métodos de pago que aparecen en nuestro sitio web.<br/><br/>Nectar se reserva el derecho de cancelar o rechazar pedidos a su discreción.<br/> <br/><strong>4. Reembolsos y Devoluciones</strong><br/><br/>• Se aceptan devoluciones dentro de los 30 días posteriores a la entrega para artículos sin abrir ni usar.<br/>• Los reembolsos se procesarán en un plazo de 7 a 10 días hábiles tras la aprobación de la devolución.<br/>• Para obtener más información, visite nuestra Política de Devoluciones.<br/><strong> <br/>5. Propiedad Intelectual</strong><br/><br/>• Todo el contenido del sitio web de Nectar, incluyendo logotipos, textos e imágenes, es propiedad de Nectar y no puede utilizarse sin nuestra autorización por escrito.<br/> <br/><strong>6. Limitación de Responsabilidad</strong><br/><br/>• Nectar no se hace responsable de ninguna reacción adversa causada por el uso inadecuado de nuestros productos. No nos hacemos responsables de retrasos en los envíos causados ​​por factores externos ajenos a nuestro control.<br/> <br/><strong>7. Ley Aplicable</strong><br/><br/>Estos términos se rigen por las leyes de [Su Estado/País].<br/><br/>Cualquier disputa se resolverá en la jurisdicción de [Su Estado/País].<br/> <br/><strong>8. Cambios en los Términos</strong><br/><br/>Nectar se reserva el derecho de actualizar estos Términos de Servicio en cualquier momento.<br/><br/>Los cambios entrarán en vigor inmediatamente después de su publicación en nuestro sitio web.<br/> <br/><strong>9. Contáctenos</strong><br/><br/>Si tiene alguna pregunta sobre estos Términos de Servicio, contáctenos en:<br/>Correo electrónico: support@Nectar.com<br/>Teléfono: [Insertar número de teléfono]<br/>Dirección: [Insertar dirección comercial]</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RUf7xH",
+        "text_aWrYWF"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_CnjRyG"
+  ]
+}
