@@ -7,25 +7,25 @@
       when 'none'
         assign should_show_background = true
       when 'home'
-        if template == 'index'
+        if template.name == 'index'
           assign should_show_background = false
         else
           assign should_show_background = true
         endif
       when 'home_collection'
-        if template == 'index' or template contains 'collection'
+        if template.name == 'index' or template.name == 'collection'
           assign should_show_background = false
         else
           assign should_show_background = true
         endif
       when 'home_collection_product'
-        if template == 'index' or template contains 'collection' or template contains 'product'
+        if template.name == 'index' or template.name == 'collection' or template.name == 'product'
           assign should_show_background = false
         else
           assign should_show_background = true
         endif
       when 'all_except_cart'
-        if template contains 'cart' or template contains 'checkout'
+        if template.name == 'cart' or template.name == 'checkout'
           assign should_show_background = true
         else
           assign should_show_background = false
@@ -36,78 +36,64 @@
   endif
 -%}
 
-<header class="i-header-container{% if should_show_background %} i-header-container--background{% endif %}" style="height: {{ section.settings.container_height }}px;">
-
-  <div class="i-header-container__content">
-    <div class="i-header-container__content--logo">
-      <div class="re">
-        <div class="ce">
-          <a href="{{ routes.root_url }}" class="header__logo">
-            <div class="header__logo--wrapper">
-
-              {% if template == 'index' or template == 'page.faqs' %}
-                <img src="{{ section.settings.logo_header | image_url: width: 400 }}" alt="Logo Arcadia" />
-              {% else %}
-                <img src="{{ section.settings.logo_header_dark | image_url: width: 400 }}" alt="Logo Arcadia" />
-              {% endif %}
-              
-            </div>
-          </a>
-        </div>
+<header class="section-header{% if should_show_background %} has-background{% endif %}{% if template.name == 'index' and should_show_background == false %} is-transparent{% endif %}">
+  <div class="i-header-container">
+    <div class="i-header-container__content">
+      
+      {% comment %} LEFT: MENU TOGGLER & DESKTOP MENU {% endcomment %}
+      <div class="i-header-container__content--menu">
+        {%- if section.settings.menu != blank -%}
+          {% render 'header-drawer' %}
+        {%- endif -%}
       </div>
-    </div>
-    <div class="i-header-container__content--menu">
-      <div class="re">
-        <div class="ce">
-          {%- liquid
-            if section.settings.menu != blank
-              render 'header-drawer'
-            endif
-          -%}
-        </div>
+
+      {% comment %} CENTER: LOGO {% endcomment %}
+      <div class="i-header-container__content--logo">
+        <a href="{{ routes.root_url }}" class="header__logo">
+          {% if section.settings.logo_header != blank %}
+            <img src="{{ section.settings.logo_header | image_url: width: 200 }}" alt="{{ shop.name }}" class="logo-light" width="80" height="auto" />
+          {% endif %}
+          {% if section.settings.logo_header_dark != blank %}
+            <img src="{{ section.settings.logo_header_dark | image_url: width: 200 }}" alt="{{ shop.name }}" class="logo-dark" width="80" height="auto" />
+          {% endif %}
+          {% if section.settings.logo_header == blank and section.settings.logo_header_dark == blank %}
+            <span class="h2">{{ shop.name }}</span>
+          {% endif %}
+        </a>
       </div>
-    </div>
-    <div class="i-header-container__content--search">
-      Searchbar
 
-      {% comment %} {% render 'header-search', input_id: 'Search-In-Modal' %} {% endcomment %}
-    </div>
-    <div class="i-header-container__content--icons">
+      {% comment %} RIGHT: ICONS {% endcomment %}
+      <div class="i-header-container__content--icons">
+        <div id="search-icon-bubble" class="header__icon-wrapper search-btn">
+          {% render 'icon-search' %}
+        </div>
 
-      {% comment %} <div id="icon-search" class="i-header-container__content--icons__icon rule">
-        <div class="re">
-          <div class="ce">
-            sea
-          </div>
+        <a href="/account" class="header__icon-wrapper account-btn">
+          {% render 'icon-account' %}
+        </a>
+
+        <div id="icon-minicart" class="header__icon-wrapper cart-btn">
+          <i-minicart blocks="65|" />
         </div>
       </div>
 
-      <div id="icon-user" class="i-header-container__content--icons__icon rule">
-        <div class="re">
-          <div class="ce">
-            us
-          </div>
-        </div>
-      </div> {% endcomment %}
-
-      <div id="icon-minicart" class="i-header-container__content--icons__icon">
-        <i-minicart blocks="65|" />
-      </div>
     </div>
   </div>
-
 </header>
+
+{% render 'search-drawer' %}
+
+<style>
+  .section-header {
+    height: {{ section.settings.container_height }}px;
+  }
+</style>
 
 {% schema %}
 {
   "name": "t:sections.header.name",
-  "class": "section-header",
-  "max_blocks": 3,
+  "class": "shopify-section-header",
   "settings": [
-    {
-      "type": "header",
-      "content": "Estructura"
-    },
     {
       "type": "link_list",
       "id": "menu",
@@ -117,88 +103,40 @@
     {
       "type": "image_picker",
       "id": "logo_header",
-      "label": "Logo header"
+      "label": "Logo header (Claro)"
     },
     {
       "type": "image_picker",
       "id": "logo_header_dark",
-      "label": "Logo header negro"
-    },
-    {
-      "type": "collection",
-      "id": "collection",
-      "label": "Productos megamenu"
-    },
-
-
-    
-
-    {
-      "type": "header",
-      "content": "Apariencia"
+      "label": "Logo header (Oscuro)"
     },
     {
       "type": "checkbox",
       "id": "background_enabled",
       "label": "Habilitar fondo de color",
-      "default": false,
-      "info": "Activa un fondo #FAF5E8 con texto #1E1E1E"
+      "default": false
     },
     {
       "type": "select",
       "id": "transparent_pages",
       "label": "Páginas con header transparente",
       "options": [
-        {
-          "value": "none",
-          "label": "Ninguna (siempre con fondo)"
-        },
-        {
-          "value": "home",
-          "label": "Solo página de inicio"
-        },
-        {
-          "value": "home_collection",
-          "label": "Página de inicio y colecciones"
-        },
-        {
-          "value": "home_collection_product",
-          "label": "Inicio, colecciones y productos"
-        },
-        {
-          "value": "all_except_cart",
-          "label": "Todas excepto carrito y checkout"
-        },
-        {
-          "value": "all",
-          "label": "Todas las páginas"
-        }
+        { "value": "none", "label": "Ninguna" },
+        { "value": "home", "label": "Solo inicio" },
+        { "value": "home_collection", "label": "Inicio y colecciones" },
+        { "value": "all", "label": "Todas" }
       ],
-      "default": "home",
-      "info": "Selecciona en qué páginas el header debe ser transparente"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.all.spacing"
+      "default": "home"
     },
     {
       "type": "range",
       "id": "container_height",
       "min": 40,
-      "max": 200,
+      "max": 150,
       "step": 2,
       "unit": "px",
-      "label": "t:sections.header.settings.container_height.label",
+      "label": "Altura del header",
       "default": 80
-    },
-    {
-      "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "@app",
     }
   ]
 }

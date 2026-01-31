@@ -15,39 +15,48 @@ function ShippingCalculator({
 
   useEffect(() => {
     const date = new Date();
-    const options = { month: 'long' };
-    const month = new Intl.DateTimeFormat('es-ES', options).format(date).toUpperCase();
-    const monthSimply = new Intl.DateTimeFormat('es-ES', options).format(date);
-    let moreTime = 0
+    const formatDate = (d) => {
+      const monthLabel = new Intl.DateTimeFormat('es-ES', { month: 'long' }).format(d).toUpperCase();
+      return `${monthLabel} ${d.getDate()}`;
+    };
 
-    if (date.getHours() >= 14) {
-      moreTime = 1
+    const formatDateSimply = (d) => {
+      const monthLabel = new Intl.DateTimeFormat('es-ES', { month: 'long' }).format(d);
+      return `${d.getDate()} de ${monthLabel}`;
+    };
+
+    let moreTime = 0;
+    if (date.getHours() >= endDayHour) {
+      moreTime = 1;
     }
 
-    let day = date.getDate();
-    const formatedToday = `${month} ${day}`;
-    setCurrentDay(formatedToday);
+    // Pedido (Hoy)
+    setCurrentDay(formatDate(date));
 
-    let tomorrowDay = date.getDate() + moreTime;
-    const formatedShip = `${month} ${tomorrowDay}`;
-    setShippingStart(formatedShip);
+    // Envío (Desde)
+    const shipStart = new Date(date);
+    shipStart.setDate(date.getDate() + moreTime);
+    setShippingStart(formatDate(shipStart));
 
-    let shippingDate = date.getDate() + (moreTime + 1);
-    const formatedShipping = `${month} ${shippingDate}`;
-    setNextDay(formatedShipping);
+    // Envío (Hasta)
+    const shipEnd = new Date(date);
+    shipEnd.setDate(date.getDate() + moreTime + 1);
+    setNextDay(formatDate(shipEnd));
 
-    let deliveryDate = date.getDate() + (moreTime + 1 + 1);
-    const formatedDelivery = `${month} ${deliveryDate}`;
-    setDeliveryDay(formatedDelivery);
+    // Entregado
+    const deliver = new Date(date);
+    deliver.setDate(date.getDate() + moreTime + 2);
+    setDeliveryDay(formatDate(deliver));
 
-    const formatedPreLimit = `${deliveryDate} de ${monthSimply}`;
-    setLimitPreDay(formatedPreLimit);
+    // Recibe tu paquete entre el (Milestone 1)
+    setLimitPreDay(formatDateSimply(deliver));
 
-    let limitDate = date.getDate() + (moreTime + 1 + 1 + 1);
-    const formatedLimitDate = `${limitDate} de ${monthSimply}`;
-    setLimitDay(formatedLimitDate);
-  
-    
+    // Recibe tu paquete entre el (Milestone 2)
+    const limit = new Date(date);
+    limit.setDate(date.getDate() + moreTime + 3);
+    setLimitDay(formatDateSimply(limit));
+
+
     const counter = () => {
       const dateReact = new Date()
       let targetTime = new Date(dateReact);

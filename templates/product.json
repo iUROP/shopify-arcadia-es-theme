@@ -47,7 +47,7 @@
           "settings": {
             "heading": "Ingredientes",
             "icon": "none",
-            "content": "<p>Texto de ingredientes</p>",
+            "content": "<p>Miel cruda pura</p>",
             "page": ""
           }
         },
@@ -90,6 +90,33 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
+      }
+    },
+    "i_section_product_testimonies_mrJ7ed": {
+      "type": "i-section-product-testimonies",
+      "blocks": {
+        "comment_pnTHH6": {
+          "type": "comment",
+          "settings": {
+            "comment": "Cada mañana se siente transformada desde que empecé a usar esta miel pura. Su sabor auténtico y su energía natural redefinieron mi rutina: me dan fuerza… y una sonrisa de verdad.",
+            "author": "Sofia Ramirez"
+          }
+        },
+        "comment_nMrnQC": {
+          "type": "comment",
+          "settings": {
+            "comment": "Cada mañana se siente transformada desde que empecé a usar esta miel pura. Su sabor auténtico y su energía natural redefinieron mi rutina: me dan fuerza… y una sonrisa de verdad.",
+            "author": "Sofia Ramirez"
+          }
+        }
+      },
+      "block_order": [
+        "comment_pnTHH6",
+        "comment_nMrnQC"
+      ],
+      "settings": {
+        "collection": "home-reviews",
+        "logos": "shopify://shop_images/logos-comments.png"
       }
     },
     "related-products": {
@@ -317,6 +344,9 @@
         "content": "<p>Descubre nuestra miel artesanal pura, recolectada de forma ética y 100 % trazable. Rica en antioxidantes y enzimas.</p>",
         "button_text": "",
         "button_link": "",
+        "collapsible_enabled": false,
+        "collapsible_button_text": "",
+        "collapsible_content": "",
         "image": "shopify://shop_images/reseta.png",
         "image_m": "shopify://shop_images/reseta.png",
         "show_complete_image": false,
@@ -497,6 +527,7 @@
   },
   "order": [
     "main",
+    "i_section_product_testimonies_mrJ7ed",
     "related-products",
     "i_section_product_list_LMxRtN",
     "i_section_banner_content_bTBCLc",

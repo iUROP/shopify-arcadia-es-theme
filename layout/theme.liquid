@@ -398,6 +398,7 @@
         slidesToScroll: 1,
         dots: true,
         arrows: true,
+        adaptiveHeight: true,
         asNavFor: '.gallery-thumbs-slick'
       });
 
@@ -412,6 +413,23 @@
       });
       
       Permalink.setScrollDragger();
+
+      // Sticky header scroll detection
+      const sectionHeader = document.querySelector('.section-header');
+      const headerGroup = document.querySelector('.shopify-section-group-header-group');
+
+      if (sectionHeader || headerGroup) {
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 50) {
+            if (sectionHeader) sectionHeader.classList.add('scrolled');
+            if (headerGroup) headerGroup.classList.add('scrolled');
+          } else {
+            if (sectionHeader) sectionHeader.classList.remove('scrolled');
+            if (headerGroup) headerGroup.classList.remove('scrolled');
+          }
+        });
+      }
+
       let maxItems = 4
       let packType = 1
       let packPremiumPrice = 0
@@ -626,8 +644,9 @@
         }
 
         if (selectedQty === 4) {
-          const isBasic = currentHandle === 'miel-cruda-de-lavanda' || currentHandle === 'miel-cruda-multifloral';
+          const isBasic = currentHandle && (currentHandle.includes('lavanda') || currentHandle.includes('multifloral'));
           const packHandle = isBasic ? 'pack-basic' : 'pack-premium';
+          console.log('Pack Debug:', { currentHandle, isBasic, packHandle });
 
           fetch(`/products/${packHandle}.js`).then(r => r.json()).then(product => {
             let targetVariant = null;

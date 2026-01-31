@@ -1,0 +1,212 @@
+<div class="search-drawer" id="search-drawer">
+  <div class="search-drawer__overlay" id="search-drawer-overlay"></div>
+  <div class="search-drawer__content">
+    <div class="search-drawer__header">
+      <div class="search-drawer__input-wrapper">
+        <svg class="search-drawer__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M11.334 11.333L14.0007 13.9997" stroke="#A6A09B" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333Z" stroke="#A6A09B" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <input 
+          type="search" 
+          name="q" 
+          placeholder="Buscar..." 
+          class="search-drawer__input" 
+          id="search-drawer-input"
+          autocomplete="off"
+        >
+        <button type="button" class="search-drawer__clear hidden" id="search-drawer-clear" aria-label="Limpiar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <button class="search-drawer__close" id="search-drawer-close" aria-label="Cerrar">
+        Cerrar
+      </button>
+    </div>
+
+    <div class="search-drawer__body">
+      {%- comment -%} VISTA POR DEFECTO: COLECCIONES {%- endcomment -%}
+      <div class="search-drawer__default-view" id="search-default-view">
+        <div class="search-drawer__collections-grid">
+          {%- assign has_configured_collections = false -%}
+          {%- if settings.cart_empty_collection_1 != blank or settings.cart_empty_collection_2 != blank or settings.cart_empty_collection_3 != blank or settings.cart_empty_collection_4 != blank or settings.cart_empty_collection_5 != blank or settings.cart_empty_collection_6 != blank -%}
+            {%- assign has_configured_collections = true -%}
+          {%- endif -%}
+          
+          {%- if has_configured_collections -%}
+            {%- for i in (1..6) -%}
+              {%- assign cart_collection_id = "cart_empty_collection_" | append: i -%}
+              {%- assign collection_handle = settings[cart_collection_id] -%}
+              {%- if collection_handle != blank -%}
+                {%- assign collection = collections[collection_handle] -%}
+                {%- if collection != blank -%}
+                  <a href="{{ collection.url }}" class="search-drawer__collection-card">
+                    <div class="search-drawer__collection-image-wrapper">
+                      {%- if collection.image != blank -%}
+                        <img src="{{ collection.image | image_url: width: 300 }}" alt="{{ collection.title }}" width="150" height="150" class="search-drawer__collection-image" loading="lazy">
+                      {%- elsif collection.products.first.featured_image != blank -%}
+                        <img src="{{ collection.products.first.featured_image | image_url: width: 300 }}" alt="{{ collection.title }}" width="150" height="150" class="search-drawer__collection-image" loading="lazy">
+                      {%- else -%}
+                        {{ 'collection-' | append: i | placeholder_svg_tag: 'search-drawer__collection-image' }}
+                      {%- endif -%}
+                    </div>
+                    <span class="search-drawer__collection-link">Ver productos</span>
+                  </a>
+                {%- endif -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- else -%}
+            {%- for collection in collections limit: 6 -%}
+              {%- unless collection.handle == 'frontpage' or collection.handle == 'all' -%}
+                <a href="{{ collection.url }}" class="search-drawer__collection-card">
+                  <div class="search-drawer__collection-image-wrapper">
+                    {%- if collection.image != blank or collection.products.first.featured_image != blank -%}
+                      {%- assign image = collection.image | default: collection.products.first.featured_image -%}
+                      <img 
+                        src="{{ image | image_url: width: 300 }}" 
+                        alt="{{ collection.title }}"
+                        width="150"
+                        height="150"
+                        class="search-drawer__collection-image"
+                        loading="lazy"
+                      >
+                    {%- else -%}
+                      {{ 'collection-' | append: forloop.index | placeholder_svg_tag: 'search-drawer__collection-image' }}
+                    {%- endif -%}
+                  </div>
+                  <span class="search-drawer__collection-link">Ver productos</span>
+                </a>
+              {%- endunless -%}
+            {%- endfor -%}
+          {%- endif -%}
+        </div>
+      </div>
+
+      {%- comment -%} VISTA DE RESULTADOS {%- endcomment -%}
+      <div class="search-drawer__results-view hidden" id="search-results-view">
+        <div class="search-drawer__results-grid" id="search-results-grid">
+          <!-- Los resultados se inyectarán aquí vía JS -->
+        </div>
+        <div class="search-drawer__loading hidden" id="search-loading">
+          <div class="loading-spinner"></div>
+        </div>
+        <div class="search-drawer__no-results hidden" id="search-no-results">
+          <p>No se encontraron resultados</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const searchDrawer = document.getElementById('search-drawer');
+    const searchInput = document.getElementById('search-drawer-input');
+    const searchBtn = document.getElementById('search-icon-bubble');
+    const closeBtn = document.getElementById('search-drawer-close');
+    const clearBtn = document.getElementById('search-drawer-clear');
+    const overlay = document.getElementById('search-drawer-overlay');
+    
+    const defaultView = document.getElementById('search-default-view');
+    const resultsView = document.getElementById('search-results-view');
+    const resultsGrid = document.getElementById('search-results-grid');
+    const loading = document.getElementById('search-loading');
+    const noResults = document.getElementById('search-no-results');
+
+    let debounceTimer;
+
+    function openSearch() {
+      searchDrawer.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => searchInput.focus(), 100);
+    }
+
+    function closeSearch() {
+      searchDrawer.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    function showDefaultView() {
+      if (defaultView) defaultView.classList.remove('hidden');
+      if (resultsView) resultsView.classList.add('hidden');
+      if (noResults) noResults.classList.add('hidden');
+      if (resultsGrid) resultsGrid.innerHTML = '';
+    }
+
+    function showResultsView() {
+      if (defaultView) defaultView.classList.add('hidden');
+      if (resultsView) resultsView.classList.remove('hidden');
+    }
+
+    function performSearch(query) {
+      showResultsView();
+      if (loading) loading.classList.remove('hidden');
+      if (noResults) noResults.classList.add('hidden');
+
+      fetch(`${window.routes.predictive_search_url}.json?q=${encodeURIComponent(query)}&resources[type]=product&resources[limit]=10`)
+        .then((response) => response.json())
+        .then((response) => {
+          if (loading) loading.classList.add('hidden');
+          const products = response.resources.results.products;
+
+          if (products && products.length > 0) {
+            renderResults(products);
+          } else {
+            if (resultsGrid) resultsGrid.innerHTML = '';
+            if (noResults) noResults.classList.remove('hidden');
+          }
+        })
+        .catch((error) => {
+          if (loading) loading.classList.add('hidden');
+          console.error(error);
+        });
+    }
+
+    function renderResults(products) {
+      let html = '';
+      products.forEach(product => {
+        html += `
+          <a href="${product.url}" class="search-drawer__result-item">
+            <div class="search-drawer__result-image">
+              <img src="${product.image}" alt="${product.title}" width="100" height="100">
+            </div>
+            <span class="search-drawer__result-title">${product.title}</span>
+          </a>
+        `;
+      });
+      if (resultsGrid) resultsGrid.innerHTML = html;
+    }
+
+    if (searchBtn) searchBtn.addEventListener('click', (e) => { e.preventDefault(); openSearch(); });
+    if (closeBtn) closeBtn.addEventListener('click', closeSearch);
+    if (overlay) overlay.addEventListener('click', closeSearch);
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', function() {
+        searchInput.value = '';
+        clearBtn.classList.add('hidden');
+        showDefaultView();
+        searchInput.focus();
+      });
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', function() {
+        const query = this.value.trim();
+        clearTimeout(debounceTimer);
+
+        if (query.length > 0) {
+          if (clearBtn) clearBtn.classList.remove('hidden');
+          showResultsView();
+          if (resultsGrid && resultsGrid.children.length === 0 && loading) {
+             loading.classList.remove('hidden');
+          }
+          debounceTimer = setTimeout(() => performSearch(query), 300);
+        } else {
+          if (clearBtn) clearBtn.classList.add('hidden');
+          showDefaultView();
+        }
+      });
+    }
+  })();
+</script>

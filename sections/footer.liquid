@@ -69,7 +69,7 @@
       </div>
 
       <div class="i-footer-copyright Text-Colors-Grey Family-Font---Body Typo-Body-S">
-        © All Rights Reserved 2025
+        © All Rights Reserved {{ 'now' | date: '%Y' }}
         <a href="{{ section.settings.instagram_url | default: 'https://www.instagram.com' }}">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path d="M14.0183 2.13437C15.1459 2.13437 16.2273 2.5823 17.0246 3.37961C17.8219 4.17691 18.2698 5.2583 18.2698 6.38586V13.7293C18.2698 14.8569 17.8219 15.9383 17.0246 16.7356C16.2273 17.5329 15.1459 17.9808 14.0183 17.9808H6.67486C5.5473 17.9808 4.46592 17.5329 3.66861 16.7356C2.8713 15.9383 2.42338 14.8569 2.42338 13.7293V6.38586C2.42338 5.2583 2.8713 4.17691 3.66861 3.37961C4.46592 2.5823 5.5473 2.13437 6.67486 2.13437H14.0183ZM14.0183 0.588379H6.67486C5.13869 0.592967 3.66674 1.20524 2.58049 2.29149C1.49425 3.37774 0.881968 4.84968 0.87738 6.38586V13.7293C0.881968 15.2655 1.49425 16.7375 2.58049 17.8237C3.66674 18.91 5.13869 19.5222 6.67486 19.5268H14.0183C15.5545 19.5222 17.0265 18.91 18.1127 17.8237C19.199 16.7375 19.8112 15.2655 19.8158 13.7293V6.38586C19.8112 4.84968 19.199 3.37774 18.1127 2.29149C17.0265 1.20524 15.5545 0.592967 14.0183 0.588379Z" fill="#464646"/>
@@ -111,7 +111,7 @@
       </a>
       <div class="i-footer-copyright only-mobile">
         <span class="Text-Colors-Grey Family-Font---Body Typo-Body-S">
-          © All Rights Reserved 2025
+          © All Rights Reserved {{ 'now' | date: '%Y' }}
         </span>
         <span>
           <a href="{{ section.settings.instagram_url | default: 'https://www.instagram.com' }}">

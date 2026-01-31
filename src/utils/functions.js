@@ -1,5 +1,5 @@
-window.Permalink = function() {
-  const init = function() {
+window.Permalink = function () {
+  const init = function () {
     console.log("Init Permalink Theme Functions!")
 
     stickyMenu()
@@ -7,7 +7,7 @@ window.Permalink = function() {
 
   } // init
 
-  const getCart = async function(openCart) {
+  const getCart = async function (openCart) {
     return new Promise(async (resolve) => {
 
       const request = await fetch(`/cart.js`, {
@@ -18,7 +18,7 @@ window.Permalink = function() {
     })
   }
 
-  const getProduct = async function() {
+  const getProduct = async function () {
 
     return new Promise((resolve) => {
 
@@ -26,7 +26,7 @@ window.Permalink = function() {
     })
   }
 
-  const getCollection = async function() {
+  const getCollection = async function () {
 
     return new Promise((resolve) => {
 
@@ -34,7 +34,7 @@ window.Permalink = function() {
     })
   }
 
-  const addItems = async function(items, open) {
+  const addItems = async function (items, open) {
     return new Promise(async (resolve) => {
 
       const request = await fetch(`/cart/add.js`, {
@@ -52,7 +52,7 @@ window.Permalink = function() {
     })
   }
 
-  const updateItems = async function() {
+  const updateItems = async function () {
 
     return new Promise((resolve) => {
 
@@ -60,7 +60,7 @@ window.Permalink = function() {
     })
   }
 
-  const updateQty = function(id, quantity) {
+  const updateQty = function (id, quantity) {
 
     return new Promise(async (resolve) => {
 
@@ -78,7 +78,7 @@ window.Permalink = function() {
     })
   }
 
-  const updateNote = async function() {
+  const updateNote = async function () {
 
     return new Promise((resolve) => {
 
@@ -86,7 +86,7 @@ window.Permalink = function() {
     })
   }
 
-  const updateAttributes = async function() {
+  const updateAttributes = async function () {
 
     return new Promise((resolve) => {
 
@@ -94,7 +94,7 @@ window.Permalink = function() {
     })
   }
 
-  const removeItems = async function() {
+  const removeItems = async function () {
 
     return new Promise((resolve) => {
 
@@ -102,7 +102,7 @@ window.Permalink = function() {
     })
   }
 
-  const openCart = function(){
+  const openCart = function () {
     window.dispatchEvent(new CustomEvent('cartToggle', {
       detail: {
         message: 'Cart is toggle'
@@ -110,7 +110,7 @@ window.Permalink = function() {
     }))
   }
 
-  const reactive = function() {
+  const reactive = function () {
     window.dispatchEvent(new CustomEvent('cartUpdate', {
       detail: {
         message: 'Cart is updated'
@@ -118,32 +118,37 @@ window.Permalink = function() {
     }))
   }
 
-  const openMenu = function() {
+  const openMenu = function () {
     const el = document.querySelector('body')
     const target = document.querySelector('body.open-menu')
     const scroll = window.scrollY
-    
+
     if (!target) {
       el.classList.add('open-menu')
     } else {
       el.classList.remove('open-menu')
     }
 
-    setTimeout( () => {
+    setTimeout(() => {
       document.querySelector('.i-header-menu__content--items__item .item-details').classList.remove('open')
       document.querySelector('.i-header-menu__content--items__item--submenu--items__item .item-details').classList.remove('open')
-    }, 10 )
+    }, 10)
   }
 
-  const stickyMenu = function() {
+  const stickyMenu = function () {
     let actualScroll = 0
     let lastScrollTop = 0
     const header = document.querySelector('.section-header')
+    const wrapper = header.closest('.shopify-section-header')
     const body = document.querySelector('body')
 
-    window.addEventListener("scroll", function() {
+    if (header.classList.contains('is-transparent')) {
+      wrapper.classList.add('has-transparent-header')
+    }
+
+    window.addEventListener("scroll", function () {
       const top = Math.min(-(window.scrollY - actualScroll + header.clientHeight), 0)
-      if (window.scrollY  > actualScroll) {
+      if (window.scrollY > actualScroll) {
         actualScroll = window.scrollY
       }
 
@@ -152,9 +157,9 @@ window.Permalink = function() {
       }
 
       header.setAttribute("style", `--_top:${top}px`);
-      header.classList.toggle('sticky',window.scrollY < actualScroll)
-      header.classList.toggle('clr',window.scrollY > header.clientHeight * 1.5)
-
+      header.classList.toggle('sticky', window.scrollY < actualScroll)
+      header.classList.toggle('clr', window.scrollY > header.clientHeight * 1.5)
+      header.classList.toggle('scrolled', window.scrollY > 50)
 
       let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
       if (currentScroll > lastScrollTop) {
@@ -165,25 +170,25 @@ window.Permalink = function() {
 
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 
-  }, false);
+    }, false);
   }
 
-  const setupHeader = function() {
+  const setupHeader = function () {
 
   }
 
-  const getPrice = function(number, currency='en-ES') {
+  const getPrice = function (number, currency = 'en-ES') {
     const formatter = new Intl.NumberFormat(currency, {
       style: 'currency',
       currency: 'EUR',
       minimumFractionDigits: 0,
       maximumFractionDigits: 2
     })
-  
+
     return formatter.format(number)
   }
 
-  const setScrollDragger = function() {
+  const setScrollDragger = function () {
     if (window.matchMedia('(pointer: fine)').matches) {
       document.querySelectorAll('.desktop-dragger-function').forEach(container => {
         let isDown = false;
@@ -219,7 +224,7 @@ window.Permalink = function() {
         });
       });
     }
-    
+
   }
 
 

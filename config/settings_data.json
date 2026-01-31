@@ -128,28 +128,6 @@
     "cart_drawer_collection": "automated-collection",
     "cart_color_scheme": "scheme-1",
     "enable_permalink_cart": true,
-    "sections": {
-      "main-password-header": {
-        "type": "main-password-header",
-        "settings": {
-          "color_scheme": "scheme-1"
-        }
-      },
-      "main-password-footer": {
-        "type": "main-password-footer",
-        "settings": {
-          "color_scheme": "scheme-1"
-        }
-      }
-    },
-    "content_for_index": [],
-    "blocks": {
-      "15588394620387169604": {
-        "type": "shopify://apps/subi-ex-subify/blocks/app-embed-block/bc0dba25-cd46-4841-bea4-6bdfe9ac815f",
-        "disabled": false,
-        "settings": {}
-      }
-    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
@@ -205,6 +183,38 @@
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
+      }
+    },
+    "sections": {
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "color_scheme": "scheme-1"
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "color_scheme": "scheme-1"
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "15588394620387169604": {
+        "type": "shopify://apps/subi-ex-subify/blocks/app-embed-block/bc0dba25-cd46-4841-bea4-6bdfe9ac815f",
+        "disabled": false,
+        "settings": {}
+      },
+      "1232542678405107163": {
+        "type": "shopify://apps/instafeed/blocks/head-block/c447db20-095d-4a10-9725-b5977662c9d5",
+        "disabled": false,
+        "settings": {}
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
