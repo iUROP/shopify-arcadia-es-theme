@@ -29,6 +29,14 @@
         </div>
       {% endfor %}
     </div>
+
+    {% if section.settings.cta_text != blank %}
+      <div style="text-align:center; margin-top: 24px;">
+        <a href="{{ section.settings.cta_link | default: '/products/pack-premium' }}" class="is-button-hover-primary Text-Colors-1000 Family-Font Typo-Body-M" style="display:inline-block; padding: 16px 36px; border-radius: 999px; text-decoration:none; background:#5B1414;">
+          {{ section.settings.cta_text }}
+        </a>
+      </div>
+    {% endif %}
   </div>
 
 </div>
@@ -42,6 +50,17 @@
       "type": "text",
       "id": "title",
       "label": "Título"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "Texto botón CTA",
+      "default": "Comprar producto"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Enlace botón CTA"
     }
   ],
   "blocks": [

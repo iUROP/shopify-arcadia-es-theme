@@ -94,13 +94,21 @@ function MiniCart({
     }
     get()
 
-    window.addEventListener('cartUpdate', function () {
+    const handleCartUpdate = function () {
       get()
-    })
+    }
 
-    window.addEventListener('cartToggle', function () {
-      setShowCart(prev => !prev)
-    })
+    const handleCartToggle = function () {
+      setShowCart((prev) => !prev)
+    }
+
+    window.addEventListener('cartUpdate', handleCartUpdate)
+    window.addEventListener('cartToggle', handleCartToggle)
+
+    return () => {
+      window.removeEventListener('cartUpdate', handleCartUpdate)
+      window.removeEventListener('cartToggle', handleCartToggle)
+    }
   }, [])
 
   useEffect(() => {
@@ -111,9 +119,34 @@ function MiniCart({
     }
   }, [showCart])
 
-  const cartToggler = () => {
-    setShowCart(!showCart)
-  }
+  useEffect(() => {
+    if (!showCart) return undefined
+
+    const closeOnOutsidePointer = (event) => {
+      const cartSnap = document.querySelector('.i-minicart-container__snap')
+      if (!cartSnap) return
+      if (!cartSnap.contains(event.target)) {
+        setShowCart(false)
+      }
+    }
+
+    const closeOnEscape = (event) => {
+      if (event.key === 'Escape') {
+        setShowCart(false)
+      }
+    }
+
+    document.addEventListener('pointerdown', closeOnOutsidePointer, true)
+    document.addEventListener('keydown', closeOnEscape)
+
+    return () => {
+      document.removeEventListener('pointerdown', closeOnOutsidePointer, true)
+      document.removeEventListener('keydown', closeOnEscape)
+    }
+  }, [showCart])
+
+  const closeCart = () => setShowCart(false)
+  const cartToggler = () => setShowCart((prev) => !prev)
 
   const settings = {
     dots: false,
@@ -161,7 +194,7 @@ function MiniCart({
               <span>{cartQty && <>({cartQty})</>}</span>
             </h2>
           </VerticalCenter>
-          <button onClick={cartToggler} className='i-minicart-container__snap--header__close slow_ani'>
+          <button onClick={closeCart} className='i-minicart-container__snap--header__close slow_ani'>
             <Icon name="close" />
           </button>
         </div>
@@ -204,7 +237,7 @@ function MiniCart({
               : <div className='empty-cart-state'>
                 <div>Nada de miel por aquí...</div>
                 <div className='i-minicart-container__snap--footer__actions'>
-                  <a href="/collections/all" className='is-button-hover-primary'>Comprar miel</a>
+                  <a href="/products/pack-premium" className='is-button-hover-primary'>Comprar miel</a>
                 </div>
               </div>
             : <div className='loading-cart-state'>Cargando carrito...</div>
@@ -255,7 +288,7 @@ function MiniCart({
           </div>
         )}
       </div>
-      <div className={`i-minicart-container__overlay slow_ani ${showCart ? 'open' : ''}`} onClick={cartToggler}></div>
+      <div className={`i-minicart-container__overlay slow_ani ${showCart ? 'open' : ''}`} onClick={closeCart}></div>
     </div>
   )
 }

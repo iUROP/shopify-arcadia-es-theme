@@ -75,20 +75,6 @@
   }
 }
 
-// Hide elements when cart is open
-body.open-cart {
-  .section-header {
-
-    .i-header-container__content--logo,
-    .search-btn,
-    .account-btn {
-      visibility: hidden !important;
-      opacity: 0 !important;
-      pointer-events: none;
-    }
-  }
-}
-
 .i-header-container {
   position: relative;
   width: 100%;
@@ -187,6 +173,50 @@ body.open-cart {
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  body.open-cart {
+    .section-header {
+      .i-header-container__content--logo,
+      .i-header-container__content--menu {
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none;
+      }
+
+      .i-header-container__content--icons {
+        .search-btn,
+        .account-btn {
+          visibility: hidden !important;
+          opacity: 0 !important;
+          pointer-events: none !important;
+        }
+      }
+    }
+  }
+
+  // Fallback: keep header elements out of the way when minicart is open,
+  // even if body class toggling gets out of sync.
+  .section-header:has(.i-minicart-container__snap.open) {
+    .i-header-container__content--logo,
+    .i-header-container__content--menu {
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+
+    .i-header-container__content--icons {
+      .search-btn,
+      .account-btn {
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+      }
+
+      z-index: 5001 !important;
+    }
+  }
+}
+
 // ==========================================================================
 // MENU TOGGLER & DRAWER
 // ==========================================================================
@@ -217,6 +247,10 @@ body.open-cart {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (min-width: 1025px) {
+      display: none;
+    }
 
     svg {
       width: 18px;
@@ -293,23 +327,53 @@ body.open-cart {
   }
 
   // Products Section
-  &__products {
-    flex: 1;
-    overflow-y: auto;
-    padding-bottom: 16px;
+  &__products-accordion {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 4px;
+    padding-top: 8px;
 
     @media only screen and (min-width: 1025px) {
       display: none;
     }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1E1E1E;
+      font-family: "Besley", serif;
+      font-size: 18px;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::after {
+        content: '+';
+        margin-left: 10px;
+        font-size: 18px;
+        line-height: 1;
+      }
+    }
+
+    &[open] {
+      summary::after {
+        content: '-';
+      }
+    }
   }
 
-  &__products-title {
-    font-family: "Besley", serif;
-    font-size: 20px;
-    color: #1E1E1E;
-    text-align: center;
-    margin: 0 0 16px 0;
-    font-weight: 400;
+  &__products {
+    flex: 0 1 auto;
+    overflow-y: auto;
+    padding: 8px 0 16px;
+
+    @media only screen and (min-width: 1025px) {
+      display: none;
+    }
   }
 
   &__product-card {
@@ -399,6 +463,21 @@ body.open-cart {
     &.is-open {
       opacity: 1;
       visibility: visible;
+    }
+  }
+}
+
+body.template-product {
+  .section-header {
+    background-color: #FAF5E8 !important;
+    .i-header-container__content--logo .header__logo {
+      .logo-dark {
+        display: block;
+      }
+
+      .logo-light {
+        display: none;
+      }
     }
   }
 }

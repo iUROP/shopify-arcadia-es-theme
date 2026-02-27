@@ -212,23 +212,27 @@
                   </div>
                 </div>
               {%- when 'collapsible_tab' -%}
-                <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
-                  <details id="Details-{{ block.id }}-{{ section.id }}">
-                    <summary>
-                      <div class="summary__title">
-                        {% render 'icon-accordion', icon: block.settings.icon %}
-                        <h2 class="h4 accordion__title inline-richtext">
-                          {{ block.settings.heading | default: block.settings.page.title | escape }}
-                        </h2>
+                {%- assign tab_content = block.settings.content | strip_html | strip -%}
+                {%- assign tab_page_content = block.settings.page.content | strip_html | strip -%}
+                {%- if tab_content != blank or tab_page_content != blank -%}
+                  <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+                    <details id="Details-{{ block.id }}-{{ section.id }}">
+                      <summary>
+                        <div class="summary__title">
+                          {% render 'icon-accordion', icon: block.settings.icon %}
+                          <h2 class="h4 accordion__title inline-richtext">
+                            {{ block.settings.heading | default: block.settings.page.title | escape }}
+                          </h2>
+                        </div>
+                        {% render 'i-icon' name: 'plus' %}
+                      </summary>
+                      <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                        {{ block.settings.content }}
+                        {{ block.settings.page.content }}
                       </div>
-                      {% render 'i-icon' name: 'plus' %}
-                    </summary>
-                    <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                      {{ block.settings.content }}
-                      {{ block.settings.page.content }}
-                    </div>
-                  </details>
-                </div>
+                    </details>
+                  </div>
+                {%- endif -%}
               {%- when 'quantity_selector' -%}
                 <div
                   id="Quantity-Form-{{ section.id }}"

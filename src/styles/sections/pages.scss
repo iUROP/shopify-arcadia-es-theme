@@ -880,6 +880,41 @@ body.template-page-benefits {
     height: auto;
     max-height: 100%;
     padding: 30px;
+
+    @media only screen and (max-width: 1024px) {
+      max-height: 240px;
+      padding: 12px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      img {
+        max-height: 240px;
+        width: auto;
+        object-fit: contain;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .i-section-image-text__text.has-items .i-section-image-text__text--pharagrah > a {
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  body.template-page,
+  body.template-page-benefits,
+  body.template-page-mision {
+    .i-section-image-text__text.has-items .i-section-image-text__text--pharagrah > a {
+      display: table;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 

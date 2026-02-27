@@ -9,6 +9,14 @@ function CartItem({
   product
 }) {
   const [itemUpdating, setItemUpdating] = useState(false)
+  const productName = product.product_title || product.title || 'Producto'
+  const variantName = product.variant_title && product.variant_title !== 'Default Title'
+    ? product.variant_title
+    : ''
+  const hasSubscription = Boolean(product.selling_plan_allocation) || (product.properties && Object.keys(product.properties).length > 0)
+  const featuredImageUrl = product.featured_image && product.featured_image.url
+    ? product.featured_image.url
+    : ''
 
   const up = async () => {
     let c = product.quantity
@@ -36,19 +44,24 @@ function CartItem({
   
   return (
     <div className={`i-cart-item`}>
-      <div className='i-cart-item--image' style={{"backgroundImage": `url(${product.featured_image.url})`}}></div>
+      <div className='i-cart-item--image' style={{"backgroundImage": featuredImageUrl ? `url(${featuredImageUrl})` : 'none'}}></div>
       <div className='i-cart-item--labels'>
         <div className='i-cart-item--labels--reviews'>
           <Stars stars={5} />
         </div>
-        {product.properties && Object.keys(product.properties).length > 0 &&
+        {hasSubscription &&
           <div className='i-cart-item--labels--desc mb-extra'>
             Suscripción
           </div>
         }
         <div className='i-cart-item--labels--name'>
-          {product.product_title}
+          {productName}
         </div>
+        {variantName &&
+          <div className='i-cart-item--labels--desc'>
+            {variantName}
+          </div>
+        }
         {/* {product.properties && Object.keys(product.properties).length > 0 &&
           <div className='i-cart-item--labels--desc'>
             {Object.keys(product.properties).length} productos en el pack

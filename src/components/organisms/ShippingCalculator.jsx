@@ -15,6 +15,7 @@ function ShippingCalculator({
 
   useEffect(() => {
     const date = new Date();
+    date.setHours(12, 0, 0, 0);
     const formatDate = (d) => {
       const monthLabel = new Intl.DateTimeFormat('es-ES', { month: 'long' }).format(d).toUpperCase();
       return `${monthLabel} ${d.getDate()}`;
@@ -79,8 +80,11 @@ function ShippingCalculator({
     }
 
     counter();
-    setInterval(counter, 1000);
+    const timerId = setInterval(counter, 1000);
 
+    return () => {
+      clearInterval(timerId);
+    };
   }, [])
 
   return (

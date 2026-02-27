@@ -303,6 +303,33 @@
         "top_format": false,
         "alternative_list": true
       }
+    },
+    "rich_text_benefits_cta": {
+      "type": "rich-text",
+      "blocks": {
+        "button_V3nh5Q": {
+          "type": "button",
+          "settings": {
+            "button_label": "Ver todos los productos",
+            "button_link": "/collections/all",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_V3nh5Q"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "padding_top": 20,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -313,6 +340,7 @@
     "i_section_image_accordeon_fKD7Xt",
     "i_section_image_text_eTLWRW",
     "i_section_faqs_MVaJHK",
-    "i_section_image_text_BKkNDQ"
+    "i_section_image_text_BKkNDQ",
+    "rich_text_benefits_cta"
   ]
 }

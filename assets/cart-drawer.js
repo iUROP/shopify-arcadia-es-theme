@@ -3,7 +3,10 @@ class CartDrawer extends HTMLElement {
     super();
 
     this.addEventListener('keyup', (evt) => evt.code === 'Escape' && this.close());
-    this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
+    this.handleOverlayClick = this.close.bind(this);
+    this.handleOutsidePointerDown = this.onOutsidePointerDown.bind(this);
+    const overlay = this.querySelector('#CartDrawer-Overlay');
+    if (overlay) overlay.addEventListener('click', this.handleOverlayClick);
     this.setHeaderCartIconAccessibility();
   }
 
@@ -45,12 +48,23 @@ class CartDrawer extends HTMLElement {
     );
 
     document.body.classList.add('overflow-hidden');
+    document.addEventListener('pointerdown', this.handleOutsidePointerDown, true);
   }
 
   close() {
     this.classList.remove('active');
     removeTrapFocus(this.activeElement);
     document.body.classList.remove('overflow-hidden');
+    document.removeEventListener('pointerdown', this.handleOutsidePointerDown, true);
+  }
+
+  onOutsidePointerDown(event) {
+    if (!this.classList.contains('active')) return;
+    const drawerInner = this.querySelector('.drawer__inner');
+    if (!drawerInner) return;
+    if (!drawerInner.contains(event.target)) {
+      this.close();
+    }
   }
 
   setSummaryAccessibility(cartDrawerNote) {
@@ -80,7 +94,11 @@ class CartDrawer extends HTMLElement {
     });
 
     setTimeout(() => {
-      this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
+      const overlay = this.querySelector('#CartDrawer-Overlay');
+      if (overlay) {
+        overlay.removeEventListener('click', this.handleOverlayClick);
+        overlay.addEventListener('click', this.handleOverlayClick);
+      }
       this.open();
     });
   }

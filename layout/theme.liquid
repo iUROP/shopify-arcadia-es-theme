@@ -414,6 +414,14 @@
       
       Permalink.setScrollDragger();
 
+      // Re-route home CTAs to a direct PDP
+      document.querySelectorAll('.template-index a[href*=\"/collections\"]').forEach(function(link) {
+        const label = (link.textContent || '').trim().toLowerCase();
+        if (label.includes('comprar miel')) {
+          link.setAttribute('href', '/products/pack-premium');
+        }
+      });
+
       // Sticky header scroll detection
       const sectionHeader = document.querySelector('.section-header');
       const headerGroup = document.querySelector('.shopify-section-group-header-group');
@@ -491,6 +499,7 @@
         $('.i-section-packs__window').addClass('show-1')
         maxItems = 4
         packType = 1
+        resetPackQuantities()
         $('.i-section-packs__window--bulker__addToCart span').html(`Faltan ${maxItems} productos`)
         $('.btn-subscription').prop('disabled', true)
         $('.btn-single-payment').prop('disabled', true)
@@ -503,6 +512,7 @@
         $('.i-section-packs__window').addClass('show-2')
         maxItems = 4
         packType = 2
+        resetPackQuantities()
         $('.i-section-packs__window--bulker__addToCart span').html(`Faltan ${maxItems} productos`)
         $('.btn-subscription').prop('disabled', true)
         $('.btn-single-payment').prop('disabled', true)
@@ -514,6 +524,13 @@
       let arrProducts = []
       let arrProperties = {}
       let arrProdsHtml = []
+
+      function resetPackQuantities() {
+        $('.i-section-packs .qty-value').text('0');
+        arrProdsHtml = [];
+        arrProperties = {};
+        setImages();
+      }
 
       function updatePacks () {
         // 46986224566510 Pack Premium
@@ -539,7 +556,12 @@
         }
 
         arrProdsHtml = [];
-        $('.item-pack-product').each(function (index) {
+        arrProperties = {};
+        const activeItemsSelector = packType === 1
+          ? '.content-tab-1 .item-pack-product'
+          : '.content-tab-2 .item-pack-product';
+
+        $(activeItemsSelector).each(function (index) {
           const $item = $(this);
           const quantity = parseInt($item.find('.qty-value').text().trim(), 10);
 
@@ -693,8 +715,130 @@
       $('.btn-subscription').prop('disabled', true)
       $('.btn-single-payment').prop('disabled', true)
       updatePackPrices();
+
+      // Sticky ATC (solo PDP, visible cuando el botón principal no está en viewport)
+      const isProductTemplate = document.body.classList.contains('template-product');
+      if (isProductTemplate && !document.getElementById('global-sticky-atc')) {
+        const stickyButton = document.createElement('button');
+        stickyButton.id = 'global-sticky-atc';
+        stickyButton.type = 'button';
+        stickyButton.textContent = 'Añadir al carrito';
+        stickyButton.setAttribute('aria-label', 'Añadir al carrito');
+
+        const stickyStyles = document.createElement('style');
+        stickyStyles.textContent = `
+          #global-sticky-atc {
+            position: fixed;
+            left: 16px;
+            right: 16px;
+            bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+            height: 52px;
+            border: 0;
+            border-radius: 999px;
+            background: #5B1414;
+            color: #fff;
+            font-family: "Besley", serif;
+            font-size: 16px;
+            font-weight: 500;
+            z-index: 4500;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+          }
+          #global-sticky-atc.is-visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+          }
+          @media (min-width: 1025px) {
+            #global-sticky-atc {
+              left: auto;
+              right: 24px;
+              width: 240px;
+            }
+          }
+        `;
+
+        function getPrimaryAtcButton() {
+          const buttons = Array.from(document.querySelectorAll('.product-form__submit'));
+          if (!buttons.length) return null;
+          return buttons.find((button) => button.offsetParent !== null) || buttons[0];
+        }
+
+        function syncStickyAtcLabel() {
+          const atcButton = getPrimaryAtcButton();
+          if (!atcButton) return;
+          const labelNode = atcButton.querySelector('span');
+          const label = (labelNode && labelNode.textContent ? labelNode.textContent : atcButton.textContent || 'Añadir al carrito').trim();
+          const infoRoot = atcButton.closest('.product__info-wrapper, .product__info-container, .product-form') || document;
+          const priceNode =
+            infoRoot.querySelector('.price .price-item--sale') ||
+            infoRoot.querySelector('.price .price-item--regular') ||
+            infoRoot.querySelector('.price-item--sale') ||
+            infoRoot.querySelector('.price-item--regular');
+          const price = priceNode ? (priceNode.textContent || '').trim().replace(/\s+/g, ' ') : '';
+          const stickyLabel = price ? `${label} · ${price}` : label;
+          stickyButton.textContent = stickyLabel;
+          stickyButton.setAttribute('aria-label', stickyLabel);
+        }
+
+        stickyButton.addEventListener('click', function () {
+          const atcButton = getPrimaryAtcButton();
+          if (!atcButton || atcButton.disabled) return;
+          atcButton.click();
+        });
+
+        document.head.appendChild(stickyStyles);
+        document.body.appendChild(stickyButton);
+
+        const primaryAtcButton = getPrimaryAtcButton();
+        if (!primaryAtcButton) {
+          stickyButton.remove();
+          return;
+        }
+
+        syncStickyAtcLabel();
+
+        const updateStickyVisibility = function (entry) {
+          const isAtcVisible = entry.isIntersecting && entry.intersectionRatio > 0.35;
+          const canShow = !isAtcVisible && !primaryAtcButton.disabled;
+          stickyButton.classList.toggle('is-visible', canShow);
+        };
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            if (!entries.length) return;
+            updateStickyVisibility(entries[0]);
+          },
+          {
+            threshold: [0, 0.35, 1],
+            rootMargin: '0px 0px -120px 0px'
+          }
+        );
+
+        observer.observe(primaryAtcButton);
+
+        const atcMutationObserver = new MutationObserver(() => {
+          syncStickyAtcLabel();
+          const rect = primaryAtcButton.getBoundingClientRect();
+          const isVisible =
+            rect.top < window.innerHeight - 120 &&
+            rect.bottom > 0 &&
+            rect.height > 0 &&
+            rect.width > 0;
+          stickyButton.classList.toggle('is-visible', !isVisible && !primaryAtcButton.disabled);
+        });
+
+        atcMutationObserver.observe(primaryAtcButton, {
+          attributes: true,
+          childList: true,
+          subtree: true,
+          characterData: true
+        });
+      }
       
     });
   </script>
 </html>
-

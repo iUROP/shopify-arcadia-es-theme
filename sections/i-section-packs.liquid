@@ -73,7 +73,7 @@
             {% assign selected_product_3 = all_products[section.settings.product_3] %}
 
             {% if selected_product_3 %}
-              <div class="item-pack-product" data-variant-id="{{ selected_product_3.variants.first.id }}" data-variant-name="{{ selected_product_2.title }}">
+              <div class="item-pack-product" data-variant-id="{{ selected_product_3.variants.first.id }}" data-variant-name="{{ selected_product_3.title }}">
                 <div class="img-content">
                   <img src="{{ selected_product_3.metafields.custom.review_image | file_url }}" alt="Product stamp image" draggable="false" />
                 </div>

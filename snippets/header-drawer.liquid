@@ -9,38 +9,6 @@
     <div id="header-close" class="i-header-menu__close">
       {% render 'icon-close' %}
     </div>
-    
-    {%- comment -%} PRODUCTOS SECTION {%- endcomment -%}
-    <div class="i-header-menu__products">
-      <h3 class="i-header-menu__products-title">Productos</h3>
-      
-      {%- assign menu_products = "miel-cruda-multifloral,miel-cruda-de-bosque,miel-cruda-de-lavanda,miel-cruda-de-romero,miel-cruda-de-azahar,miel-cruda-de-tomillo" | split: "," -%}
-      
-      {%- for handle in menu_products -%}
-        {%- assign product = all_products[handle] -%}
-        {%- if product -%}
-          <a href="{{ product.url }}" class="i-header-menu__product-card">
-            <div class="i-header-menu__product-card-image">
-              <img 
-                src="{{ product.featured_image | img_url: '160x160' }}" 
-                alt="{{ product.title }}"
-                width="80"
-                height="80"
-                loading="lazy"
-              />
-            </div>
-            <div class="i-header-menu__product-card-info">
-              <span class="i-header-menu__product-card-title">{{ product.title }}</span>
-              <span class="i-header-menu__product-card-price">{{ product.price | money }}</span>
-            </div>
-          </a>
-        {%- endif -%}
-      {%- endfor -%}
-
-      <a href="/collections/all" class="i-header-menu__cta-button">
-        Comprar miel
-      </a>
-    </div>
 
     {%- comment -%} SECONDARY LINKS {%- endcomment -%}
     <ul class="i-header-menu__content--items" role="list">
@@ -54,6 +22,42 @@
         {%- endunless -%}
       {%- endfor -%}
     </ul>
+
+    {%- comment -%} PRODUCTOS SECTION (COLLAPSIBLE EN MOBILE) {%- endcomment -%}
+    <details class="i-header-menu__products-accordion">
+      <summary>
+        <span>Productos</span>
+      </summary>
+
+      <div class="i-header-menu__products">
+        {%- assign menu_products = "miel-cruda-multifloral,miel-cruda-de-bosque,miel-cruda-de-lavanda,miel-cruda-de-romero,miel-cruda-de-azahar,miel-cruda-de-tomillo" | split: "," -%}
+
+        {%- for handle in menu_products -%}
+          {%- assign product = all_products[handle] -%}
+          {%- if product -%}
+            <a href="{{ product.url }}" class="i-header-menu__product-card">
+              <div class="i-header-menu__product-card-image">
+                <img
+                  src="{{ product.featured_image | img_url: '160x160' }}"
+                  alt="{{ product.title }}"
+                  width="80"
+                  height="80"
+                  loading="lazy"
+                />
+              </div>
+              <div class="i-header-menu__product-card-info">
+                <span class="i-header-menu__product-card-title">{{ product.title }}</span>
+                <span class="i-header-menu__product-card-price">{{ product.price | money }}</span>
+              </div>
+            </a>
+          {%- endif -%}
+        {%- endfor -%}
+
+        <a href="/products/pack-premium" class="i-header-menu__cta-button">
+          Comprar miel
+        </a>
+      </div>
+    </details>
   </nav>
 </div>
 
@@ -78,6 +82,7 @@
       overlay.classList.remove('is-open');
       header.classList.remove('menu-open');
       body.style.overflow = '';
+      menuContent.querySelectorAll('details[open]').forEach((el) => el.removeAttribute('open'));
     }
 
     if (hamburger) hamburger.addEventListener('click', openMenu);
