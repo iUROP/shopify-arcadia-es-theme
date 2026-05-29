@@ -218,7 +218,7 @@
         "alternate_title": true,
         "text_left": false,
         "button_text": "Comprar miel",
-        "button_link": "shopify://collections/frontpage",
+        "button_link": "shopify://collections/all",
         "boxed_text": false,
         "boxed_banner": false
       }
@@ -276,7 +276,7 @@
       "settings": {
         "title": "La fuente de energía más saludable",
         "button_text": "Comprar miel",
-        "button_link": "shopify://collections/frontpage",
+        "button_link": "shopify://collections/all",
         "banner_1": "shopify://shop_images/spec-image.png",
         "banner_2": "shopify://shop_images/spec-image-2.png",
         "banner_3": "shopify://shop_images/spec-image-3.png",
@@ -327,7 +327,7 @@
         "id_section": "",
         "content": "<p>Nuestra miel premium, rica en flavonoides y ácidos fenólicos, ayuda a reducir el estrés oxidativo y protege la salud celular.<br/><br/>Gracias a sus propiedades antimicrobianas, combate bacterias e infecciones, aliviando la inflamación y acelerando la recuperación frente a enfermedades.</p>",
         "button_text": "Comprar miel",
-        "button_link": "shopify://collections/frontpage",
+        "button_link": "shopify://collections/all",
         "collapsible_enabled": false,
         "collapsible_button_text": "",
         "collapsible_content": "",

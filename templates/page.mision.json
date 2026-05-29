@@ -87,7 +87,7 @@
       "settings": {
         "title": "Beneficios clave para la salud",
         "cta_text": "Comprar miel pura",
-        "cta_link": "shopify://collections/frontpage"
+        "cta_link": "shopify://collections/all"
       }
     },
     "i_section_parallax_GXgLBU": {
@@ -137,7 +137,7 @@
         "alternate_title": true,
         "text_left": false,
         "button_text": "Comprar miel natural",
-        "button_link": "shopify://collections/frontpage",
+        "button_link": "shopify://collections/all",
         "boxed_text": false,
         "boxed_banner": true
       }
