@@ -52,7 +52,7 @@
       "name": "IUROP Collection Grid",
       "settings": {
         "collection": "frontpage",
-        "products_per_page": 6,
+        "products_per_page": 12,
         "show_sorting": true,
         "sort_by": "manual"
       }
