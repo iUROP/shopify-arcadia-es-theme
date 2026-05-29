@@ -16,14 +16,14 @@
           "type": "review",
           "settings": {
             "review_text": "Cada gota impulsa mi día: miel pura para una energía natural...",
-            "author_name": "Alejandro Fernández"
+            "author_name": "Gonzalo Teba"
           }
         },
         "review_rgmwhf": {
           "type": "review",
           "settings": {
             "review_text": "Desde que la probé, no falta en mi desayuno. Se nota que es miel de verdad, con sabor y aroma únicos",
-            "author_name": "Alberto Luján"
+            "author_name": "Andrés Tirado"
           }
         }
       },
@@ -100,6 +100,7 @@
     },
     "i_section_packs_NbfGC9": {
       "type": "i-section-packs",
+      "disabled": true,
       "name": "iUROP section - Packs",
       "settings": {
         "title": "Crea tu propio pack y ahorra un +25%",
