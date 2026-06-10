@@ -54,7 +54,7 @@
         "collection": "frontpage",
         "products_per_page": 12,
         "show_sorting": true,
-        "sort_by": "manual"
+        "sort_by": "title-ascending"
       }
     }
   },
