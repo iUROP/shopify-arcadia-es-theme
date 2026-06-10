@@ -24,10 +24,6 @@
           "type": "description",
           "settings": {}
         },
-        "custom_icons_aUfbEJ": {
-          "type": "custom_icons",
-          "settings": {}
-        },
         "buy_buttons_g8cfV6": {
           "type": "buy_buttons",
           "settings": {
@@ -64,7 +60,6 @@
         "custom_tags_QgcnPk",
         "title",
         "description",
-        "custom_icons_aUfbEJ",
         "buy_buttons_g8cfV6",
         "easy_bundle_mix_bundle_WLQbQw",
         "collapsible_tab_JHdRz4",
