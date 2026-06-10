@@ -28,6 +28,13 @@
           "type": "custom_icons",
           "settings": {}
         },
+        "buy_buttons_g8cfV6": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
         "easy_bundle_mix_bundle_WLQbQw": {
           "type": "shopify://apps/easy-bundle/blocks/mix-bundle/491a753a-7e8b-4c89-a6fb-9028a1df000b",
           "settings": {
@@ -51,10 +58,6 @@
             "content": "<p>Texto de envio y precios</p>",
             "page": ""
           }
-        },
-        "custom_image_ewChUF": {
-          "type": "custom-image",
-          "settings": {}
         }
       },
       "block_order": [
@@ -62,18 +65,18 @@
         "title",
         "description",
         "custom_icons_aUfbEJ",
+        "buy_buttons_g8cfV6",
         "easy_bundle_mix_bundle_WLQbQw",
         "collapsible_tab_JHdRz4",
-        "collapsible_tab_E6nzTz",
-        "custom_image_ewChUF"
+        "collapsible_tab_E6nzTz"
       ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
         "media_size": "medium",
         "constrain_to_viewport": true,
-        "media_fit": "cover",
-        "gallery_layout": "stacked",
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
         "media_position": "left",
         "image_zoom": "none",
         "mobile_thumbnails": "show",
