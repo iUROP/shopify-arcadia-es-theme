@@ -41,7 +41,7 @@
     "header": {
       "type": "header",
       "settings": {
-        "menu": "main-menu",
+        "menu": "men-inicial",
         "logo_header": "shopify://shop_images/logo-h.png",
         "logo_header_dark": "shopify://shop_images/logo-dark-h.png",
         "background_enabled": true,
