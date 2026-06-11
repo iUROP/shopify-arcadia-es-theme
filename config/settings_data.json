@@ -220,6 +220,11 @@
         "type": "shopify://apps/easy-bundle/blocks/app/491a753a-7e8b-4c89-a6fb-9028a1df000b",
         "disabled": false,
         "settings": {}
+      },
+      "8670728856252544919": {
+        "type": "shopify://apps/essential-estimated/blocks/app-embed/02a895dd-b5b5-4103-8966-c6914aa8309e",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
